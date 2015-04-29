@@ -1,2 +1,3 @@
-# api-draft
-Experimental repository to create a scripting API for Aseprite
+# Aseprite Scripting API Draft
+
+This is an experimental repository to create a scripting API for Aseprite.
