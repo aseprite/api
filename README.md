@@ -27,7 +27,7 @@ cases:
    functionality. Examples: Add a new command, tool, editor state, extra
    information in `.ase` files, customized color picker, etc.
 
-These items are ordered by complexity. The API, maintenance, and
+These items are ordered by complexity. API design, maintenance, and
 backward compatibility problems increase from the first point to the
 last one.
 
