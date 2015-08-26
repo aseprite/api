@@ -5,7 +5,7 @@ instance of [Application][application.md] class.
 
 * Globals
   * [rgba](#rgba)
-  * [rgbaR, rgbaG, rgbaB, rgbaA](#rgbaR)
+  * [rgbaR, rgbaG, rgbaB, rgbaA](#rgbar-rgbag-rgbab-rgbaa)
   * [activeSprite](#activeSprite)
 * Classes
   * [Sprite](sprite.md)
