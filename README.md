@@ -9,6 +9,9 @@ Aseprite. We'll use JavaScript as scripting language and
 What we should be able to do with this API?  We can identify some use
 cases:
 
+1. Macro-like scripts: Little scripts to modify pixels, or cels, or
+   layers in certain way (to do repetitive stuff easily).
+
 1. Scripts for testing: To create scripts to test end-user
    capabilities.
 
@@ -31,20 +34,35 @@ These items are ordered by complexity. API design, maintenance, and
 backward compatibility problems increase from the first point to the
 last one.
 
+## Macro-like Scripts Examples
+
+This could use a simple API like:
+
+    var spr = activeSprite
+
+    for (y=0; y<spr.height; ++y) {
+      for (x=0; x<spr.width; ++x) {
+        c = spr.getPixel(x, y)
+        hsv = Hsv.fromRgb(c)
+        a = 255 * hsv.s / 100
+        c = Rgb.fromHsv(hsv.h, hsv.s, hsv.v);
+        spr.putPixel(x, y, rgba(c.r, c.g, c.b, a))
+    }
+
 ## Scripts Examples
 
 Test if a GIF file is converted to RGB correctly:
 
-    var sprite1 = app.sprites.open("test.gif")
-    var sprite2 = app.sprites.open({
+    var gif = sprites.open("test.gif")
+    var expected = sprites.open({
       "expected0.png", "expected1.png", "expected3.png" })
 
     // It should call the internal command know as ChangePixelFormat
-    sprite2.colorMode = ColorMode.RGB
+    expected.colorMode = ColorMode.RGB
 
     // Compare that both sprites are equal (same width, height,
     // color mode, pixels, palettes).
-    app.test.expectEqual(sprite2, sprite1)
+    test.expectEqual(expected, gif)
 
 Create a simple sprite, and focus the second frame (the shown API here
 is just an example):
@@ -56,10 +74,11 @@ is just an example):
       colorMode: ColorMode.RGB,
       background: Color.BLACK
     })
-    var sprite = app.activeSprite
+
+    var sprite = activeSprite
 
     // Alternative API to create sprites?
-    var sprite2 = app.sprites.add(32, 32, ColorMode.RGB)
+    var sprite2 = sprites.add(32, 32, ColorMode.RGB)
 
     // Or just?
     var sprite3 = new Sprite(32, 32, ColorMode.RGB)
@@ -76,14 +95,14 @@ is just an example):
     frame2.duration = 500
 
     // Show 2nd frame
-    app.views(sprite).activeFrame = 2
+    sprite.activeFrame = 2
 
 ## Observe Events Examples
 
 Everytime we save an image, save a copy into `path/filename-x2.png`
 resizing it to 200%:
 
-    app.events.on('afterSave', function(ev) {
+    events.on('afterSave', function(ev) {
       var sprite = ev.sprite
       var fn = sprite.filename
       fn = fn.path + "/" + fn.title + "x2.png"
