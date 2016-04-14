@@ -4,7 +4,7 @@ The `app` global object.
 
 ## app.activeImage
 
-    var sprite = app.activeImage
+    var image = app.activeImage
 
 Returns the active image, an [Image](image.md) object.
 
