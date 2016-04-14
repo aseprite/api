@@ -4,6 +4,10 @@ This is an experimental repository to create a scripting API for
 Aseprite. We'll use JavaScript as scripting language and
 [duktape.org](http://duktape.org/) as the scripting engine.
 
+This is the API proposal:
+
+    https://github.com/aseprite/api-draft/api.md
+
 ## Use Cases
 
 What we should be able to do with this API?  We can identify some use
@@ -36,17 +40,17 @@ last one.
 
 ## Macro-like Scripts Examples
 
-This could use a simple API like:
+This could use a simple API like (this API is just an example):
 
-    var spr = activeSprite
+    var img = app.activeImage
 
-    for (y=0; y<spr.height; ++y) {
-      for (x=0; x<spr.width; ++x) {
-        c = spr.getPixel(x, y)
+    for (y=0; y<img.height; ++y) {
+      for (x=0; x<img.width; ++x) {
+        c = img.getPixel(x, y)
         hsv = Hsv.fromRgb(c)
         a = 255 * hsv.s / 100
         c = Rgb.fromHsv(hsv.h, hsv.s, hsv.v);
-        spr.putPixel(x, y, rgba(c.r, c.g, c.b, a))
+        img.putPixel(x, y, rgba(c.r, c.g, c.b, a))
     }
 
 ## Scripts Examples
