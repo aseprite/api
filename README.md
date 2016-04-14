@@ -4,9 +4,7 @@ This is an experimental repository to create a scripting API for
 Aseprite. We'll use JavaScript as scripting language and
 [duktape.org](http://duktape.org/) as the scripting engine.
 
-This is the API proposal:
-
-    https://github.com/aseprite/api-draft/api.md
+[This is the API proposal.](api.md)
 
 ## Use Cases
 
