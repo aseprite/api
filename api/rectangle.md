@@ -1,0 +1,50 @@
+# Rectangle
+
+If a function receives a rectangle as an argument it could be several things:
+
+1. You can specify the parameter `x, y, width, height` directly as
+   arguments of the function.
+   E.g. `sprite.crop(0, 16, 64, 32)`
+1. You can specify an object with `x`, `y`, `width`, and `height` properties.
+   E.g. `sprite.crop({ 'x': 0, 'y': 16, 'width': 64, 'height': 32 })`
+1. You can specify a `Rectangle` instance:
+   E.g. `sprite.crop(new Rectangle(0, 16, 64, 32))`
+
+## new Rectangle()
+
+    new Rectangle()
+    new Rectangle(otherRectangle)
+    new Rectangle(x, y, width, height)
+    new Rectangle({ 'x': number, 'y': number, 'width': number, 'height': number })
+
+## Rectangle.x
+
+    var x = rectangle.x
+    rectangle.x = newX
+
+Gets or sets the *x*-coordinate of the rectangle. 0 means at the left
+side of the screen/sprite.
+
+## Rectangle.y
+
+    var y = rectangle.y
+    rectangle.y = newY
+
+Gets or sets the *y*-coordinate of the rectangle. 0 means at the top side
+of the screen/sprite.
+
+## Rectangle.width
+
+    var width = rectangle.width
+    rectangle.width = newWidth
+
+Gets or sets the *width* of the rectangle. If it's 0, the rectangle is
+empty (so the coordinate doesn't matter).
+
+## Rectangle.height
+
+    var height = rectangle.height
+    rectangle.height = newHeight
+
+Gets or sets the *height* of the rectangle. If it's 0, the rectangle is
+empty (so the coordinate doesn't matter).

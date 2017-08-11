@@ -8,10 +8,15 @@
 
     var h = image.height
 
-## Image.putPixel
+## Image.putPixel()
 
     image.putPixel(x, y, color)
 
-## Image.getPixel
+Sets the pixel in the *xy*-coordinate to the given
+[pixel color](pixelcolor.md).
+
+## Image.getPixel()
 
     var color = image.getPixel(x, y)
+
+Returns the [pixel color](pixelcolor.md) for the given *xy*-coordinate.

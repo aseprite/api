@@ -2,16 +2,18 @@
 
 The `console` global object.
 
-## console.condition
+## console.condition()
 
-    console.assert(condition, error_message)
+    console.assert(condition)
 
-Prints the `error_message` string when `condition` is `false`.
+Prints an error message when `condition` is `false` and stops the
+execution of the script.
 
-## console.log
+## console.log()
 
     console.log(object)
+    console.log(object1, object2, ...)
 
-Prints the given *object* (generally a string) into the console (the
+Prints the given objects (generally strings) into the console (the
 Terminal if we're executing the script in `--batch` or `--shell`
 mode).

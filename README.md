@@ -12,4 +12,7 @@ Aseprite. We'll use JavaScript as the scripting language and
   * [ColorMode](api/colormode.md)
 * Classes
   * [Image](api/image.md)
+  * [Rectangle](api/rectangle.md)
+  * [Selection](api/selection.md)
+  * [Size](api/size.md)
   * [Sprite](api/sprite.md)

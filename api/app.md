@@ -21,4 +21,18 @@ handle color at the lowest level.
 
 ## app.version
 
-Returns the Aseprite version number as a string (e.g. `"1.1.4"`).
+Returns the Aseprite version number as a string (e.g. `"1.2-beta12"`).
+
+## app.open()
+
+    app.open(filename)
+
+Opens a new sprite loading it from the given filename. Returns an
+instance of the [Sprite class](sprite.md) or `null` if something went
+wrong.
+
+## app.exit()
+
+    app.exit()
+
+Closes the application. It's like clicking *File > Exit* menu option.
