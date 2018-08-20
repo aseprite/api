@@ -2,12 +2,12 @@
 
 The `console` global object.
 
-## console.condition()
+## console.assert()
 
     console.assert(condition)
 
 Prints an error message when `condition` is `false` and stops the
-execution of the script.
+execution of the script. This method is used for unit-testing.
 
 ## console.log()
 
