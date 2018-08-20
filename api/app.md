@@ -36,3 +36,10 @@ wrong.
     app.exit()
 
 Closes the application. It's like clicking *File > Exit* menu option.
+
+## app.transaction()
+
+    app.transaction(function() { ... })
+
+Creates a new transaction so you can group several sprite
+modifications in just one undo/redo operation.
