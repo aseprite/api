@@ -1,18 +1,20 @@
-# console
+# Base library
 
-The `console` global object.
+## assert()
 
-## console.assert()
-
-    console.assert(condition)
+```lua
+assert(condition)
+```
 
 Prints an error message when `condition` is `false` and stops the
 execution of the script. This method is used for unit-testing.
 
-## console.log()
+## print()
 
-    console.log(object)
-    console.log(object1, object2, ...)
+```lua
+print(object)
+print(object1, object2, ...)
+```
 
 Prints the given objects (generally strings) into the console (the
 Terminal if we're executing the script in `--batch` or `--shell`

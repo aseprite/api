@@ -1,17 +1,20 @@
-# Aseprite JavaScript API
+# Aseprite API
 
-This is an experimental repository to create a scripting API for
-Aseprite. We'll use JavaScript as the scripting language and
-[mujs](http://mujs.com/) as the scripting engine.
+This is the scripting API for Aseprite. Since Aseprite v1.2.10 you
+will be able to create scripts with [Lua](https://www.lua.org/).
 
-* Globals objects
+You can find some tests/examples for this API
+[here](https://github.com/aseprite/tests/tree/master/scripts).
+
+* Globals namespaces
   * [app](api/app.md)
   * [app.pixelColor](api/pixelcolor.md)
-  * [console](api/console.md)
+  * [Base library](api/base.md)
 * Constants
   * [ColorMode](api/colormode.md)
-* Classes
+* Classes/objects
   * [Image](api/image.md)
+  * [Range](api/range.md)
   * [Rectangle](api/rectangle.md)
   * [Selection](api/selection.md)
   * [Size](api/size.md)

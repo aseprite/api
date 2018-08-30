@@ -2,8 +2,10 @@
 
 ## Sprite.width
 
-    var w = sprite.width
-    sprite.width = w
+```lua
+local w = sprite.width
+sprite.width = w
+```
 
 Returns or changes the sprite width. Use
 [Sprite.resize](#spriteresize) if you want to change the sprite size
@@ -11,8 +13,10 @@ resizing layers, images, etc.
 
 ## Sprite.height
 
-    var h = sprite.height
-    sprite.height = h
+```lua
+local h = sprite.height
+sprite.height = h
+```
 
 Returns or changes the sprite height. Use
 [Sprite.resize](#spriteresize) if you want to change the sprite size
@@ -33,34 +37,46 @@ string if this is a new sprite without an associated file.
 
 Returns the [color mode](colormode.md) of this sprite.
 
-## Sprite.resize()
+## Sprite:resize()
 
-    sprite.resize(width, height)
-    sprite.resize(size)
+```lua
+sprite:resize(width, height)
+sprite:resize(size)
+```
 
 Resize the sprite (and all frames/cels) to the given dimensions. See
 [Size class](size.md).
 
-## Sprite.crop()
+## Sprite:crop()
 
-    sprite.crop(x, y, width, height)
-    sprite.crop(rectangle)
+```lua
+sprite:crop(x, y, width, height)
+sprite:crop(rectangle)
+```
 
 Crops the sprite to the given dimensions. See the
 [Rectangle class](rectangle.md).
 
-## Sprite.save()
+## Sprite:save()
 
-    sprite.save()
+```lua
+sprite:save()
+```
 
-## Sprite.saveAs()
+## Sprite:saveAs()
 
-    sprite.saveAs(filename)
+```lua
+sprite:saveAs(filename)
+```
 
-## Sprite.saveCopyAs()
+## Sprite:saveCopyAs()
 
-    sprite.saveCopyAs(filename)
+```lua
+sprite:saveCopyAs(filename)
+```
 
-## Sprite.loadPalette()
+## Sprite:loadPalette()
 
-    sprite.loadPalette(filename)
+```lua
+sprite:loadPalette(filename)
+```
