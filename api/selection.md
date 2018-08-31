@@ -1,32 +1,42 @@
 # Selection
 
-## new Selection()
+## Selection()
 
-    new Selection()
-    new Selection(rectangle)
+```lua
+Selection()
+Selection(rectangle)
+```
 
-Creates a new empty selection, or with the given rectangle.
+Creates a new empty selection, or with the given [rectangle](rectangle.md).
 
 ## Selection.bounds
 
-    var rectangle = selection.bounds
+```lua
+local rectangle = selection.bounds
+```
 
 Returns a [rectangle](rectangle.md) with the bounds of the selection
 (if the rectangle is empty, is because there is no selection).
 
-## Selection.deselect()
+## Selection:deselect()
 
-    selection.deselect()
+```lua
+selection:deselect()
+```
 
-## Selection.select()
+## Selection:select()
 
-    selection.select(rectangle)
+```lua
+selection:select(rectangle)
+```
 
 Selects the given [rectangle](rectangle.md).
 
-## Selection.selectAll()
+## Selection:selectAll()
 
-    selection.selectAll()
+```lua
+selection:selectAll()
+```
 
 Selected the whole sprite canvas. Only valid for a
 [sprite.selection](sprite.md#spriteselection).
