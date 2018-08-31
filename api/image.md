@@ -42,6 +42,10 @@ image:putPixel(x, y, color)
 Sets the pixel in the *xy*-coordinate to the given
 [pixel color](pixelcolor.md).
 
+**Warning**: This method doesn't create undo information, you should
+[clone the image](#imageclone) and then [patch it](#imagepatch) to get
+a proper undo/redo information.
+
 ## Image:getPixel()
 
 ```lua
@@ -49,3 +53,16 @@ local color = image:getPixel(x, y)
 ```
 
 Returns the [pixel color](pixelcolor.md) for the given *xy*-coordinate.
+
+## Image:putImage()
+
+```lua
+destinationImage:putImage(sourceImage [, position ] )
+```
+
+Copies/draws the given *sourceImage* image over *destinationImage*.
+If *position* is a [point](point.md), it will put the given image in
+the given position.
+
+**Warning**: This method generates undo information, so you could use
+it as an individual operation or in a [transaction](app.md#apptransaction).
