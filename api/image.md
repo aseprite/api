@@ -19,7 +19,7 @@ local copy = image:clone()
 Creates a copy of the given image. The new image is unrelated to the
 sprite, but can be used to update the image in a transaction. E.g. You
 clone an image, modify the pixels from the copy, and then you
-[patch the image](#imagepatch).
+[patch the image](#imageputimage).
 
 ## Image.width
 
@@ -43,8 +43,8 @@ Sets the pixel in the *xy*-coordinate to the given
 [pixel color](pixelcolor.md).
 
 **Warning**: This method doesn't create undo information, you should
-[clone the image](#imageclone) and then [patch it](#imagepatch) to get
-a proper undo/redo information.
+[clone the image](#imageclone) and then [patch it](#imageputimage) to
+get proper undo/redo information.
 
 ## Image:getPixel()
 
