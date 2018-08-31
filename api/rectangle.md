@@ -1,12 +1,13 @@
 # Rectangle
 
-If a function receives a rectangle as an argument it could be several things:
+If a function receives a rectangle as an argument it could be several
+things:
 
-1. You can specify the parameter `x, y, width, height` directly as
+1. You can specify the parameters `x, y, width, height` directly as
    arguments of the function.
    E.g. `sprite:crop(0, 16, 64, 32)`
 1. You can specify an object with `x`, `y`, `width`, and `height` properties.
-   E.g. `sprite:crop{x=0, y=16, width=64, height=32}`
+   E.g. `sprite:crop{ x=0, y=16, width=64, height=32 }`
 1. You can specify a `Rectangle` instance:
    E.g. `sprite:crop(Rectangle(0, 16, 64, 32))`
 

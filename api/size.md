@@ -2,13 +2,13 @@
 
 If a function receives a size as an argument it could be several things:
 
-1. You can specify the parameter `width, height` directly as
+1. You can specify two parameters `width, height` directly as
    arguments of the function.
-   E.g. `sprite.resize(64, 32)`
+   E.g. `sprite:resize(64, 32)`
 1. You can specify an object with `width` and `height` properties.
-   E.g. `sprite.resize({ 'width': 64, 'height': 32 })`
+   E.g. `sprite:resize{ width=64, height=32 }`
 1. You can specify a `Size` instance:
-   E.g. `sprite.resize(new Size(64, 32))`
+   E.g. `sprite:resize(Size(64, 32))`
 
 ## Size()
 
