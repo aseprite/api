@@ -14,7 +14,6 @@ You can find some tests/examples for this API
   * [ColorMode](api/colormode.md)
 * Classes/objects
   * [Image](api/image.md)
-  * [Range](api/range.md)
   * [Rectangle](api/rectangle.md)
   * [Selection](api/selection.md)
   * [Size](api/size.md)
