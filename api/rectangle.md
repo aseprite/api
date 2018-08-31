@@ -59,3 +59,12 @@ rectangle.height = newHeight
 
 Gets or sets the *height* of the rectangle. If it's 0, the rectangle is
 empty (so the coordinate doesn't matter).
+
+## Rectangle.isEmpty
+
+```lua
+local status = rectangle.isEmpty
+```
+
+Returns true if the rectangle is empty i.e. [width](rectanglewidth)
+and/or [height](#rectangleheight) are 0.

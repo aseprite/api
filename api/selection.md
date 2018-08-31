@@ -18,6 +18,15 @@ local rectangle = selection.bounds
 Returns a [rectangle](rectangle.md) with the bounds of the selection
 (if the rectangle is empty, is because there is no selection).
 
+## Selection.isEmpty
+
+```lua
+local status = selection.isEmpty
+```
+
+Returns true if the selection is empty i.e. there are no pixels
+selected.
+
 ## Selection:deselect()
 
 ```lua
