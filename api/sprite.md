@@ -1,5 +1,11 @@
 # Sprite
 
+## Sprite()
+
+```lua
+local sprite = Sprite(width, height [, colorMode])
+```
+
 ## Sprite.width
 
 ```lua
