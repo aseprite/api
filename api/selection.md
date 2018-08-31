@@ -40,3 +40,13 @@ selection:selectAll()
 
 Selected the whole sprite canvas. Only valid for a
 [sprite.selection](sprite.md#spriteselection).
+
+## Selection:contains()
+
+```lua
+local status = selection:contains(point)
+local status = selection:contains(x, y)
+```
+
+Returns true or false if the given [point](point.md) is inside the
+selection.
