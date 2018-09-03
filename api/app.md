@@ -34,7 +34,7 @@ app.open(filename)
 ```
 
 Opens a new sprite loading it from the given filename. Returns an
-instance of the [Sprite class](sprite.md) or `null` if something went
+instance of the [Sprite class](sprite.md) or `nil` if something went
 wrong.
 
 ## app.exit()
