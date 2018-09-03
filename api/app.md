@@ -25,7 +25,7 @@ to handle color at the lowest level.
 
 ## app.version
 
-Returns the Aseprite version number as a string (e.g. `"1.2-beta12"`).
+Returns the Aseprite version number as a string (e.g. `"1.2.10-beta1"`).
 
 ## app.open()
 
