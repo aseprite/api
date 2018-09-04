@@ -66,3 +66,23 @@ the given position.
 
 **Warning**: This method generates undo information, so you could use
 it as an individual operation or in a [transaction](app.md#apptransaction).
+
+## Image:pixels()
+
+```lua
+iterator = image:pixels()
+```
+
+Returns a pixel iterator for the whole image.
+Then you can use the iterator in these ways:
+
+```lua
+for it in image:pixels() do
+  local pixelValue = it() -- get pixel
+  it(pixelValue)          -- set pixel
+  print(it.x, it.y)       -- get pixel x,y coordinates
+end
+```
+
+A `pixelValue` can be interpreted with the
+[app.pixelColor](pixelcolor.md) functions.
