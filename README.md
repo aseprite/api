@@ -23,9 +23,16 @@ You can find some tests/examples for this API
 * Constants
   * [ColorMode](api/colormode.md)
 * Classes/objects
+  * [Cel](api/cel.md)
+  * [Color](api/color.md)
+  * [Frame](api/frame.md)
   * [Image](api/image.md)
+  * [Layer](api/layer.md)
+  * [Palette](api/palette.md)
   * [Point](api/point.md)
   * [Rectangle](api/rectangle.md)
   * [Selection](api/selection.md)
   * [Size](api/size.md)
+  * [Slice](api/slice.md)
   * [Sprite](api/sprite.md)
+  * [Tag](api/tag.md)
