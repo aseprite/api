@@ -36,6 +36,24 @@ Gets or sets the current foreground [color](color.md).
 Gets or sets the current background [color](color.md). Remember that
 some commands use the background color to clear the active layer.
 
+## app.isUIAvailable
+
+Returns true if the UI is available. E.g. if this is true you can use
+[app.alert](#appalert) or [dialogs](dialog.md).
+
+## app.alert()
+
+```lua
+app.alert "Text"
+app.alert("Text")
+app.alert{title="Title", text="Text", buttons="OK"}
+app.alert{title="Title", text="Text", buttons={"OK", "Cancel"}}
+app.alert{title="Title", text={"Line 1", "Line 2", ...}, buttons={"Yes", "No", "Cancel", ...}}
+```
+
+Shows an alert message. If `buttons` are not specified, it will show a
+message box with the `OK` button only.
+
 ## app.open()
 
 ```lua
