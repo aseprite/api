@@ -27,6 +27,15 @@ to handle color at the lowest level.
 
 Returns the Aseprite version number as a string (e.g. `"1.2.10-beta1"`).
 
+## app.fgColor
+
+Gets or sets the current foreground [color](color.md).
+
+## app.bgColor
+
+Gets or sets the current background [color](color.md). Remember that
+some commands use the background color to clear the active layer.
+
 ## app.open()
 
 ```lua
