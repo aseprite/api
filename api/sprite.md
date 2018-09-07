@@ -6,6 +6,10 @@
 local sprite = Sprite(width, height [, colorMode])
 ```
 
+Creates a new sprite with the given `width` and `height`. The
+[color mode](colormode.md) is optional, [RGB](colormode.md#colormodergb)
+by default.
+
 ## Sprite.width
 
 ```lua
