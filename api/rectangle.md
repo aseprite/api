@@ -66,5 +66,5 @@ empty (so the coordinate doesn't matter).
 local status = rectangle.isEmpty
 ```
 
-Returns true if the rectangle is empty i.e. [width](rectanglewidth)
+Returns true if the rectangle is empty i.e. [width](#rectanglewidth)
 and/or [height](#rectangleheight) are 0.
