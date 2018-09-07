@@ -6,8 +6,6 @@
 
 ## Layer.opacity
 
-## Layer.userData
-
 ## Layer.isImage
 
 ## Layer.isGroup
