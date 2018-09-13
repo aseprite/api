@@ -2,13 +2,23 @@
 
 ## Layer.sprite
 
+Gets the sprite to which this layer belongs.
+
 ## Layer.name
+
+Gets/sets the layer name (a string).
 
 ## Layer.opacity
 
+Gets/sets the layer opacity value (an integer value from `0` to `255`).
+
 ## Layer.isImage
 
+Is true if this image has [cels](cel.md) with [images](image.md).
+
 ## Layer.isGroup
+
+Is true if this image has sublayers inside.
 
 ## Layer.color
 
