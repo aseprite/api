@@ -41,6 +41,15 @@ local bounds = cel.bounds
 Returns the [rectangle](rectangle.md) with the cel bounds (position
 and size).
 
+## Cel.position
+
+```lua
+local position = cel.position
+cel.position = position
+```
+
+Gets or sets the cel position.
+
 ## Cel.opacity
 
 ```lua
