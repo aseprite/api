@@ -67,12 +67,6 @@ sprite:crop(rectangle)
 Crops the sprite to the given dimensions. See the
 [Rectangle class](rectangle.md).
 
-## Sprite:save()
-
-```lua
-sprite:save()
-```
-
 ## Sprite:saveAs()
 
 ```lua
