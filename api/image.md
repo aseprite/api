@@ -71,10 +71,12 @@ it as an individual operation or in a [transaction](app.md#apptransaction).
 
 ```lua
 iterator = image:pixels()
+iterator = image:pixels(rectangle)
 ```
 
-Returns a pixel iterator for the whole image.
-Then you can use the iterator in these ways:
+Returns a pixel iterator for the whole image or the given
+[rectangle](rectangle.md). Then you can use the iterator in these
+ways:
 
 ```lua
 for it in image:pixels() do
