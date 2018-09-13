@@ -2,10 +2,6 @@
 
 ## Slice.sprite
 
-## Slice.fromFrame
-
-## Slice.toFrame
-
 ## Slice.name
 
 ## Slice.bounds
