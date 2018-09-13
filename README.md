@@ -21,6 +21,8 @@ You can find some tests/examples for this API
   * [app](api/app.md)
   * [app.pixelColor](api/pixelcolor.md)
 * Constants
+  * [AniDir](api/anidir.md)
+  * [BlendMode](api/blendmode.md)
   * [ColorMode](api/colormode.md)
 * Classes/objects
   * [Cel](api/cel.md)
