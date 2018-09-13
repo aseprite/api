@@ -8,10 +8,10 @@ local sprite = frame.sprite
 
 Returns the [sprite](sprite.md) of this frame.
 
-## Frame.frame
+## Frame.frameNumber
 
 ```lua
-local frameNumber = frame.frame
+local frameNumber = frame.frameNumber
 ```
 
 Returns the frame number. `1` is the first frame in the animation and
