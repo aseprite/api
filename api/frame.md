@@ -1,5 +1,10 @@
 # Frame
 
+This is an auxiliary object that points to a given frame in the sprite
+and can be used to adjust information about that frame. If you modify
+the number of frames in the sprite, or the structure of the frames, a
+`Frame` object will still pointing to the same frame number.
+
 ## Frame.sprite
 
 ```lua
