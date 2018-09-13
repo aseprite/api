@@ -1,5 +1,7 @@
 # Tag
 
+## Tag.sprite
+
 ## Tag.fromFrame
 
 ## Tag.toFrame
