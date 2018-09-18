@@ -20,6 +20,25 @@ Is true if this image has [cels](cel.md) with [images](image.md).
 
 Is true if this image has sublayers inside.
 
+## Layer.isTransparent
+
+## Layer.isBackground
+
+## Layer.isEditable
+
+## Layer.isVisible
+
+## Layer.isContinuous
+
+## Layer.isCollapsed
+
+## Layer.isExpanded
+
+## Layer.cels
+
+Returns the collection of [cels](cel.md) of this layer. Empty if the
+layer is a group.
+
 ## Layer.color
 
 ```lua
