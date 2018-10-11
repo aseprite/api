@@ -18,7 +18,7 @@ sprite.width = w
 ```
 
 Returns or changes the sprite width. Use
-[Sprite.resize](#spriteresize) if you want to change the sprite size
+[Sprite:resize](#spriteresize) if you want to change the sprite size
 resizing layers, images, etc.
 
 ## Sprite.height
@@ -29,7 +29,7 @@ sprite.height = h
 ```
 
 Returns or changes the sprite height. Use
-[Sprite.resize](#spriteresize) if you want to change the sprite size
+[Sprite:resize](#spriteresize) if you want to change the sprite size
 resizing layers, images, etc.
 
 ## Sprite.selection
