@@ -27,6 +27,7 @@ You can find some tests/examples for this API
 * Classes/objects
   * [Cel](api/cel.md)
   * [Color](api/color.md)
+  * [Dialog](api/dialog.md)
   * [Frame](api/frame.md)
   * [Image](api/image.md)
   * [Layer](api/layer.md)
