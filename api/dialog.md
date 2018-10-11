@@ -87,7 +87,10 @@ dlg:button{ text="Close",
 dlg:show{ wait=false }
 ```
 
-Closes the dialog when a dialog is opened in background.
+Closes the dialog from a `onclick` [button](#dialogbutton) event. By
+default buttons without an `onclick` event handler will close the
+dialog, but if you specify a `onclick` function, you have to call this
+function to close the dialog.
 
 ## Dialog:color()
 
