@@ -1,32 +1,76 @@
 # Color
 
-## Color.red
+Represents a color that can be choose by the user in different kinds
+(RGB, HSV, HSL, grayscale, indexed).
 
-## Color.green
+Don't confuse this color with the [app.pixelColor](pixelcolor.md)
+which is used to put/get pixels to/from an [image](image.md).
 
-## Color.blue
+## Color()
+
+```lua
+local c
+c = Color{ r=255, g=255, b=255, a=255 }
+c = Color{ h=360.0, s=1.0, v=1.0, a=255 }
+c = Color{ h=360.0, s=1.0, l=1.0, a=255 }
+c = Color{ red=255, green=255, blue=255, alpha=255 }
+c = Color{ hue=360.0, saturation=1.0, value=1.0, alpha=255 }
+c = Color{ hue=360.0, saturation=1.0, lightness=1.0, alpha=255 }
+c = Color{ gray=255, alpha=255 }
+c = Color(integer)
+```
+
+* If `alpha` argument is not specified, it's 255 by default (opacity = 100%).
+* The `Color(integer)` constructor receives a [pixel color](pixelcolor.md)
+  and the integer is interpreted depending on the [active sprite](app.md#appactivesprite).
 
 ## Color.alpha
 
-## Color.hsvHue
+```lua
+local c = Color{ r=0, g=0, b=0, a=128 }
+assert(c.alpha == 128)
+```
 
-## Color.hsvSaturation
+## Color.red/green/blue
 
-## Color.hsvValue
+```lua
+local c = Color{ r=255, g=128, b=32 }
+assert(c.red   == 255)
+assert(c.green == 128)
+assert(c.blue  == 32)
+c.red   = 20
+c.green = 40
+c.blue  = 255
+```
 
-## Color.hslHue
+Get/sets red/green/blue components of the color.
 
-## Color.hslSaturation
+## Color.hsvHue/Saturation/Value
 
-## Color.hslLightness
+```lua
+local c = Color{ h=45, s=0.5, v=0.2 }
+assert(c.hsvHue        == 45)
+assert(c.hsvSaturation == 0.5)
+assert(c.hsvValue      == 0.2)
+```
+
+## Color.hslHue/Saturation/Lightness
 
 ## Color.hue
 
+Gets/sets the [HSV hue](#colorhsvhuesaturationvalue) or [HSL hue](colorhslhuesaturationligthness) depending on the kind of color.
+
 ## Color.saturation
+
+Gets/sets the [HSV saturation](#colorhsvhuesaturationvalue) or [HSL saturation](colorhslhuesaturationligthness) depending on the kind of color.
 
 ## Color.value
 
+Gets/sets the [HSV value](#colorhsvhuesaturationvalue).
+
 ## Color.lightness
+
+Gets/sets the [HSL lightness](colorhslhuesaturationligthness).
 
 ## Color.index
 
