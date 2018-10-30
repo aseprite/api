@@ -2,6 +2,14 @@
 
 The `app` global namespace.
 
+## app.activeCel
+
+Returns the active [Cel](cel.md) object.
+
+## app.activeFrame
+
+Returns the active frame number (1 is the first frame in the sprite).
+
 ## app.activeImage
 
 ```lua
@@ -10,6 +18,10 @@ local image = app.activeImage
 
 Returns the active image, an [Image](image.md) object.
 
+## app.activeLayer
+
+Returns the active layer, a [Layer](layer.md) object.
+
 ## app.activeSprite
 
 ```lua
@@ -17,6 +29,11 @@ local sprite = app.activeSprite
 ```
 
 Returns the active sprite, a [Sprite](sprite.md) object.
+
+## app.activeTag
+
+Returns the active [tag](tag.md), which is the tag located at the
+[active frame](#appactiveframe).
 
 ## app.pixelColor
 
