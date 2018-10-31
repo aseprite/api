@@ -10,6 +10,23 @@ Returns the active [Cel](cel.md) object.
 
 Returns the active frame number (1 is the first frame in the sprite).
 
+**WARNING**: This function has a bug in Aseprite v1.2.10-beta2,
+returns `nil` if we are in the first frame of the sprite. Also it
+returns a number, but in the future it will returns a
+[frame](frame.md) object, you can use an auxiliary function at the
+moment:
+
+```lua
+local function activeFrameNumber()
+  local f = app.activeFrame
+  if f == nil then
+    return 1
+  else
+    return f
+  end
+end
+```
+
 ## app.activeImage
 
 ```lua
