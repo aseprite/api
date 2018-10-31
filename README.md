@@ -30,6 +30,7 @@ You can find some tests/examples for this API
   * [Dialog](api/dialog.md)
   * [Frame](api/frame.md)
   * [Image](api/image.md)
+  * [ImageSpec](api/imagespec.md)
   * [Layer](api/layer.md)
   * [Palette](api/palette.md)
   * [Point](api/point.md)

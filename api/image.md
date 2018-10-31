@@ -8,7 +8,14 @@ share the same image).
 
 ```lua
 local image = Image(width, height [, colorMode])
+local image = Image(spec)
 ```
+
+Creates a new image with the given `width` and `height`. The
+[color mode](colormode.md) is optional, [RGB](colormode.md#colormodergb)
+by default.
+
+The `spec` parameter is an [image specification](imagespec.md) object.
 
 ## Image:clone()
 
@@ -32,6 +39,22 @@ local w = image.width
 ```lua
 local h = image.height
 ```
+
+## Image.colorMode
+
+```lua
+local colorMode = image.colorMode
+```
+
+Image [color mode](colormode.md).
+
+## Image.spec
+
+```lua
+local spec = image.spec
+```
+
+The [specification](imagespec.md) for this image.
 
 ## Image:putPixel()
 

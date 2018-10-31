@@ -4,11 +4,14 @@
 
 ```lua
 local sprite = Sprite(width, height [, colorMode])
+local sprite = Sprite(spec)
 ```
 
 Creates a new sprite with the given `width` and `height`. The
 [color mode](colormode.md) is optional, [RGB](colormode.md#colormodergb)
 by default.
+
+The `spec` parameter is an [image specification](imagespec.md) object.
 
 ## Sprite.width
 
@@ -46,6 +49,14 @@ string if this is a new sprite without an associated file.
 ## Sprite.colorMode
 
 Returns the [color mode](colormode.md) of this sprite.
+
+## Sprite.spec
+
+```lua
+local spec = sprite.spec
+```
+
+The [specification](imagespec.md) for image in this sprite.
 
 ## Sprite.frames
 
