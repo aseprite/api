@@ -69,22 +69,22 @@ local white = pc.graya(255)
 local semiTransparentWhite = pc.graya(255, 128)
 ```
 
-## PixelColor.grayaG()
+## PixelColor.grayaV()
 
 ```lua
-local gray = app.pixelColor.grayaG(color)
+local gray = app.pixelColor.grayaV(color)
 ```
 
-Returns the gray component of the given pixel color.
+Returns the value component of the given gray pixel.
 
 Example:
 
 ```lua
 local pc = app.pixelColor
-local gray = pc.grayaG(pc.graya(128, 0))
+local gray = pc.grayaV(pc.graya(128, 0))
 -- gray is 128
 ```
 
 ## PixelColor.grayaA()
 
-Same as [grayaG()](#pixelcolorgrayag) but with the Alpha component.
+Same as [grayaV()](#pixelcolorgrayav) but with the Alpha component.
