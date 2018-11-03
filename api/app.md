@@ -123,7 +123,7 @@ function fails, the whole transaction is undone. If the function
 successes, the transaction is committed and then all actions will be
 grouped in just one undo/redo operation.
 
-## app.command()
+## app.command
 
 ```lua
 app.command.CommandName()
