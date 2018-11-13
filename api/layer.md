@@ -10,7 +10,13 @@ Gets/sets the layer name (a string).
 
 ## Layer.opacity
 
-Gets/sets the layer opacity value (an integer value from `0` to `255`).
+```lua
+local opacity = layer.opacity
+layer.opacity = newOpacity
+```
+
+Gets or sets the cel opacity. A value from `0` to `255` (which means
+`0=0%` completely transparent, or `255=100%` completely opaque).
 
 ## Layer.isImage
 

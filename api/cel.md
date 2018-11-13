@@ -58,10 +58,11 @@ Gets or sets the cel position.
 
 ```lua
 local opacity = cel.opacity
-cel.opacity = opacity
+cel.opacity = newOpacity
 ```
 
-Gets or sets the cel opacity. A value from `0` to `255`.
+Gets or sets the cel opacity. A value from `0` to `255` (which means
+`0=0%` completely transparent, or `255=100%` completely opaque).
 
 ## Cel.color
 
