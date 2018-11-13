@@ -1,5 +1,9 @@
 # Cel
 
+A [cel](https://www.aseprite.org/docs/cel/) is an [image](#celimage) in a specific
+[*xy*-coordinate](#celposition), and a specific
+[layer](#cellayer)/[frame](#celframe) combination.
+
 ## Cel.sprite
 
 ```lua
