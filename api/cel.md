@@ -32,9 +32,12 @@ Returns the frame number, `1` is the first frame (not `0`).
 
 ```lua
 local image = cel.image
+cel.image = newImage
 ```
 
-Returns the [image](image.md) with the pixels of this cel.
+Gets or sets the [image](image.md) with the pixels of this cel. This
+is the preferred way to replace the cel image, because it generates
+only one undoable action.
 
 ## Cel.bounds
 
@@ -49,7 +52,7 @@ and size).
 
 ```lua
 local position = cel.position
-cel.position = position
+cel.position = newPosition
 ```
 
 Gets or sets the cel position.
@@ -68,7 +71,7 @@ Gets or sets the cel opacity. A value from `0` to `255` (which means
 
 ```lua
 local color = cel.color
-cel.color = color
+cel.color = newColor
 ```
 
 Gets or sets the user-defined [color](color.md) of this cel in the timeline.
@@ -77,7 +80,7 @@ Gets or sets the user-defined [color](color.md) of this cel in the timeline.
 
 ```lua
 local data = cel.data
-cel.data = data
+cel.data = newData
 ```
 
 Gets or sets the user-defined data related to this cel (a text string).
