@@ -4,6 +4,13 @@ An image object. Each [cel](https://www.aseprite.org/docs/cel/) has
 one image (all [linked cels](https://www.aseprite.org/docs/linked-cels/)
 share the same image).
 
+An image can be associated to a specific cel or can be alone:
+
+* When you create an image with `Image()`, the image will be alone so
+  they don't generate undo information.
+* A [Cel.image](cel.md#celimage) is an image associated to a cel, some
+  functions will generate undoable actions.
+
 ## Image()
 
 ```lua
@@ -56,14 +63,16 @@ local spec = image.spec
 
 The [specification](imagespec.md) for this image.
 
-## Image:putPixel()
+## Image:drawPixel()
 
 ```lua
-image:putPixel(x, y, color)
+image:drawPixel(x, y, color)
 ```
 
-Sets the pixel in the *xy*-coordinate to the given
-[pixel color](pixelcolor.md).
+Sets the pixel in the *xy*-coordinate to the given [pixel
+color](pixelcolor.md). The *xy*-coordinate is relative to the image,
+so pixel (0, 0) is the first pixel at the top-left coorner in the
+image, not in the sprite canvas.
 
 **Warning**: This method doesn't create undo information, you should
 [clone the image](#imageclone) and then [patch it](#imageputimage) to
@@ -77,18 +86,44 @@ local color = image:getPixel(x, y)
 
 Returns the [pixel color](pixelcolor.md) for the given *xy*-coordinate.
 
-## Image:putImage()
+## Image:drawImage()
 
 ```lua
-destinationImage:putImage(sourceImage [, position ] )
+destinationImage:drawImage(sourceImage [, position ] )
 ```
 
 Copies/draws the given *sourceImage* image over *destinationImage*.
-If *position* is a [point](point.md), it will put the given image in
-the given position.
+If *position* is a [point](point.md), it will draw the *sourceImage*
+in the given position.
 
-**Warning**: This method generates undo information, so you could use
-it as an individual operation or in a [transaction](app.md#apptransaction).
+**Warning**: If the image is associated with a [Cel](cel.md), this
+method generates undo information, so you could use it as an
+individual operation or in a [transaction](app.md#apptransaction).
+
+## Image:drawSprite()
+
+```lua
+destinationImage:drawSprite(sourceSprite, frameNumber, [, position ] )
+```
+
+Draws the given [sourceSprite](sprite.md) frame number into the
+*destinationImage*. If *position* is a [point](point.md), it will draw
+the *sourceSprite* in the given position.
+
+**Warning**: If the image is associated with a [Cel](cel.md), this
+method generates undo information, so you could use it as an
+individual operation or in a [transaction](app.md#apptransaction).
+
+## Image:isEqual()
+
+```lua
+if imageA:isEqual(imageB) then
+  print("Both images are equal")
+end
+```
+
+Returns true if both images looks the same ([spec](#imagespec) is
+equal and all [pixels](#imagepixels) are the same).
 
 ## Image:pixels()
 
@@ -111,3 +146,18 @@ end
 
 A `pixelValue` can be interpreted with the
 [app.pixelColor](pixelcolor.md) functions.
+
+## Image:putPixel()
+
+Same as [Image:drawPixel()](#imagedrawpixel).
+
+## Image:putImage()
+
+Now it's [Image:drawImage()](#imagedrawimage).
+This function is deprecated and was renamed to avoid confusion with
+the behavior [cel.image](cel.md#celimage).
+
+## Image:putSprite()
+
+Now it's [Image:drawSprite()](#imagedrawsprite)
+to match [Image:drawImage()](#imagedrawimage) name.
