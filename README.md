@@ -29,6 +29,10 @@ a little experiment, so you have five main options to approach your idea:
 5. **Show a dialog to the user**: The [Dialog](api/dialog.md#dialog) object
    gives you the possibility to show controls to the user to enter values.
 
+## API Changes
+
+[API changes between versions](Changes.md).
+
 ## Reference
 
 * Globals namespaces
