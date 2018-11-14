@@ -35,6 +35,16 @@ Returns or changes the sprite height. Use
 [Sprite:resize](#spriteresize) if you want to change the sprite size
 resizing layers, images, etc.
 
+## Sprite.bounds
+
+```lua
+local rectangle = sprite.bounds
+```
+
+Returns the bounds of the sprite as a
+[rectangle](rectangle.md#rectangle) in the position `0,0`.
+This is like calling `Rectangle{ x=0, y=0, width=sprite.width, height=sprite.height }`.
+
 ## Sprite.selection
 
 The `sprite.selection` property is an instance of the
