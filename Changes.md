@@ -43,7 +43,7 @@ end
   * Added [`Rectangle.union`](api/rectangle.md#rectangleunion) function.
 * [`Sprite`](api/sprite.md#sprite)
   * Added [`Sprite.bounds`](api/sprite.md#spritebounds) property.
-* [Image](api/image.md#image)
+* [`Image`](api/image.md#image)
   * Added [`Image:clear()`](api/image.md#imageclear) function.
   * Added [`Image:isEqual`](api/image.md#imageisequal),
     [`Image:clear`](api/image.md#clear).
