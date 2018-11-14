@@ -63,6 +63,15 @@ local spec = image.spec
 
 The [specification](imagespec.md) for this image.
 
+## Image:clear()
+
+```lua
+image:clear([ color ])
+```
+
+Clear all pixels in the image with the given [color](color.md) (or
+`image.spec.transparentColor` if no color is specified).
+
 ## Image:drawPixel()
 
 ```lua
