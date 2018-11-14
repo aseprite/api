@@ -8,28 +8,59 @@ release.
 Deprecated should be avoided because might be removed in future
 versions of Aseprite.
 
+## Detect available API
+
+You can use [`app.apiVersion`](api/app.md#appapiversion):
+
+```lua
+if app.apiVersion == nil then
+  -- First scripting API available
+  app.alert("This is Aseprite v1.2.10-beta1 or v1.2.10-beta2")
+elseif app.apiVersion == 1 then
+  -- Second revision of the scripting API
+  app.alert("This is Aseprite v1.2.10-beta3")
+else
+  -- Future versions will be 2, 3, etc.
+end
+```
+
 ## From v1.2.10-beta2 to v1.2.10-beta3
 
-* Added [`Image:clear()`](api/image.md#imageclear) function.
+* [`app`](api/app.md#app)
+  * New [`app.apiVersion`](api/app.md#appapiversion) with value `1`.
+  * Different return value for `app.activeFrame`: Now it returns a
+    [`Frame`](api/frame.md) instead of a frame number (an integer
+    value). In v1.2.10-beta2 this function returned `nil` when we were
+    in the first frame, now it returns the valid `Frame` object with
+    `frame.frameNumber = 1`. You can access the old frame number value doing:
+    ```lua
+    local activeFrameNumber = app.activeFrame.frameNumber
+    ```
+* [`Rectangle`](api/rectangle.md#rectangle)
+  * Added [`Rectangle.contains`](api/rectangle.md#rectanglecontains) function.
+  * Added [`Rectangle.intersect`](api/rectangle.md#rectangleintersect) function.
+  * Added [`Rectangle.intersects`](api/rectangle.md#rectangleintersects) function.
+  * Added [`Rectangle.union`](api/rectangle.md#rectangleunion) function.
+* [`Sprite`](api/sprite.md#sprite)
+  * Added [`Sprite.bounds`](api/sprite.md#spritebounds) property.
+* [Image](api/image.md#image)
+  * Added [`Image:clear()`](api/image.md#imageclear) function.
+  * Added [`Image:isEqual`](api/image.md#imageisequal),
+    [`Image:clear`](api/image.md#clear).
+  * Added [`Image:drawPixel`](api/image.md#imagedrawpixel) as an alias for
+    `Image:putPixel` (both functions will be available).
+  * Deprecated ~~`Image:putImage`~~, replaced with
+    [`Image:drawImage`](api/image.md#imagedrawimage).
+  * Deprecated ~~`Image:putSprite`~~, replaced with
+    [`Image:drawSprite`](api/image.md#imagedrawsprite). Also
+    `Image:putSprite` wasn't working correctly for positions != `0,0`.
+* [`ColorMode`](api/colormode.md#colormode):
+  * Deprecated ~~`ColorMode.GRAYSCALE`~~, replaced with
+    [`ColorMode.GRAY`](api/colormode.md#colormodegray).
+* All functions that receive an integer can automatically accept
+  floating numbers doing an implicit `math.floor(number)` conversion.
 
-* Different return value for `app.activeFrame`: Now it returns a
-  [`Frame`](api/frame.md) instead of a frame number (an integer
-  value). In v1.2.10-beta2 this function returned `nil` when we were
-  in the first frame, now it returns the valid `Frame` object with
-  `frame.frameNumber = 1`. You can access the old frame number value doing:
-  ```lua
-  local activeFrameNumber = app.activeFrame.frameNumber
-  ```
+## v1.2.10-beta1 and v1.2.10-beta2
 
-* Added [`Image:drawPixel`](api/image.md#imagedrawpixel) as an alias for
-  `Image:putPixel` (both functions will be available).
-
-* Deprecated ~~`Image:putImage`~~, replaced with
-  [`Image:drawImage`](api/image.md#imagedrawimage).
-
-* Deprecated ~~`Image:putSprite`~~, replaced with
-  [`Image:drawSprite`](api/image.md#imagedrawsprite). Also
-  `Image:putSprite` wasn't working correctly for positions != `0,0`.
-
-* Deprecated ~~`ColorMode.GRAYSCALE`~~, replaced with
-  [`ColorMode.GRAY`](api/colormode.md#colormodegray).
+* [`app`](api/app.md#app)
+  * `app.apiVersion` didn't exist (is `nil`)
