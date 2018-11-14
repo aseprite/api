@@ -61,6 +61,11 @@ to handle color at the lowest level.
 
 Returns the Aseprite version number as a string (e.g. `"1.2.10-beta1"`).
 
+## app.apiVersion
+
+Returns the API version. See the [changes file](../Changes.md) between
+version to know what offer each API version.
+
 ## app.fgColor
 
 Gets or sets the current foreground [color](color.md).
