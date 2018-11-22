@@ -4,11 +4,11 @@ The `app` global namespace.
 
 ## app.activeCel
 
-Returns the active [Cel](cel.md) object.
+Gets or sets the active [Cel](cel.md) object.
 
 ## app.activeFrame
 
-Returns the active frame number (1 is the first frame in the sprite).
+Gets or sets the active frame number (1 is the first frame in the sprite).
 
 **WARNING**: This function has a bug in Aseprite v1.2.10-beta2,
 returns `nil` if we are in the first frame of the sprite. Also it
