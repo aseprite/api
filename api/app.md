@@ -2,6 +2,10 @@
 
 The `app` global namespace.
 
+## app.site
+
+Active [site](site.md) (active image, layer, frame, sprite, etc.).
+
 ## app.activeCel
 
 Gets or sets the active [Cel](cel.md) object.

@@ -36,6 +36,9 @@ end
     ```lua
     local activeFrameNumber = app.activeFrame.frameNumber
     ```
+* [`Site`](api/site.md#frame)
+  * Different return value for `app.site.frame`: Now it returns a
+    [`Frame`](api/frame.md) instead of a frame number.
 * [`Rectangle`](api/rectangle.md#rectangle)
   * Added [`Rectangle.contains`](api/rectangle.md#rectanglecontains) function.
   * Added [`Rectangle.intersect`](api/rectangle.md#rectangleintersect) function.
