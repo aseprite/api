@@ -41,7 +41,8 @@ a little experiment, so you have five main options to approach your idea:
 * Constants
   * [AniDir](api/anidir.md#anidir)
   * [BlendMode](api/blendmode.md#blendmode)
-  * [ColorMode](api/colormode.md)
+  * [ColorMode](api/colormode.md#colormode)
+  * [RangeType](api/rangetype.md#rangetype)
 * Classes/objects
   * [Cel](api/cel.md#cel)
   * [Color](api/color.md#color)
@@ -52,6 +53,7 @@ a little experiment, so you have five main options to approach your idea:
   * [Layer](api/layer.md#layer)
   * [Palette](api/palette.md#palette)
   * [Point](api/point.md#point)
+  * [Range](api/range.md#range)
   * [Rectangle](api/rectangle.md#rectangle)
   * [Selection](api/selection.md#selectin)
   * [Size](api/size.md#size)
