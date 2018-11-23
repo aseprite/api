@@ -1,7 +1,11 @@
 # Range
 
 This class is used to represent the range of selected objects in the
-timeline. It can be:
+timeline.
+
+![Timeline Example](rangetype/cels.png)
+
+It can be:
 
 * A list of layers
 * A list of frames
