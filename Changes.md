@@ -36,6 +36,7 @@ end
     ```lua
     local activeFrameNumber = app.activeFrame.frameNumber
     ```
+  * New [`app.range`](api/app.md#apprange)
 * [`Site`](api/site.md#frame)
   * Different return value for `app.site.frame`: Now it returns a
     [`Frame`](api/frame.md) instead of a frame number.

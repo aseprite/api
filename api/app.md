@@ -4,7 +4,11 @@ The `app` global namespace.
 
 ## app.site
 
-Active [site](site.md) (active image, layer, frame, sprite, etc.).
+Active [site](site.md#site) (active image, layer, frame, sprite, etc.).
+
+## app.range
+
+Active [range](range.md#range) in the timeline.
 
 ## app.activeCel
 
