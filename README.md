@@ -56,6 +56,7 @@ a little experiment, so you have five main options to approach your idea:
   * [Range](api/range.md#range)
   * [Rectangle](api/rectangle.md#rectangle)
   * [Selection](api/selection.md#selectin)
+  * [Site](api/site.md#site)
   * [Size](api/size.md#size)
   * [Slice](api/slice.md#slice)
   * [Sprite](api/sprite.md#sprite)
