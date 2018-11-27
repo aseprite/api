@@ -63,6 +63,15 @@ local spec = image.spec
 
 The [specification](imagespec.md) for this image.
 
+## Image.cel
+
+```lua
+local cel = image.cel
+```
+
+Returns the [cel](cel.md) to which this image belongs or `nil` if this
+image is not associated to a cel.
+
 ## Image:clear()
 
 ```lua
