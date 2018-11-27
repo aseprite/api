@@ -147,3 +147,14 @@ Executes the give command named `CommandName` with the given
 parameters.  You can look at the
 [gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
 file to check a list of available commands.
+
+## app.refresh()
+
+```lua
+app.refresh()
+```
+
+This function is available just in case you see that your script
+updates the sprite but the screen is not showing the updated state of
+the sprite. It should not be needed, but it's here just in case that
+something is not working right on the Aseprite side.
