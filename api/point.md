@@ -28,7 +28,7 @@ local x = point.x
 point.x = newX
 ```
 
-## Point.height
+## Point.y
 
 ```lua
 local y = point.y
