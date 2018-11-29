@@ -85,7 +85,7 @@ local rectInside = Rectangle{ x=4, y=4, width=8, height=8 }
 if bounds:contains(rectInside) then ... end
 ```
 
-## Rectangle:intersects
+## Rectangle:intersects()
 
 ```lua
 local booleanResult = rectangle:intersects(otherRectangle)
