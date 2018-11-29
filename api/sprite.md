@@ -224,8 +224,8 @@ Creates a new empty [layer group](layer.md) at the top of the layers stack.
 ## Sprite:deleteLayer()
 
 ```lua
-sprite:newLayer(layer)
-sprite:newLayer(layerName)
+sprite:deleteLayer(layer)
+sprite:deleteLayer(layerName)
 ```
 
 Deletes the given [layer](layer.md) or the layer with the given `layerName` (a string).
