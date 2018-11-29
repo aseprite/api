@@ -137,6 +137,18 @@ For each different kind of widget the field is of a different type:
   selected item.
 * [color](#dialogcolor): A [Color](color.md).
 
+## Dialog.bounds
+
+```lua
+local dlg = Dialog()
+local bounds = dlg.bounds
+dlg.bounds = Rectangle(x, y, bounds.width, bounds.height)
+```
+
+Gets or sets the position and size (a [rectangle](rectangle.md)) of
+the dialog. This might be useful to align several dialog that must be
+shown in the same *xy*-position.
+
 ## Dialog:entry()
 
 ```lua
