@@ -69,7 +69,7 @@ local booleanResult = rectangle.isEmpty
 Returns true if the rectangle is empty i.e. [width](#rectanglewidth)
 and/or [height](#rectangleheight) are 0.
 
-## Rectangle:contains
+## Rectangle:contains()
 
 ```lua
 local booleanResult = rectangle:contains(otherRectangle)
@@ -93,7 +93,7 @@ local booleanResult = rectangle:intersects(otherRectangle)
 
 Returns true if `rectangle` intersects in some way `otherRectangle`.
 
-## Rectangle:intersect
+## Rectangle:intersect()
 
 ```lua
 local newRectangle = rectangle:intersect(otherRectangle)
@@ -102,7 +102,7 @@ local newRectangle = rectangle:intersect(otherRectangle)
 Returns the new rectangle `newRectangle` which is the intersection of
 `rectangle` and `otherRectangle`. If both rectangles don't intersect each other, the result will be an [empty rectangle](#rectangleisempty)
 
-## Rectangle:union
+## Rectangle:union()
 
 ```lua
 local newRectangle = rectangle:union(otherRectangle)
