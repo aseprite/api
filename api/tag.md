@@ -3,8 +3,10 @@
 ## Tag.sprite
 
 ## Tag.fromFrame
+Returns the starting frame number for the tag (not a Frame object).
 
 ## Tag.toFrame
+Returns the ending frame number for the tag (not a Frame object).
 
 ## Tag.frames
 
