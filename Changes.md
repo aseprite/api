@@ -64,6 +64,11 @@ end
 * [`ColorMode`](api/colormode.md#colormode):
   * Deprecated ~~`ColorMode.GRAYSCALE`~~, replaced with
     [`ColorMode.GRAY`](api/colormode.md#colormodegray).
+* [`Tag`](api/tag.md#tag):
+  * Different return value for
+    [`Tag.fromFrame`](api/tag.md#tagfromframe) and
+    [`Tag.toFrame`](api/tag.md#tagtoframe): now they return a [`Frame`](api/frame.md#frame)
+    object instead of an integer value.
 * All functions that receive an integer can automatically accept
   floating numbers doing an implicit `math.floor(number)` conversion.
 
