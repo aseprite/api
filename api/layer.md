@@ -45,6 +45,8 @@ Is true if this image has sublayers inside.
 Returns the collection of [cels](cel.md) of this layer. Empty if the
 layer is a group.
 
+See also the [Layer:cel()](#layercel) function.
+
 ## Layer.color
 
 ```lua
@@ -62,3 +64,13 @@ layer.data = data
 ```
 
 Gets or sets the user-defined data related to this layer (a text string).
+
+## Layer:cel()
+
+```lua
+local cel = layer:cel(frameNumber)
+assert(cel == layer:cel(sprite.frames[frameNumber]))
+```
+
+Returns the [Cel](cel.md#cel) in the given [frame](frame.md#frame) or
+`frameNumber` (an integer). Returns `nil` if there is no cel in the layer/frame.
