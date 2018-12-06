@@ -32,3 +32,13 @@ frame.duration = duration
 Gets or sets the duration of this frame in the animation in
 seconds. E.g. `0.3333` means that this frame will be `1/3` of a second
 in the screen when the animation is being played.
+
+## Frame.previous
+
+Returns `Frame` object in the previous frame number or `nil` if this
+is the first frame.
+
+## Frame.next
+
+Returns `Frame` object in the next frame number or `nil` if this is
+the last frame.
