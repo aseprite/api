@@ -233,11 +233,13 @@ Deletes the given [layer](layer.md) or the layer with the given `layerName` (a s
 ## Sprite:newFrame()
 
 ```lua
+local frame = sprite:newFrame(frame)
 local frame = sprite:newFrame(frameNumber)
 ```
 
-Creates a copy of the given `frameNumber` (an integer) and returns the
-new [frame](frame.md).
+Creates a copy of the given [frame](frame.md) object or frame number
+and returns a [`Frame`](frame.md) that points to the newly created
+frame in `frameNumber` position.
 
 ## Sprite:newEmptyFrame()
 

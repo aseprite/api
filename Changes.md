@@ -47,6 +47,9 @@ end
   * Added [`Rectangle.union`](api/rectangle.md#rectangleunion) function.
 * [`Sprite`](api/sprite.md#sprite)
   * Added [`Sprite.bounds`](api/sprite.md#spritebounds) property.
+  * Different [`Sprite:newFrame`](api/sprite.md#spritenewframe) and
+  [`Sprite:newEmptyFrame`](api/sprite.md#spritenewemptyframe) behavior
+  (check documentation and [issue #4](https://github.com/aseprite/api/issues/4#issuecomment-444874154)).
 * [`Image`](api/image.md#image)
   * Added [`Image:clear()`](api/image.md#imageclear) function.
   * Added [`Image:isEqual`](api/image.md#imageisequal),
