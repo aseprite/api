@@ -24,6 +24,10 @@ else
 end
 ```
 
+## From v1.2.10-beta3 to v1.2.10-beta4
+
+* Fixed [`app.sprites`](api/app.md#appsprites) collection.
+
 ## From v1.2.10-beta2 to v1.2.10-beta3
 
 * [`app`](api/app.md#app)

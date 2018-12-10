@@ -88,6 +88,16 @@ some commands use the background color to clear the active layer.
 Returns true if the UI is available. E.g. if this is true you can use
 [app.alert](#appalert) or [dialogs](dialog.md).
 
+## app.sprites
+
+```lua
+for i,sprite in ipairs(app.sprites)
+  -- do something with each sprite...
+end
+```
+
+Returns an array of [sprites](sprite.md#sprite).
+
 ## app.alert()
 
 ```lua
