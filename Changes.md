@@ -26,7 +26,9 @@ end
 
 ## From v1.2.10-beta3 to v1.2.10-beta4
 
-* Fixed [`app.sprites`](api/app.md#appsprites) collection.
+* [`app.apiVersion`](api/app.md#appapiversion) is `2`
+* Fixed [`app.sprites`](api/app.md#appsprites) table
+* Added [`app.param`](api/app.md#appparam) table
 
 ## From v1.2.10-beta2 to v1.2.10-beta3
 
