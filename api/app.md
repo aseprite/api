@@ -177,3 +177,22 @@ This function is available just in case you see that your script
 updates the sprite but the screen is not showing the updated state of
 the sprite. It should not be needed, but it's here just in case that
 something is not working right on the Aseprite side.
+
+## app.undo()
+
+```lua
+app.undo()
+```
+
+Undoes the latest operation in the [`activeSprite`](#appactivesprite).
+It's like calling `app.command.Undo()` (the *Edit > Undo*  menu option).
+
+## app.redo()
+
+```lua
+app.redo()
+```
+
+Redoes the latest undone operation in the
+[`activeSprite`](#appactivesprite).  It's like calling
+`app.command.Redo()` (the *Edit > Redo*  menu option).
