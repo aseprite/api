@@ -24,6 +24,13 @@ else
 end
 ```
 
+## From v1.2.10-beta4 to v1.2.10
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `3`
+* Added [`sprite:close()`](api/sprite.md#spriteclose) function
+* Now [`sprite:saveAs()`](api/sprite.md#spritesaveas) changes the state of the
+  sprite as a saved document
+
 ## From v1.2.10-beta3 to v1.2.10-beta4
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `2`

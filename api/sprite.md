@@ -185,11 +185,28 @@ Crops the sprite to the given dimensions. See the
 sprite:saveAs(filename)
 ```
 
+Saves the sprite to the given file and mark the sprite as saved so
+closing it doesn't will ask to save changes.
+
 ## Sprite:saveCopyAs()
 
 ```lua
 sprite:saveCopyAs(filename)
 ```
+
+Saves a copy of the sprite in the given file but doesn't change the
+saved state of the sprite, if the sprite is modified and then try to
+close it, the user will be asked to save changes.
+
+## Sprite:close()
+
+```lua
+sprite:close()
+```
+
+Closes the sprite. This doesn't ask the user to save changes. If you
+want to do the classic *File > Close* where the user is asking to save
+changes, you can use `app.command.CloseFile()`.
 
 ## Sprite:loadPalette()
 
