@@ -102,7 +102,12 @@ get proper undo/redo information.
 local color = image:getPixel(x, y)
 ```
 
-Returns the [pixel color](pixelcolor.md) for the given *xy*-coordinate.
+Returns the [pixel color](pixelcolor.md) for the given *xy*-coordinate related to the "Image" itself.
+
+Do NOT confuse with the absolute *xy*-coordinate in the Canvas.
+In the following example, we show the differences between `getPixel()`, [`Cel.bounds`](cel.md#celbounds) and [`Cel.position`](cel.md#celposition):
+
+![Getpixel](image/getpixel.gif)
 
 ## Image:drawImage()
 
