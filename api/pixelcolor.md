@@ -1,64 +1,86 @@
-# PixelColor
+# app.pixelColor
 
-This is a property from [app](app.md) which contains functions to
-handle color at the lowest level: a 32-bit unsigned integer.
+This [`app`](app.md) property contains a set of function to handle the color
+for [Image pixels](image.md#imagepixels) at the lowest level: an unsigned integer.
 
-This color format is used when you handle pixels with
-[Image:getPixel()](image.md#imagegetpixel) or
-[Image:putPixel()](image.md#imageputpixel).
+On Aseprite there are two kind of ways to handle colors:
 
-## PixelColor.rgba()
+1. The [Color](color.md) object type (a high-level/abstract/user-friendly way to handle color)
+2. Or an unsigned integer (low-level/performance-wise) value which can represent several kind of colors:
+   - For [RGB](colormode.md#colormodergb) images: a 32-bit unsigned integer value (8-bit for each of the four RGBA component)
+   - [Gray](colormode.md#colormodegray) images: a 16-bit unsigned integer with Alpha and Grayscale value (8-bit for Alpha, 8-bit for Gray)
+   - [Indexed](colormode.md#colormodeindexed) images: 8-bit unsigned
+     integer which represents a value from 0 to 255 to reference a
+     [palette entry](palette.md#palettegetcolor)
+
+For performance reasons, pixel values on [images](image.md#image) are
+handled with the sencond kind of colors: an unsigned integer value.
+This color format is used when you handle pixels directly with functions like
+[Image:getPixel()](image.md#imagegetpixel),
+[Image:putPixel()](image.md#imageputpixel), or
+[Image:pixels()](image.md#imagepixels).
+
+## app.pixelColor.rgba()
 
 ```lua
-local color = app.pixelColor.rgba(red, green, blue, [, alpha])
+local rgbaPixelValue = app.pixelColor.rgba(red, green, blue, [, alpha])
 ```
 
-Construct a RGBA color.
+Constructs a 32-bit unsigned integer for [RGBA](colormode.md#colormodergb) images.
+Alpha will be 255 (i.e. 100% opaque) if it's not specified.
 
 Example:
 
 ```lua
 local pc = app.pixelColor
-local red = pc.rgba(255, 0, 0)
+local redPixel = pc.rgba(255, 0, 0)
 local semiTransparentWhite = pc.rgba(255, 255, 255, 128)
 ```
 
-## PixelColor.rgbaR()
+## app.pixelColor.rgbaR()
 
 ```lua
-local redValue = app.pixelColor.rgbaR(color)
+local redComponent = app.pixelColor.rgbaR(rgbaPixelValue)
 ```
 
-Returns the red component of the given pixel color.
-The component **is not** premultiplied by alpha.
+Returns the red component of the given 32-bit integer (`rgbaPixelValue`).
+This integer is a value created with [`app.pixelColor.rgba()`](apppixelcolorrgba)
+or [`Image:getPixel()`]() from a
+[RGBA](colormode.md#colormodergb) image.
+
+Note: RGB components **are not** premultiplied by alpha.
 
 Example:
 
 ```lua
-var pc = app.pixelColor
-var red = pc.rgbaG(pc.rgba(255, 128, 0))
--- red is 255
+local pc = app.pixelColor
+local rgbaPixelValue = pc.rgba(255, 128, 0)
+local redComponent = pc.rgbaR(rgbaPixelValue)
+local greenComponent = pc.rgbaG(rgbaPixelValue)
+-- redComponent is 255
+-- greenComponent is 128
 ```
 
-## PixelColor.rgbaG()
+## app.pixelColor.rgbaG()
 
-Same as [rgbaR()](#pixelcolorrgbar) but with the Green component.
+Same as [rgbaR()](#apppixelcolorrgbar) but with the Green component.
 
-## PixelColor.rgbaB()
+## app.pixelColor.rgbaB()
 
-Same as [rgbaR()](#pixelcolorrgbar) but with the Blue component.
+Same as [rgbaR()](#apppixelcolorrgbar) but with the Blue component.
 
-## PixelColor.rgbaA()
+## app.pixelColor.rgbaA()
 
-Same as [rgbaR()](#pixelcolorrgbar) but with the Alpha component.
+Same as [rgbaR()](#apppixelcolorrgbar) but with the Alpha component.
 
-## PixelColor.graya()
+## app.pixelColor.graya()
 
 ```lua
-local color = app.pixelColor.graya(value [, alpha])
+local grayPixelValue = app.pixelColor.graya(gray [, alpha])
 ```
 
-Construct a color for a grayscale [image](image.md).
+Constructs a 16-bit unsigned integer for [grayscale](colormode.md#colormodegrayscale) images.
+Alpha will be 255 (i.e. 100% opaque) if it's not specified.
 
 Example:
 
@@ -69,22 +91,27 @@ local white = pc.graya(255)
 local semiTransparentWhite = pc.graya(255, 128)
 ```
 
-## PixelColor.grayaV()
+## app.pixelColor.grayaV()
 
 ```lua
-local gray = app.pixelColor.grayaV(color)
+local grayValue = app.pixelColor.grayaV(grayPixelValue)
 ```
 
-Returns the value component of the given gray pixel.
+Returns the gray component of the given 16-bit integer (`grayPixelValue`).
+This integer is a value created with [`app.pixelColor.graya()`](apppixelcolorgraya)
+or [`Image:getPixel()`]() from a [grayscale](colormode.md#colormodegray) image.
 
 Example:
 
 ```lua
 local pc = app.pixelColor
-local gray = pc.grayaV(pc.graya(128, 0))
--- gray is 128
+local grayPixelValue = pc.graya(128, 32)
+local grayComponent = pc.grayaV(grayPixelValue)
+local alphaComponent = pc.grayaA(grayPixelValue)
+-- grayComponent is 128
+-- alphaComponent is 32
 ```
 
-## PixelColor.grayaA()
+## app.pixelColor.grayaA()
 
-Same as [grayaV()](#pixelcolorgrayav) but with the Alpha component.
+Same as [grayaV()](#apppixelcolorgrayav) but with the Alpha component.

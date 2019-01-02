@@ -87,8 +87,8 @@ Clear all pixels in the image with the given [color](color.md) (or
 image:drawPixel(x, y, color)
 ```
 
-Sets the pixel in the *xy*-coordinate to the given [pixel
-color](pixelcolor.md). The *xy*-coordinate is relative to the image,
+Sets the pixel in the *xy*-coordinate to the given [integer pixel
+value](pixelcolor.md#apppixelcolor). The *xy*-coordinate is relative to the image,
 so pixel (0, 0) is the first pixel at the top-left coorner in the
 image, not in the sprite canvas.
 
@@ -99,15 +99,18 @@ get proper undo/redo information.
 ## Image:getPixel()
 
 ```lua
-local color = image:getPixel(x, y)
+local pixelValue = image:getPixel(x, y)
 ```
 
-Returns the [pixel color](pixelcolor.md) for the given *xy*-coordinate related to the "Image" itself.
+Returns a [integer pixel value](pixelcolor.md#apppixelcolor) for the given
+*xy*-coordinate related to the "Image" itself. The returned value will
+depend on the [color mode](#imagecolormode) of the image.
 
 Do NOT confuse with the absolute *xy*-coordinate in the Canvas.
-In the following example, we show the differences between `getPixel()`, [`Cel.bounds`](cel.md#celbounds) and [`Cel.position`](cel.md#celposition):
+In the following example, we show the differences between `getPixel()`,
+[`Cel.bounds`](cel.md#celbounds) and [`Cel.position`](cel.md#celposition):
 
-![Getpixel](image/getpixel.gif)
+![Coordinates example for getPixel](image/getpixel.gif)
 
 ## Image:drawImage()
 
@@ -156,8 +159,8 @@ iterator = image:pixels(rectangle)
 ```
 
 Returns a pixel iterator for the whole image or the given
-[rectangle](rectangle.md). Then you can use the iterator in these
-ways:
+[rectangle](rectangle.md). Then you can use the iterator to read or
+change pixel values in this way:
 
 ```lua
 for it in image:pixels() do
@@ -167,8 +170,8 @@ for it in image:pixels() do
 end
 ```
 
-A `pixelValue` can be interpreted with the
-[app.pixelColor](pixelcolor.md) functions.
+A `pixelValue!` can be interpreted with the
+[app.pixelColor](pixelcolor.md#apppixelcolor) functions.
 
 ## Image:putPixel()
 
