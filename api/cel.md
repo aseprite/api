@@ -26,7 +26,16 @@ Returns the [layer](layer.md) where this cel is located.
 local frame = cel.frame
 ```
 
-Returns the frame number, `1` is the first frame (not `0`).
+Returns the [frame](frame.md#frame) object which this cel belongs.
+
+## Cel.frameNumber
+
+```lua
+local frameNumber = cel.frameNumber
+```
+
+Returns the frame number which this cel belongs, the frame number `1`
+is the first frame (not `0`).
 
 ## Cel.image
 
