@@ -44,6 +44,8 @@ a little experiment, so you have five main options to approach your idea:
   * [BlendMode](api/blendmode.md#blendmode)
   * [ColorMode](api/colormode.md#colormode)
   * [RangeType](api/rangetype.md#rangetype)
+  * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
+  * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
 * Classes/objects
   * [Cel](api/cel.md#cel)
   * [Color](api/color.md#color)

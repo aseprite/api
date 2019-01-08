@@ -42,7 +42,7 @@ parameters.
 * `app.command.DuplicateSprite`
 * `app.command.DuplicateView`
 * `app.command.Exit`
-* `app.command.ExportSpriteSheet()`
+* [`app.command.ExportSpriteSheet`](command/ExportSpriteSheet.md)
 * `app.command.Eyedropper`
 * `app.command.Fill`
 * `app.command.FitScreen`
