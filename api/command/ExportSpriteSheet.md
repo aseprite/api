@@ -42,8 +42,8 @@ app.command.ExportSpriteSheet {
 * `innerPadding`
 * `trim`
 * `openGenerated`
-* `layer=`
-* `tag=`
+* `layer`
+* `tag`
 * `listLayers`
 * `listTags`
 * `listSlices`
