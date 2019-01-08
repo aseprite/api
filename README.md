@@ -37,6 +37,7 @@ a little experiment, so you have five main options to approach your idea:
 
 * Globals namespaces
   * [app](api/app.md#app)
+  * [app.command](api/app_command.md#appcommand)
   * [app.pixelColor](api/pixelcolor.md#pixelcolor)
 * Constants
   * [AniDir](api/anidir.md#anidir)

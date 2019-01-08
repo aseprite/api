@@ -157,15 +157,7 @@ grouped in just one undo/redo operation.
 
 ## app.command
 
-```lua
-app.command.CommandName()
-app.command.CommandName{param1:value1, param2:value2, ...}
-```
-
-Executes the give command named `CommandName` with the given
-parameters.  You can look at the
-[gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
-file to check a list of available commands.
+Check the [app.command](app_command.md#appcommand) documentation.
 
 ## app.refresh()
 
