@@ -17,6 +17,7 @@ app.command.ExportSpriteSheet {
   shapePadding=0,
   innerPadding=0,
   trim=false,
+  extrude=false,
   openGenerated=false,
   layer="",
   tag="",
