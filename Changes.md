@@ -33,7 +33,11 @@ end
     and [`sprite:convertColorSpace()`](api/sprite.md#spriteconvertcolorspace)
   * Now [`sprite:saveAs()`](api/sprite.md#spritesaveas) changes the state of the
     sprite as a saved document
+  * Now you can set [`sprite.filename`](api/sprite.md#spritefilename) property
 * New [`ColorSpace`](api/colorspace.md#colorspace) class.
+* New `focus` property for [Dialog:button](api/dialog.md#dialogbutton)
+  and [Dialog:entry](api/dialog.md#dialogentry).
+* New parameters for [`ExportSpriteSheet`](api/command/ExportSpriteSheet.md).
 
 ## v1.2.10-beta4
 
