@@ -53,8 +53,14 @@ pixels in the canvas.
 
 ## Sprite.filename
 
-The file from where this sprite was loaded or saved. Or an empty
-string if this is a new sprite without an associated file.
+```lua
+local name = sprite.filename
+sprite.filename = newName
+```
+
+Gets or sets the name of the file from where this sprite was loaded or
+saved. Or an empty string if this is a new sprite without an
+associated file.
 
 ## Sprite.colorMode
 
