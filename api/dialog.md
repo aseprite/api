@@ -49,6 +49,7 @@ dlg:button{ id=string,
             label=string,
             text=string,
             selected=boolean,
+            focus=boolean,
             onclick=function }
 ```
 
@@ -61,6 +62,7 @@ Arguments (table fields):
 * `label`: Label at the left side of the control.
 * `text`: Text of the button.
 * `selected`: True in case that you want to show the button checked by default.
+* `focus`: Focus this button by default or when the Enter key is pressed in an [text entry](#dialogentry) field.
 * `onclick`: Function to be called when the button is pressed.
 
 ## Dialog:check()
@@ -155,7 +157,8 @@ shown in the same *xy*-position.
 local dlg = Dialog()
 dlg:entry{ id=string,
            label=string,
-           text=string }
+           text=string,
+           focus=boolean }
 ```
 
 Creates a text entry.
