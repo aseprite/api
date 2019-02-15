@@ -47,9 +47,14 @@ This is like calling `Rectangle{ x=0, y=0, width=sprite.width, height=sprite.hei
 
 ## Sprite.selection
 
-The `sprite.selection` property is an instance of the
-[Selection class](selection.md) to manipulate the set of selected
-pixels in the canvas.
+```lua
+local selection = sprite.selection
+sprite.selection = newSelection
+```
+
+Gets or sets the active sprite selection. This property is an instance
+of the [Selection class](selection.md) to manipulate the set of
+selected pixels in the canvas.
 
 ## Sprite.filename
 
