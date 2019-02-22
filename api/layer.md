@@ -18,6 +18,16 @@ layer.opacity = newOpacity
 Gets or sets the cel opacity. A value from `0` to `255` (which means
 `0=0%` completely transparent, or `255=100%` completely opaque).
 
+## Layer.blendMode
+
+```lua
+local blendMode = layer.blendMode
+layer.blendMode = newBlendMode
+```
+
+Gets or sets the layer blending mode. Check the possible
+[BlendMode](blendmode.md#blendmode) values.
+
 ## Layer.isImage
 
 Is true if this image has [cels](cel.md) with [images](image.md).
