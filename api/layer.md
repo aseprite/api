@@ -30,15 +30,25 @@ Gets or sets the layer blending mode. Check the possible
 
 ## Layer.isImage
 
-Is true if this image has [cels](cel.md) with [images](image.md).
+It's true if this layer has [cels](cel.md) with [images](image.md).
 
 ## Layer.isGroup
 
-Is true if this image has sublayers inside.
+It's true if this layer has sublayers inside.
 
 ## Layer.isTransparent
 
+It's true if this layer is a [transparent layer](https://www.aseprite.org/docs/layers/#transparent-layers)
+(instead of a the [background layer](#layerisbackground)). Transparent layers have
+an alpha channel or, for [indexed color mode](colormode.md#colormodeindexed),
+the [transparent index](https://www.aseprite.org/docs/transparent-color/) is not visible.
+
 ## Layer.isBackground
+
+It's true if this layer is the [background layer](https://www.aseprite.org/docs/layers/#background-layer).
+A background layer is opaque, doesn't have alpha channel (`Alpha=255` on every pixel),
+or in [indexed color mode](colormode.md#colormodeindexed), the
+[transparent index](https://www.aseprite.org/docs/transparent-color/) is ignored.
 
 ## Layer.isEditable
 
