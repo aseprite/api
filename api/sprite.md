@@ -233,6 +233,27 @@ sprite:setPalette(palette)
 
 Changes the sprite [palette](palette.md).
 
+## Sprite:assignColorSpace
+
+```lua
+local colorSpace = ColorSpace{ sRGB }
+sprite:assignColorSpace(colorSpace)
+```
+
+Assign a new [color space](colorspace.md) to the sprite without
+modifying the sprite pixels.
+
+## Sprite:convertColorSpace
+
+```lua
+local colorSpace = ColorSpace{ sRGB }
+sprite:convertColorSpace(colorSpace)
+```
+
+Converts all the sprite pixels to a new [color space](colorspace.md)
+so the image looks the same as in the previous color space (all pixels
+will be adjusted to the new color space).
+
 ## Sprite:newLayer()
 
 ```lua
