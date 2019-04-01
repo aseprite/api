@@ -75,3 +75,18 @@ Gets/sets the [HSL lightness](colorhslhuesaturationligthness).
 ## Color.index
 
 ## Color.gray
+
+## Color.rgbaPixel
+
+```lua
+local c = Color{ r=200, g=100, b=0, a=255 }
+assert(c.rgbaPixel == app.pixelColor.rgba(200, 100, 0, 255))
+```
+
+Returns the [pixel color](pixelcolor.md#pixelcolorrgba) which is
+equivalent to the RGBA values of this color.
+
+## Color.grayPixel
+
+Returns the [pixel color](pixelcolor.md#pixelcolorgraya) which is
+equivalent to the gray+alpha values of this color.
