@@ -188,3 +188,33 @@ app.redo()
 Redoes the latest undone operation in the
 [`activeSprite`](#appactivesprite).  It's like calling
 `app.command.Redo()` (the *Edit > Redo*  menu option).
+
+## app.useTool()
+
+```lua
+app.useTool{
+ tool=string,
+ color=Color,
+ points={ Point, Point, .... },
+ cel=Cel,
+ layer=Layer,
+ frame=Frame
+}
+```
+
+Simulates an user stroke in the canvas using the given tool.
+
+* `tool`: A string with a well known tool ID (`rectangular_marquee`,
+  `elliptical_marquee`, `lasso`, `polygonal_lasso`, `magic_wand`,
+  `pencil`, `spray`, `eraser`, `eyedropper`, `zoom`, `hand`, `move`,
+  `slice`, `paint_bucket`, `gradient`, `line`, `curve`, `rectangle`,
+  `filled_rectangle`, `ellipse`, `filled_ellipse`, `contour`,
+  `polygon`, `blur`, `jumble`)
+* `color`: A [color](color.md) object to draw with the given tool
+* `points`: An array of [points](point.md) in the sprite canvas which
+  simulate the position of where the user put the mouse to draw with
+  the given tool.
+* And we can specify the `cel` or `layer`/`frame` where to draw:
+  * `cel`: The specific [cel](cel.md) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
+  * `layer`: The [layer](layer.md) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
+  * `frame`: The [frame](frame.md) where to draw (by default [app.activeFrame](app.md#appactiveframe))
