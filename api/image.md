@@ -143,6 +143,25 @@ end
 Returns true if both images looks the same ([spec](#imagespec) is
 equal and all [pixels](#imagepixels) are the same).
 
+## Image:isEmpty()
+
+```lua
+local result = image:isEmpty()
+```
+
+Returns true if all pixels in the image are equal to the transparent
+color.
+
+## Image:isPlain()
+
+```lua
+local result = image:isPlain(color)
+```
+
+Returns true if all pixels in the image are equal to the given `color`
+(which can be a [pixel color](pixelcolor.md#pixelcolor) or a
+[color](color.md#color)).
+
 ## Image:pixels()
 
 ```lua
