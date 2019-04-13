@@ -5,6 +5,7 @@
 ```lua
 local sprite = Sprite(width, height [, colorMode])
 local sprite = Sprite(spec)
+local sprite = Sprite(otherSprite)
 ```
 
 Creates a new sprite with the given `width` and `height`. The
@@ -12,6 +13,8 @@ Creates a new sprite with the given `width` and `height`. The
 by default.
 
 The `spec` parameter is an [image specification](imagespec.md) object.
+
+If `otherSprite` is given (other `Sprite` object), the sprite is duplicated.
 
 ## Sprite.width
 
