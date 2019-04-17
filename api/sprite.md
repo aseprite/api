@@ -362,3 +362,12 @@ sprite:deleteSlice(sliceName)
 ```
 
 Deletes the given [slice](slice.md).
+
+## Sprite:flatten()
+
+```lua
+sprite:flatten()
+```
+
+Flatten all layers of the sprite into one layer.
+It's like calling `app.commands.FlattenLayers()`.
