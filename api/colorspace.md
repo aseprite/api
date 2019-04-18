@@ -8,11 +8,11 @@ of a [sprite](sprite.md), [image](image.md), or [image spec](imagespec.md).
 ```lua
 local none = ColorSpace()
 local srgb = ColorSpace{ sRGB }
-local icc = ColorSpace{ filename="/path/file.icc" }
+local icc = ColorSpace{ fromFile="/path/file.icc" }
 ```
 
 Creates an empty color space, sRGB color space, or loads a color
-profile from the given ICC file in `filename`.
+profile from the given ICC file specified in `fromFile` parameter.
 
 ## ColorSpace.name
 

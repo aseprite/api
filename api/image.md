@@ -16,6 +16,8 @@ An image can be associated to a specific cel or can be alone:
 ```lua
 local image = Image(width, height [, colorMode])
 local image = Image(spec)
+local image = Image(otherImage)
+local image = Image{ fromFile=filename }
 ```
 
 Creates a new image with the given `width` and `height`. The
@@ -24,16 +26,24 @@ by default.
 
 The `spec` parameter is an [image specification](imagespec.md) object.
 
+If you specify `otherImage`, it's equivalent to use
+[`otherImage:clone()`](#imageclone).
+
+If `fromFile` is given, it indicates a file name (a string) and
+it will create an image loading the first frame of the given file.
+
 ## Image:clone()
 
 ```lua
 local copy = image:clone()
 ```
 
-Creates a copy of the given image. The new image is unrelated to the
-sprite, but can be used to update the image in a transaction. E.g. You
-clone an image, modify the pixels from the copy, and then you
-[patch the image](#imageputimage).
+Creates a copy of the given image. You can use the `Image(otherImage)`
+constructor for the same behavior.
+
+he new image is unrelated to the sprite, but can be used to update the
+image in a transaction. E.g. You clone an image, modify the pixels
+from the copy, and then you [patch the image](#imageputimage).
 
 ## Image.width
 
@@ -198,3 +208,11 @@ the behavior [cel.image](cel.md#celimage).
 
 Now it's [Image:drawSprite()](#imagedrawsprite)
 to match [Image:drawImage()](#imagedrawimage) name.
+
+## Image:saveAs()
+
+```lua
+image:saveAs(filename)
+```
+
+Saves the image as a sprite in the given `filename`.

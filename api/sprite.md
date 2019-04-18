@@ -6,6 +6,7 @@
 local sprite = Sprite(width, height [, colorMode])
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
+local sprite = Sprite{ fromFile=filename }
 ```
 
 Creates a new sprite with the given `width` and `height`. The
@@ -15,6 +16,9 @@ by default.
 The `spec` parameter is an [image specification](imagespec.md) object.
 
 If `otherSprite` is given (other `Sprite` object), the sprite is duplicated.
+
+If `fromFile` is given, it indicates a file name (a string) and it's
+like opening a new document with [`app.open()`](app.md#appopen).
 
 ## Sprite.width
 
@@ -226,6 +230,14 @@ changes, you can use `app.command.CloseFile()`.
 
 ```lua
 sprite:loadPalette(filename)
+```
+
+Sets the sprite palette loading it from the given file.
+
+The same can be achieved using [`Palette{ fromFile }`](palette.md#palette):
+
+```lua
+sprite:setPalette(Palette{ fromFile=filename })
 ```
 
 ## Sprite:setPalette()
