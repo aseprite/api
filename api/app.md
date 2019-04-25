@@ -159,6 +159,10 @@ grouped in just one undo/redo operation.
 
 Check the [app.command](app_command.md#appcommand) documentation.
 
+## app.preferences
+
+Check the [app.preferences](app_preferences.md#apppreferences) documentation.
+
 ## app.refresh()
 
 ```lua
