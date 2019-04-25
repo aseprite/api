@@ -67,7 +67,7 @@ to handle color at the lowest level.
 
 ## app.version
 
-Returns the Aseprite version number as a string (e.g. `"1.2.10-beta1"`).
+Returns the Aseprite version number as a [`Version`](version.md#version) object (e.g. `Version("1.2.10-beta1")`).
 
 ## app.apiVersion
 

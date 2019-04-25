@@ -27,6 +27,7 @@ end
 ## v1.2.10
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `3`
+* [`app.version`](api/app.md#appversion) is an [`Version`](api/version.md#version) object
 * [`Sprite`](api/sprite.md#sprite)
   * Added [`sprite:close()`](api/sprite.md#spriteclose) function
   * Added [`sprite:assignColorSpace()`](api/sprite.md#spriteassigncolorspace)
