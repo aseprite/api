@@ -60,6 +60,10 @@ Returns the active sprite, a [Sprite](sprite.md) object.
 Returns the active [tag](tag.md), which is the tag located at the
 [active frame](#appactiveframe).
 
+## app.activeTool
+
+## app.activeBrush
+
 ## app.pixelColor
 
 This [pixelColor namespace](pixelcolor.md) contains internal functions
@@ -67,7 +71,7 @@ to handle color at the lowest level.
 
 ## app.version
 
-Returns the Aseprite version number as a string (e.g. `"1.2.10-beta1"`).
+Returns the Aseprite version number as a [`Version`](version.md#version) object (e.g. `Version("1.2.10-beta1")`).
 
 ## app.apiVersion
 
@@ -157,15 +161,11 @@ grouped in just one undo/redo operation.
 
 ## app.command
 
-```lua
-app.command.CommandName()
-app.command.CommandName{param1:value1, param2:value2, ...}
-```
+Check the [app.command](app_command.md#appcommand) documentation.
 
-Executes the give command named `CommandName` with the given
-parameters.  You can look at the
-[gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
-file to check a list of available commands.
+## app.preferences
+
+Check the [app.preferences](app_preferences.md#apppreferences) documentation.
 
 ## app.refresh()
 
@@ -196,3 +196,35 @@ app.redo()
 Redoes the latest undone operation in the
 [`activeSprite`](#appactivesprite).  It's like calling
 `app.command.Redo()` (the *Edit > Redo*  menu option).
+
+## app.useTool()
+
+```lua
+app.useTool{
+ tool=string,
+ color=Color,
+ brush=Brush,
+ points={ Point, Point, .... },
+ cel=Cel,
+ layer=Layer,
+ frame=Frame
+}
+```
+
+Simulates an user stroke in the canvas using the given tool.
+
+* `tool`: A string with a well known tool ID (`rectangular_marquee`,
+  `elliptical_marquee`, `lasso`, `polygonal_lasso`, `magic_wand`,
+  `pencil`, `spray`, `eraser`, `eyedropper`, `zoom`, `hand`, `move`,
+  `slice`, `paint_bucket`, `gradient`, `line`, `curve`, `rectangle`,
+  `filled_rectangle`, `ellipse`, `filled_ellipse`, `contour`,
+  `polygon`, `blur`, `jumble`) or a [tool](tool.md) object
+* `color`: A [color](color.md) object to draw with the given tool
+* `brush`: A [brush](brush.md) object to draw the points
+* `points`: An array of [points](point.md) in the sprite canvas which
+  simulate the position of where the user put the mouse to draw with
+  the given tool.
+* And we can specify the `cel` or `layer`/`frame` where to draw:
+  * `cel`: The specific [cel](cel.md) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
+  * `layer`: The [layer](layer.md) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
+  * `frame`: The [frame](frame.md) where to draw (by default [app.activeFrame](app.md#appactiveframe))

@@ -18,6 +18,16 @@ local rectangle = selection.bounds
 Returns a [rectangle](rectangle.md) with the bounds of the selection
 (if the rectangle is empty, is because there is no selection).
 
+## Selection.origin
+
+```lua
+local point = selection.origin
+selection.origin = newPoint
+```
+
+Gets or sets the selection origin/position (a [point](point.md)).
+This can be used to move the selection edges (not the content).
+
 ## Selection.isEmpty
 
 ```lua

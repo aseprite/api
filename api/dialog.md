@@ -49,6 +49,7 @@ dlg:button{ id=string,
             label=string,
             text=string,
             selected=boolean,
+            focus=boolean,
             onclick=function }
 ```
 
@@ -61,6 +62,7 @@ Arguments (table fields):
 * `label`: Label at the left side of the control.
 * `text`: Text of the button.
 * `selected`: True in case that you want to show the button checked by default.
+* `focus`: Focus this button by default or when the Enter key is pressed in an [text entry](#dialogentry) field.
 * `onclick`: Function to be called when the button is pressed.
 
 ## Dialog:check()
@@ -155,7 +157,8 @@ shown in the same *xy*-position.
 local dlg = Dialog()
 dlg:entry{ id=string,
            label=string,
-           text=string }
+           text=string,
+           focus=boolean }
 ```
 
 Creates a text entry.
@@ -252,3 +255,32 @@ dlg:slider{ id=string,
 ```
 
 Creates a slider in the dialog.
+
+## Dialog:file()
+
+```lua
+local dlg = Dialog()
+dlg:file{ id=string,
+          label=string,
+          title=string,
+          open=boolean,
+          save=boolean,
+          filename=string | { string1,string2,string3... },
+          filetypes={ string1,string2,string3... },
+          onchange=function }
+```
+
+Creates a text entry field + a button to select one file to open or save, possibilities:
+
+* `open=true`: shows a dialog to open an existent file (this is the default mode).
+* `save=true`: shows a dialog to select an existent file to overwrite or a new file to save.
+
+Arguments (table fields):
+
+* `load`: True if you want to show a dialog to the user to select an existent file to load/read.
+* `save`: True if you want to show a dialog to the user to select a new file to save/write content.
+* `filename`: String of the selected filename to open or save.
+* `filetypes`: Array of possible file types/extensions that the user can select.
+* `entry`: Show an entry field to edit the filename manually (false by default).
+* `focus`: Focus this field by default.
+* `onchange`: Function to be called when the filename is changed.

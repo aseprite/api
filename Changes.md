@@ -24,13 +24,32 @@ else
 end
 ```
 
-## From v1.2.10-beta3 to v1.2.10-beta4
+## v1.2.10
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `3`
+* [`app.version`](api/app.md#appversion) is an [`Version`](api/version.md#version) object
+* [`Sprite`](api/sprite.md#sprite)
+  * Added [`sprite:close()`](api/sprite.md#spriteclose) function
+  * Added [`sprite:assignColorSpace()`](api/sprite.md#spriteassigncolorspace)
+    and [`sprite:convertColorSpace()`](api/sprite.md#spriteconvertcolorspace)
+  * Now [`sprite:saveAs()`](api/sprite.md#spritesaveas) changes the state of the
+    sprite as a saved document
+  * Now you can set [`sprite.filename`](api/sprite.md#spritefilename) property
+* New [`ColorSpace`](api/colorspace.md#colorspace) class.
+* New `focus` property for [Dialog:button](api/dialog.md#dialogbutton)
+  and [Dialog:entry](api/dialog.md#dialogentry).
+* New parameters for [`ExportSpriteSheet`](api/command/ExportSpriteSheet.md).
+* New [`app.useTool()`](app.md#appusetool),
+  [`Brush`](api/brush.md#brush),
+  [`Tool`](api/tool.md#tool) class.
+
+## v1.2.10-beta4
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `2`
 * Fixed [`app.sprites`](api/app.md#appsprites) table
-* Added [`app.param`](api/app.md#appparam) table
+* Added [`app.params`](api/app.md#appparams) table
 
-## From v1.2.10-beta2 to v1.2.10-beta3
+## v1.2.10-beta3
 
 * [`app`](api/app.md#app)
   * New [`app.apiVersion`](api/app.md#appapiversion) with value `1`.
@@ -78,7 +97,7 @@ end
 * All functions that receive an integer can automatically accept
   floating numbers doing an implicit `math.floor(number)` conversion.
 
-## v1.2.10-beta1 and v1.2.10-beta2
+## v1.2.10-beta2
 
 * [`app`](api/app.md#app)
   * `app.apiVersion` didn't exist (is `nil`)

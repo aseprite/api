@@ -5,6 +5,8 @@
 ```lua
 local sprite = Sprite(width, height [, colorMode])
 local sprite = Sprite(spec)
+local sprite = Sprite(otherSprite)
+local sprite = Sprite{ fromFile=filename }
 ```
 
 Creates a new sprite with the given `width` and `height`. The
@@ -12,6 +14,11 @@ Creates a new sprite with the given `width` and `height`. The
 by default.
 
 The `spec` parameter is an [image specification](imagespec.md) object.
+
+If `otherSprite` is given (other `Sprite` object), the sprite is duplicated.
+
+If `fromFile` is given, it indicates a file name (a string) and it's
+like opening a new document with [`app.open()`](app.md#appopen).
 
 ## Sprite.width
 
@@ -47,14 +54,25 @@ This is like calling `Rectangle{ x=0, y=0, width=sprite.width, height=sprite.hei
 
 ## Sprite.selection
 
-The `sprite.selection` property is an instance of the
-[Selection class](selection.md) to manipulate the set of selected
-pixels in the canvas.
+```lua
+local selection = sprite.selection
+sprite.selection = newSelection
+```
+
+Gets or sets the active sprite selection. This property is an instance
+of the [Selection class](selection.md) to manipulate the set of
+selected pixels in the canvas.
 
 ## Sprite.filename
 
-The file from where this sprite was loaded or saved. Or an empty
-string if this is a new sprite without an associated file.
+```lua
+local name = sprite.filename
+sprite.filename = newName
+```
+
+Gets or sets the name of the file from where this sprite was loaded or
+saved. Or an empty string if this is a new sprite without an
+associated file.
 
 ## Sprite.colorMode
 
@@ -185,16 +203,41 @@ Crops the sprite to the given dimensions. See the
 sprite:saveAs(filename)
 ```
 
+Saves the sprite to the given file and mark the sprite as saved so
+closing it doesn't will ask to save changes.
+
 ## Sprite:saveCopyAs()
 
 ```lua
 sprite:saveCopyAs(filename)
 ```
 
+Saves a copy of the sprite in the given file but doesn't change the
+saved state of the sprite, if the sprite is modified and then try to
+close it, the user will be asked to save changes.
+
+## Sprite:close()
+
+```lua
+sprite:close()
+```
+
+Closes the sprite. This doesn't ask the user to save changes. If you
+want to do the classic *File > Close* where the user is asking to save
+changes, you can use `app.command.CloseFile()`.
+
 ## Sprite:loadPalette()
 
 ```lua
 sprite:loadPalette(filename)
+```
+
+Sets the sprite palette loading it from the given file.
+
+The same can be achieved using [`Palette{ fromFile }`](palette.md#palette):
+
+```lua
+sprite:setPalette(Palette{ fromFile=filename })
 ```
 
 ## Sprite:setPalette()
@@ -204,6 +247,27 @@ sprite:setPalette(palette)
 ```
 
 Changes the sprite [palette](palette.md).
+
+## Sprite:assignColorSpace
+
+```lua
+local colorSpace = ColorSpace{ sRGB }
+sprite:assignColorSpace(colorSpace)
+```
+
+Assign a new [color space](colorspace.md) to the sprite without
+modifying the sprite pixels.
+
+## Sprite:convertColorSpace
+
+```lua
+local colorSpace = ColorSpace{ sRGB }
+sprite:convertColorSpace(colorSpace)
+```
+
+Converts all the sprite pixels to a new [color space](colorspace.md)
+so the image looks the same as in the previous color space (all pixels
+will be adjusted to the new color space).
 
 ## Sprite:newLayer()
 
@@ -310,3 +374,12 @@ sprite:deleteSlice(sliceName)
 ```
 
 Deletes the given [slice](slice.md).
+
+## Sprite:flatten()
+
+```lua
+sprite:flatten()
+```
+
+Flatten all layers of the sprite into one layer.
+It's like calling `app.commands.FlattenLayers()`.
