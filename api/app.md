@@ -60,6 +60,10 @@ Returns the active sprite, a [Sprite](sprite.md) object.
 Returns the active [tag](tag.md), which is the tag located at the
 [active frame](#appactiveframe).
 
+## app.activeTool
+
+## app.activeBrush
+
 ## app.pixelColor
 
 This [pixelColor namespace](pixelcolor.md) contains internal functions
@@ -199,6 +203,7 @@ Redoes the latest undone operation in the
 app.useTool{
  tool=string,
  color=Color,
+ brush=Brush,
  points={ Point, Point, .... },
  cel=Cel,
  layer=Layer,
@@ -213,8 +218,9 @@ Simulates an user stroke in the canvas using the given tool.
   `pencil`, `spray`, `eraser`, `eyedropper`, `zoom`, `hand`, `move`,
   `slice`, `paint_bucket`, `gradient`, `line`, `curve`, `rectangle`,
   `filled_rectangle`, `ellipse`, `filled_ellipse`, `contour`,
-  `polygon`, `blur`, `jumble`)
+  `polygon`, `blur`, `jumble`) or a [tool](tool.md) object
 * `color`: A [color](color.md) object to draw with the given tool
+* `brush`: A [brush](brush.md) object to draw the points
 * `points`: An array of [points](point.md) in the sprite canvas which
   simulate the position of where the user put the mouse to draw with
   the given tool.

@@ -39,12 +39,15 @@ end
 * New `focus` property for [Dialog:button](api/dialog.md#dialogbutton)
   and [Dialog:entry](api/dialog.md#dialogentry).
 * New parameters for [`ExportSpriteSheet`](api/command/ExportSpriteSheet.md).
+* New [`app.useTool()`](app.md#appusetool),
+  [`Brush`](api/brush.md#brush),
+  [`Tool`](api/tool.md#tool) class.
 
 ## v1.2.10-beta4
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `2`
 * Fixed [`app.sprites`](api/app.md#appsprites) table
-* Added [`app.param`](api/app.md#appparam) table
+* Added [`app.params`](api/app.md#appparams) table
 
 ## v1.2.10-beta3
 
