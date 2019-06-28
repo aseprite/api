@@ -88,7 +88,7 @@ parameters.
 * `app.command.MoveCel`
 * `app.command.MoveMask`
 * `app.command.NewBrush`
-* `app.command.NewFile`
+* [`app.command.NewFile`](command/NewFile.md)
 * `app.command.NewFrameTag`
 * `app.command.NewFrame`
 * `app.command.NewLayer`
