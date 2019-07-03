@@ -24,6 +24,14 @@ else
 end
 ```
 
+## v1.2.13
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `4`
+* [`app.useTool()`](app.md#appusetool) now can be used inside a
+  [`app.transaction()`](app.md#apptransaction)
+  ([#18](https://github.com/aseprite/api/issues/18))
+* New params for [`app.command.NewFile`](api/command/NewFile.md).
+
 ## v1.2.10
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `3`
