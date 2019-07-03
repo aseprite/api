@@ -3,7 +3,8 @@
 ## Sprite()
 
 ```lua
-local sprite = Sprite(width, height [, colorMode])
+local sprite = Sprite(width, height)
+local sprite = Sprite(width, height, colorMode)
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
 local sprite = Sprite{ fromFile=filename }
