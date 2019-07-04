@@ -25,6 +25,14 @@ palette](https://github.com/aseprite/aseprite/tree/master/data/extensions)
 [`DB32`](https://github.com/aseprite/aseprite/blob/8e193b592ae06abb36be6f72ef43c308b511b24c/data/extensions/dawnbringer-palettes/package.json#L14),
 [`Solarized`](https://github.com/aseprite/aseprite/blob/8e193b592ae06abb36be6f72ef43c308b511b24c/data/extensions/software-palettes/package.json#L15)).
 
+## #Palette
+
+```lua
+local ncolors = #palette
+```
+
+Returns the number of colors in the palette (remember that valid indexes in the palette go from `0` to `ncolors-1`).
+
 ## Palette:resize()
 
 ```lua
@@ -36,9 +44,27 @@ value).
 
 ## Palette:getColor()
 
+```lua
+local color = palette:getColor(index)
+```
+
+Returns the [`color`](color.md) in the given entry `index` (the `index` goes from `0` to `#palette-1`).
+
 ## Palette:setColor()
 
+```lua
+palette:setColor(index, color)
+```
+
+Changes a palette color in the given entry `index` (the `index` goes from `0` to `#palette-1`).
+The `color` can be a [`Color`](color.md) object or an [integer pixel value](pixelcolor.md#apppixelcolor).
+
 ## Palette.frame
+
+At the moment it always return the first [frame](frame.md), but in a
+near future Aseprite will support palette changes over time (in
+different frames), so this field should be the frame number where this
+palette is displayed for first time in the [sprite](sprite.md).
 
 ## Palette:saveAs()
 
