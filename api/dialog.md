@@ -103,7 +103,7 @@ dlg:color{ id=string,
            color=app.Color }
 ```
 
-Creates a button to select a [color](color.md).
+Creates a button to select a [color](color.md#color).
 
 ## Dialog:combobox()
 
@@ -137,7 +137,7 @@ For each different kind of widget the field is of a different type:
   number depending on the number of decimals of the number field.
 * [combobox](#dialogcombobox): A string with the
   selected item.
-* [color](#dialogcolor): A [Color](color.md).
+* [color](#dialogcolor): A [Color](color.md#color).
 
 ## Dialog.bounds
 
@@ -147,7 +147,7 @@ local bounds = dlg.bounds
 dlg.bounds = Rectangle(x, y, bounds.width, bounds.height)
 ```
 
-Gets or sets the position and size (a [rectangle](rectangle.md)) of
+Gets or sets the position and size (a [rectangle](rectangle.md#rectangle)) of
 the dialog. This might be useful to align several dialog that must be
 shown in the same *xy*-position.
 

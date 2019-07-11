@@ -1,11 +1,11 @@
 # app.pixelColor
 
-This [`app`](app.md) property contains a set of function to handle the color
+This [`app`](app.md#app) property contains a set of function to handle the color
 for [Image pixels](image.md#imagepixels) at the lowest level: an unsigned integer.
 
 On Aseprite there are two kind of ways to handle colors:
 
-1. The [Color](color.md) object type (a high-level/abstract/user-friendly way to handle color)
+1. The [Color](color.md#color) object type (a high-level/abstract/user-friendly way to handle color)
 2. Or an unsigned integer (low-level/performance-wise) value which can represent several kind of colors:
    - For [RGB](colormode.md#colormodergb) images: a 32-bit unsigned integer value (8-bit for each of the four RGBA component)
    - [Gray](colormode.md#colormodegray) images: a 16-bit unsigned integer with Alpha and Grayscale value (8-bit for Alpha, 8-bit for Gray)

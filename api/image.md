@@ -21,10 +21,10 @@ local image = Image{ fromFile=filename }
 ```
 
 Creates a new image with the given `width` and `height`. The
-[color mode](colormode.md) is optional, [RGB](colormode.md#colormodergb)
+[color mode](colormode.md#colormode) is optional, [RGB](colormode.md#colormodergb)
 by default.
 
-The `spec` parameter is an [image specification](imagespec.md) object.
+The `spec` parameter is an [image specification](imagespec.md#imagespec) object.
 
 If you specify `otherImage`, it's equivalent to use
 [`otherImage:clone()`](#imageclone).
@@ -63,7 +63,7 @@ local h = image.height
 local colorMode = image.colorMode
 ```
 
-Image [color mode](colormode.md).
+Image [color mode](colormode.md#colormode).
 
 ## Image.spec
 
@@ -71,7 +71,7 @@ Image [color mode](colormode.md).
 local spec = image.spec
 ```
 
-The [specification](imagespec.md) for this image.
+The [specification](imagespec.md#imagespec) for this image.
 
 ## Image.cel
 
@@ -79,7 +79,7 @@ The [specification](imagespec.md) for this image.
 local cel = image.cel
 ```
 
-Returns the [cel](cel.md) to which this image belongs or `nil` if this
+Returns the [cel](cel.md#cel) to which this image belongs or `nil` if this
 image is not associated to a cel.
 
 ## Image:clear()
@@ -88,7 +88,7 @@ image is not associated to a cel.
 image:clear([ color ])
 ```
 
-Clear all pixels in the image with the given [color](color.md) (or
+Clear all pixels in the image with the given [color](color.md#color) (or
 `image.spec.transparentColor` if no color is specified).
 
 ## Image:drawPixel()
@@ -129,10 +129,10 @@ destinationImage:drawImage(sourceImage [, position ] )
 ```
 
 Copies/draws the given *sourceImage* image over *destinationImage*.
-If *position* is a [point](point.md), it will draw the *sourceImage*
+If *position* is a [point](point.md#point), it will draw the *sourceImage*
 in the given position.
 
-**Warning**: If the image is associated with a [Cel](cel.md), this
+**Warning**: If the image is associated with a [Cel](cel.md#cel), this
 method generates undo information, so you could use it as an
 individual operation or in a [transaction](app.md#apptransaction).
 
@@ -142,11 +142,11 @@ individual operation or in a [transaction](app.md#apptransaction).
 destinationImage:drawSprite(sourceSprite, frameNumber, [, position ] )
 ```
 
-Draws the given [sourceSprite](sprite.md) frame number into the
-*destinationImage*. If *position* is a [point](point.md), it will draw
+Draws the given [sourceSprite](sprite.md#sprite) frame number into the
+*destinationImage*. If *position* is a [point](point.md#point), it will draw
 the *sourceSprite* in the given position.
 
-**Warning**: If the image is associated with a [Cel](cel.md), this
+**Warning**: If the image is associated with a [Cel](cel.md#cel), this
 method generates undo information, so you could use it as an
 individual operation or in a [transaction](app.md#apptransaction).
 
@@ -177,7 +177,7 @@ local result = image:isPlain(color)
 ```
 
 Returns true if all pixels in the image are equal to the given `color`
-(which can be a [pixel color](pixelcolor.md#pixelcolor) or a
+(which can be a [pixel color](pixelcolor.md#apppixelcolor) or a
 [color](color.md#color)).
 
 ## Image:pixels()
@@ -188,7 +188,7 @@ iterator = image:pixels(rectangle)
 ```
 
 Returns a pixel iterator for the whole image or the given
-[rectangle](rectangle.md). Then you can use the iterator to read or
+[rectangle](rectangle.md#rectangle). Then you can use the iterator to read or
 change pixel values in this way:
 
 ```lua

@@ -30,7 +30,7 @@ Gets or sets the layer blending mode. Check the possible
 
 ## Layer.isImage
 
-It's true if this layer has [cels](cel.md) with [images](image.md).
+It's true if this layer has [cels](cel.md#cel) with [images](image.md#image).
 
 ## Layer.isGroup
 
@@ -62,7 +62,7 @@ or in [indexed color mode](colormode.md#colormodeindexed), the
 
 ## Layer.cels
 
-Returns the collection of [cels](cel.md) of this layer. Empty if the
+Returns the collection of [cels](cel.md#cel) of this layer. Empty if the
 layer is a group.
 
 See also the [Layer:cel()](#layercel) function.
@@ -74,7 +74,7 @@ local color = layer.color
 layer.color = color
 ```
 
-Gets or sets the user-defined [color](color.md) of this layer in the timeline.
+Gets or sets the user-defined [color](color.md#color) of this layer in the timeline.
 
 ## Layer.data
 

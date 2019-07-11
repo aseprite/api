@@ -42,7 +42,7 @@ parameters.
 * `app.command.DuplicateSprite`
 * `app.command.DuplicateView`
 * `app.command.Exit`
-* [`app.command.ExportSpriteSheet`](command/ExportSpriteSheet.md)
+* [`app.command.ExportSpriteSheet`](command/ExportSpriteSheet.md#exportspritesheet)
 * `app.command.Eyedropper`
 * `app.command.Fill`
 * `app.command.FitScreen`
@@ -86,9 +86,9 @@ parameters.
 * `app.command.MergeDownLayer`
 * `app.command.ModifySelection`
 * `app.command.MoveCel`
-* [`app.command.MoveMask`](command/MoveMask.md)
+* [`app.command.MoveMask`](command/MoveMask.md#movemask)
 * `app.command.NewBrush`
-* [`app.command.NewFile`](command/NewFile.md)
+* [`app.command.NewFile`](command/NewFile.md#newfile)
 * `app.command.NewFrameTag`
 * `app.command.NewFrame`
 * `app.command.NewLayer`

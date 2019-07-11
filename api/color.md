@@ -3,8 +3,8 @@
 Represents a color that can be choose by the user in different kinds
 (RGB, HSV, HSL, grayscale, indexed).
 
-Don't confuse this color with the [app.pixelColor](pixelcolor.md)
-which is used to put/get pixels to/from an [image](image.md).
+Don't confuse this color with the [app.pixelColor](pixelcolor.md#apppixelcolor)
+which is used to put/get pixels to/from an [image](image.md#image).
 
 ## Color()
 
@@ -21,7 +21,7 @@ c = Color(integer)
 ```
 
 * If `alpha` argument is not specified, it's 255 by default (opacity = 100%).
-* The `Color(integer)` constructor receives a [pixel color](pixelcolor.md)
+* The `Color(integer)` constructor receives a [pixel color](pixelcolor.md#apppixelcolor)
   and the integer is interpreted depending on the [active sprite](app.md#appactivesprite).
 
 ## Color.alpha
@@ -83,10 +83,10 @@ local c = Color{ r=200, g=100, b=0, a=255 }
 assert(c.rgbaPixel == app.pixelColor.rgba(200, 100, 0, 255))
 ```
 
-Returns the [pixel color](pixelcolor.md#pixelcolorrgba) which is
+Returns the [pixel color](pixelcolor.md#apppixelcolorrgba) which is
 equivalent to the RGBA values of this color.
 
 ## Color.grayPixel
 
-Returns the [pixel color](pixelcolor.md#pixelcolorgraya) which is
+Returns the [pixel color](pixelcolor.md#apppixelcolorgraya) which is
 equivalent to the gray+alpha values of this color.

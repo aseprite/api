@@ -30,7 +30,7 @@ end
 * [`app.useTool()`](app.md#appusetool) now can be used inside a
   [`app.transaction()`](app.md#apptransaction)
   ([#18](https://github.com/aseprite/api/issues/18))
-* New params for [`app.command.NewFile`](api/command/NewFile.md).
+* New params for [`app.command.NewFile`](api/command/NewFile.md#newfile).
 
 ## v1.2.10
 
@@ -46,7 +46,7 @@ end
 * New [`ColorSpace`](api/colorspace.md#colorspace) class.
 * New `focus` property for [Dialog:button](api/dialog.md#dialogbutton)
   and [Dialog:entry](api/dialog.md#dialogentry).
-* New parameters for [`ExportSpriteSheet`](api/command/ExportSpriteSheet.md).
+* New parameters for [`ExportSpriteSheet`](api/command/ExportSpriteSheet.md#exportspritesheet).
 * New [`app.useTool()`](app.md#appusetool),
   [`Brush`](api/brush.md#brush),
   [`Tool`](api/tool.md#tool) class.
@@ -62,7 +62,7 @@ end
 * [`app`](api/app.md#app)
   * New [`app.apiVersion`](api/app.md#appapiversion) with value `1`.
   * Different return value for `app.activeFrame`: Now it returns a
-    [`Frame`](api/frame.md) instead of a frame number (an integer
+    [`Frame`](api/frame.md#frame) instead of a frame number (an integer
     value). In v1.2.10-beta2 this function returned `nil` when we were
     in the first frame, now it returns the valid `Frame` object with
     `frame.frameNumber = 1`. You can access the old frame number value doing:
@@ -72,7 +72,7 @@ end
   * New [`app.range`](api/app.md#apprange)
 * [`Site`](api/site.md#frame)
   * Different return value for `app.site.frame`: Now it returns a
-    [`Frame`](api/frame.md) instead of a frame number.
+    [`Frame`](api/frame.md#frame) instead of a frame number.
 * [`Rectangle`](api/rectangle.md#rectangle)
   * Added [`Rectangle.contains`](api/rectangle.md#rectanglecontains) function.
   * Added [`Rectangle.intersect`](api/rectangle.md#rectangleintersect) function.

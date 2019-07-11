@@ -7,7 +7,7 @@ Selection()
 Selection(rectangle)
 ```
 
-Creates a new empty selection, or with the given [rectangle](rectangle.md).
+Creates a new empty selection, or with the given [rectangle](rectangle.md#rectangle).
 
 ## Selection.bounds
 
@@ -15,7 +15,7 @@ Creates a new empty selection, or with the given [rectangle](rectangle.md).
 local rectangle = selection.bounds
 ```
 
-Returns a [rectangle](rectangle.md) with the bounds of the selection
+Returns a [rectangle](rectangle.md#rectangle) with the bounds of the selection
 (if the rectangle is empty, is because there is no selection).
 
 ## Selection.origin
@@ -25,7 +25,7 @@ local point = selection.origin
 selection.origin = newPoint
 ```
 
-Gets or sets the selection origin/position (a [point](point.md)).
+Gets or sets the selection origin/position (a [point](point.md#point)).
 This can be used to move the selection edges (not the content).
 
 ## Selection.isEmpty
@@ -49,7 +49,7 @@ selection:deselect()
 selection:select(rectangle)
 ```
 
-Selects the given [rectangle](rectangle.md).
+Selects the given [rectangle](rectangle.md#rectangle).
 
 ## Selection:selectAll()
 
@@ -67,5 +67,5 @@ local status = selection:contains(point)
 local status = selection:contains(x, y)
 ```
 
-Returns true or false if the given [point](point.md) is inside the
+Returns true or false if the given [point](point.md#point) is inside the
 selection.

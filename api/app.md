@@ -12,7 +12,7 @@ Active [range](range.md#range) in the timeline.
 
 ## app.activeCel
 
-Gets or sets the active [Cel](cel.md) object.
+Gets or sets the active [Cel](cel.md#cel) object.
 
 ## app.activeFrame
 
@@ -21,7 +21,7 @@ Gets or sets the active frame number (1 is the first frame in the sprite).
 **WARNING**: This function has a bug in Aseprite v1.2.10-beta2,
 returns `nil` if we are in the first frame of the sprite. Also it
 returns a number, but in the future it will returns a
-[frame](frame.md) object, you can use an auxiliary function at the
+[frame](frame.md#frame) object, you can use an auxiliary function at the
 moment:
 
 ```lua
@@ -41,11 +41,11 @@ end
 local image = app.activeImage
 ```
 
-Returns the active image, an [Image](image.md) object.
+Returns the active image, an [Image](image.md#image) object.
 
 ## app.activeLayer
 
-Returns the active layer, a [Layer](layer.md) object.
+Returns the active layer, a [Layer](layer.md#layer) object.
 
 ## app.activeSprite
 
@@ -53,11 +53,11 @@ Returns the active layer, a [Layer](layer.md) object.
 local sprite = app.activeSprite
 ```
 
-Returns the active sprite, a [Sprite](sprite.md) object.
+Returns the active sprite, a [Sprite](sprite.md#sprite) object.
 
 ## app.activeTag
 
-Returns the active [tag](tag.md), which is the tag located at the
+Returns the active [tag](tag.md#tag), which is the tag located at the
 [active frame](#appactiveframe).
 
 ## app.activeTool
@@ -66,7 +66,7 @@ Returns the active [tag](tag.md), which is the tag located at the
 
 ## app.pixelColor
 
-This [pixelColor namespace](pixelcolor.md) contains internal functions
+This [pixelColor namespace](pixelcolor.md#apppixelcolor) contains internal functions
 to handle color at the lowest level.
 
 ## app.version
@@ -75,22 +75,22 @@ Returns the Aseprite version number as a [`Version`](version.md#version) object 
 
 ## app.apiVersion
 
-Returns the API version. See the [changes file](../Changes.md) between
+Returns the API version. See the [changes file](../Changes.md#api-changes) between
 version to know what offer each API version.
 
 ## app.fgColor
 
-Gets or sets the current foreground [color](color.md).
+Gets or sets the current foreground [color](color.md#color).
 
 ## app.bgColor
 
-Gets or sets the current background [color](color.md). Remember that
+Gets or sets the current background [color](color.md#color). Remember that
 some commands use the background color to clear the active layer.
 
 ## app.isUIAvailable
 
 Returns true if the UI is available. E.g. if this is true you can use
-[app.alert](#appalert) or [dialogs](dialog.md).
+[app.alert](#appalert) or [dialogs](dialog.md#dialog).
 
 ## app.sprites
 
@@ -131,7 +131,7 @@ app.open(filename)
 ```
 
 Opens a new sprite loading it from the given filename. Returns an
-instance of the [Sprite class](sprite.md) or `nil` if something went
+instance of the [Sprite class](sprite.md#sprite) or `nil` if something went
 wrong.
 
 ## app.exit()
@@ -218,13 +218,13 @@ Simulates an user stroke in the canvas using the given tool.
   `pencil`, `spray`, `eraser`, `eyedropper`, `zoom`, `hand`, `move`,
   `slice`, `paint_bucket`, `gradient`, `line`, `curve`, `rectangle`,
   `filled_rectangle`, `ellipse`, `filled_ellipse`, `contour`,
-  `polygon`, `blur`, `jumble`) or a [tool](tool.md) object
-* `color`: A [color](color.md) object to draw with the given tool
-* `brush`: A [brush](brush.md) object to draw the points
-* `points`: An array of [points](point.md) in the sprite canvas which
+  `polygon`, `blur`, `jumble`) or a [tool](tool.md#tool) object
+* `color`: A [color](color.md#color) object to draw with the given tool
+* `brush`: A [brush](brush.md#brush) object to draw the points
+* `points`: An array of [points](point.md#point) in the sprite canvas which
   simulate the position of where the user put the mouse to draw with
   the given tool.
 * And we can specify the `cel` or `layer`/`frame` where to draw:
-  * `cel`: The specific [cel](cel.md) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
-  * `layer`: The [layer](layer.md) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
-  * `frame`: The [frame](frame.md) where to draw (by default [app.activeFrame](app.md#appactiveframe))
+  * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
+  * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
+  * `frame`: The [frame](frame.md#frame) where to draw (by default [app.activeFrame](app.md#appactiveframe))

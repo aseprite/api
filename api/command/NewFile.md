@@ -13,5 +13,5 @@ app.command.NewFile {
 * `ui`
 * `width`
 * `height`
-* `colorMode` ([ColorMode](../colormode.md))
+* `colorMode` ([ColorMode](../colormode.md#colormode))
 * `fromClipboard`

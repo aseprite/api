@@ -48,7 +48,7 @@ value).
 local color = palette:getColor(index)
 ```
 
-Returns the [`color`](color.md) in the given entry `index` (the `index` goes from `0` to `#palette-1`).
+Returns the [`color`](color.md#color) in the given entry `index` (the `index` goes from `0` to `#palette-1`).
 
 ## Palette:setColor()
 
@@ -57,14 +57,14 @@ palette:setColor(index, color)
 ```
 
 Changes a palette color in the given entry `index` (the `index` goes from `0` to `#palette-1`).
-The `color` can be a [`Color`](color.md) object or an [integer pixel value](pixelcolor.md#apppixelcolor).
+The `color` can be a [`Color`](color.md#color) object or an [integer pixel value](pixelcolor.md#apppixelcolor).
 
 ## Palette.frame
 
-At the moment it always return the first [frame](frame.md), but in a
+At the moment it always return the first [frame](frame.md#frame), but in a
 near future Aseprite will support palette changes over time (in
 different frames), so this field should be the frame number where this
-palette is displayed for first time in the [sprite](sprite.md).
+palette is displayed for first time in the [sprite](sprite.md#sprite).
 
 ## Palette:saveAs()
 

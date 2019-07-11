@@ -19,7 +19,7 @@ Or a combination of those.
 local type = range.type
 ```
 
-Returns a [RangeType](rangetype.md).
+Returns a [RangeType](rangetype.md#rangetype).
 
 ## Range.isEmpty
 
