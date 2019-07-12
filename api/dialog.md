@@ -230,7 +230,10 @@ dlg:separator{ id=string,
 ```lua
 local dlg = Dialog()
 dlg:show()
-dlg:show{ wait=false }
+dlg:show{
+  wait=false,
+  bounds=Rectangle()
+}
 ```
 
 Makes the dialog visible to the user. The script code will continue
@@ -242,6 +245,10 @@ background", which means that the script code continues the execution
 with its following line, and the dialog will be visible until it's
 closed with some button or calling [Dialog:close](#dialogclose) in a
 `onclick` event.
+
+With `{ bounds=Rectangle() }` you can display the dialog in a specific
+location. Useful to show the dialog in a previous position that you
+obtain from [Dialog.bounds](#dialogbounds) property.
 
 ## Dialog:slider()
 
