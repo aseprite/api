@@ -1,7 +1,7 @@
 # ColorSpace
 
 Represents the [color space/profile](https://www.aseprite.org/docs/color-profile/)
-of a [sprite](sprite.md), [image](image.md), or [image spec](imagespec.md).
+of a [sprite](sprite.md#sprite), [image](image.md#image), or [image spec](imagespec.md#imagespec).
 
 ## ColorSpace()
 

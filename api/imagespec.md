@@ -1,8 +1,8 @@
 # ImageSpec
 
 It's a simple structure that contains some specifications of a
-[sprite](sprite.md) or [image](image.md) (like canvas size, [color
-mode](colormode.md), etc.)
+[sprite](sprite.md#sprite) or [image](image.md#image) (like canvas size,
+[color mode](colormode.md#colormode), etc.)
 
 ## ImageSpec.colorMode
 
@@ -11,7 +11,7 @@ local colorMode = spec.colorMode
 spec.colorMode = colorMode
 ```
 
-The [color mode](colormode.md) of the image.
+The [color mode](colormode.md#colormode) of the image.
 
 ## ImageSpec.width
 

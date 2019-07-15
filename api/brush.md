@@ -20,10 +20,10 @@ local brush = Brush{
 }
 ```
 
-* [BrushType](brushtype.md)
-* [BrushPattern](brushpattern.md)
-* [Image](image.md)
-* [Point](point.md)
+* [BrushType](brushtype.md#brushtype)
+* [BrushPattern](brushpattern.md#brushpattern)
+* [Image](image.md#image)
+* [Point](point.md#point)
 
 ## Brush.type
 

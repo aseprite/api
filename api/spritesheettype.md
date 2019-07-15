@@ -1,7 +1,7 @@
 # SpriteSheetType
 
 Type of sprite sheet used in
-[`app.command.ExportSpriteSheet`](command/ExportSpriteSheet.md).
+[`app.command.ExportSpriteSheet`](command/ExportSpriteSheet.md#exportspritesheet).
 
 ## SpriteSheetType.HORIZONTAL
 

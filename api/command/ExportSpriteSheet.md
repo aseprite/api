@@ -29,7 +29,7 @@ app.command.ExportSpriteSheet {
 
 * `ui`
 * `askOverwrite`
-* `type` ([SpriteSheetType](../spritesheettype.md))
+* `type` ([SpriteSheetType](../spritesheettype.md#spritesheettype))
 * `columns`
 * `rows`
 * `width`
@@ -37,7 +37,7 @@ app.command.ExportSpriteSheet {
 * `bestFit=false`
 * `textureFilename`
 * `dataFilename`
-* `dataFormat` ([SpriteSheetDataFormat](../spritesheetdataformat.md))
+* `dataFormat` ([SpriteSheetDataFormat](../spritesheetdataformat.md#spritesheetdataformat))
 * `borderPadding`
 * `shapePadding`
 * `innerPadding`

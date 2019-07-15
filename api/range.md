@@ -19,7 +19,7 @@ Or a combination of those.
 local type = range.type
 ```
 
-Returns a [RangeType](rangetype.md).
+Returns a [RangeType](rangetype.md#rangetype).
 
 ## Range.isEmpty
 
@@ -28,7 +28,7 @@ local booleanResult = rectangle.isEmpty
 ```
 
 Returns true if the range is empty, i.e. there is no selected range in
-the timelin (a thick border in the timeline), only the [active cel](app.md#appactivecel)
+the timeline (a thick border in the timeline), only the [active cel](app.md#appactivecel)
 in the sprite editor.
 
 This is the same as asking for `range.type == RangeType.EMPTY`.

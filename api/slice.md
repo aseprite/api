@@ -17,7 +17,7 @@ local color = slice.color
 slice.color = color
 ```
 
-Gets or sets the user-defined [color](color.md) of this slice in the timeline.
+Gets or sets the user-defined [color](color.md#color) of this slice in the timeline.
 
 ## Slice.data
 

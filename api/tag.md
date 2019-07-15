@@ -35,4 +35,4 @@ local color = tag.color
 tag.color = color
 ```
 
-Gets or sets the user-defined [color](color.md) of this tag in the timeline.
+Gets or sets the user-defined [color](color.md#color) of this tag in the timeline.

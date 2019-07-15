@@ -31,14 +31,14 @@ a little experiment, so you have five main options to approach your idea:
 
 ## API Changes
 
-[API changes between versions](Changes.md).
+[API changes between versions](Changes.md#api-changes).
 
 ## Reference
 
 * Globals namespaces
   * [app](api/app.md#app)
   * [app.command](api/app_command.md#appcommand)
-  * [app.pixelColor](api/pixelcolor.md#pixelcolor)
+  * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
 * Constants
   * [AniDir](api/anidir.md#anidir)
   * [BlendMode](api/blendmode.md#blendmode)

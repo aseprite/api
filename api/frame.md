@@ -11,7 +11,7 @@ the number of frames in the sprite, or the structure of the frames, a
 local sprite = frame.sprite
 ```
 
-Returns the [sprite](sprite.md) of this frame.
+Returns the [sprite](sprite.md#sprite) of this frame.
 
 ## Frame.frameNumber
 

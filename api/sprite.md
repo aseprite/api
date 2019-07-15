@@ -3,17 +3,18 @@
 ## Sprite()
 
 ```lua
-local sprite = Sprite(width, height [, colorMode])
+local sprite = Sprite(width, height)
+local sprite = Sprite(width, height, colorMode)
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
 local sprite = Sprite{ fromFile=filename }
 ```
 
 Creates a new sprite with the given `width` and `height`. The
-[color mode](colormode.md) is optional, [RGB](colormode.md#colormodergb)
+[color mode](colormode.md#colormode) is optional, [RGB](colormode.md#colormodergb)
 by default.
 
-The `spec` parameter is an [image specification](imagespec.md) object.
+The `spec` parameter is an [image specification](imagespec.md#imagespec) object.
 
 If `otherSprite` is given (other `Sprite` object), the sprite is duplicated.
 
@@ -60,7 +61,7 @@ sprite.selection = newSelection
 ```
 
 Gets or sets the active sprite selection. This property is an instance
-of the [Selection class](selection.md) to manipulate the set of
+of the [Selection class](selection.md#selection) to manipulate the set of
 selected pixels in the canvas.
 
 ## Sprite.filename
@@ -76,7 +77,7 @@ associated file.
 
 ## Sprite.colorMode
 
-Returns the [color mode](colormode.md) of this sprite.
+Returns the [color mode](colormode.md#colormode) of this sprite.
 
 ## Sprite.spec
 
@@ -84,7 +85,7 @@ Returns the [color mode](colormode.md) of this sprite.
 local spec = sprite.spec
 ```
 
-The [specification](imagespec.md) for image in this sprite.
+The [specification](imagespec.md#imagespec) for image in this sprite.
 
 ## Sprite.frames
 
@@ -97,11 +98,11 @@ for i = 1,#s.frames do
 end
 ```
 
-An array of [frames](frame.md).
+An array of [frames](frame.md#frame).
 
 ## Sprite.palettes
 
-An array of [palettes](palette.md). Generally it contains only one
+An array of [palettes](palette.md#palette). Generally it contains only one
 palette (`sprite.palettes[1]`).
 
 In the future we'll support multiple palettes to create
@@ -118,7 +119,7 @@ for i = 1,#s.layers do
 end
 ```
 
-An array of [layers](layer.md).
+An array of [layers](layer.md#layer).
 
 ## Sprite.cels
 
@@ -131,7 +132,7 @@ for i = 1,#s.cels do
 end
 ```
 
-An array of [cels](cel.md).
+An array of [cels](cel.md#cel).
 
 ## Sprite.tags
 
@@ -144,7 +145,7 @@ for i = 1,#s.tags do
 end
 ```
 
-An array of [tags](tag.md).
+An array of [tags](tag.md#tag).
 
 ## Sprite.slices
 
@@ -157,13 +158,13 @@ for i = 1,#s.slices do
 end
 ```
 
-An array of [slices](slice.md).
+An array of [slices](slice.md#slice).
 
 ## Sprite.backgroundLayer
 
 Returns the [background
 layer](https://www.aseprite.org/docs/layers/#background-layer) a
-[layer](layer.md) object or `nil` if the sprite doesn't contain a
+[layer](layer.md#layer) object or `nil` if the sprite doesn't contain a
 background layer.
 
 ## Sprite.transparentColor
@@ -185,7 +186,7 @@ sprite:resize(size)
 ```
 
 Resize the sprite (and all frames/cels) to the given dimensions. See
-[Size class](size.md).
+[Size class](size.md#size).
 
 ## Sprite:crop()
 
@@ -195,7 +196,7 @@ sprite:crop(rectangle)
 ```
 
 Crops the sprite to the given dimensions. See the
-[Rectangle class](rectangle.md).
+[Rectangle class](rectangle.md#rectangle).
 
 ## Sprite:saveAs()
 
@@ -246,7 +247,7 @@ sprite:setPalette(Palette{ fromFile=filename })
 sprite:setPalette(palette)
 ```
 
-Changes the sprite [palette](palette.md).
+Changes the sprite [palette](palette.md#palette).
 
 ## Sprite:assignColorSpace
 
@@ -255,7 +256,7 @@ local colorSpace = ColorSpace{ sRGB }
 sprite:assignColorSpace(colorSpace)
 ```
 
-Assign a new [color space](colorspace.md) to the sprite without
+Assign a new [color space](colorspace.md#colorspace) to the sprite without
 modifying the sprite pixels.
 
 ## Sprite:convertColorSpace
@@ -265,7 +266,7 @@ local colorSpace = ColorSpace{ sRGB }
 sprite:convertColorSpace(colorSpace)
 ```
 
-Converts all the sprite pixels to a new [color space](colorspace.md)
+Converts all the sprite pixels to a new [color space](colorspace.md#colorspace)
 so the image looks the same as in the previous color space (all pixels
 will be adjusted to the new color space).
 
@@ -275,7 +276,7 @@ will be adjusted to the new color space).
 local layer = sprite:newLayer()
 ```
 
-Creates a new [layer](layer.md) at the top of the layers stack.
+Creates a new [layer](layer.md#layer) at the top of the layers stack.
 
 ## Sprite:newGroup()
 
@@ -283,7 +284,7 @@ Creates a new [layer](layer.md) at the top of the layers stack.
 local layerGroup = sprite:newGroup()
 ```
 
-Creates a new empty [layer group](layer.md) at the top of the layers stack.
+Creates a new empty [layer group](layer.md#layer) at the top of the layers stack.
 
 ## Sprite:deleteLayer()
 
@@ -292,7 +293,7 @@ sprite:deleteLayer(layer)
 sprite:deleteLayer(layerName)
 ```
 
-Deletes the given [layer](layer.md) or the layer with the given `layerName` (a string).
+Deletes the given [layer](layer.md#layer) or the layer with the given `layerName` (a string).
 
 ## Sprite:newFrame()
 
@@ -301,14 +302,14 @@ local frame = sprite:newFrame(frame)
 local frame = sprite:newFrame(frameNumber)
 ```
 
-Creates a copy of the given [frame](frame.md) object or frame number
-and returns a [`Frame`](frame.md) that points to the newly created
+Creates a copy of the given [frame](frame.md#frame) object or frame number
+and returns a [`Frame`](frame.md#frame) that points to the newly created
 frame in `frameNumber` position.
 
 ## Sprite:newEmptyFrame()
 
 Creates a new empty frame in the given `frameNumber` (an integer) and
-returns the new [frame](frame.md).
+returns the new [frame](frame.md#frame).
 
 ## Sprite:deleteFrame()
 
@@ -323,9 +324,9 @@ cel = sprite:newCel(layer, frame)
 cel = sprite:newCel(layer, frame, image, position)
 ```
 
-Creates a new [cel](cel.md) in the given [layer](layer.md) and `frame`
-number. If the [image](image.md) is not specified, a new image will be
-created with the size of the sprite canvas. The [position](point.md)
+Creates a new [cel](cel.md#cel) in the given [layer](layer.md#layer) and `frame`
+number. If the [image](image.md#image) is not specified, a new image will be
+created with the size of the sprite canvas. The [position](point.md#point)
 is a point to locate the image.
 
 ## Sprite:deleteCel()
@@ -335,7 +336,7 @@ sprite:deleteCel(cel)
 sprite:deleteCel(layer, frame)
 ```
 
-Deletes the given [cel](cel.md). If the cel is from a transparent
+Deletes the given [cel](cel.md#cel). If the cel is from a transparent
 layer, the cel is completely deleted, but if the cel is from a
 background layer, the cel will be delete with the
 [background color](app.md#appbgcolor).
@@ -346,7 +347,7 @@ background layer, the cel will be delete with the
 local tag = sprite:newTag(fromFrameNumber, toFrameNumber)
 ```
 
-Creates a new [tag](tag.md) in the given frame range and with the given name.
+Creates a new [tag](tag.md#tag) in the given frame range and with the given name.
 
 ## Sprite:deleteTag()
 
@@ -355,7 +356,7 @@ sprite:deleteTag(tag)
 sprite:deleteTag(tagName)
 ```
 
-Deletes the given [tag](tag.md).
+Deletes the given [tag](tag.md#tag).
 
 ## Sprite:newSlice()
 
@@ -364,7 +365,7 @@ local slice = sprite:newSlice()
 local slice = sprite:newSlice(Rectangle)
 ```
 
-Returns a new [slice](slice.md).
+Returns a new [slice](slice.md#slice).
 
 ## Sprite:deleteSlice()
 
@@ -373,7 +374,7 @@ sprite:deleteSlice(slice)
 sprite:deleteSlice(sliceName)
 ```
 
-Deletes the given [slice](slice.md).
+Deletes the given [slice](slice.md#slice).
 
 ## Sprite:flatten()
 

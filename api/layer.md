@@ -18,17 +18,37 @@ layer.opacity = newOpacity
 Gets or sets the cel opacity. A value from `0` to `255` (which means
 `0=0%` completely transparent, or `255=100%` completely opaque).
 
+## Layer.blendMode
+
+```lua
+local blendMode = layer.blendMode
+layer.blendMode = newBlendMode
+```
+
+Gets or sets the layer blending mode. Check the possible
+[BlendMode](blendmode.md#blendmode) values.
+
 ## Layer.isImage
 
-Is true if this image has [cels](cel.md) with [images](image.md).
+It's true if this layer has [cels](cel.md#cel) with [images](image.md#image).
 
 ## Layer.isGroup
 
-Is true if this image has sublayers inside.
+It's true if this layer has sublayers inside.
 
 ## Layer.isTransparent
 
+It's true if this layer is a [transparent layer](https://www.aseprite.org/docs/layers/#transparent-layers)
+(instead of a the [background layer](#layerisbackground)). Transparent layers have
+an alpha channel or, for [indexed color mode](colormode.md#colormodeindexed),
+the [transparent index](https://www.aseprite.org/docs/transparent-color/) is not visible.
+
 ## Layer.isBackground
+
+It's true if this layer is the [background layer](https://www.aseprite.org/docs/layers/#background-layer).
+A background layer is opaque, doesn't have alpha channel (`Alpha=255` on every pixel),
+or in [indexed color mode](colormode.md#colormodeindexed), the
+[transparent index](https://www.aseprite.org/docs/transparent-color/) is ignored.
 
 ## Layer.isEditable
 
@@ -42,7 +62,7 @@ Is true if this image has sublayers inside.
 
 ## Layer.cels
 
-Returns the collection of [cels](cel.md) of this layer. Empty if the
+Returns the collection of [cels](cel.md#cel) of this layer. Empty if the
 layer is a group.
 
 See also the [Layer:cel()](#layercel) function.
@@ -54,7 +74,7 @@ local color = layer.color
 layer.color = color
 ```
 
-Gets or sets the user-defined [color](color.md) of this layer in the timeline.
+Gets or sets the user-defined [color](color.md#color) of this layer in the timeline.
 
 ## Layer.data
 

@@ -10,7 +10,7 @@ A [cel](https://www.aseprite.org/docs/cel/) is an [image](#celimage) in a specif
 local sprite = cel.sprite
 ```
 
-Cels belong to one [sprite](sprite.md). This property returns that sprite.
+Cels belong to one [sprite](sprite.md#sprite). This property returns that sprite.
 
 ## Cel.layer
 
@@ -18,7 +18,7 @@ Cels belong to one [sprite](sprite.md). This property returns that sprite.
 local layer = cel.layer
 ```
 
-Returns the [layer](layer.md) where this cel is located.
+Returns the [layer](layer.md#layer) where this cel is located.
 
 ## Cel.frame
 
@@ -26,7 +26,16 @@ Returns the [layer](layer.md) where this cel is located.
 local frame = cel.frame
 ```
 
-Returns the frame number, `1` is the first frame (not `0`).
+Returns the [frame](frame.md#frame) object which this cel belongs.
+
+## Cel.frameNumber
+
+```lua
+local frameNumber = cel.frameNumber
+```
+
+Returns the frame number which this cel belongs, the frame number `1`
+is the first frame (not `0`).
 
 ## Cel.image
 
@@ -35,7 +44,7 @@ local image = cel.image
 cel.image = newImage
 ```
 
-Gets or sets the [image](image.md) with the pixels of this cel. This
+Gets or sets the [image](image.md#image) with the pixels of this cel. This
 is the preferred way to replace the cel image, because it generates
 only one undoable action.
 
@@ -45,7 +54,7 @@ only one undoable action.
 local bounds = cel.bounds
 ```
 
-Returns the [rectangle](rectangle.md) with the cel bounds (position
+Returns the [rectangle](rectangle.md#rectangle) with the cel bounds (position
 and size).
 
 ## Cel.position
@@ -74,7 +83,7 @@ local color = cel.color
 cel.color = newColor
 ```
 
-Gets or sets the user-defined [color](color.md) of this cel in the timeline.
+Gets or sets the user-defined [color](color.md#color) of this cel in the timeline.
 
 ## Cel.data
 
