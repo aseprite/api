@@ -114,7 +114,7 @@ parameters.
 * `app.command.RemoveLayer`
 * `app.command.RemoveSlice`
 * `app.command.RepeatLastExport`
-* `app.command.ReplaceColor`
+* [`app.command.ReplaceColor`](command/ReplaceColor.md#replacecolor)
 * `app.command.ReselectMask`
 * `app.command.ReverseFrames`
 * `app.command.Rotate`
