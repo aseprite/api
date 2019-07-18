@@ -24,6 +24,19 @@ else
 end
 ```
 
+## v1.2.14
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `5`
+* Added filter commands:
+  * [`app.command.BrightnessContrast()`](api/command/BrightnessContrast.md#brightnesscontrast)
+  * [`app.command.Despeckle()`](api/command/Despeckle.md#despeckle)
+  * [`app.command.HueSaturation()`](api/command/HueSaturation.md#huesaturation)
+  * [`app.command.InvertColor()`](api/command/InvertColor.md#invertcolor)
+  * [`app.command.Outline()`](api/command/Outline.md#outline)
+  * [`app.command.ReplaceColor()`](api/command/ReplaceColor.md#replacecolor)
+* New types:
+  * [`FilterChannels`](api/filterchannels.md#filterchannels)
+
 ## v1.2.13
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `4`

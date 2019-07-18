@@ -13,7 +13,7 @@ parameters.
 * `app.command.AdvancedMode`
 * `app.command.AutocropSprite`
 * `app.command.BackgroundFromLayer`
-* `app.command.BrightnessContrast`
+* [`app.command.BrightnessContrast`](command/BrightnessContrast.md#brightnesscontrast)
 * `app.command.Cancel`
 * `app.command.CanvasSize`
 * `app.command.CelOpacity`
@@ -35,7 +35,7 @@ parameters.
 * `app.command.CropSprite`
 * `app.command.Cut`
 * `app.command.DeselectMask`
-* `app.command.Despeckle`
+* [`app.command.Despeckle`](command/Despeckle.md#despeckle)
 * `app.command.DeveloperConsole`
 * `app.command.DiscardBrush`
 * `app.command.DuplicateLayer`
@@ -66,9 +66,9 @@ parameters.
 * `app.command.GotoPreviousTab`
 * `app.command.GridSettings`
 * `app.command.Home`
-* `app.command.HueSaturation`
+* [`app.command.HueSaturation`](command/HueSaturation.md#huesaturation)
 * `app.command.ImportSpriteSheet`
-* `app.command.InvertColor`
+* [`app.command.InvertColor`](command/InvertColor.md#invertcolor)
 * `app.command.InvertMask`
 * `app.command.KeyboardShortcuts`
 * `app.command.Launch`
@@ -100,6 +100,7 @@ parameters.
 * `app.command.OpenScriptFolder`
 * `app.command.OpenWithApp`
 * `app.command.Options`
+* [`app.command.Outline`](command/Outline.md#outline)
 * `app.command.PaletteEditor`
 * `app.command.PaletteSize`
 * `app.command.PasteText`

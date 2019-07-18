@@ -45,6 +45,7 @@ a little experiment, so you have five main options to approach your idea:
   * [BrushPattern](api/brushpattern.md#brushpattern)
   * [BrushType](api/brushtype.md#brushtype)
   * [ColorMode](api/colormode.md#colormode)
+  * [FilterChannel](api/filterchannel.md#filterchannel)
   * [RangeType](api/rangetype.md#rangetype)
   * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
   * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
