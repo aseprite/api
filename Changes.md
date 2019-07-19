@@ -36,6 +36,8 @@ end
   * [`app.command.ReplaceColor()`](api/command/ReplaceColor.md#replacecolor)
 * New types:
   * [`FilterChannels`](api/filterchannels.md#filterchannels)
+* Added support to convert arrays of 2 or 4 integers into [points](api/point.md#point),
+  [sizes](api/size.md#size), and [rectangles](api/rectangle.md#rectangle).
 
 ## v1.2.13
 

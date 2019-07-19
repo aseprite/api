@@ -7,6 +7,8 @@ If a function receives a size as an argument it could be several things:
    E.g. `sprite:resize(64, 32)`
 1. You can specify an object with `width` and `height` properties.
    E.g. `sprite:resize{ width=64, height=32 }`
+1. You can specify an array two elements:
+   E.g. `sprite:resize{ 64, 32 }`
 1. You can specify a `Size` instance:
    E.g. `sprite:resize(Size(64, 32))`
 
@@ -17,6 +19,7 @@ Size()
 Size(otherSize)
 Size(width, height)
 Size{width=number, height=number}
+Size{number, number}
 ```
 
 Creates a new `Size` instance with the given dimensions (or
