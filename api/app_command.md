@@ -147,7 +147,7 @@ parameters.
 * `app.command.SliceProperties`
 * `app.command.SnapToGrid`
 * `app.command.SpriteProperties`
-* `app.command.SpriteSize`
+* [`app.command.SpriteSize`](command/SpriteSize.md)
 * `app.command.Stroke`
 * `app.command.SwitchColors`
 * `app.command.SymmetryMode`
