@@ -23,8 +23,10 @@ method="nearest"
 * `method`: Resize algorithm method to be used. Default is `nearest` (for Nearest Neighbor), alternatives: `bilinear`
 and `rotSprite`.
 
-Note: we should be able to use image "i", but at the moment image IDs change after a SpriteSize.
-```local s = Sprite(1, 1)
+Known issue: In the following code, we should be able to use image "i", but at the moment image IDs change after a SpriteSize:
+
+```lua
+local s = Sprite(1, 1)
 local cel = app.activeCel
 local i = cel.image
 local r = Color(255, 0, 0).rgbaPixel
@@ -35,11 +37,13 @@ expect_img(i, { r }) -- OK
 
 app.command.SpriteSize{ ui = false, scaleX = 2 }
 
-expect_img(i, { r,r }) --it will fail```
+expect_img(i, { r,r }) --it will fail
+```
 
-So, to make it works, we will use "cel.image" instead of "i":
+So, to make it works, we will use `cel.image` instead of "i":
 
-```local s = Sprite(1, 1)
+```lua
+local s = Sprite(1, 1)
 local cel = app.activeCel
 local r = Color(255, 0, 0).rgbaPixel
 
@@ -49,6 +53,7 @@ expect_img(cel.image, { r }) -- OK
 
 app.command.SpriteSize{ ui = false, scaleX = 2 }
 
-expect_img(cel.image, { r,r }) --it will pass```
+expect_img(cel.image, { r,r }) --it will pass
+```
 
 This issue will be fixed in a future.
