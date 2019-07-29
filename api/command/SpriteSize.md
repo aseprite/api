@@ -31,7 +31,7 @@ local i = cel.image
 
 app.command.SpriteSize{ ui = false, scaleX = 2 }
 
-print(i.width) -- it will fail: ...attemp to index a nil value (global 'i')
+print(i.width) -- it will fail: ...attempt to index a nil value (global 'i')
 ```
 
 So, to make it works, we have to use `cel.image` instead of `i`:
