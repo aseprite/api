@@ -25,10 +25,10 @@ parameters.
 * `app.command.Clear`
 * `app.command.CloseAllFiles`
 * `app.command.CloseFile`
-* `app.command.ColorCurve`
+* [`app.command.ColorCurve`](command/ColorCurve.md#colorcurve)
 * `app.command.ColorQuantization`
 * `app.command.ContiguousFill`
-* `app.command.ConvolutionMatrix`
+* [`app.command.ConvolutionMatrix`](command/ConvolutionMatrix.md#convolutionmatrix)
 * `app.command.CopyCel`
 * `app.command.CopyMerged`
 * `app.command.Copy`
