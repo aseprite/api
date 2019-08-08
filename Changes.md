@@ -29,6 +29,8 @@ end
 * [`app.apiVersion`](api/app.md#appapiversion) is `5`
 * Added filter commands:
   * [`app.command.BrightnessContrast()`](api/command/BrightnessContrast.md#brightnesscontrast)
+  * [`app.command.ColorCurve()`](api/command/ColorCurve.md#colorcurve)
+  * [`app.command.ConvolutionMatrix()`](api/command/ConvolutionMatrix.md#convolutionmatrix)
   * [`app.command.Despeckle()`](api/command/Despeckle.md#despeckle)
   * [`app.command.HueSaturation()`](api/command/HueSaturation.md#huesaturation)
   * [`app.command.InvertColor()`](api/command/InvertColor.md#invertcolor)
@@ -38,6 +40,8 @@ end
   * [`FilterChannels`](api/filterchannels.md#filterchannels)
 * Added support to convert arrays of 2 or 4 integers into [points](api/point.md#point),
   [sizes](api/size.md#size), and [rectangles](api/rectangle.md#rectangle).
+* Changed [`Sprite:resize()`](api/sprite.md#spriteresize) behavior:
+  resizes the sprite and images (not only the canvas).
 
 ## v1.2.13
 
