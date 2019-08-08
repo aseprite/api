@@ -24,7 +24,7 @@ Returns a [RangeType](rangetype.md#rangetype).
 ## Range.isEmpty
 
 ```lua
-local booleanResult = rectangle.isEmpty
+local booleanResult = range.isEmpty
 ```
 
 Returns true if the range is empty, i.e. there is no selected range in
