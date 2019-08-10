@@ -40,6 +40,8 @@ end
   * [`FilterChannels`](api/filterchannels.md#filterchannels)
 * Added support to convert arrays of 2 or 4 integers into [points](api/point.md#point),
   [sizes](api/size.md#size), and [rectangles](api/rectangle.md#rectangle).
+* Added [`Range.colors`](api/range.md#rangecolors) and
+  [`Range.containsColor`](api/range.md#rangecontainscolor) members.
 * Changed [`Sprite:resize()`](api/sprite.md#spriteresize) behavior:
   resizes the sprite and images (not only the canvas).
 
