@@ -30,6 +30,7 @@ parameters.
 * `app.command.ContiguousFill`
 * [`app.command.ConvolutionMatrix`](command/ConvolutionMatrix.md#convolutionmatrix)
 * `app.command.CopyCel`
+* [`app.command.CopyColors`](command/CopyColors.md#copycolors)
 * `app.command.CopyMerged`
 * `app.command.Copy`
 * `app.command.CropSprite`
@@ -86,6 +87,7 @@ parameters.
 * `app.command.MergeDownLayer`
 * `app.command.ModifySelection`
 * `app.command.MoveCel`
+* [`app.command.MoveColors`)(command/MoveColors.md#movecolors)
 * [`app.command.MoveMask`](command/MoveMask.md#movemask)
 * `app.command.NewBrush`
 * [`app.command.NewFile`](command/NewFile.md#newfile)
