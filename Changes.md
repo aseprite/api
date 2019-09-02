@@ -43,6 +43,7 @@ end
 * Added [`Range.colors`](api/range.md#rangecolors) and
   [`Range.containsColor`](api/range.md#rangecontainscolor) members. And new
   commands [`CopyColors`](api/command/CopyColors.md#copycolors)/[`MoveColors`](api/command/MoveColors.md#movecolors).
+* Added [`Image:resize()`](api/image.md#imageresize) function.
 * Changed [`Sprite:resize()`](api/sprite.md#spriteresize) behavior:
   resizes the sprite and images (not only the canvas).
 
