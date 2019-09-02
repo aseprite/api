@@ -46,6 +46,12 @@ end
 * Added [`Image:resize()`](api/image.md#imageresize) function.
 * Changed [`Sprite:resize()`](api/sprite.md#spriteresize) behavior:
   resizes the sprite and images (not only the canvas).
+* [`Sprite.layers`](api/sprite.md#spritelayers) returns only the first
+  level of layers (in previous versions it returned all the layers,
+  even sublayers inside groups).
+* New [`Layer.layers`](api/layer.md#layerlayers) property to get the layer groups
+* Possibility to change [`Layer.parent`](api/layer.md#layerparent) property
+* New [`Layer.stackIndex`](api/layer.md#layerstackindex) property to reorder layers
 
 ## v1.2.13
 
