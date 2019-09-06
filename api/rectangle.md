@@ -8,6 +8,8 @@ things:
    E.g. `sprite:crop(0, 16, 64, 32)`
 1. You can specify an object with `x`, `y`, `width`, and `height` properties.
    E.g. `sprite:crop{ x=0, y=16, width=64, height=32 }`
+1. You can specify an array with 4 elements:
+   E.g. `sprite:crop{ 0, 16, 64, 32 }`
 1. You can specify a `Rectangle` instance:
    E.g. `sprite:crop(Rectangle(0, 16, 64, 32))`
 
@@ -18,6 +20,7 @@ Rectangle()
 Rectangle(otherRectangle)
 Rectangle(x, y, width, height)
 Rectangle{x=number, y=number, width=number, height=number}
+Rectangle{number, number, number, number}
 ```
 
 ## Rectangle.x

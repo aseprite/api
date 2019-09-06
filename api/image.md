@@ -224,3 +224,17 @@ image:saveAs(filename)
 ```
 
 Saves the image as a sprite in the given `filename`.
+
+## Image:resize()
+
+```lua
+image:resize(width, height)
+image:resize{ width=integer, height=integer, ... }
+image:resize{ size=Size(width, height), ... }
+image:resize{ ..., method='bilinear' | 'rotsprite' }
+image:resize{ ..., pivot=Point(x, y) }
+```
+
+Resizes the image. The pivot is `Point(0, 0)` by default (i.e.  the
+image right and bottom sides will be increased, and the top-left
+corner will be in the same place).

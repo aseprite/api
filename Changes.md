@@ -24,6 +24,35 @@ else
 end
 ```
 
+## v1.2.14
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `5`
+* Added filter commands:
+  * [`app.command.BrightnessContrast()`](api/command/BrightnessContrast.md#brightnesscontrast)
+  * [`app.command.ColorCurve()`](api/command/ColorCurve.md#colorcurve)
+  * [`app.command.ConvolutionMatrix()`](api/command/ConvolutionMatrix.md#convolutionmatrix)
+  * [`app.command.Despeckle()`](api/command/Despeckle.md#despeckle)
+  * [`app.command.HueSaturation()`](api/command/HueSaturation.md#huesaturation)
+  * [`app.command.InvertColor()`](api/command/InvertColor.md#invertcolor)
+  * [`app.command.Outline()`](api/command/Outline.md#outline)
+  * [`app.command.ReplaceColor()`](api/command/ReplaceColor.md#replacecolor)
+* New types:
+  * [`FilterChannels`](api/filterchannels.md#filterchannels)
+* Added support to convert arrays of 2 or 4 integers into [points](api/point.md#point),
+  [sizes](api/size.md#size), and [rectangles](api/rectangle.md#rectangle).
+* Added [`Range.colors`](api/range.md#rangecolors) and
+  [`Range.containsColor`](api/range.md#rangecontainscolor) members. And new
+  commands [`CopyColors`](api/command/CopyColors.md#copycolors)/[`MoveColors`](api/command/MoveColors.md#movecolors).
+* Added [`Image:resize()`](api/image.md#imageresize) function.
+* Changed [`Sprite:resize()`](api/sprite.md#spriteresize) behavior:
+  resizes the sprite and images (not only the canvas).
+* [`Sprite.layers`](api/sprite.md#spritelayers) returns only the first
+  level of layers (in previous versions it returned all the layers,
+  even sublayers inside groups).
+* New [`Layer.layers`](api/layer.md#layerlayers) property to get the layer groups
+* Possibility to change [`Layer.parent`](api/layer.md#layerparent) property
+* New [`Layer.stackIndex`](api/layer.md#layerstackindex) property to reorder layers
+
 ## v1.2.13
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `4`

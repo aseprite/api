@@ -13,7 +13,7 @@ parameters.
 * `app.command.AdvancedMode`
 * `app.command.AutocropSprite`
 * `app.command.BackgroundFromLayer`
-* `app.command.BrightnessContrast`
+* [`app.command.BrightnessContrast`](command/BrightnessContrast.md#brightnesscontrast)
 * `app.command.Cancel`
 * `app.command.CanvasSize`
 * `app.command.CelOpacity`
@@ -25,17 +25,18 @@ parameters.
 * `app.command.Clear`
 * `app.command.CloseAllFiles`
 * `app.command.CloseFile`
-* `app.command.ColorCurve`
+* [`app.command.ColorCurve`](command/ColorCurve.md#colorcurve)
 * `app.command.ColorQuantization`
 * `app.command.ContiguousFill`
-* `app.command.ConvolutionMatrix`
+* [`app.command.ConvolutionMatrix`](command/ConvolutionMatrix.md#convolutionmatrix)
 * `app.command.CopyCel`
+* [`app.command.CopyColors`](command/CopyColors.md#copycolors)
 * `app.command.CopyMerged`
 * `app.command.Copy`
 * `app.command.CropSprite`
 * `app.command.Cut`
 * `app.command.DeselectMask`
-* `app.command.Despeckle`
+* [`app.command.Despeckle`](command/Despeckle.md#despeckle)
 * `app.command.DeveloperConsole`
 * `app.command.DiscardBrush`
 * `app.command.DuplicateLayer`
@@ -66,9 +67,9 @@ parameters.
 * `app.command.GotoPreviousTab`
 * `app.command.GridSettings`
 * `app.command.Home`
-* `app.command.HueSaturation`
+* [`app.command.HueSaturation`](command/HueSaturation.md#huesaturation)
 * `app.command.ImportSpriteSheet`
-* `app.command.InvertColor`
+* [`app.command.InvertColor`](command/InvertColor.md#invertcolor)
 * `app.command.InvertMask`
 * `app.command.KeyboardShortcuts`
 * `app.command.Launch`
@@ -86,6 +87,7 @@ parameters.
 * `app.command.MergeDownLayer`
 * `app.command.ModifySelection`
 * `app.command.MoveCel`
+* [`app.command.MoveColors`)(command/MoveColors.md#movecolors)
 * [`app.command.MoveMask`](command/MoveMask.md#movemask)
 * `app.command.NewBrush`
 * [`app.command.NewFile`](command/NewFile.md#newfile)
@@ -100,6 +102,7 @@ parameters.
 * `app.command.OpenScriptFolder`
 * `app.command.OpenWithApp`
 * `app.command.Options`
+* [`app.command.Outline`](command/Outline.md#outline)
 * `app.command.PaletteEditor`
 * `app.command.PaletteSize`
 * `app.command.PasteText`
@@ -114,7 +117,7 @@ parameters.
 * `app.command.RemoveLayer`
 * `app.command.RemoveSlice`
 * `app.command.RepeatLastExport`
-* `app.command.ReplaceColor`
+* [`app.command.ReplaceColor`](command/ReplaceColor.md#replacecolor)
 * `app.command.ReselectMask`
 * `app.command.ReverseFrames`
 * `app.command.Rotate`
@@ -146,7 +149,7 @@ parameters.
 * `app.command.SliceProperties`
 * `app.command.SnapToGrid`
 * `app.command.SpriteProperties`
-* `app.command.SpriteSize`
+* [`app.command.SpriteSize`](command/SpriteSize.md)
 * `app.command.Stroke`
 * `app.command.SwitchColors`
 * `app.command.SymmetryMode`

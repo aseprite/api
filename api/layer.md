@@ -28,6 +28,35 @@ layer.blendMode = newBlendMode
 Gets or sets the layer blending mode. Check the possible
 [BlendMode](blendmode.md#blendmode) values.
 
+## Layer.layers
+
+It's a table of sub-layers if this layer is a group
+([`Layer.isGroup`](#layerisgroup)), or nil if this is not a group.
+
+## Layer.parent
+
+```lua
+local spriteOrLayerGroup = layer.parent
+layer.parent = sprite
+layer.parent = group
+```
+
+Gets the sprite or the layer group which this layer belongs. You can
+also sets the parent to move the layer at the top of the stack of that
+parent.
+
+## Layer.stackIndex
+
+```lua
+local index = layer.stackIndex
+layer.stackIndex = newPosition
+```
+
+Gets or sets the position of this layer in the stack (i.e. the index
+in the `layer.parent.layers` table). `1` means the first layer (the
+[background layer](https://www.aseprite.org/docs/layers/#background-layer)),
+and bigger numbers layers that are above.
+
 ## Layer.isImage
 
 It's true if this layer has [cels](cel.md#cel) with [images](image.md#image).

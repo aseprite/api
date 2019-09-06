@@ -16,7 +16,7 @@ Or a combination of those.
 ## Range.type
 
 ```lua
-local type = range.type
+local type = app.range.type
 ```
 
 Returns a [RangeType](rangetype.md#rangetype).
@@ -24,14 +24,14 @@ Returns a [RangeType](rangetype.md#rangetype).
 ## Range.isEmpty
 
 ```lua
-local booleanResult = range.isEmpty
+local booleanResult = app.range.isEmpty
 ```
 
 Returns true if the range is empty, i.e. there is no selected range in
 the timeline (a thick border in the timeline), only the [active cel](app.md#appactivecel)
 in the sprite editor.
 
-This is the same as asking for `range.type == RangeType.EMPTY`.
+This is the same as asking for `app.range.type == RangeType.EMPTY`.
 
 Note that if the range is empty, you can still use
 [Range.layers](#rangelayers) to get the [active
@@ -68,14 +68,37 @@ cels are counted just one time in this array).
 Returns an array of selected [images](image.md#image) in the range that are
 in unlocked layers (editable).
 
+## Range.colors
+
+```lua
+local selectedColors = app.range.colors
+app.range.colors = { ... }
+```
+
+Gets or sets the array of selected palette entries in the [color bar](https://www.aseprite.org/docs/color-bar/).
+Each element of the array is an integer (the palette index)
+
+Example to select the colors with index 0 and 3 in the color bar:
+```lua
+app.range.colors = { 0, 3 }
+```
+
 ## Range:contains()
 
 ```lua
-local hasLayer = range:contains(layer)
-local hasFrame = range:contains(frame)
-local hasCel = range:contains(cel)
+local hasLayer = app.range:contains(layer)
+local hasFrame = app.range:contains(frame)
+local hasCel = app.range:contains(cel)
 ```
 
 Returns true if the given object
 ([layer](layer.md#layer)/[frame](frame.md#frame)/[cel](cel.md#cel)) is
 inside the selected range.
+
+## Range:containsColor()
+
+```lua
+local hasColor = app.range:containsColor(colorIndex)
+```
+
+Returns true if the given color index is selected in the [color bar](https://www.aseprite.org/docs/color-bar/).
