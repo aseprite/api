@@ -24,6 +24,13 @@ else
 end
 ```
 
+## v1.2.15
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `6`
+* Fixed [`Sprite:resize()`](api/sprite.md#spriteresize): Now it can resize the non-active sprite.
+* Fixed [`Sprite:newTag()`](api/sprite.md#spritenewtag): Adds undo
+  information (can be used inside a transaction now).
+
 ## v1.2.14
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `5`
