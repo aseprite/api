@@ -95,7 +95,7 @@ Returns true if the UI is available. E.g. if this is true you can use
 ## app.sprites
 
 ```lua
-for i,sprite in ipairs(app.sprites)
+for i,sprite in ipairs(app.sprites) do
   -- do something with each sprite...
 end
 ```
