@@ -87,7 +87,7 @@ parameters.
 * `app.command.MergeDownLayer`
 * `app.command.ModifySelection`
 * `app.command.MoveCel`
-* [`app.command.MoveColors`)(command/MoveColors.md#movecolors)
+* [`app.command.MoveColors`](command/MoveColors.md#movecolors)
 * [`app.command.MoveMask`](command/MoveMask.md#movemask)
 * `app.command.NewBrush`
 * [`app.command.NewFile`](command/NewFile.md#newfile)
