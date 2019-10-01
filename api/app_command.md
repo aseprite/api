@@ -9,7 +9,7 @@ Executes the given command named `CommandName` with the given
 parameters.
 
 * `app.command.About`
-* `app.command.AddColor`
+* [`app.command.AddColor`](command/AddColor.md#addcolor)
 * `app.command.AdvancedMode`
 * `app.command.AutocropSprite`
 * `app.command.BackgroundFromLayer`
