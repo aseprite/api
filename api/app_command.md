@@ -165,3 +165,11 @@ parameters.
 If you cannot find a specific command, you might like to give a look at the
 [gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
 file which contains the definitions of menus / commands + the parameters.
+
+To figure out the parameters of a script if you can't find them:
+1. Choose the command you want to find and find it's counterpart cpp file in [src/app/commands](https://github.com/aseprite/aseprite/tree/master/src/app/commands). For example: `app.command.CropSprite` has the file `cmd_crop.cpp`
+2. Find all places in the file where `params.get` is used, the strings in that function are the parameter names you need to use.
+3. When setting the parameters, you'll want to write the parameters as below because Lua does not accept hyphens in identifiers.
+```lua 
+app.command.CommandName { ["parameter-name"] = value, ["other-parameter-name"] = otherValue }
+```
