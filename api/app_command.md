@@ -171,8 +171,9 @@ To figure out the parameters of an undocumented command, you can:
 1. Choose a command (the `CommandName` part of `app.command.CommandName`) from
    [gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml) file
    ( `<key command="CommandName" ...>` or `<item command="CommandName" ...>`)
-1. If the parameter contains parameters like `<param name="param-name1" value="param-value2" />`
-   you can specify them between `{ ... }`, for example:
+1. If those `<key>...</key>` or `<item>...</item>` XML elements contain children elements
+   like `<param name="param-name1" value="param-value2" />`
+   you can specify those parameters in Lua between `{ ... }`, for example:
    ```lua
    app.command.CommandName { ["param-name1"]="param-value1", ["param-name2"]="param-value2" }
    ```
