@@ -8,7 +8,7 @@ Active [site](site.md#site) (active image, layer, frame, sprite, etc.).
 
 ## app.range
 
-Active [range](range.md#range) in the timeline.
+[Range](range.md#range) member represents the active selection from an objects collection. It returns a sorted list of selected frames, or cels, or layers, or colors, etc.
 
 ## app.activeCel
 
