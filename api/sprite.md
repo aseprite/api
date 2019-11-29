@@ -53,6 +53,16 @@ Returns the bounds of the sprite as a
 [rectangle](rectangle.md#rectangle) in the position `0,0`.
 This is like calling `Rectangle{ x=0, y=0, width=sprite.width, height=sprite.height }`.
 
+## Sprite.gridBounds
+
+```lua
+local rectangle = sprite.gridBounds
+sprite.gridBounds = rectangle
+```
+
+Gets or sets the bounds of the sprite grid as a
+[rectangle](rectangle.md#rectangle).
+
 ## Sprite.selection
 
 ```lua

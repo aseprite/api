@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.2.16
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `7`
+* Added [`Sprite.gridBounds`](api/sprite.md#spritegridbounds) property
+
 ## v1.2.15
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `6`
