@@ -21,11 +21,15 @@ app.command.ExportSpriteSheet {
   openGenerated=false,
   layer="",
   tag="",
+  splitLayers=false,
   listLayers=true,
   listTags=true,
   listSlices=true
 }
 ```
+
+This is similar to
+using [the `-sheet` argument from the CLI](https://www.aseprite.org/docs/cli/#sheet).
 
 * `ui`
 * `askOverwrite`
@@ -45,6 +49,7 @@ app.command.ExportSpriteSheet {
 * `openGenerated`
 * `layer`
 * `tag`
+* `splitLayers`
 * `listLayers`
 * `listTags`
 * `listSlices`
