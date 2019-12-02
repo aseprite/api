@@ -24,6 +24,15 @@ else
 end
 ```
 
+## v1.2.16.3
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `8`
+* Fixed [`Layer.stackIndex`](api/layer.md#layerstackindex) setter when
+  the number we use is higher than the current `stackIndex` of the
+  layer
+* Now [`app.preferences.document(nil)`](api/app_preferences.md#apppreferencesdocument)
+  returns the default preferences for documents
+
 ## v1.2.16
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `7`
