@@ -132,7 +132,7 @@ parameters.
 * `app.command.SelectTile`
 * `app.command.SelectionAsGrid`
 * `app.command.SetColorSelector`
-* `app.command.SetInkType`
+* [`app.command.SetInkType`](command/SetInkType.md)
 * `app.command.SetLoopSection`
 * `app.command.SetPaletteEntrySize`
 * `app.command.SetPalette`
