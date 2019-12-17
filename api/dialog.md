@@ -145,6 +145,7 @@ For each different kind of widget the field is of a different type:
 * [combobox](#dialogcombobox): A string with the
   selected item.
 * [color](#dialogcolor): A [Color](color.md#color).
+* [shades](#dialogshades): A table with an array of [Color](color.md#color)s when `mode="sort"`
 
 ## Dialog.bounds
 
@@ -230,6 +231,36 @@ local dlg = Dialog()
 dlg:separator{ id=string,
                label=string,
                text=string }
+```
+
+## Dialog:shades()
+
+```lua
+local dlg = Dialog()
+dlg:shades{ id=string,
+            label=string,
+            mode="pick" | "sort",
+            colors={ color1, color2, color3, ... },
+            onclick=function }
+```
+
+Creates a widget with a set of colors that can be clicked/picked (when
+`mode="pick"`, which is the default mode) or can be sorted (when
+`mode="sort"`, which is the default mode).
+
+The `onclick` function can receive a `event` parameter which is a
+table with one `color` field which is the color that was clicked, for
+example:
+
+```lua
+dlg:shades{
+  ...
+  onclick=function(ev)
+    -- In this case we change the active foreground color
+    -- with the clicked color in the shades widget.
+    app.fgColor = ev.color
+  end
+}
 ```
 
 ## Dialog:show()
