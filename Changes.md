@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.2.17
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `9`
+* New [`app.fs`](api/app_fs.md#appfs) with several functions to handle filenames and paths
+
 ## v1.2.16.3
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `8`

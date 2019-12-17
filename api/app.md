@@ -167,6 +167,10 @@ Check the [app.command](app_command.md#appcommand) documentation.
 
 Check the [app.preferences](app_preferences.md#apppreferences) documentation.
 
+## app.fs
+
+Check the [app.fs](app_fs.md#appfs) documentation.
+
 ## app.refresh()
 
 ```lua
