@@ -28,6 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `9`
 * New [`app.fs`](api/app_fs.md#appfs) with several functions to handle filenames and paths
+* New [`Dialog{ onclose }`](api/dialog.md#dialog-1) constructor with a table with fields like `title` and `onclose`
 
 ## v1.2.16.3
 

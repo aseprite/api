@@ -36,10 +36,17 @@ end
 
 ```lua
 local dlg = Dialog()
+local dlg = Dialog(string)
+local dlg = Dialog{ title=string,
+                    onclose=function }
 ```
 
 Creates a new dialog. The dialog is hidden, so you have to call
-[Dialog:show](#dialogshow) function to make it visible.
+[Dialog:show](#dialogshow) function to make it visible. The
+constructor that receives a `string` will use that string in the title
+bar of the dialog. The constructor that receives a table can receive a
+special callback function (`onclose`) that is called when the dialog
+is closed.
 
 ## Dialog:button()
 
