@@ -110,7 +110,7 @@ local path = app.fs.joinPath(path1, path2)
 ## app.fs.isFile()
 
 ```lua
-local exists = app.fs.is_file(fn)
+local exists = app.fs.isFile(fn)
 ```
 
 Returns true if the given filename `fn` is a file.
@@ -118,7 +118,7 @@ Returns true if the given filename `fn` is a file.
 ## app.fs.isDirectory()
 
 ```lua
-local exists = app.fs.is_directory(fn)
+local exists = app.fs.isDirectory(fn)
 ```
 
 Returns true if the given filename `fn` is a directory.
