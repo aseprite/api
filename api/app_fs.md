@@ -50,7 +50,7 @@ Returns the file extension (without including the `.`) of the given
 filename `fn`. For example:
 
 ```lua
-print(fs.fileExtension('path/file.png'))
+print(app.fs.fileExtension('path/file.png'))
 ```
 
 Prints `png`.
@@ -65,7 +65,7 @@ Returns the file title (without including the path nor the extension)
 of the given filename `fn`. For example:
 
 ```lua
-print(fs.fileExtension('path/file.png'))
+print(app.fs.fileExtension('path/file.png'))
 ```
 
 Prints `file`.
@@ -80,7 +80,7 @@ Returns the file path [joined](#appfsjoinpath) with the title (without
 including the extension) of the given filename `fn`. For example:
 
 ```lua
-print(fs.fileExtension('path/file.png'))
+print(app.fs.fileExtension('path/file.png'))
 ```
 
 Prints `path/file`.
