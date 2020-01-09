@@ -124,6 +124,18 @@ app.alert{title="Title", text={"Line 1", "Line 2", ...}, buttons={"Yes", "No", "
 Shows an alert message. If `buttons` are not specified, it will show a
 message box with the `OK` button only.
 
+Returns an integer with the selected button i.e. 1 if the first button
+was clicked, 2 if the second one, etc. Example:
+
+```lua
+local result = app.alert{ title="Warning",
+                          text="Save Changes?",
+                          buttons={"Yes", "No"}}
+if result == 1 then
+  app.alert "Yes was pressed"
+end
+```
+
 ## app.open()
 
 ```lua
