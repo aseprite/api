@@ -221,9 +221,17 @@ to match [Image:drawImage()](#imagedrawimage) name.
 
 ```lua
 image:saveAs(filename)
+image:saveAs{ filename=string,
+              palette=Palette }
 ```
 
 Saves the image as a sprite in the given `filename`.
+
+To save an [indexed image](colormode.md#colormodeindexed) we need to
+specify a `palette` parameter (a [Palette](palette.md#palette)
+object).  If we don't specify a palette parameter, in case that the
+image is related to a [Cel](cel.md#cel), we'll use the palette of the
+Cel's [Sprite](sprite.md#sprite).
 
 ## Image:resize()
 

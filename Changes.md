@@ -30,6 +30,7 @@ end
 * New [`app.fs`](api/app_fs.md#appfs) with several functions to handle filenames and paths
 * New [`Dialog{ onclose }`](api/dialog.md#dialog-1) constructor with a table with fields like `title` and `onclose`
 * New [`Dialog:shades{}`](api/dialog.md#dialogshades) widget
+* New [`Image:saveAs{ filename, palette }`](api/image.md#imagesaveas) function
 
 ## v1.2.16.3
 
