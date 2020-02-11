@@ -1,6 +1,10 @@
 # Tag
 
+Represents [a tag in the timeline](https://www.aseprite.org/docs/tags/).
+
 ## Tag.sprite
+
+Returns the sprite to which this tag belongs.
 
 ## Tag.fromFrame
 
@@ -26,7 +30,23 @@ local frames = tag.toFrame.frameNumber - tag.fromFrame.frameNumber + 1
 
 ## Tag.name
 
+```lua
+local name = tag.name
+tag.name = name
+```
+
+Gets or sets the name of the tag (a string).
+
 ## Tag.aniDir
+
+```lua
+local aniDir = tag.aniDir
+tag.aniDir = AniDir.FORWARD
+tag.aniDir = AniDir.REVERSE
+tag.aniDir = AniDir.PING_PONG
+```
+
+Gets or sets the *[Animation Direction](https://www.aseprite.org/docs/tags/)* property of the tag.
 
 ## Tag.color
 
