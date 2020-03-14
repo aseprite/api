@@ -10,7 +10,7 @@ A set of function to handle file names and the file system.
 local fn = "path" .. app.fs.pathSeparator .. "filename.png"
 ```
 
-Return sthe preferred path separator of the current platform, it is
+Returns the preferred path separator of the current platform, it is
 `/` on macOS and Linux, and `\` on Windows. Preferably you should use
 [app.fs.joinPath()](#appfsjoinpath).
 
@@ -86,6 +86,16 @@ print(app.fs.fileExtension('path/file.png'))
 Prints `path/file`.
 
 ## app.fs.normalizePath()
+
+Returns the file path converted to a canonical form for the current platform. 
+
+Example:
+
+```lua
+print(app.fs.normalizePath("//home//user//path"))
+```
+
+Will print as `/home/user/path` on macOS and Linux, and `C:\home\user\path` on Windows.
 
 ## app.fs.joinPath()
 
