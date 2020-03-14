@@ -111,13 +111,27 @@ Returns `path1/path2` on macOS or Linux, and `path1\path2` on Windows.
 
 ## app.fs.currentPath
 
+Returns the path the Aseprite executable was launched from.
+
 ## app.fs.appPath
+
+Returns the installation path of Aseprite for the current platform.
 
 ## app.fs.tempPath
 
+Returns the path for temporary files for the current platform.
+
+On macOS or Linux it will be `/tmp`, and Windows it will be `%temp%` & look like `C:\Users\username\AppData\Local\Temp\`.
+
 ## app.fs.userDocsPath
 
+Returns the current user's Documents path for the current platform. 
+
+Depending on the platform, this may return the user's home directory.
+
 ## app.fs.userConfigPath
+
+Returns the current user's Aseprite configuration path for the current platform.
 
 # File System Access
 
