@@ -95,7 +95,7 @@ Example:
 print(app.fs.normalizePath('//home//user//path'))
 ```
 
-Will print as `/home/user/path` on macOS and Linux, and `C:\home\user\path` on Windows.
+Will print as `/home/user/path` on macOS or Linux, and `C:\home\user\path` on Windows.
 
 ## app.fs.joinPath()
 
