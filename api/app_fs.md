@@ -121,7 +121,7 @@ Returns the installation path of Aseprite for the current platform.
 
 Returns the path for temporary files for the current platform.
 
-On macOS or Linux it will be `/tmp`, and Windows it will be `%temp%` & look like `C:\Users\username\AppData\Local\Temp\`.
+On macOS or Linux it will be `/tmp`, and Windows it will look like `C:\Users\username\AppData\Local\Temp\`.
 
 ## app.fs.userDocsPath
 
