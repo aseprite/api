@@ -92,28 +92,32 @@ Returns the file path converted to a canonical form for the current platform.
 Example:
 
 ```lua
-print(app.fs.normalizePath("//home//user//path"))
+print(app.fs.normalizePath('//home//user//path'))
 ```
 
 Will print as `/home/user/path` on macOS and Linux, and `C:\home\user\path` on Windows.
 
 ## app.fs.joinPath()
 
+Can accept any number of string arguments to join together with the path separator for the current platform.
+
 ```lua
-local path = app.fs.joinPath(path1, path2)
+local path = app.fs.joinPath('path1', 'path2')
 ```
+
+Returns `path1/path2` on macOS or Linux, and `path1\path2` on Windows.
 
 # Special Folders
 
-## app.currentPath
+## app.fs.currentPath
 
-## app.appPath
+## app.fs.appPath
 
-## app.tempPath
+## app.fs.tempPath
 
-## app.userDocsPath
+## app.fs.userDocsPath
 
-## app.userConfigPath
+## app.fs.userConfigPath
 
 # File System Access
 
