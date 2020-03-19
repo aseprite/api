@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.2.18
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `10`
+* New [`Tag.color`](api/tag.md#tagcolor) property
+
 ## v1.2.17
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `9`
