@@ -133,6 +133,8 @@ Depending on the platform, this may return the user's home directory.
 
 Returns the current user's Aseprite configuration path for the current platform.
 
+You can learn about the specific location of this folder [from the Aseprite documentation](https://www.aseprite.org/docs/preferences-folder/).
+
 # File System Access
 
 ## app.fs.isFile()
