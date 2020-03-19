@@ -10,7 +10,7 @@ A set of function to handle file names and the file system.
 local fn = "path" .. app.fs.pathSeparator .. "filename.png"
 ```
 
-Return sthe preferred path separator of the current platform, it is
+Returns the preferred path separator of the current platform, it is
 `/` on macOS and Linux, and `\` on Windows. Preferably you should use
 [app.fs.joinPath()](#appfsjoinpath).
 
@@ -50,7 +50,7 @@ Returns the file extension (without including the `.`) of the given
 filename `fn`. For example:
 
 ```lua
-print(app.fs.fileExtension('path/file.png'))
+print(app.fs.fileExtension("path/file.png"))
 ```
 
 Prints `png`.
@@ -65,7 +65,7 @@ Returns the file title (without including the path nor the extension)
 of the given filename `fn`. For example:
 
 ```lua
-print(app.fs.fileExtension('path/file.png'))
+print(app.fs.fileExtension("path/file.png"))
 ```
 
 Prints `file`.
@@ -80,30 +80,58 @@ Returns the file path [joined](#appfsjoinpath) with the title (without
 including the extension) of the given filename `fn`. For example:
 
 ```lua
-print(app.fs.fileExtension('path/file.png'))
+print(app.fs.fileExtension("path/file.png"))
 ```
 
 Prints `path/file`.
 
 ## app.fs.normalizePath()
 
-## app.fs.joinPath()
+Returns the file path converted to a canonical form for the current platform.
+
+Example:
 
 ```lua
-local path = app.fs.joinPath(path1, path2)
+print(app.fs.normalizePath("//home//user//path"))
 ```
+
+Will print as `/home/user/path` on macOS or Linux, and `C:\home\user\path` on Windows.
+
+## app.fs.joinPath()
+
+Can accept any number of string arguments to join together with the path separator for the current platform.
+
+```lua
+local path = app.fs.joinPath("path1", "path2")
+```
+
+Returns `path1/path2` on macOS or Linux, and `path1\path2` on Windows.
 
 # Special Folders
 
-## app.currentPath
+## app.fs.currentPath
 
-## app.appPath
+Returns the path the Aseprite executable was launched from.
 
-## app.tempPath
+## app.fs.appPath
 
-## app.userDocsPath
+Returns the installation path of Aseprite for the current platform.
 
-## app.userConfigPath
+## app.fs.tempPath
+
+Returns the path for temporary files for the current platform.
+
+On macOS or Linux it will be `/tmp`, and Windows it will look like `C:\Users\username\AppData\Local\Temp\`.
+
+## app.fs.userDocsPath
+
+Returns the current user's Documents path for the current platform.
+
+Depending on the platform, this may return the user's home directory.
+
+## app.fs.userConfigPath
+
+Returns the current user's Aseprite configuration path for the current platform.
 
 # File System Access
 
