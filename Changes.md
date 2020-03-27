@@ -28,6 +28,9 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `10`
 * New [`Tag.color`](api/tag.md#tagcolor) property
+* New [`MouseButton`](api/mousebutton.md#mousebutton) which enumerates
+  possible values for the new `ev.button` value of the
+  [`Dialog:shades{ onclick }`](api/dialog.md#dialogshades) widget callback.
 
 ## v1.2.17
 

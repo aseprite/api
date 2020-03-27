@@ -43,6 +43,7 @@ a little experiment, so you have five main options to approach your idea:
   * [AniDir](api/anidir.md#anidir)
   * [BlendMode](api/blendmode.md#blendmode)
   * [BrushPattern](api/brushpattern.md#brushpattern)
+  * [MouseButton](api/mousebutton.md#mousebutton)
   * [BrushType](api/brushtype.md#brushtype)
   * [ColorMode](api/colormode.md#colormode)
   * [FilterChannel](api/filterchannel.md#filterchannel)
