@@ -16,6 +16,7 @@ An image can be associated to a specific cel or can be alone:
 ```lua
 local image = Image(width, height [, colorMode])
 local image = Image(spec)
+local image = Image(sprite)
 local image = Image(otherImage)
 local image = Image{ fromFile=filename }
 ```
@@ -28,6 +29,10 @@ The `spec` parameter is an [image specification](imagespec.md#imagespec) object.
 
 If you specify `otherImage`, it's equivalent to use
 [`otherImage:clone()`](#imageclone).
+
+If a `sprite` is given, the image will be a render of the first frame
+of the [sprite](sprite.md#sprite). Note: You can use
+[`Image:drawSprite()`](#imagedrawsprite) to draw other frame.
 
 If `fromFile` is given, it indicates a file name (a string) and
 it will create an image loading the first frame of the given file.
