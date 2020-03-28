@@ -62,7 +62,13 @@ Returns the active [tag](tag.md#tag), which is the tag located at the
 
 ## app.activeTool
 
+Returns the active tool (a [Tool](tool.md#tool) object) selected in
+the [tool bar](https://www.aseprite.org/docs/workspace/).
+
 ## app.activeBrush
+
+Returns the active brush (a [Brush](brush.md#brush) object) selected
+in the [context bar](https://www.aseprite.org/docs/workspace/).
 
 ## app.pixelColor
 
