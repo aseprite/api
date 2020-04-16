@@ -188,16 +188,32 @@ dlg:label{ id=string,
 
 Creates a static label.
 
+## Dialog:modify()
+
+```lua
+local dlg = Dialog()
+dlg:modify{ id=string,
+            visible=boolean,
+            enabled=boolean,
+            text=string }
+```
+
+Changes properties of the given widget that matches the identifier `id`.
+
 ## Dialog:newrow()
 
 ```lua
 local dlg = Dialog()
 dlg:newrow()
+dlg:newrow{ always }
 ```
 
 Indicates that the next widget should be put in a new row in the
 dialog (useful to create buttons or several controls of the same type
 one below the other).
+
+Using the `newrow{ always }` is a way to avoid joining widgets of the
+same type (it's like calling `newrow()` after new widget is added).
 
 ## Dialog:number()
 

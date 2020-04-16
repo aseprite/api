@@ -30,7 +30,10 @@ end
 * New [`Tag.color`](api/tag.md#tagcolor) property
 * New [`MouseButton`](api/mousebutton.md#mousebutton) which enumerates
   possible values for the new `ev.button` value of the
-  [`Dialog:shades{ onclick }`](api/dialog.md#dialogshades) widget callback.
+  [`Dialog:shades{ onclick }`](api/dialog.md#dialogshades) widget callback
+* New [`Dialog:modify{}`](api/dialog.md#dialogmodify) method to change
+  widget properties dynamically
+* New [`Dialog:newrow{ always }`](api/dialog.md#dialognewrow) variant
 
 ## v1.2.17
 
