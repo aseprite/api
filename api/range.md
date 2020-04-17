@@ -51,11 +51,21 @@ array of one element, just the active layer). The same is true for
 
 ## Range.layers
 
-Returns an array of selected [layers](layer.md#layer).
+``lua
+local layers = app.range.layers
+app.range.layers = { layer1, layer2, ... }
+``
+
+Returns or sets the array of selected [layers](layer.md#layer).
 
 ## Range.frames
 
-Returns an array of selected [frames](frame.md#frame).
+``lua
+local frames = app.range.frames
+app.range.frames = { 1, 2, ... }
+``
+
+Returns or sets the array of selected [frames](frame.md#frame).
 
 ## Range.cels
 
@@ -105,3 +115,11 @@ local hasColor = app.range:containsColor(colorIndex)
 ```
 
 Returns true if the given color index is selected in the [color bar](https://www.aseprite.org/docs/color-bar/).
+
+## Range:clear()
+
+```lua
+app.range:clear()
+```
+
+Clears the current selected range of frames/layers/cels/colors.

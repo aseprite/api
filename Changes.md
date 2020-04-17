@@ -34,6 +34,8 @@ end
 * New [`Dialog:modify{}`](api/dialog.md#dialogmodify) method to change
   widget properties dynamically
 * New [`Dialog:newrow{ always }`](api/dialog.md#dialognewrow) variant
+* New [`Range:clear()`](api/range.md#rangeclear) function
+* New [`Range.layers`](api/range.md#rangelayers) and [`Range.frames`](api/range.md#rangeframes) setters
 
 ## v1.2.17
 
