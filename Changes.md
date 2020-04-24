@@ -24,6 +24,19 @@ else
 end
 ```
 
+## v1.2.18
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `10`
+* New [`Tag.color`](api/tag.md#tagcolor) property
+* New [`MouseButton`](api/mousebutton.md#mousebutton) which enumerates
+  possible values for the new `ev.button` value of the
+  [`Dialog:shades{ onclick }`](api/dialog.md#dialogshades) widget callback
+* New [`Dialog:modify{}`](api/dialog.md#dialogmodify) method to change
+  widget properties dynamically
+* New [`Dialog:newrow{ always }`](api/dialog.md#dialognewrow) variant
+* New [`Range:clear()`](api/range.md#rangeclear) function
+* New [`Range.layers`](api/range.md#rangelayers) and [`Range.frames`](api/range.md#rangeframes) setters
+
 ## v1.2.17
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `9`

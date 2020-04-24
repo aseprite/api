@@ -188,16 +188,32 @@ dlg:label{ id=string,
 
 Creates a static label.
 
+## Dialog:modify()
+
+```lua
+local dlg = Dialog()
+dlg:modify{ id=string,
+            visible=boolean,
+            enabled=boolean,
+            text=string }
+```
+
+Changes properties of the given widget that matches the identifier `id`.
+
 ## Dialog:newrow()
 
 ```lua
 local dlg = Dialog()
 dlg:newrow()
+dlg:newrow{ always }
 ```
 
 Indicates that the next widget should be put in a new row in the
 dialog (useful to create buttons or several controls of the same type
 one below the other).
+
+Using the `newrow{ always }` is a way to avoid joining widgets of the
+same type (it's like calling `newrow()` after new widget is added).
 
 ## Dialog:number()
 
@@ -249,16 +265,22 @@ Creates a widget with a set of colors that can be clicked/picked (when
 `mode="sort"`, which is the default mode).
 
 The `onclick` function can receive a `event` parameter which is a
-table with one `color` field which is the color that was clicked, for
-example:
+table with one `event.color` field which is the color that was
+clicked, and a `event.button` field with the
+[mouse button](mousebutton.md#mousebutton), for example:
 
 ```lua
 dlg:shades{
   ...
   onclick=function(ev)
-    -- In this case we change the active foreground color
-    -- with the clicked color in the shades widget.
-    app.fgColor = ev.color
+    if ev.button == MouseButton.LEFT then
+      -- In this case we change the active foreground color
+      -- with the clicked color in the shades widget when
+      -- the left mouse button is pressed.
+      app.fgColor = ev.color
+    elseif ev.button == MouseButton.RIGHT then
+      app.bgColor = ev.color
+    end
   end
 }
 ```
