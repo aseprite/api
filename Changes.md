@@ -98,8 +98,8 @@ end
 ## v1.2.13
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `4`
-* [`app.useTool()`](app.md#appusetool) now can be used inside a
-  [`app.transaction()`](app.md#apptransaction)
+* [`app.useTool()`](api/app.md#appusetool) now can be used inside a
+  [`app.transaction()`](api/app.md#apptransaction)
   ([#18](https://github.com/aseprite/api/issues/18))
 * New params for [`app.command.NewFile`](api/command/NewFile.md#newfile).
 
@@ -118,7 +118,7 @@ end
 * New `focus` property for [Dialog:button](api/dialog.md#dialogbutton)
   and [Dialog:entry](api/dialog.md#dialogentry).
 * New parameters for [`ExportSpriteSheet`](api/command/ExportSpriteSheet.md#exportspritesheet).
-* New [`app.useTool()`](app.md#appusetool),
+* New [`app.useTool()`](api/app.md#appusetool),
   [`Brush`](api/brush.md#brush),
   [`Tool`](api/tool.md#tool) class.
 
