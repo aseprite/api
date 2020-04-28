@@ -51,19 +51,19 @@ array of one element, just the active layer). The same is true for
 
 ## Range.layers
 
-``lua
+```lua
 local layers = app.range.layers
 app.range.layers = { layer1, layer2, ... }
-``
+```
 
 Returns or sets the array of selected [layers](layer.md#layer).
 
 ## Range.frames
 
-``lua
+```lua
 local frames = app.range.frames
 app.range.frames = { 1, 2, ... }
-``
+```
 
 Returns or sets the array of selected [frames](frame.md#frame).
 
