@@ -219,11 +219,18 @@ Redoes the latest undone operation in the
 app.useTool{
  tool=string,
  color=Color,
+ bgColor=Color,
  brush=Brush,
  points={ Point, Point, .... },
  cel=Cel,
  layer=Layer,
- frame=Frame
+ frame=Frame,
+ ink=Ink,
+ button=MouseButton.Left | MouseButton.Right,
+ opacity=integer,
+ contiguous=false | true,
+ tolerance=integer,
+ freehandAlgorithm=0 | 1
 }
 ```
 

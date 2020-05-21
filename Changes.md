@@ -24,6 +24,17 @@ else
 end
 ```
 
+## v1.2.19
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `11`
+* Added support to modify more properties with [`Dialog:modify{}`]()
+  ([PR#2359](https://github.com/aseprite/aseprite/pull/2359/commits/b3681fdbb0489d49333b3b5719fb79ddad504e95),
+  separator text [#27](https://github.com/aseprite/api/issues/27))
+* Added some extra `onchange` and `onrelease` events for some widgets like [`Dialog:slider{}`](api/dialog.md#dialogslider)
+  ([PR#2359](https://github.com/aseprite/aseprite/pull/2359/commits/1311173d978d1619229dd6f5bf95dee016a37851))
+* Added more arguments (`bgColor`, `ink`, `button`, `opacity`, `contiguous`, `tolerance`, `freehandAlgorithm`) to [`app.useTool{}`](api/app.md#appusetool)
+* New [Ink](api/ink.md#ink) constants
+
 ## v1.2.18
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `10`

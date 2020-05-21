@@ -6,6 +6,6 @@ app.command.SetInkType {
 }
 ```
 
-* `type`: ink type set up, `"simple"` by default. Others possibles configurations: `"alpha-compositing"`, `"copy-color"`, `"lock-alpha"` and `"shading"`.
+* `type`: [ink type](../ink.md) to set, `"simple"` by default.
 
 More info on ink type behavior at [https://www.aseprite.org/docs/ink/](https://www.aseprite.org/docs/ink/)
