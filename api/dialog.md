@@ -213,7 +213,7 @@ dialog (useful to create buttons or several controls of the same type
 one below the other).
 
 Using the `newrow{ always }` is a way to avoid joining widgets of the
-same type (it's like calling `newrow()` after new widget is added).
+same type (it's like calling `newrow()` after each new widget is added).
 
 ## Dialog:number()
 

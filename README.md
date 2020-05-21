@@ -9,7 +9,7 @@ for this API or some [tests](https://github.com/aseprite/tests/tree/master/scrip
 ## Where to start
 
 Generally you will want to write a script to solve a problem or to do
-a little experiment, so you have five main options to approach your idea:
+a little experiment, so you have six options to approach your idea:
 
 1. **Transform the active sprite**: In this case
    [app.activeSprite](api/app.md#appactivesprite) will give you access
@@ -28,6 +28,8 @@ a little experiment, so you have five main options to approach your idea:
    good option to export the modified sprite.
 5. **Show a dialog to the user**: The [Dialog](api/dialog.md#dialog) object
    gives you the possibility to show controls to the user to enter values.
+6. **Add new options to any menu**: In this case need to create an
+   [plugin with a script](api/plugin.md).
 
 ## API Changes
 
