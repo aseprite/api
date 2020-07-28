@@ -7,7 +7,7 @@ of a [sprite](sprite.md#sprite), [image](image.md#image), or [image spec](images
 
 ```lua
 local none = ColorSpace()
-local srgb = ColorSpace{ sRGB }
+local srgb = ColorSpace{ sRGB=true }
 local icc = ColorSpace{ fromFile="/path/file.icc" }
 ```
 

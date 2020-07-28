@@ -24,6 +24,16 @@ else
 end
 ```
 
+## v1.2.22
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `12`
+* New [`app.command.CanvasSize()`](api/command/CanvasSize.md#canvassize) params (`ui` and `bounds`)
+* Fixed crash undoing `Sprite:newCel()` in background layer
+* Fixed `Dialog onclose` event, now it's called when we close the app and the dialog is still opened [#28](https://github.com/aseprite/api/issues/28)
+* API changes:
+  * You must use `Dialog:newrow{ always=true }` to activate the automatic "newrow" (`Dialog:newrow{ always }` cannot be used)
+  * You must use `ColorSpace{ sRGB=true }` to create an sRGB color space (`ColorSpace{ sRGB }` cannot be used)
+
 ## v1.2.19
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `11`
@@ -44,7 +54,7 @@ end
   [`Dialog:shades{ onclick }`](api/dialog.md#dialogshades) widget callback
 * New [`Dialog:modify{}`](api/dialog.md#dialogmodify) method to change
   widget properties dynamically
-* New [`Dialog:newrow{ always }`](api/dialog.md#dialognewrow) variant
+* New [`Dialog:newrow{ always=true }`](api/dialog.md#dialognewrow) variant
 * New [`Range:clear()`](api/range.md#rangeclear) function
 * New [`Range.layers`](api/range.md#rangelayers) and [`Range.frames`](api/range.md#rangeframes) setters
 

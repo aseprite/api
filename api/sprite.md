@@ -8,6 +8,7 @@ local sprite = Sprite(width, height, colorMode)
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
 local sprite = Sprite{ fromFile=filename }
+local sprite = Sprite{ fromFile=filename, oneFrame }
 ```
 
 Creates a new sprite with the given `width` and `height`. The
@@ -262,7 +263,7 @@ Changes the sprite [palette](palette.md#palette).
 ## Sprite:assignColorSpace
 
 ```lua
-local colorSpace = ColorSpace{ sRGB }
+local colorSpace = ColorSpace{ sRGB=true }
 sprite:assignColorSpace(colorSpace)
 ```
 
@@ -272,7 +273,7 @@ modifying the sprite pixels.
 ## Sprite:convertColorSpace
 
 ```lua
-local colorSpace = ColorSpace{ sRGB }
+local colorSpace = ColorSpace{ sRGB=true }
 sprite:convertColorSpace(colorSpace)
 ```
 

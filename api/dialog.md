@@ -205,14 +205,14 @@ Changes properties of the given widget that matches the identifier `id`.
 ```lua
 local dlg = Dialog()
 dlg:newrow()
-dlg:newrow{ always }
+dlg:newrow{ always=true }
 ```
 
 Indicates that the next widget should be put in a new row in the
 dialog (useful to create buttons or several controls of the same type
 one below the other).
 
-Using the `newrow{ always }` is a way to avoid joining widgets of the
+Using the `newrow{ always=true }` is a way to avoid joining widgets of the
 same type (it's like calling `newrow()` after each new widget is added).
 
 ## Dialog:number()

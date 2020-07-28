@@ -15,7 +15,7 @@ parameters.
 * `app.command.BackgroundFromLayer`
 * [`app.command.BrightnessContrast`](command/BrightnessContrast.md#brightnesscontrast)
 * `app.command.Cancel`
-* `app.command.CanvasSize`
+* [`app.command.CanvasSize`](command/CanvasSize.md#canvassize)
 * `app.command.CelOpacity`
 * `app.command.CelProperties`
 * `app.command.ChangeBrush`
