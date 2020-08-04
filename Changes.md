@@ -33,6 +33,7 @@ end
 * API changes:
   * You must use `Dialog:newrow{ always=true }` to activate the automatic "newrow" (`Dialog:newrow{ always }` cannot be used)
   * You must use `ColorSpace{ sRGB=true }` to create an sRGB color space (`ColorSpace{ sRGB }` cannot be used)
+  * Now [`app.command.SetInkType{ type=... }`](api/command/SetInkType.md#setinktype) works
 
 ## v1.2.19
 
