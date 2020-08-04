@@ -46,8 +46,8 @@ local copy = image:clone()
 Creates a copy of the given image. You can use the `Image(otherImage)`
 constructor for the same behavior.
 
-he new image is unrelated to the sprite, but can be used to update the
-image in a transaction. E.g. You clone an image, modify the pixels
+The new image is unrelated to the sprite, but it can be used to update
+the image in a transaction. E.g. You clone an image, modify the pixels
 from the copy, and then you [patch the image](#imageputimage).
 
 ## Image.width
