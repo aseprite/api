@@ -17,7 +17,7 @@ a little experiment, so you have six options to approach your idea:
    e.g. we are in the `Home` tab).
 2. **Generate a new sprite** : Here the
    [Sprite()](api/sprite.md#sprite-1) function creates a new
-   sprite and sets is as the active one. From there you can modify the
+   sprite and sets it as the active one. From there you can modify the
    [Sprite](api/sprite.md#sprite) object as you want.
 3. **Open one or several existent files**: You can use
    [app.open](api/app.md#appopen) to load a sprite from the disk and
