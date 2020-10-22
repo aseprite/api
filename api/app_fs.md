@@ -191,10 +191,10 @@ Create one directory.
 
 Returns `true` if the directory was created.
 
-## app.fs.makeDirectories()
+## app.fs.makeAllDirectories()
 
 ```lua
-local result = app.fs.makeDirectories(path)
+local result = app.fs.makeAllDirectories(path)
 ```
 
 Create all directories needed to access to the `path`, so path could

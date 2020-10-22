@@ -27,7 +27,7 @@ end
 ## v1.2.26
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `13`
-* New [`app.fs.makeDirectory`](api/app_fs.md#appfsmakedirectory)/[`app.fs.makeDirectories`](api/app_fs.md#appfsmakedirectories)/[`app.fs.removeDirectory`](api/app_fs.md#appfsremovedirectory)
+* New [`app.fs.makeDirectory`](api/app_fs.md#appfsmakedirectory)/[`app.fs.makeAllDirectories`](api/app_fs.md#appfsmakealldirectories)/[`app.fs.removeDirectory`](api/app_fs.md#appfsremovedirectory)
   functions to manipulate directories
 
 ## v1.2.22
