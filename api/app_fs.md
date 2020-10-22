@@ -180,3 +180,35 @@ for _,filename in pairs(app.fs.listFiles(dir)) do
   ...
 end
 ```
+
+## app.fs.makeDirectory()
+
+```lua
+app.fs.makeDirectory(path)
+```
+
+Create one directory.
+
+Returns `true` if the directory was created.
+
+## app.fs.makeDirectories()
+
+```lua
+local result = app.fs.makeDirectories(path)
+```
+
+Create all directories needed to access to the `path`, so path could
+be `dir1/dir2/dir3` and the whole hierarchy of directories will be
+created.
+
+Returns `true` if all the directories were created.
+
+## app.fs.removeDirectory()
+
+```lua
+app.fs.removeDirectory(path)
+```
+
+Remove the given directory (it must be empty).
+
+Returns `true` if the directory was removed (or is already removed).
