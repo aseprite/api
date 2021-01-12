@@ -20,7 +20,7 @@ To create a plugin we have to create a folder with a `package.json` file. For ex
   "categories": [ "Scripts" ],
   "contributes": {
     "scripts": [
-        { "path": "./my-script.lua" },
+        { "path": "./my-script.lua" }
     ]
   }
 }
