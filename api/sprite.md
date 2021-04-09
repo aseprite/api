@@ -64,6 +64,16 @@ sprite.gridBounds = rectangle
 Gets or sets the bounds of the sprite grid as a
 [rectangle](rectangle.md#rectangle).
 
+## Sprite.pixelRatio
+
+```lua
+local size = sprite.pixelRatio
+sprite.pixelRatio = size
+```
+
+Gets or sets the pixel ratio of the sprite as a
+[size](size.md#size).
+
 ## Sprite.selection
 
 ```lua
