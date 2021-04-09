@@ -68,7 +68,7 @@ parameters.
 * `app.command.GridSettings`
 * `app.command.Home`
 * [`app.command.HueSaturation`](command/HueSaturation.md#huesaturation)
-* `app.command.ImportSpriteSheet`
+* [`app.command.ImportSpriteSheet`](command/ImportSpriteSheet.md#importspritesheet)
 * [`app.command.InvertColor`](command/InvertColor.md#invertcolor)
 * `app.command.InvertMask`
 * `app.command.KeyboardShortcuts`
