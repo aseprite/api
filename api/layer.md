@@ -83,6 +83,14 @@ or in [indexed color mode](colormode.md#colormodeindexed), the
 
 ## Layer.isVisible
 
+```lua
+local visible = layer.isVisible
+layer.isVisible = visible
+```
+
+A boolean property (`true` or `false`) that indicates if the layer is
+visible or hidden. Also can be set to show or hide the layer.
+
 ## Layer.isContinuous
 
 ## Layer.isCollapsed
