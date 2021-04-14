@@ -24,6 +24,14 @@ else
 end
 ```
 
+## v1.2.26
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `13`
+* New [`app.fs.makeDirectory`](api/app_fs.md#appfsmakedirectory)/[`app.fs.makeAllDirectories`](api/app_fs.md#appfsmakealldirectories)/[`app.fs.removeDirectory`](api/app_fs.md#appfsremovedirectory)
+  functions to manipulate directories
+* Added [`Sprite.pixelRatio`](api/sprite.md#spritepixelratio) property
+* Added [`app.command.ImportSpriteSheet`](api/command/ImportSpriteSheet.md#importspritesheet).
+
 ## v1.2.22
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `12`
