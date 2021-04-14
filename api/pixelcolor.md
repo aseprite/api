@@ -14,7 +14,7 @@ On Aseprite there are two kind of ways to handle colors:
      [palette entry](palette.md#palettegetcolor)
 
 For performance reasons, pixel values on [images](image.md#image) are
-handled with the sencond kind of colors: an unsigned integer value.
+handled with the second kind of colors: an unsigned integer value.
 This color format is used when you handle pixels directly with functions like
 [Image:getPixel()](image.md#imagegetpixel),
 [Image:putPixel()](image.md#imageputpixel), or
