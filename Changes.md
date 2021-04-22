@@ -29,6 +29,7 @@ end
 * [`app.apiVersion`](api/app.md#appapiversion) is `14`
 * Added `selection` argument to
   [`app.useTool{}`](api/app.md#appusetool) to use selection tools
+* New [`SelectionMode`](api/selectionmode.md#selectionmode)
 
 ## v1.2.26
 
