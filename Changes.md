@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.2.28
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `14`
+* Added `selection` argument to
+  [`app.useTool{}`](api/app.md#appusetool) to use selection tools
+
 ## v1.2.26
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `13`

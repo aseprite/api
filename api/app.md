@@ -236,7 +236,8 @@ app.useTool{
  opacity=integer,
  contiguous=false | true,
  tolerance=integer,
- freehandAlgorithm=0 | 1
+ freehandAlgorithm=0 | 1,
+ selection="replace" | "add" | "subtract" | "intersect"
 }
 ```
 
@@ -253,6 +254,9 @@ Simulates an user stroke in the canvas using the given tool.
 * `points`: An array of [points](point.md#point) in the sprite canvas which
   simulate the position of where the user put the mouse to draw with
   the given tool.
+* `selection`: What to do with the selection, only for selection-like
+  tools (`rectangular_marquee`, `magic_wand`, etc.). `"replace"` is
+  the default mode.
 * And we can specify the `cel` or `layer`/`frame` where to draw:
   * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
   * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
