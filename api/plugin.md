@@ -42,7 +42,7 @@ function init(plugin)
   plugin:newCommand{
     id="MyFirstCommand",
     title="My First Command",
-    group="cel_popup",
+    group="cel_popup_properties",
     onclick=function()
       plugin.preferences.count = plugin.preferences.count+1
     end
