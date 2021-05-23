@@ -114,7 +114,7 @@ This is a table with parameters specified as
 [`--script-param key=value`](https://www.aseprite.org/docs/cli/#script-param) in the
 [CLI](https://www.aseprite.org/docs/cli/) or as `<param>` in
 `user.aseprite-keys` or
-[`gui.xml`](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
+[`gui.xml`](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
 file.
 
 ## app.alert()

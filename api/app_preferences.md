@@ -7,7 +7,7 @@ app.preferences.section.option = newValue
 
 Gets or sets the given preference `option` in the given `section`. You
 can find valid `section` and `option` names in the
-[pref.xml](https://github.com/aseprite/aseprite/blob/master/data/pref.xml)
+[pref.xml](https://github.com/aseprite/aseprite/blob/main/data/pref.xml)
 file.
 
 ## app.preferences.tool()

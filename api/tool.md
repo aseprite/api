@@ -14,5 +14,5 @@ local id = app.activeTool.id
 ```
 
 Returns the identifier (a string) of the specified in the
-[`gui.xml`](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
+[`gui.xml`](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
 file ([example](https://github.com/aseprite/aseprite/blob/20618ff321ae4e73a4f5d6bfd9ef6f2cd8925b7a/data/gui.xml#L1065)).

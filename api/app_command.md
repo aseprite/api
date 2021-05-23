@@ -163,13 +163,13 @@ parameters.
 * `app.command.Zoom`
 
 If you cannot find a specific command, you might like to give a look at the
-[gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml)
+[gui.xml](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
 file which contains the definitions of menus / commands + the parameters.
 
 To figure out the parameters of an undocumented command, you can:
 
 1. Choose a command (the `CommandName` part of `app.command.CommandName`) from
-   [gui.xml](https://github.com/aseprite/aseprite/blob/master/data/gui.xml) file
+   [gui.xml](https://github.com/aseprite/aseprite/blob/main/data/gui.xml) file
    ( `<key command="CommandName" ...>` or `<item command="CommandName" ...>`)
 1. If those `<key>...</key>` or `<item>...</item>` XML elements contain children elements
    like `<param name="param-name1" value="param-value2" />`
@@ -181,7 +181,7 @@ To figure out the parameters of an undocumented command, you can:
 Another alternative is looking to the Aseprite source code:
 
 1. Choose the command you want to use and find its counterpart `.cpp` file
-   in [src/app/commands/](https://github.com/aseprite/aseprite/tree/master/src/app/commands)
+   in [src/app/commands/](https://github.com/aseprite/aseprite/tree/main/src/app/commands)
    (e.g. `app.command.CropSprite` has the file `cmd_crop.cpp`)
 1. Find all places in the file where `params.get` is used, the strings
    in that function are the parameter names you need to use.
