@@ -57,8 +57,31 @@ end
 
 Then we compress both files (`package.json` and `my-script.lua`) in a
 `.zip`, and rename the `.zip` to `.aseprite-extension`. To install the
-extension just double-clicking just be enough on Windows or macOS.
+extension just double-clicking it should be enough on Windows or
+macOS. In other case you can install it from *Edit > Preferences >
+Extensions > Add Extension*.
 
 ## Plugin.preferences
 
+It's a Lua table where you can load/save any kind of Lua value here
+and they will be saved/restored automatically on each session.
+
 ## Plugin:newCommand
+
+```lua
+function init(plugin)
+  plugin:newCommand{
+    id="CommandName",
+    title="User Friendly Command Name",
+    group=string,
+    onclick=function()
+      ...
+    end
+  }
+end
+```
+
+Creates a new command that can be associated to keyboard shortcuts and
+it's added in the app menu in the specific `"group"`. Groups are defined
+in the [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
+inside the `<menus>` element.
