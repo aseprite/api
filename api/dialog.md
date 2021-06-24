@@ -8,11 +8,11 @@ Example:
 ```lua
 local dlg = Dialog()
 dlg:entry{ id="user_value", label="User Value:", text="Default User" }
-dlg:button{ id="ok", text="OK" }
+dlg:button{ id="confirm", text="Confirm" }
 dlg:button{ id="cancel", text="Cancel" }
 dlg:show()
 local data = dlg.data
-if data.ok then
+if data.confirm then
   app.alert("The given value is '" .. data.user_value .. "'")
 end
 ```
@@ -24,10 +24,10 @@ For example:
 ```lua
 local data =
   Dialog():entry{ id="user_value", label="User Value:", text="Default User" }
-          :button{ id="ok", text="OK" }
+          :button{ id="confirm", text="Confirm" }
           :button{ id="cancel", text="Cancel" }
           :show().data
-if data.ok then
+if data.confirm then
   app.alert("The given value is '" .. data.user_value .. "'")
 end
 ```
