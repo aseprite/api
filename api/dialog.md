@@ -318,7 +318,8 @@ dlg:slider{ id=string,
             label=string,
             min=integer,
             max=integer,
-            value=integer }
+            value=integer
+            onchange=function }
 ```
 
 Creates a slider in the dialog.
