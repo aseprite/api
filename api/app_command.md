@@ -20,7 +20,7 @@ parameters.
 * `app.command.CelProperties`
 * `app.command.ChangeBrush`
 * `app.command.ChangeColor`
-* `app.command.ChangePixelFormat`
+* [`app.command.ChangePixelFormat`](command/ChangePixelFormat.md#changepixelformat)
 * `app.command.ClearCel`
 * `app.command.Clear`
 * `app.command.CloseAllFiles`
