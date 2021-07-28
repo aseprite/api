@@ -58,11 +58,11 @@ assert(c.hsvValue      == 0.2)
 
 ## Color.hue
 
-Gets/sets the [HSV hue](#colorhsvhuesaturationvalue) or [HSL hue](colorhslhuesaturationligthness) depending on the kind of color.
+Gets/sets the [HSV hue](#colorhsvhuesaturationvalue) or [HSL hue](#colorhslhuesaturationlightness) depending on the kind of color.
 
 ## Color.saturation
 
-Gets/sets the [HSV saturation](#colorhsvhuesaturationvalue) or [HSL saturation](colorhslhuesaturationligthness) depending on the kind of color.
+Gets/sets the [HSV saturation](#colorhsvhuesaturationvalue) or [HSL saturation](#colorhslhuesaturationlightness) depending on the kind of color.
 
 ## Color.value
 
@@ -70,7 +70,7 @@ Gets/sets the [HSV value](#colorhsvhuesaturationvalue).
 
 ## Color.lightness
 
-Gets/sets the [HSL lightness](colorhslhuesaturationligthness).
+Gets/sets the [HSL lightness](#colorhslhuesaturationligthness).
 
 ## Color.index
 
