@@ -4,7 +4,7 @@
 app.command.ChangePixelFormat {
   format=string,
   dithering=string,
-  dithering-matrix=string,
+  ["dithering-matrix"]=string,
   rgbmap=string,
   toGray=string
 }
