@@ -119,7 +119,7 @@ local dlg = Dialog()
 dlg:combobox{ id=string,
               label=string,
               option=string,
-              options={ string1,string2,string3... }
+              options={ string1,string2,string3... },
               onchange=function }
 ```
 
@@ -319,7 +319,7 @@ dlg:slider{ id=string,
             label=string,
             min=integer,
             max=integer,
-            value=integer
+            value=integer,
             onchange=function }
 ```
 
