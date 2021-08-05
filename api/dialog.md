@@ -107,7 +107,8 @@ function to close the dialog.
 local dlg = Dialog()
 dlg:color{ id=string,
            label=string,
-           color=app.Color }
+           color=app.Color,
+           onchange=function }
 ```
 
 Creates a button to select a [color](color.md#color).
@@ -167,7 +168,8 @@ local dlg = Dialog()
 dlg:entry{ id=string,
            label=string,
            text=string,
-           focus=boolean }
+           focus=boolean,
+           onchange=function }
 ```
 
 Creates a text entry.
@@ -223,7 +225,8 @@ local dlg = Dialog()
 dlg:number{ id=string,
             label=string,
             text=string,
-            decimals=integer }
+            decimals=integer,
+            onchange=function }
 ```
 
 Creates an entry field to input a number.
