@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.2.30
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `14`
+* New `onenabled` attribute for [`plugin:newCommand()`](api/plugin.md#pluginnewcommand)
+
 ## v1.2.28
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `14`
