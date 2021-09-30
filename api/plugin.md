@@ -76,6 +76,10 @@ function init(plugin)
     group=string,
     onclick=function()
       ...
+    end,
+    onenabled=function()
+      ...
+      return true | false
     end
   }
 end
@@ -85,3 +89,10 @@ Creates a new command that can be associated to keyboard shortcuts and
 it's added in the app menu in the specific `"group"`. Groups are defined
 in the [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
 inside the `<menus>` element.
+
+* `onclick`: Function to be called when the command is executed
+  (clicked or an associated keyboard shortcut pressed).
+* `onenabled`: Optional function to know if the command should be
+  available (enabled or disabled). It should return true if the
+  command can be executed right now. If this function is not specified
+  the command will be always available to be executed by the user.
