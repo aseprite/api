@@ -28,6 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `14`
 * New `onenabled` attribute for [`plugin:newCommand()`](api/plugin.md#pluginnewcommand)
+* New [`App.events`](api/app.md#appevents) and [`Sprite.events`](api/sprite.md#spriteevents) properties, and [`Events`](api/events.md#events) class
 * New [`Image.bytes`](api/image.md#imagebytes) and [`Image.rowStride`](api/image.md#imagerowstride) properties
 * New [`WebSocket`](api/websocket.md#websocket) class and [`WebSocketMessageType`](api/websocketmessagetype.md#websocketmessagetype) constants
 
