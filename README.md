@@ -53,6 +53,7 @@ a little experiment, so you have six options to approach your idea:
   * [RangeType](api/rangetype.md#rangetype)
   * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
   * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
+  * [WebSocketMessageType](api/websocketmessagetype.md#websocketmessagetype)
 * Classes/objects
   * [Brush](api/brush.md#brush)
   * [Cel](api/cel.md#cel)
@@ -75,6 +76,7 @@ a little experiment, so you have six options to approach your idea:
   * [Tag](api/tag.md#tag)
   * [Tool](api/tool.md#tool)
   * [Version](api/version.md#version)
+  * [WebSocket](api/websocket.md#websocket)
 * Lua libraries
   * [Basic Functions](https://www.lua.org/manual/5.3/manual.html#6.1)
   * [Coroutine Manipulation](https://www.lua.org/manual/5.3/manual.html#6.2)
