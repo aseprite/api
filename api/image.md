@@ -87,6 +87,30 @@ local cel = image.cel
 Returns the [cel](cel.md#cel) to which this image belongs or `nil` if this
 image is not associated to a cel.
 
+## Image.bytes
+
+```lua
+local s = image.bytes
+image.bytes = s
+```
+
+A byte string that contains raw image data. The layout depends on the
+image's color mode. It can be used with the usual string methods, or
+split into bytes using `string.bytes`. For editing the image, it's
+easier to use `image:pixels()`.
+
+The number of bytes must be equal to `image.rowStride * image.height`.
+
+## Image.rowStride
+
+```lua
+local numberOfBytesPerRow = image.rowStride
+```
+
+Number of bytes for each row in the image. Each image has a total of
+`image.rowSide * image.height` bytes. It's useful if you are going to
+get or set the [`Image.bytes`](#imagebytes) property manually.
+
 ## Image:clear()
 
 ```lua
