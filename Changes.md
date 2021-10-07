@@ -28,6 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `14`
 * New `onenabled` attribute for [`plugin:newCommand()`](api/plugin.md#pluginnewcommand)
+* New [`WebSocket`](api/websocket.md#websocket) class and [`WebSocketMessageType`](api/websocketmessagetype.md#websocketmessagetype) constants
 
 ## v1.2.28
 
