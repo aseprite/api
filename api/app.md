@@ -263,3 +263,19 @@ Simulates an user stroke in the canvas using the given tool.
   * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
   * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
   * `frame`: The [frame](frame.md#frame) where to draw (by default [app.activeFrame](app.md#appactiveframe))
+
+## App.events
+
+Returns the [`Events`](events.md#events) object to associate functions
+that can act like listeners of specific `App` events. E.g.
+
+```lua
+app.events:on('sitechange',
+  function()
+    print('Now we are located in other sprite, layer, or frame')
+  end)
+```
+
+Available events for a `App`:
+
+* `'sitechange'`: When the user selects other sprite, layer, or frame.

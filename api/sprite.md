@@ -405,3 +405,20 @@ sprite:flatten()
 
 Flatten all layers of the sprite into one layer.
 It's like calling `app.commands.FlattenLayers()`.
+
+## Sprite.events
+
+Returns the [`Events`](events.md#events) object to associate functions
+that can act like listeners of specific `Sprite` events. E.g.
+
+```lua
+sprite.events:on('change',
+  function()
+    print('The sprite has changed')
+  end)
+```
+
+Available events for a `Sprite`:
+
+* `'change'`: When sprite content changed because we perform some
+  action on it (also called when we undo/redo those actions).

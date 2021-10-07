@@ -60,6 +60,7 @@ a little experiment, so you have six options to approach your idea:
   * [Color](api/color.md#color)
   * [ColorSpace](api/colorspace.md#colorspace)
   * [Dialog](api/dialog.md#dialog)
+  * [Events](api/events.md#events)
   * [Frame](api/frame.md#frame)
   * [Image](api/image.md#image)
   * [ImageSpec](api/imagespec.md#imagespec)
