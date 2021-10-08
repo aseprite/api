@@ -31,6 +31,7 @@ end
 * New [`App.events`](api/app.md#appevents) and [`Sprite.events`](api/sprite.md#spriteevents) properties, and [`Events`](api/events.md#events) class
 * New [`Image.bytes`](api/image.md#imagebytes) and [`Image.rowStride`](api/image.md#imagerowstride) properties
 * New [`WebSocket`](api/websocket.md#websocket) class and [`WebSocketMessageType`](api/websocketmessagetype.md#websocketmessagetype) constants
+* New [`Layer.isReference`](api/layer.md#layerisreference) property
 
 ## v1.2.28
 
