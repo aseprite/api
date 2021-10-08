@@ -97,6 +97,15 @@ visible or hidden. Also can be set to show or hide the layer.
 
 ## Layer.isExpanded
 
+## Layer.isReference
+
+```lua
+local isRef = layer.isReference
+```
+
+Returns true if the layer is a reference layer. You cannot change the
+value of this property.
+
 ## Layer.cels
 
 Returns the collection of [cels](cel.md#cel) of this layer. Empty if the
