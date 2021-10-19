@@ -1,29 +1,29 @@
 # WebSocketMessageType
 
-## WebSocketMessageType.Text
+## WebSocketMessageType.TEXT
 
 Text message received
 
-## WebSocketMessageType.Binary
+## WebSocketMessageType.BINARY
 
 Binary message received
 
-## WebSocketMessageType.Open
+## WebSocketMessageType.OPEN
 
 Connected to the server
 
-## WebSocketMessageType.Close
+## WebSocketMessageType.CLOSE
 
 Connection was closed for any reason, or broke
 
-## WebSocketMessageType.Ping
+## WebSocketMessageType.PING
 
 See [the standard](https://datatracker.ietf.org/doc/html/rfc6455) about ping and pong.
 
-## WebSocketMessageType.Pong
+## WebSocketMessageType.PONG
 
 Your ping has been answered.
 
 Note that incoming pings are answered automatically.
 
-## WebSocketMessageType.Fragment
+## WebSocketMessageType.FRAGMENT

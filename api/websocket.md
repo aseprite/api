@@ -26,15 +26,15 @@ Example:
 
 ```lua
 local function handleMessage(mt, data)
-  if mt == WebSocketMessageType.Open then
+  if mt == WebSocketMessageType.OPEN then
     print("Connection open. Sending a message...")
     ws:sendText("Hello!")
 
-  elseif mt == WebSocketMessageType.Text then
+  elseif mt == WebSocketMessageType.TEXT then
     print("Message recived: " .. data)
     ws:close()
 
-  elseif mt == WebSocketMessageType.Close then
+  elseif mt == WebSocketMessageType.CLOSE then
     print("Connection closed")
   end
 end
@@ -59,13 +59,13 @@ the websocket.
 
 Try connecting to the server. After a successful connection,
 `onreceive` function will be called with message type
-`WebSocketMessageType.Open`. When the server or network breaks the connection,
+`WebSocketMessageType.OPEN`. When the server or network breaks the connection,
 the client tries reconnecting automatically.
 
 ## WebSocket:close()
 
 Disconnects from the server. After a disconnect, `onreceive` function
-will be called with message type `WebSocketMessageType.Close`.
+will be called with message type `WebSocketMessageType.CLOSE`.
 
 ## WebSocket:sendText()
 
