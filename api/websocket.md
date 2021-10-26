@@ -7,20 +7,27 @@ local ws = WebSocket()
 local ws = WebSocket{
     url = string,
     onreceive = function(message, data),
-    deflate = bool
+    deflate = bool,
+    minreconnectwait=number,
+    maxreconnectwait=number
 }
 ```
 
 Creates a websocket client that can be used to communicate with
-another program. `url` specifies the server to connect. `deflate`
-option enables compression before sending the data - if the server is
-running on the same machine, it might be faster to turn it off.
+another program:
 
-`onreceive` function will be called for every incoming message, and
-when the connection is established and broken. Its two arguments are
-the event type (see
-[`WebSocketMessageType`](websocketmessagetype.md#websocketmessagetype))
-and the received data (a string, can be empty).
+* `url` specifies the server to connect.
+* `deflate` option enables compression before sending the data - if
+  the server is running on the same machine, it might be faster to
+  turn it off.
+* `onreceive` function will be called for every incoming message, and
+  when the connection is established and broken. Its two arguments are
+  the event type (see
+  [`WebSocketMessageType`](websocketmessagetype.md#websocketmessagetype))
+  and the received data (a string, can be empty).
+* `minreconnectwait` and `maxreconnectwait` (in seconds) are optional
+  values that limit the waiting time to try a reconnection to the
+  server.
 
 Example:
 
