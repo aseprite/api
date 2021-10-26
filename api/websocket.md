@@ -48,7 +48,7 @@ end
 
 local ws = WebSocket{
     onreceive = handleMessage,
-    url = "http://127.0.0.1:34613",
+    url = "http://127.0.0.1:9000",
     deflate = false
 }
 ```
