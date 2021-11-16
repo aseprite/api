@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.2.31
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `16`
+* New `filenamechange` event for [`Sprite.events`](api/sprite.md#spriteevents)
+
 ## v1.2.30
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `15`
