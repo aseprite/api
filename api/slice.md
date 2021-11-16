@@ -8,7 +8,7 @@ Gets or sets a slice's bounding [rectangle](rectangle.md#rectangle).
 
 ## Slice.center
 
-Gets or sets the central [rectangle](rectangle.md#rectangle) of a slice's nine-slice. The getter returns returns `nil` when nine-slicing is inactive in Aseprite's user interface. The rectangle's top-left corner is defined in local coordinates.
+Gets or sets the central [rectangle](rectangle.md#rectangle) of a slice's nine-slice. The getter returns `nil` when nine-slicing is inactive in Aseprite's user interface. The rectangle's top-left corner is defined in local coordinates.
 
 ```lua
 local sliceBounds = slice.bounds
