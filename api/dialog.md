@@ -126,6 +126,9 @@ dlg:combobox{ id=string,
 
 Creates a combo box/drop-down list.
 
+* `options`: Indicates a list of available options in the combobox.
+* `option`: Indicates the default selected option in the combobox (one of the `options`).
+
 ## Dialog.data
 
 ```lua
