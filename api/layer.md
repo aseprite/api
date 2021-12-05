@@ -1,5 +1,13 @@
 # Layer
 
+Layers are arranged as a stack within a sprite. Layers may nest within
+each other to form a hierarchy. Layers that accept children are group
+layers.
+
+A layer can be created with [Sprite:newLayer](sprite.md#spritenewlayer).
+A group layer can be created with [Sprite:newGroup](sprite.md#spritenewgroup).
+Layers can be removed with [Sprite:deleteLayer](sprite.md#spritedeletelayer).
+
 ## Layer.sprite
 
 Gets the sprite to which this layer belongs.
