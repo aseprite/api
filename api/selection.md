@@ -49,7 +49,8 @@ selection:deselect()
 selection:select(rectangle)
 ```
 
-Selects the given [rectangle](rectangle.md#rectangle).
+Replaces the selection with the given [rectangle](rectangle.md#rectangle).
+If you want to add a rectangle to the selection, you can use [Selection:add()](selection.md#selectionadd).
 
 ## Selection:selectAll()
 
@@ -59,6 +60,36 @@ selection:selectAll()
 
 Selected the whole sprite canvas. Only valid for a
 [sprite.selection](sprite.md#spriteselection).
+
+## Selection:add()
+
+```lua
+selection:add(rectangle)
+selection:add(otherSelection)
+```
+
+Adds a new rectangle (or `otherSelection`) to the
+`selection`. Creating an union between the existent selected area and
+the given `rectangle`/`otherSelection`.
+
+## Selection:subtract()
+
+```lua
+selection:subtract(rectangle)
+selection:subtract(otherSelection)
+```
+
+Subtracts the given `rectangle` (or `otherSelection`) from `selection`.
+
+## Selection:intersect()
+
+```lua
+selection:intersect(rectangle)
+selection:intersect(otherSelection)
+```
+
+Creates an intersection in `selection` between the given `rectangle`
+(or `otherSelection`) and the already selected area in `selection`.
 
 ## Selection:contains()
 
