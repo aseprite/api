@@ -93,7 +93,7 @@ parameters.
 * [`app.command.NewFile`](command/NewFile.md#newfile)
 * `app.command.NewFrameTag`
 * `app.command.NewFrame`
-* `app.command.NewLayer`
+* [`app.command.NewLayer`](command/NewLayer.md#newlayer)
 * `app.command.NewSpriteFromSelection`
 * `app.command.OpenBrowser`
 * `app.command.OpenFile`
