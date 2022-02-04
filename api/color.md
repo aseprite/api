@@ -74,6 +74,17 @@ Gets/sets the [HSL lightness](#colorhslhuesaturationligthness).
 
 ## Color.index
 
+```lua
+local c = Color(index)
+oldIndex = c.index
+c.index = newIndex
+```
+
+Gets or sets the palette index related to this color. If the color is
+not an index, i.e. it's RGB/HSL/HSV, the closest palette index of the
+current palette (the palette of the active sprite) that matches the
+RGB/HSL/HSV values will be returned.
+
 ## Color.gray
 
 ## Color.rgbaPixel
