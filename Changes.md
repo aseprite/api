@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.2.31
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `16`
+* New `filenamechange` event for [`Sprite.events`](api/sprite.md#spriteevents)
+* Possibility to change `options` field for [`Dialog:combobox()`](api/dialog.md#dialogcombobox) from [`Dialog:modify()`](api/dialog.md#dialogmodify)
+
 ## v1.2.30
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `15`
@@ -62,7 +68,7 @@ end
 ## v1.2.19
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `11`
-* Added support to modify more properties with [`Dialog:modify{}`]()
+* Added support to modify more properties with [`Dialog:modify{}`](api/dialog.md#dialogmodify)
   ([PR#2359](https://github.com/aseprite/aseprite/pull/2359/commits/b3681fdbb0489d49333b3b5719fb79ddad504e95),
   separator text [#27](https://github.com/aseprite/api/issues/27))
 * Added some extra `onchange` and `onrelease` events for some widgets like [`Dialog:slider{}`](api/dialog.md#dialogslider)

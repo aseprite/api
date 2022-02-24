@@ -422,3 +422,5 @@ Available events for a `Sprite`:
 
 * `'change'`: When sprite content changed because we perform some
   action on it (also called when we undo/redo those actions).
+* `'filenamechange'`: When the filename associated to a sprite
+  changes.
