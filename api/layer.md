@@ -11,11 +11,11 @@ local blendMode = layer.blendMode
 layer.blendMode = newBlendMode
 ```
 
-Gets or sets the layer [BlendMode](blendmode.md#blendmode), expressed as an integer or enumerated constant.
+Gets or sets the layer [BlendMode](blendmode.md#blendmode), expressed as an integer or enumerated constant. When the layer is a [group](#layerisgroup), the getter returns `nil`.
 
 ## Layer.cels
 
-Gets a `table` of [cels](cel.md#cel) in the layer. If the layer is a group, this property will return a table of zero length.
+Gets a `table` of [cels](cel.md#cel) in the layer. If the layer is a [group](#layerisgroup), this property will return a table of zero length.
 
 See also the [Layer:cel()](#layercel) method.
 
@@ -39,19 +39,19 @@ Gets or sets the user-defined data related to this layer, a `string`.
 
 ## Layer.isBackground
 
-Gets whether or not a layer is a background. The opposite of the property [Layer.isTransparent](#layeristransparent). Background layers do not contain images which support transparency. 
+Gets whether or not a layer is a background. Returns `false` if the layer is a [group](#layerisgroup). The opposite of the property [Layer.isTransparent](#layeristransparent). Background layers do not contain images which support transparency. 
 
 For context, see the general documentation on [layers](https://www.aseprite.org/docs/layers). 
 
 ## Layer.isCollapsed
 
-Gets or sets whether or not a [group](#layerisgroup) layer is collapsed, i.e., whether its child layers are hidden in the timeline. The opposite of the property [Layer.isExpanded](#layerisexpanded).
+Gets or sets whether or not a [group](#layerisgroup) layer is collapsed, i.e., whether its child layers are hidden in the timeline. Returns `false` if the layer is not a group. The opposite of the property [Layer.isExpanded](#layerisexpanded).
 
 The getter describes only the group layer's local collapse, not whether any hierarchy that contains it is collapsed. See [Layer.isVisible](#layerisvisible) for an example snippet using a similar property.
 
 ## Layer.isContinuous
 
-Gets or sets whether a layer biases toward linked [cels](cel.md#cel) when a new cel is created in the timeline.
+Gets or sets whether a layer biases toward linked [cels](cel.md#cel) when a new cel is created in the timeline. Returns `false` if the layer is a [group](#layerisgroup).
 
 For context, see the general documentation on [continuous layers](https://www.aseprite.org/docs/continuous-layers/).
 
@@ -63,7 +63,7 @@ The getter describes only the group layer's local editability, not whether any h
 
 ## Layer.isExpanded
 
-Gets or sets whether or not a [group](#layerisgroup) layer is expanded, meaning whether its child layers are visible in the timeline. The opposite of the property [Layer.isCollapsed](#layeriscollapsed).
+Gets or sets whether or not a [group](#layerisgroup) layer is expanded, meaning whether its child layers are visible in the timeline. Returns `true` if the layer is not a group. The opposite of the property [Layer.isCollapsed](#layeriscollapsed).
 
 The getter describes only the group layer's local expansion, not whether any hierarchy that contains it is expanded. See [Layer.isVisible](#layerisvisible) for an example snippet using a similar property.
 
@@ -87,7 +87,9 @@ Gets whether or not the layer is a reference layer.
 
 ## Layer.isTransparent
 
-Gets whether or not a layer supports transparency. The opposite of the property [Layer.isBackground](#layerisbackground). For [indexed color mode](colormode.md#colormodeindexed), the layer may contain images with a [transparent color](imagespec.md#imagespectransparentcolor) index. For RGB or grayscale color mode, the layer may contain images with an alpha channel.
+Gets whether or not a layer supports transparency. Returns `true` if the layer is a group. The opposite of the property [Layer.isBackground](#layerisbackground).
+
+For [indexed color mode](colormode.md#colormodeindexed), the layer may contain images with a [transparent color](imagespec.md#imagespectransparentcolor) index. For RGB or grayscale color mode, the layer may contain images with an alpha channel.
 
 For context, see the general documentation on [layers](https://www.aseprite.org/docs/layers).
 
@@ -106,7 +108,7 @@ layer1.isVisible = true
 print(layer1.isVisible)
 ```
 
-The getter describes only the layer's local visibility, not its visibility with respect to any hierarchy that contains it.
+The getter describes only the layer's local visibility, not its visibility with respect to a hierarchy that may contain it.
 
 ## Layer.layers
 
@@ -127,7 +129,7 @@ Gets or sets the layer opacity, a value from `0` to `255`. The layer is complete
 
 ## Layer.parent
 
-Gets or sets the layer's parent. The parent may be either a [sprite](sprite.md#sprite) or layer that is a [group](#layerisgroup).
+Gets or sets the layer's parent. The parent may be either a [sprite](sprite.md#sprite) or a [group](#layerisgroup) layer.
 
 ```lua
 local spriteOrLayerGroup = layer.parent
