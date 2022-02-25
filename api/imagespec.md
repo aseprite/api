@@ -1,8 +1,28 @@
 # ImageSpec
 
-It's a simple structure that contains some specifications of a
-[sprite](sprite.md#sprite) or [image](image.md#image) (like canvas size,
-[color mode](colormode.md#colormode), etc.)
+It's a simple object that contains some specifications to create new
+[sprites](sprite.md#sprite) or [images](image.md#image), or to get the
+information (specs) of a [sprite](sprite.md#spritespec) or
+[image](image.md#imagespec), like the canvas size (width/height),
+[color mode](colormode.md#colormode), and color space. Often
+abbreviated as 'spec' in the API.
+
+## ImageSpec()
+
+```lua
+ImageSpec()
+ImageSpec(otherImageSpec)
+ImageSpec{
+    width=number,
+    height=number,
+    colorMode=number,
+    transparentColor=number }
+```
+
+Creates a new `ImageSpec` instance.
+
+When no arguments are given, defaults to a width and height of 1, with
+the transparent color index set to zero and RGB color mode.
 
 ## ImageSpec.colorMode
 
@@ -11,7 +31,8 @@ local colorMode = spec.colorMode
 spec.colorMode = colorMode
 ```
 
-The [color mode](colormode.md#colormode) of the image.
+Gets or sets the [color mode](colormode.md#colormode) of the image or
+sprite.
 
 ## ImageSpec.width
 
@@ -20,7 +41,7 @@ local w = spec.width
 spec.width = w
 ```
 
-Canvas width.
+Gets or sets the width of the image or sprite.
 
 ## ImageSpec.height
 
@@ -29,7 +50,17 @@ local h = spec.height
 spec.height = h
 ```
 
-Canvas height.
+Gets or sets the height of the image or sprite.
+
+## ImageSpec.colorSpace
+
+```lua
+local colorSpace = spec.colorSpace
+spec.colorSpace = ColorSpace{ sRGB=true }
+```
+
+Gets or sets the [color space](colorspace.md#colorspace) for an image
+or sprite.
 
 ## ImageSpec.transparentColor
 
@@ -38,5 +69,5 @@ local mask = spec.transparentColor
 spec.transparentColor = mask
 ```
 
-Index in the palette that represent the transparent color in
-transparent layers in indexed sprites.
+Gets or sets the index that refers a transparent color in a palette
+when the image or sprite uses indexed [color mode](colormode.md#colormode).
