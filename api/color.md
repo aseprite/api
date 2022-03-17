@@ -17,6 +17,7 @@ c = Color{ red=255, green=255, blue=255, alpha=255 }
 c = Color{ hue=360.0, saturation=1.0, value=1.0, alpha=255 }
 c = Color{ hue=360.0, saturation=1.0, lightness=1.0, alpha=255 }
 c = Color{ gray=255, alpha=255 }
+c = Color{ index=integer }
 c = Color(integer)
 ```
 

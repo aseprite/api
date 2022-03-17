@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.2.33
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `17`
+* New `Color{ index }`
+* Now `Color.index` returns an integer instead of a number
+
 ## v1.2.31
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `16`
