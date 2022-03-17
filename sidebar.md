@@ -45,4 +45,3 @@ Classes/objects
   * [Tool](api/tool.md#tool)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)
-  
