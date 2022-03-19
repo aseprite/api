@@ -74,7 +74,7 @@ layer.stackIndex = newPosition
 
 Gets or sets the layer's index in its parent's layers `table`. 
 
-![Coordinates example for getPixel](image/stackindices.png)
+![Coordinates example for getPixel](layer/stackindices.png)
 
 In other words, this is the layer's place in the local stack. Layers
 stack in descending order. For example, a layer with index `1` will
