@@ -151,6 +151,9 @@ In the following example, we show the differences between `getPixel()`,
 
 ![Coordinates example for getPixel](image/getpixel.gif)
 
+When the coordinates are out of bounds, returns `-1`. In Lua, this will be
+rendered as `4294967295`, `0xffffffff` in hexadecimal, i.e., opaque white.
+
 ## Image:drawImage()
 
 ```lua
