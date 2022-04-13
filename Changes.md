@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.2.35
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `18`
+* Now `Dialog()` returns `nil` if we are running in `-batch` mode
+
 ## v1.2.33
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `17`
