@@ -24,18 +24,23 @@ Returns the [layer](layer.md#layer) where this cel is located.
 
 ```lua
 local frame = cel.frame
+cel.frame = newFrame
 ```
 
-Returns the [frame](frame.md#frame) object which this cel belongs.
+Returns the [frame](frame.md#frame) object which this cel belongs.  If
+you set this property, the cel will be moved to the given frame (if
+another cel already exists in that frame, it will be removed).
 
 ## Cel.frameNumber
 
 ```lua
 local frameNumber = cel.frameNumber
+cel.frameNumber = newFrameNumber
 ```
 
 Returns the frame number which this cel belongs, the frame number `1`
-is the first frame (not `0`).
+is the first frame (not `0`). If you set this property the cel will be
+moved to the given `frameNumber`, check the notes of [Cel.frame](#celframe).
 
 ## Cel.image
 

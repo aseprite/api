@@ -28,6 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `18`
 * Now `Dialog()` returns `nil` if we are running in `-batch` mode
+* New `Cel.frame`/`Cel.frameNumber` setters
 
 ## v1.2.33
 
