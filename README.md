@@ -47,7 +47,7 @@ a little experiment, so you have six options to approach your idea:
   * [BrushPattern](api/brushpattern.md#brushpattern)
   * [BrushType](api/brushtype.md#brushtype)
   * [ColorMode](api/colormode.md#colormode)
-  * [FilterChannel](api/filterchannel.md#filterchannel)
+  * [FilterChannels](api/filterchannels.md#filterchannel)
   * [Ink](api/ink.md#ink)
   * [MouseButton](api/mousebutton.md#mousebutton)
   * [RangeType](api/rangetype.md#rangetype)
