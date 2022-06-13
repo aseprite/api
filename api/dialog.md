@@ -48,6 +48,8 @@ bar of the dialog. The constructor that receives a table can receive a
 special callback function (`onclose`) that is called when the dialog
 is closed.
 
+Returns `nil` if there is no UI available, i.e. [app.isUIAvailable is `false`](app.md#appisuiavailable).
+
 ## Dialog:button()
 
 ```lua

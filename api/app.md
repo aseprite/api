@@ -96,7 +96,8 @@ some commands use the background color to clear the active layer.
 ## app.isUIAvailable
 
 Returns true if the UI is available. E.g. if this is true you can use
-[app.alert](#appalert) or [dialogs](dialog.md#dialog).
+[app.alert](#appalert) or [dialogs](dialog.md#dialog). The UI is not available
+when we run in [--batch mode](https://www.aseprite.org/docs/cli/#batch).
 
 ## app.sprites
 
