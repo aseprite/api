@@ -254,7 +254,6 @@ Creates a radio button. Arguments are the same as in [Dialog:button](#dialogbutt
 ```lua
 local dlg = Dialog()
 dlg:separator{ id=string,
-               label=string,
                text=string }
 ```
 
