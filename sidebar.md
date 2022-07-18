@@ -4,8 +4,10 @@
 
 Globals namespaces
   * [app](api/app.md#app)
-  * [app.command](api/app_command.md#appcommand)
-  * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
+    * [command](api/app_command.md#appcommand)
+    * [preferences](api/app_preferences.md#apppreferences)
+    * [fs](api/app_fs.md#appfs)
+  * [pixelColor](api/pixelcolor.md#apppixelcolor)
 
 Constants
   * [AniDir](api/anidir.md#anidir)
