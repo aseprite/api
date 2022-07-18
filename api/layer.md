@@ -78,8 +78,6 @@ stack in descending order. For example, a layer with index `1` will
 lie beneath a layer with index `2`, assuming the layers share the same
 parent.
 
-Gets or sets the user-defined data related to this layer, a `string`.
-
 ## Layer.isImage
 
 Gets whether or not the layer contains [cels](cel.md#cel) with
