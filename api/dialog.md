@@ -208,6 +208,13 @@ dlg:modify{ id=string,
 
 Changes properties of the given widget that matches the identifier `id`.
 
+```lua
+local dlg = Dialog()
+dlg:modify{ title = "New Dialog Title" }
+```
+
+Using the `dialog:modify` with a parameter `title` changes the dialog title.
+
 ## Dialog:newrow()
 
 ```lua
