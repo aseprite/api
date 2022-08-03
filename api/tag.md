@@ -56,3 +56,12 @@ tag.color = color
 ```
 
 Gets or sets the user-defined [color](color.md#color) of this tag in the timeline.
+
+## Tag.data
+
+```lua
+local data = tag.data
+tag.data = data
+```
+
+Gets or sets the user-defined data related to this tag, a `string`.
