@@ -122,9 +122,9 @@ parameters.
 * app.command.ReverseFrames
 * app.command.Rotate
 * app.command.RunScript
-* app.command.SaveFileAs
-* app.command.SaveFileCopyAs
-* app.command.SaveFile
+* [app.command.SaveFile](command/SaveFile.md#savefile)
+* [app.command.SaveFileAs](command/SaveFile.md#savefile)
+* [app.command.SaveFileCopyAs](command/SaveFile.md#savefile)
 * app.command.SaveMask
 * app.command.SavePalette
 * app.command.ScrollCenter

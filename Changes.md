@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.2.36
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `19`
+* Fixed several issues with [app.command.SaveFile/SaveFileAs/SaveFileCopyAs](command/SaveFile.md#savefile) commands
+* Fixed [Sprite:newSlice](api/sprite.md#spritenewslice), now it adds undo information
+
 ## v1.2.35
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `18`
