@@ -16,7 +16,7 @@ parameters.
 * [app.command.BrightnessContrast](command/BrightnessContrast.md#brightnesscontrast)
 * app.command.Cancel
 * [app.command.CanvasSize](command/CanvasSize.md#canvassize)
-* app.command.CelOpacity
+* [app.command.CelOpacity](command/CelOpacity.md#celopacity)
 * app.command.CelProperties
 * app.command.ChangeBrush
 * app.command.ChangeColor
@@ -75,7 +75,7 @@ parameters.
 * app.command.Launch
 * app.command.LayerFromBackground
 * app.command.LayerLock
-* app.command.LayerOpacity
+* [app.command.LayerOpacity](command/LayerOpacity.md#layeropacity)
 * app.command.LayerProperties
 * app.command.LayerVisibility
 * app.command.LinkCels
