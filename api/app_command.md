@@ -44,6 +44,7 @@ parameters.
 * app.command.DuplicateView
 * app.command.Exit
 * [app.command.ExportSpriteSheet](command/ExportSpriteSheet.md#exportspritesheet)
+* [app.command.ExportTileset](command/ExportTileset.md#exporttileset)
 * app.command.Eyedropper
 * app.command.Fill
 * app.command.FitScreen

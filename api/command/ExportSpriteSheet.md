@@ -28,9 +28,11 @@ app.command.ExportSpriteSheet {
   tag="",
   splitLayers=false,
   splitTags=false,
+  splitGrid=false,
   listLayers=true,
   listTags=true,
-  listSlices=true
+  listSlices=true,
+  fromTilesets=false,
 }
 ```
 
@@ -63,6 +65,9 @@ using [the `-sheet` argument from the CLI](https://www.aseprite.org/docs/cli/#sh
 * `tag`
 * `splitLayers`
 * `splitTags`
+* `splitGrid`: Only available since v1.3-beta21
 * `listLayers`
 * `listTags`
 * `listSlices`
+* `fromTilesets`: Only available since v1.3-beta21, export tileset,
+  like [ExportTileset](ExportTileset.md#exporttileset)

@@ -29,6 +29,7 @@ end
 * [`app.apiVersion`](api/app.md#appapiversion) is `20`
 * Only in v1.3-beta21:
   * Added `bounds` parameter to [app.command.SaveFileCopyAs](command/SaveFile.md#savefile) command
+  * Added `splitGrid` & `fromTilesets` parameters to [app.command.ExportSpriteSheet](command/ExportSpriteSheet.md#exportspritesheet) command
 
 ## v1.2.36
 
