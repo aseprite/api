@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.2.40 & v1.3-beta21
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `20`
+* Only in v1.3-beta21:
+  * Added `bounds` parameter to [app.command.SaveFileCopyAs](command/SaveFile.md#savefile) command
+
 ## v1.2.36
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `19`

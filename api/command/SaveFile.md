@@ -11,6 +11,7 @@ app.command.SaveFile {
   fromFrame=frame,
   toFrame=frame,
   ignoreEmpty=false,
+  bounds=Rectangle,
 }
 app.command.SaveFileAs { ... }
 app.command.SaveFileCopyAs { ... }
@@ -48,3 +49,5 @@ Parameters:
   you want to avoid saving empty frames of a sequence of files
   (e.g. when saving an animation as `frame01.png`, `frame02.png`,
   etc.).
+* `bounds`: Available since v1.3-beta21: Only export the selected
+  [rectangle](../rectangle.md#rectangle) of the canvas.
