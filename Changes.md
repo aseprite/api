@@ -29,13 +29,13 @@ end
 * [`app.apiVersion`](api/app.md#appapiversion) is `20`
 * Added [app.range.slices](api/range.md#rangeslices) object
 * Only in v1.3-beta21:
-  * Added `bounds` parameter to [app.command.SaveFileCopyAs](command/SaveFile.md#savefile) command
-  * Added `splitGrid` & `fromTilesets` parameters to [app.command.ExportSpriteSheet](command/ExportSpriteSheet.md#exportspritesheet) command
+  * Added `bounds` parameter to [app.command.SaveFileCopyAs](api/command/SaveFile.md#savefile) command
+  * Added `splitGrid` & `fromTilesets` parameters to [app.command.ExportSpriteSheet](api/command/ExportSpriteSheet.md#exportspritesheet) command
 
 ## v1.2.36
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `19`
-* Fixed several issues with [app.command.SaveFile/SaveFileAs/SaveFileCopyAs](command/SaveFile.md#savefile) commands
+* Fixed several issues with [app.command.SaveFile/SaveFileAs/SaveFileCopyAs](api/command/SaveFile.md#savefile) commands
 * Fixed [Sprite:newSlice](api/sprite.md#spritenewslice), now it adds undo information
 
 ## v1.2.35
