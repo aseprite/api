@@ -27,6 +27,7 @@ end
 ## v1.2.40 & v1.3-beta21
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `20`
+* Added [app.range.slices](api/range.md#rangeslices) object
 * Only in v1.3-beta21:
   * Added `bounds` parameter to [app.command.SaveFileCopyAs](command/SaveFile.md#savefile) command
   * Added `splitGrid` & `fromTilesets` parameters to [app.command.ExportSpriteSheet](command/ExportSpriteSheet.md#exportspritesheet) command

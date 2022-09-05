@@ -13,6 +13,7 @@ It can be:
 * A list of cels
 * A list of images
 * A list of colors
+* A list of slices
 
 Or a combination of those.
 
@@ -96,17 +97,33 @@ Example to select the colors with index 0 and 3 in the color bar:
 app.range.colors = { 0, 3 }
 ```
 
+## Range.slices
+
+```lua
+local selectedSlices = app.range.slices
+app.range.slices = { ... }
+```
+
+Gets or sets the array of [selected slices](https://www.aseprite.org/docs/slices) in the sprite editor.
+Each element of the array is a [slice](slice.md#slice).
+
+Example to select all slices in the sprite:
+```lua
+app.range.slices = app.activeSprite.slices
+```
+
 ## Range:contains()
 
 ```lua
 local hasLayer = app.range:contains(layer)
 local hasFrame = app.range:contains(frame)
 local hasCel = app.range:contains(cel)
+local hasSlice = app.range:contains(slice)
 ```
 
 Returns true if the given object
-([layer](layer.md#layer)/[frame](frame.md#frame)/[cel](cel.md#cel)) is
-inside the selected range.
+([layer](layer.md#layer)/[frame](frame.md#frame)/[cel](cel.md#cel)/[slice](slice.md#slice))
+is inside the selected range.
 
 ## Range:containsColor()
 
