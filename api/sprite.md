@@ -413,14 +413,21 @@ that can act like listeners of specific `Sprite` events. E.g.
 
 ```lua
 sprite.events:on('change',
-  function()
+  function(ev)
     print('The sprite has changed')
   end)
 ```
 
+A special `ev` argument can be sent to the listener. Which generally
+is a table, but it can be `nil` for older version of Aseprite or
+events that don't support it.
+
 Available events for a `Sprite`:
 
 * `'change'`: When sprite content changed because we perform some
-  action on it (also called when we undo/redo those actions).
+  action on it (also called when we undo/redo those actions). Since
+  Aseprite v1.2.41, you can access `ev.fromUndo` property which is
+  `true` if the change came from a undo/redo/undo history event (and
+  not from a direct user change in the sprite).
 * `'filenamechange'`: When the filename associated to a sprite
   changes.

@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.2.41 & v1.3-beta22
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `21`
+* New `ev` argument for [`Sprite.events:on('change', ...)`](api/sprite.md#spriteevents)
+  callback to detect if the change is from an undo/redo change (related to [#3539](https://github.com/aseprite/aseprite/issues/3539))
+
 ## v1.2.40 & v1.3-beta21
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `20`
