@@ -57,3 +57,17 @@ tag.color = color
 ```
 
 Gets or sets the user-defined [color](color.md#color) of this tag in the timeline.
+
+## Tag.repeats
+
+```lua
+local n = tag.repeats
+tag.repeats = n
+```
+
+Gets or sets the number of times the tag is repeated/looped.
+
+* `0` = Doesn't specify, plays infinite in UI, once on export, for ping-pong it plays once in each direction
+* `1` = Plays once, for ping-pong it plays just in one direction
+* `2` = Plays twice, for ping-pong it plays once in each direction, and once in reverse
+* `n` = Plays N times

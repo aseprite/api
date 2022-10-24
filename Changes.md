@@ -30,6 +30,7 @@ end
 * New `ev` argument for [`Sprite.events:on('change', ...)`](api/sprite.md#spriteevents)
   callback to detect if the change is from an undo/redo change (related to [#3539](https://github.com/aseprite/aseprite/issues/3539))
 * New [AniDir.PING_PONG_REVERSE](api/anidir.md#anidir) field
+* New [Tag.repeats](api/tag.md#tagrepeats) field
 
 ## v1.2.40 & v1.3-beta21
 
