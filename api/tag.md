@@ -44,6 +44,7 @@ local aniDir = tag.aniDir
 tag.aniDir = AniDir.FORWARD
 tag.aniDir = AniDir.REVERSE
 tag.aniDir = AniDir.PING_PONG
+tag.aniDir = AniDir.PING_PONG_REVERSE
 ```
 
 Gets or sets the *[Animation Direction](https://www.aseprite.org/docs/tags/)* property of the tag.
