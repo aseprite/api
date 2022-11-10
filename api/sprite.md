@@ -96,6 +96,15 @@ Gets or sets the name of the file from where this sprite was loaded or
 saved. Or an empty string if this is a new sprite without an
 associated file.
 
+## Sprite.isModified
+
+```lua
+local modified = sprite.isModified
+```
+
+Returns true if the sprite is modified compared to the latest saved
+state on disk.
+
 ## Sprite.colorMode
 
 Returns the [color mode](colormode.md#colormode) of this sprite.
