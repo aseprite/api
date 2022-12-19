@@ -190,6 +190,10 @@ Check the [app.preferences](app_preferences.md#apppreferences) documentation.
 
 Check the [app.fs](app_fs.md#appfs) documentation.
 
+## app.theme
+
+Check the [app.theme](app_theme.md#apptheme) documentation.
+
 ## app.refresh()
 
 ```lua

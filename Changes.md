@@ -33,6 +33,7 @@ end
 * New [Tag.repeats](api/tag.md#tagrepeats) field
 * New [Sprite.isModified](api/sprite.md#spriteismodified) property
 * New [Image.bounds](api/image.md#imagebounds) property and [Image:shrinkBounds()](api/image.md#imageshrinkbounds) function
+* New [app.theme](api/app_theme.md#apptheme) class
 
 ## v1.2.40 & v1.3-beta21
 
