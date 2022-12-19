@@ -71,3 +71,12 @@ Gets or sets the number of times the tag is repeated/looped.
 * `1` = Plays once, for ping-pong it plays just in one direction
 * `2` = Plays twice, for ping-pong it plays once in each direction, and once in reverse
 * `n` = Plays N times
+
+## Tag.data
+
+```lua
+local data = tag.data
+tag.data = data
+```
+
+Gets or sets the user-defined data related to this tag, a `string`.
