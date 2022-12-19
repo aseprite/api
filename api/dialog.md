@@ -32,6 +32,28 @@ if data.confirm then
 end
 ```
 
+Each time we add a new widget like `:button{ ... }` some common properties
+can be specified for every kind of widget:
+
+```lua
+Dialog:widget_type{
+  id=string,
+  label=string,
+  focus=boolean,
+  enabled=boolean,
+  visible=boolean,
+}
+```
+
+Where:
+* `id`: It's the ID to identify this widget in [Dialog.data](#dialogdata)
+* `label`: Label at the left side of the widget
+* `focus`: Focus this widget by default (useful to focus a specific
+  [entry](#dialogentry) when the dialog appears on the screen for the
+  first time)
+* `enabled`: Enable or disable the widget by default
+* `visible`: Make the widget visible or hidden by default
+
 ## Dialog()
 
 ```lua
