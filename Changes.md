@@ -34,6 +34,8 @@ end
 * New [Sprite.isModified](api/sprite.md#spriteismodified) property
 * New [Image.bounds](api/image.md#imagebounds) property and [Image:shrinkBounds()](api/image.md#imageshrinkbounds) function
 * New [app.theme](api/app_theme.md#apptheme) class
+* New [Dialog:canvas()](api/dialog.md#dialogcanvas) widget
+* New [GraphicsContext](api/graphicscontext.md#graphicscontext) class
 
 ## v1.2.40 & v1.3-beta21
 

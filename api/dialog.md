@@ -42,6 +42,8 @@ Dialog:widget_type{
   focus=boolean,
   enabled=boolean,
   visible=boolean,
+  hexpand=boolean,
+  vexpand=boolean,
 }
 ```
 
@@ -53,6 +55,8 @@ Where:
   first time)
 * `enabled`: Enable or disable the widget by default
 * `visible`: Make the widget visible or hidden by default
+* `hexpand`: Expand the widget horizontally (useful to make a [canvas](#dialogcanvas) with fixed size if we specify `hexpand=false`)
+* `vexpand`: Expand the widget vertically (useful to make a [canvas](#dialogcanvas) with fixed size if we specify `vexpand=false`)
 
 ## Dialog()
 
@@ -390,3 +394,37 @@ Arguments (table fields):
 * `entry`: Show an entry field to edit the filename manually (false by default).
 * `focus`: Focus this field by default.
 * `onchange`: Function to be called when the filename is changed.
+
+## Dialog:canvas()
+
+```lua
+local dlg = Dialog()
+dlg:canvas{ id=string,
+            width=integer,
+            height=integer,
+            onpaint=function(ev) ... end }
+            onmousemove=function(ev) ... end }
+            onmousedown=function(ev) ... end }
+            onmouseup=function(ev) ... end }
+```
+
+The Canvas widget provides several events to create an interactive
+experience with the user:
+
+* `onpaint`: A function that receives an event with [a GraphicsContext
+  (`ev.context`)](graphicscontext.md#graphicscontext) to paint on.
+* `onmousemove`/`onmousedown`/`onmouseup`: Mouse events when the mouse
+  is moved over the canvas, a button is pressed (`onmousedown`), or a
+  button is released (`onmouseup`). The event have `ev.x`/`ev.y` to
+  access the mouse position (in client coordinates, where 0,0 is the
+  top-left corner of the canvas widget) and `ev.button` that is a
+  [MouseButton](mousebutton.md#mousebutton).
+
+## Dialog:repaint()
+
+```lua
+dlg:repaint()
+```
+
+Will call `onpaint` event of all [canvases](#canvas) and update the
+dialog pixels on the screen.
