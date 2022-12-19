@@ -32,6 +32,7 @@ end
 * New [AniDir.PING_PONG_REVERSE](api/anidir.md#anidir) field
 * New [Tag.repeats](api/tag.md#tagrepeats) field
 * New [Sprite.isModified](api/sprite.md#spriteismodified) property
+* New [Image.bounds](api/image.md#imagebounds) property and [Image:shrinkBounds()](api/image.md#imageshrinkbounds) function
 
 ## v1.2.40 & v1.3-beta21
 

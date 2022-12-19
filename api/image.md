@@ -65,6 +65,15 @@ local w = image.width
 local h = image.height
 ```
 
+## Image.bounds
+
+```lua
+local rectangle = image.bounds
+```
+
+Returns a [rectangle](rectangle.md#rectangle) with the bounds of the
+image with origin equal to (0, 0).
+
 ## Image.colorMode
 
 ```lua
@@ -278,3 +287,14 @@ image:resize{ ..., pivot=Point(x, y) }
 Resizes the image. The pivot is `Point(0, 0)` by default (i.e.  the
 image right and bottom sides will be increased, and the top-left
 corner will be in the same place).
+
+## Image:shrinkBounds()
+
+```lua
+local rectangle = image:shrinkBounds()
+local rectangle = image:shrinkBounds(refColor)
+```
+
+Returns the shrunken bounds (a [rectangle](rectangle.md#rectangle)) of
+the image removing all the empty space of borders using the mask color
+or the given reference [color](color.md#color) in `refColor`.
