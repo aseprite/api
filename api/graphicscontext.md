@@ -23,6 +23,8 @@ Dialog():canvas{
 
 ## GraphicsContext:restore()
 
+## GraphicsContext:clip()
+
 ## GraphicsContext:strokeRect()
 
 ## GraphicsContext:fillRect()
@@ -70,6 +72,10 @@ gc:drawThemeRect(partId, x, y, w, h)
 ## GraphicsContext:lineTo()
 
 ## GraphicsContext:cubicTo()
+
+## GraphicsContext:rect()
+
+## GraphicsContext:roundedRect()
 
 ## GraphicsContext:stroke()
 
