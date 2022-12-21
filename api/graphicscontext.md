@@ -47,6 +47,8 @@ Returns the [size](size.md#size) of the text using the current font.
 
 ```lua
 gc:drawImage(image, x, y)
+gc:drawImage(image, srcRect, dstRect)
+gc:drawImage(image, srcX, srcY, srcW, srcH, dstX, dstY, dstW, dstH)
 ```
 
 ## GraphicsContext:drawThemeImage()
