@@ -63,6 +63,29 @@ rectangle.height = newHeight
 Gets or sets the *height* of the rectangle. If it's 0, the rectangle is
 empty (so the coordinate doesn't matter).
 
+## Rectangle.origin
+
+```lua
+local point = rectangle.origin
+rectangle.origin = newPoint
+```
+
+Gets or sets the origin of the rectangle with a
+[Point](point.md#point) object, just like changing
+[Rectangle.x](#rectanglex) and [Rectangle.y](#rectangley) at the same
+time.
+
+## Rectangle.size
+
+```lua
+local size = rectangle.size
+rectangle.size = newSize
+```
+
+Gets or sets the size of the rectangle with a [Size](size.md#size)
+object, just like changing [Rectangle.width](#rectanglewidth) and
+[Rectangle.height](#rectangleheight) at the same time.
+
 ## Rectangle.isEmpty
 
 ```lua
