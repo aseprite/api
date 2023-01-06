@@ -208,6 +208,26 @@ The transparent color is an intenger that specifies what index (`0` by
 default) is the transparent color in transparent layers on indexed
 sprites.
 
+## Sprite.color
+
+```lua
+local color = sprite.color
+sprite.color = color
+```
+
+Gets or sets the user-defined [color](color.md#color) of this sprite.
+This color is used to display the tab in the main window of this
+sprite.
+
+## Sprite.data
+
+```lua
+local data = sprite.data
+sprite.data = data
+```
+
+Gets or sets the user-defined data related to this sprite (a text string).
+
 ## Sprite:resize()
 
 ```lua

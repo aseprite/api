@@ -92,6 +92,10 @@ return a table of zero length.
 
 Groups may nest within groups, creating a hierarchy.
 
+## Layer.isTilemap
+
+Returns true if the layer is a tilemap (contains a [tileset](#layertileset))
+
 ## Layer.isTransparent
 
 Gets whether or not a layer supports transparency. The opposite of the
@@ -229,3 +233,9 @@ Returns a [cel](cel.md#cel), if any, at the intersection of the layer
 and a frame. The frame may be either a [frame](frame.md#frame) object
 or its [frame number](frame.md#frameframenumber), an integer. If there
 is no cel at that intersection, returns `nil`.
+
+## Layer.tileset
+
+Returns the [tileset](tileset.md#tileset) associated to this layer
+only when [it's a tilemap](#layeristilemap) (returns nil in other
+case).

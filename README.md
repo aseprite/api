@@ -76,6 +76,7 @@ a little experiment, so you have six options to approach your idea:
   * [Slice](api/slice.md#slice)
   * [Sprite](api/sprite.md#sprite)
   * [Tag](api/tag.md#tag)
+  * [Tileset](api/tileset.md#tileset)
   * [Tool](api/tool.md#tool)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)

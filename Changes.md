@@ -86,6 +86,9 @@ end
 * Added `selection` argument to
   [`app.useTool{}`](api/app.md#appusetool) to use selection tools
 * New [`SelectionMode`](api/selectionmode.md#selectionmode)
+* In **v1.3-beta1**
+  * New [`Layer.isTilemap`](api/layer.md#isTilemap)
+  * New [`Tileset`](api/tileset.md#tileset)
 
 ## v1.2.26
 
