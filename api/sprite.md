@@ -228,6 +228,11 @@ sprite.data = data
 
 Gets or sets the user-defined data related to this sprite (a text string).
 
+## Sprite.properties
+
+Access user-defined and extension-defined
+[properties](properties.md#properties) of this sprite.
+
 ## Sprite:resize()
 
 ```lua

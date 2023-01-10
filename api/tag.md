@@ -80,3 +80,8 @@ tag.data = data
 ```
 
 Gets or sets the user-defined data related to this tag, a `string`.
+
+## Tag.properties
+
+Access user-defined and extension-defined
+[properties](properties.md#properties) of this tag.

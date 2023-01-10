@@ -39,6 +39,11 @@ slice.data = data
 
 Gets or sets the user-defined data related to this slice, a `string`.
 
+## Slice.properties
+
+Access user-defined and extension-defined
+[properties](properties.md#properties) of this slice.
+
 ## Slice.name
 
 Gets or sets the a slice's name, a `string`.

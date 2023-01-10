@@ -222,6 +222,11 @@ layer.data = data
 
 Gets or sets the user-defined data related to this layer (a text string).
 
+## Layer.properties
+
+Access user-defined and extension-defined
+[properties](properties.md#properties) of this layer.
+
 ## Layer:cel()
 
 ```lua

@@ -98,3 +98,8 @@ cel.data = newData
 ```
 
 Gets or sets the user-defined data related to this cel (a text string).
+
+## Cel.properties
+
+Access user-defined and extension-defined
+[properties](properties.md#properties) of this cel.
