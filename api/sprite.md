@@ -431,6 +431,42 @@ sprite:deleteSlice(sliceName)
 
 Deletes the given [slice](slice.md#slice).
 
+## Sprite:newTileset()
+
+```lua
+local tileset = sprite:newTileset()
+local tileset = sprite:newTileset(Grid)
+local tileset = sprite:newTileset(Rectangle)
+local tileset = sprite:newTileset(Grid, numTiles)
+local tileset = sprite:newTileset(Rectangle, numTiles)
+local tileset = sprite:newTileset(anotherTileset)
+```
+
+Returns a new [tileset](tileset.md#tileset) and adds it to the
+sprite's tilesets.
+
+If not parameters are given, the resulting tileset has tile size 16x16
+pixels and just 1 tile.
+
+If Grid or Rectangle is specified it is used to set the resulting
+tileset's origin and tile size.
+
+numTiles specifies the number of tiles we want the tileset to contain
+initially.
+
+If another tileset is passed as the only parameter, the result is a
+duplicate of it. Take into consideration that the passed tileset
+cannot belong to another sprite.
+
+## Sprite:deleteTileset()
+
+```lua
+sprite:deleteTileset(tileset)
+sprite:deleteTileset(tilesetIndex)
+```
+
+Deletes the given [tileset](tileset.md#tileset) from the sprite's tilesets.
+
 ## Sprite:newTile()
 
 ```lua
