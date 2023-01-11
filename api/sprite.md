@@ -431,6 +431,33 @@ sprite:deleteSlice(sliceName)
 
 Deletes the given [slice](slice.md#slice).
 
+## Sprite:newTile()
+
+```lua
+local tile = sprite:newTile(tileset [, tileIndex])
+```
+
+Inserts an empty tile into the given
+[tileset](https://github.com/aseprite/api/blob/next-version/api/tileset.md#tileset)
+at a given `tileIndex`. If `tileIndex` is not provided, the new tile
+is added to the end of the tileset. This method generates undo
+information, so you could use it as an individual operation or in a
+[transaction](https://github.com/aseprite/api/blob/main/api/app.md#apptransaction).
+
+## Sprite:deleteTile()
+
+```lua
+local tile = tileset:tile(tileIndex)
+Sprite:deleteTile(tile)
+Sprite:deleteTile(tileset, tileIndex)
+```
+
+Removes a `tile` from a
+[tileset](https://github.com/aseprite/api/blob/next-version/api/tileset.md#tileset). This
+method generates undo information, so you could use it as an
+individual operation or in a
+[transaction](https://github.com/aseprite/api/blob/main/api/app.md#apptransaction).
+
 ## Sprite:flatten()
 
 ```lua
