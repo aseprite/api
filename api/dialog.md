@@ -64,6 +64,7 @@ Where:
 local dlg = Dialog()
 local dlg = Dialog(string)
 local dlg = Dialog{ title=string,
+                    parent=otherDialog,
                     onclose=function }
 ```
 
@@ -73,6 +74,10 @@ constructor that receives a `string` will use that string in the title
 bar of the dialog. The constructor that receives a table can receive a
 special callback function (`onclose`) that is called when the dialog
 is closed.
+
+The `{ parent=otherDialog }` can be used to display an alert/subdialog
+inside a parent dialog (the parent dialog is blocked until the
+child dialog is closed).
 
 Returns `nil` if there is no UI available, i.e. [app.isUIAvailable is `false`](app.md#appisuiavailable).
 
