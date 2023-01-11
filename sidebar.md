@@ -42,7 +42,7 @@ Classes/objects
   * [Slice](api/slice.md#slice)
   * [Sprite](api/sprite.md#sprite)
   * [Tag](api/tag.md#tag)
+  * [Tileset](api/tileset.md#tileset)
   * [Tool](api/tool.md#tool)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)
-  
