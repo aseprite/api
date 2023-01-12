@@ -241,6 +241,11 @@ is no cel at that intersection, returns `nil`.
 
 ## Layer.tileset
 
-Returns the [tileset](tileset.md#tileset) associated to this layer
-only when [it's a tilemap](#layeristilemap) (returns nil in other
-case).
+```lua
+local tileset = layer.tileset
+layer.tileset = newTileset
+```
+
+Gets or sets the [tileset](tileset.md#tileset) associated to this
+layer only when [it's a tilemap](#layeristilemap) (returns nil in
+other case).
