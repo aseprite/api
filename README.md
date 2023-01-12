@@ -50,6 +50,7 @@ a little experiment, so you have six options to approach your idea:
   * [FilterChannels](api/filterchannels.md#filterchannel)
   * [Ink](api/ink.md#ink)
   * [MouseButton](api/mousebutton.md#mousebutton)
+  * [MouseCursor](api/mousecursor.md#mousecursor)
   * [RangeType](api/rangetype.md#rangetype)
   * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
   * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
