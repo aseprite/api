@@ -168,6 +168,12 @@ app.transaction(
   function()
     ...
   end)
+
+app.transaction(
+  string,
+  function()
+    ...
+  end)
 ```
 
 Creates a new transaction so you can group several sprite
@@ -177,6 +183,9 @@ The function in the argument is called inside the transaction, if the
 function fails, the whole transaction is undone. If the function
 successes, the transaction is committed and then all actions will be
 grouped in just one undo/redo operation.
+
+If a string is given as first argument, that string will be used as a
+label for the undo/redo action.
 
 ## app.command
 
