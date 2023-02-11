@@ -407,10 +407,14 @@ local dlg = Dialog()
 dlg:canvas{ id=string,
             width=integer,
             height=integer,
-            onpaint=function(ev) ... end }
-            onmousemove=function(ev) ... end }
-            onmousedown=function(ev) ... end }
-            onmouseup=function(ev) ... end }
+            onpaint=function(ev) ... end,
+            onkeydown=function(ev) ... end,
+            onkeyup=function(ev) ... end,
+            onmousemove=function(ev) ... end,
+            onmousedown=function(ev) ... end,
+            onmouseup=function(ev) ... end,
+            onwheel=function(ev) ... end,
+            ontouchmagnify=function(ev) ... end }
 ```
 
 The Canvas widget provides several events to create an interactive
@@ -418,12 +422,18 @@ experience with the user:
 
 * `onpaint`: A function that receives an event with [a GraphicsContext
   (`ev.context`)](graphicscontext.md#graphicscontext) to paint on.
-* `onmousemove`/`onmousedown`/`onmouseup`: Mouse events when the mouse
-  is moved over the canvas, a button is pressed (`onmousedown`), or a
-  button is released (`onmouseup`). The event have `ev.x`/`ev.y` to
-  access the mouse position (in client coordinates, where 0,0 is the
-  top-left corner of the canvas widget) and `ev.button` that is a
-  [MouseButton](mousebutton.md#mousebutton).
+* `onkeydown`/`onkeyup`: Key events when a key is pressed or released.
+  If a canvas widget handles these events, it will receive the
+  keyboard focus when it's clicked. The `ev` event is a
+  [KeyEvent](keyevent.md).
+* `onmousemove`/`onmousedown`/`onmouseup`/`onwheel`: Mouse events when
+  the mouse is moved over the canvas, a button is pressed
+  (`onmousedown`), a button is released (`onmouseup`), or the mouse
+  wheel moved (`onwheel`). The `ev` event is a
+  [MouseEvent](mouseevent.md).
+* `ontouchmagnify`: Touch event generated when a pinch gesture is done
+  in the trackpad to zoom in or out. The `ev` event is a
+  [TouchEvent](touchevent.md).
 
 ## Dialog:repaint()
 
