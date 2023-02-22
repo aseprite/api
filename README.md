@@ -78,6 +78,7 @@ a little experiment, so you have six options to approach your idea:
   * [Sprite](api/sprite.md#sprite)
   * [Tag](api/tag.md#tag)
   * [Tileset](api/tileset.md#tileset)
+  * [Timer](api/timer.md#timer)
   * [Tool](api/tool.md#tool)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)
