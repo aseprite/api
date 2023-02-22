@@ -64,6 +64,7 @@ Where:
 local dlg = Dialog()
 local dlg = Dialog(string)
 local dlg = Dialog{ title=string,
+                    notitlebar=false,
                     parent=otherDialog,
                     onclose=function }
 ```
@@ -78,6 +79,9 @@ is closed.
 The `{ parent=otherDialog }` can be used to display an alert/subdialog
 inside a parent dialog (the parent dialog is blocked until the
 child dialog is closed).
+
+The `{ notitlebar=true }` can be used to display a dialog without any
+kind of title bar (the dialog must be closed with a button inside it).
 
 Returns `nil` if there is no UI available, i.e. [app.isUIAvailable is `false`](app.md#appisuiavailable).
 
