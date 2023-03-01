@@ -11,23 +11,69 @@ Dialog():canvas{
 
 ## GraphicsContext.width
 
+Gets the width of the visible area in pixels.
+
 ## GraphicsContext.height
+
+Gets the height of the visible area in pixels.
 
 ## GraphicsContext.antialias
 
+It's true or false in case that you want to paint paths using
+antialiasing.
+
 ## GraphicsContext.color
+
+```lua
+local color = gc.color
+gc.color = Color(255)
+```
+
+Gets or sets the [color](color.md#color) to paint with the path functions.
 
 ## GraphicsContext.strokeWidth
 
 ## GraphicsContext:save()
 
+```lua
+gc:save()
+```
+
+Saves current clipping information to
+[restore](#graphicscontextrestore) it later.
+
 ## GraphicsContext:restore()
+
+```lua
+gc:restore()
+```
 
 ## GraphicsContext:clip()
 
+```lua
+gc:clip()
+```
+
+Sets the [current path](#graphicscontextbeginpath) as a clipping area
+for following drawing operations.
+
 ## GraphicsContext:strokeRect()
 
+```lua
+gc:strokeRect(rectangle)
+```
+
+Paints the edges of the given [rectangle](rectangle.md#rectangle) with
+the [current color](#graphicscontextcolor).
+
 ## GraphicsContext:fillRect()
+
+```lua
+gc:fillRect(rectangle)
+```
+
+Fills the given [rectangle](rectangle.md#rectangle) with the
+[current color](#graphicscontextcolor).
 
 ## GraphicsContext:fillText()
 
@@ -67,18 +113,60 @@ gc:drawThemeRect(partId, x, y, w, h)
 
 ## GraphicsContext:beginPath()
 
+```lua
+gc:beginPath()
+```
+
 ## GraphicsContext:closePath()
+
+```lua
+gc:closePath()
+```
 
 ## GraphicsContext:moveTo()
 
+```lua
+gc:moveTo(x, y)
+```
+
 ## GraphicsContext:lineTo()
+
+```lua
+gc:lineTo(x, y)
+```
 
 ## GraphicsContext:cubicTo()
 
+```lua
+gc:cubicTo(cp1x, cp1y, cp2x, cp2y, x, y)
+```
+
 ## GraphicsContext:rect()
+
+```lua
+gc:rect(rectangle)
+```
 
 ## GraphicsContext:roundedRect()
 
+```lua
+gc:roundedRect(rectangle, rx, ry)
+```
+
 ## GraphicsContext:stroke()
 
+```lua
+gc:stroke()
+```
+
+Paints the edges of the [current path](#graphicscontextbeginpath) with
+the [current color](#graphicscontextcolor).
+
 ## GraphicsContext:fill()
+
+```lua
+gc:fill()
+```
+
+Fills the [current path](#graphicscontextbeginpath) with the [current
+color](#graphicscontextcolor).
