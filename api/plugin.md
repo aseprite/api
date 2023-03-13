@@ -96,3 +96,27 @@ inside the `<menus>` element.
   available (enabled or disabled). It should return true if the
   command can be executed right now. If this function is not specified
   the command will be always available to be executed by the user.
+
+## Plugin:newMenuGroup
+
+```lua
+function init(plugin)
+  plugin:newMenuGroup{
+    id="new_group_id",
+    title="Menu Item Label",
+    group="parent_group_id"
+  }
+end
+```
+
+Creates a new menu item which will contain a submenu grouping several
+plugin commands.
+
+* `id`: ID to identify this new menu group in
+  `[Plugin:newCommand{ ..., group=id, ... }](#pluginnewcommand)`
+  calls to add several command/menu items as elements of this
+  group submenu.
+* `group`: In which existent group we should add this new menu item.
+  Existent app groups are defined in the
+  [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
+  inside the `<menus>` element.

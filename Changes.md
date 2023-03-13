@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.3-rc2
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `22`
+* New [`plugin:newMenuGroup()`](api/plugin.md#pluginnewmenugroup) function
+
 ## v1.3-rc1
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `21`
