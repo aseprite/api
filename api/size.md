@@ -38,3 +38,12 @@ size.width = newWidth
 local height = size.height
 size.height = newHeight
 ```
+
+## Size:union()
+
+```lua
+local newSize = size:union(otherSize)
+```
+
+Returns the new size `newSize` which will be big enough to contains
+both given dimensions (`size` and `otherSize`).
