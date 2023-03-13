@@ -1,26 +1,41 @@
 # GraphicsContext
 
 ```lua
-Dialog():canvas{
+local dlg = Dialog()
+dlg:canvas{
   onpaint = function(ev)
-    local ctx = ev.context
-    -- ctx is a GraphicsContext
+    local gc = ev.context
+    -- gc is a GraphicsContext
   end
 }
 ```
 
 ## GraphicsContext.width
 
-Gets the width of the visible area in pixels.
+```lua
+local width = gc.width 
+```
+
+Gets the width of the visible area in pixels. Canvas dimensions change when the dialog is resized by the user.
 
 ## GraphicsContext.height
 
-Gets the height of the visible area in pixels.
+```lua
+local height = gc.height
+```
+
+Gets the height of the visible area in pixels. Canvas dimensions change when the dialog is resized by the user.
 
 ## GraphicsContext.antialias
 
-It's true or false in case that you want to paint paths using
-antialiasing.
+```lua
+local aa = gc.antialias
+gc.antialias = true
+```
+
+Gets or sets whether paths and shapes are painted on using antialiasing.
+
+![Comparison between a line drawn on canvas without and with the antialiasing](image/canvas-antialias-comparison.png)
 
 ## GraphicsContext.color
 
@@ -32,6 +47,13 @@ gc.color = Color(255)
 Gets or sets the [color](color.md#color) to paint with the path functions.
 
 ## GraphicsContext.strokeWidth
+
+```lua
+local sw = gc.strokeWidth
+gc.strokeWidth = 10
+```
+
+Gets or sets the width of lines painted when calling [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:strokeRect()](#graphicscontextstrokerect).
 
 ## GraphicsContext:save()
 
@@ -64,7 +86,7 @@ gc:strokeRect(rectangle)
 ```
 
 Paints the edges of the given [rectangle](rectangle.md#rectangle) with
-the [current color](#graphicscontextcolor).
+the [current color](#graphicscontextcolor) and [current width](#graphicscontextstrokewidth).
 
 ## GraphicsContext:fillRect()
 
@@ -87,7 +109,7 @@ gc:fillText(string, x, y)
 local size = gc:measureText(string)
 ```
 
-Returns the [size](size.md#size) of the text using the current font.
+Returns the [size](size.md#size) of the given text using the current font.
 
 ## GraphicsContext:drawImage()
 
@@ -160,7 +182,7 @@ gc:stroke()
 ```
 
 Paints the edges of the [current path](#graphicscontextbeginpath) with
-the [current color](#graphicscontextcolor).
+the [current color](#graphicscontextcolor) and [current width](#graphicscontextstrokewidth).
 
 ## GraphicsContext:fill()
 
