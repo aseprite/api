@@ -4,7 +4,7 @@ This object is received as first parameter in the function associated
 to `onkeydown` or `onkeyup` events of a
 [canvas](dialog.md#dialogcanvas) widget.
 
-## KeyEvent.repeat
+## KeyEvent.repeatCount
 
 Number of times the key was autorepeated. This can happen when the
 user presses and holds a key.
