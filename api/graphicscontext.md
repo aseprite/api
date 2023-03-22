@@ -1,5 +1,7 @@
 # GraphicsContext
 
+The _GraphicsContext_ object provides methods for drawing images, text and shapes on the canvas.
+
 ```lua
 local dlg = Dialog()
 dlg:canvas{
