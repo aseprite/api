@@ -61,8 +61,10 @@ Gets or sets the width of lines painted when calling [GraphicsContext:stroke()](
 gc:save()
 ```
 
-Saves current clipping information to
-[restore](#graphicscontextrestore) it later.
+Saves the current state of the canvas to [restore](#graphicscontextrestore) it later, including:
+ - [color](#graphicscontextcolor)
+ - [stroke width](#graphicscontextstrokewidth)
+ - [clipping region](#graphicscontextclip)
 
 ## GraphicsContext:restore()
 
@@ -70,14 +72,46 @@ Saves current clipping information to
 gc:restore()
 ```
 
+Restores the last [saved](#graphicscontextsave) canvas state.
+
 ## GraphicsContext:clip()
 
 ```lua
 gc:clip()
 ```
 
-Sets the [current path](#graphicscontextbeginpath) as a clipping area
-for following drawing operations.
+Sets the [current path](#graphicscontextbeginpath) as a clipping area for following drawing operations.
+
+**Warning:** The only option to draw paths not clipped after calling `GraphicsContext:clip()` is [restoring](#graphicscontextrestore) a previously saved state.
+
+```lua
+-- Save state before clipping
+gc:save()
+
+-- Create a rectangle and use it as a clipping region
+gc:beginPath()
+gc:rect(Rectangle(0, 30, 100, 40))
+gc:clip()
+
+-- Stroke a circle with width of 4 
+gc.strokeWidth = 4
+
+gc:beginPath()
+gc:roundedRect(Rectangle(10, 10, 80, 80), 50)
+gc:stroke()
+
+-- Restore the state
+gc:restore()
+
+-- Fill a smaller circle in white
+gc.color = Color {r = 255, g = 255, b = 255, a = 255}
+
+gc:beginPath()
+gc:roundedRect(Rectangle(20, 20, 60, 60), 30)
+gc:fill()
+```
+
+![Clipping region](image/clip.png)
 
 ## GraphicsContext:strokeRect()
 
