@@ -159,11 +159,15 @@ List of possible parts can be found in [theme.xml](https://github.com/aseprite/a
 gc:beginPath()
 ```
 
+Starts a new path, emptying the list of tracked sub-paths. This is the first method to call when drawing paths.
+
 ## GraphicsContext:closePath()
 
 ```lua
 gc:closePath()
 ```
+
+Closes the current sub-path by connecting the current point with the first point of the current sub-path.
 
 ## GraphicsContext:moveTo()
 
@@ -171,11 +175,17 @@ gc:closePath()
 gc:moveTo(x, y)
 ```
 
+Starts a new sub-path at the specified _xy_-coordinates. This is the second method to call (after [GraphicsContext:beginPath()](#graphicscontextbeginpath)) when drawing paths.
+
 ## GraphicsContext:lineTo()
 
 ```lua
 gc:lineTo(x, y)
 ```
+
+Adds a line to the current sub-path, from the last point to the specified _xy_-coordinates.
+
+**Note:** This method doesn't draw on the canvas, to draw the path onto the canvas call [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:fill()](#graphicscontextfill).
 
 ## GraphicsContext:cubicTo()
 
@@ -183,11 +193,19 @@ gc:lineTo(x, y)
 gc:cubicTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 
+Adds a cubic [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) to the current sub-path, from the last point to the specified _xy_-coordinates, with two control points (specified by _cp1x_, _cp1y_, _cp2x_, and _cp2y_ coordinates). 
+
+**Note:** This method doesn't draw on the canvas, to draw the path onto the canvas call [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:fill()](#graphicscontextfill).
+
 ## GraphicsContext:rect()
 
 ```lua
 gc:rect(rectangle)
 ```
+
+Adds a given [Rectangle](rectangle.md) to the current sub-path.
+
+**Note:** This method doesn't draw on the canvas, to draw the path onto the canvas call [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:fill()](#graphicscontextfill).
 
 ## GraphicsContext:roundedRect()
 
