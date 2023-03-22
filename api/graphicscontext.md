@@ -210,8 +210,21 @@ Adds a given [Rectangle](rectangle.md) to the current sub-path.
 ## GraphicsContext:roundedRect()
 
 ```lua
+gc:roundedRect(rectangle, r)
 gc:roundedRect(rectangle, rx, ry)
 ```
+
+Adds a given [Rectangle](rectangle.md) to the current sub-path with rounded corners.
+
+If a single radius is specified, a rectangle with circular corners is created. This method can be used to easily draw circles.
+
+![Rounded rectangle with a single radius specified](image/rounded-rectangle-single-radius.png)
+
+If two radii are specified, a rectangle with elliptical corners is created.
+
+![Rounded rectangle with two radii specified](image/rounded-rectangle-two-radii.png)
+
+**Note:** This method doesn't draw on the canvas, to draw the path onto the canvas call [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:fill()](#graphicscontextfill).
 
 ## GraphicsContext:stroke()
 
