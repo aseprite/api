@@ -121,6 +121,16 @@ gc:drawImage(image, srcRect, dstRect)
 gc:drawImage(image, srcX, srcY, srcW, srcH, dstX, dstY, dstW, dstH)
 ```
 
+Draws on the canvas the given image.
+
+If given _xy_-coordinates, the full image will be drawn at the specified position, in it's original scale.
+
+![Image drawn on a canvas](image/image-on-canvas.png)
+
+If given source and destination [bounds](rectangle.md) (or their respective values), a part of the image is drawn (specified by the _srcRect_ (or _srcX_, _srcY_, _srcW_, and _srcH_), relative to the image) on the canvas (specified by the _dstRect_ (or _dstX_, _dstY_, _dstW_, and _dstH_), relative to the canvas). This allows drawing only a part of and/or scaling the image.
+
+![Image part drawn a on canvas](image/image-part-on-canvas.png)
+
 ## GraphicsContext:drawThemeImage()
 
 ```lua
