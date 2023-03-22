@@ -103,6 +103,8 @@ Fills the given [rectangle](rectangle.md#rectangle) with the
 gc:fillText(string, x, y)
 ```
 
+Draws on the canvas the given text string, at a position specified by the _xy_-coordinates.
+
 ## GraphicsContext:measureText()
 
 ```lua
@@ -126,12 +128,20 @@ gc:drawThemeImage(partId, point)
 gc:drawThemeImage(partId, x, y)
 ```
 
+Draws on the canvas a theme part specified by the given _partId_, at a given [Point](point.md) or at specified _xy_-coordinates.
+
+List of possible parts can be found in [theme.xml](https://github.com/aseprite/aseprite/blob/3c77928a6f193748bcd8cca15d45000dd58e11d5/data/extensions/aseprite-theme/theme.xml#L115).
+
 ## GraphicsContext:drawThemeRect()
 
 ```lua
 gc:drawThemeRect(partId, rectangle)
 gc:drawThemeRect(partId, x, y, w, h)
 ```
+
+Draws on the canvas a theme part specified by the given _partId_, filling a given [Rectangle](rectangle.md) or at specified _xy_-coordinates, with given width and height. This method uses [nine-slice scaling](https://en.wikipedia.org/wiki/9-slice_scaling) for parts that have their [Slice's center](slice.md#slicecenter) defined. 
+
+List of possible parts can be found in [theme.xml](https://github.com/aseprite/aseprite/blob/3c77928a6f193748bcd8cca15d45000dd58e11d5/data/extensions/aseprite-theme/theme.xml#L115).
 
 ## GraphicsContext:beginPath()
 
