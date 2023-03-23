@@ -166,12 +166,17 @@ In the following example, we show the differences between `getPixel()`,
 ## Image:drawImage()
 
 ```lua
-destinationImage:drawImage(sourceImage [, position ] )
+destinationImage:drawImage(sourceImage [, position, opacity, blendMode] )
 ```
 
 Copies/draws the given *sourceImage* image over *destinationImage*.
 If *position* is a [point](point.md#point), it will draw the *sourceImage*
-in the given position.
+in the given position (Point(0, 0) as default).
+*Opacity* is an integer (0 to 255) that defines a general opacity level of
+the *sourceImage* (255 by default).
+[blendMode](blendmode.md) is the blending method to compose the
+*sourceImage* over the *destinationImage*
+([BlendMode.NORMAL](blendmode.md#BlendMode.NORMAL) as default).
 
 **Warning**: If the image is associated with a [Cel](cel.md#cel), this
 method generates undo information, so you could use it as an
