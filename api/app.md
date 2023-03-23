@@ -203,6 +203,15 @@ Check the [app.fs](app_fs.md#appfs) documentation.
 
 Check the [app.theme](app_theme.md#apptheme) documentation.
 
+## app.uiScale
+
+```
+local scale = app.uiScale
+```
+
+Returns the [UI Elements Scaling](https://www.aseprite.org/docs/preferences/)
+value specified in *Edit > Preferences* as an scale factor (1 for 100%, 2 for 200%, etc.)
+
 ## app.refresh()
 
 ```lua

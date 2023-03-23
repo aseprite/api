@@ -27,6 +27,7 @@ end
 ## v1.3-rc2
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `22`
+* New [`app.uiScale`](api/app.md#appuiscale) property
 * New [`plugin:newMenuGroup()`](api/plugin.md#pluginnewmenugroup) function
 * New [`Size:union()`](api/size.md#sizeunion) function
 * Renamed `KeyEvent:repeat` to [`KeyEvent:repeatCount`](api/keyevent.md#repeatcount)
