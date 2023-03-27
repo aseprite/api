@@ -417,6 +417,7 @@ dlg:canvas{ id=string,
             onmousemove=function(ev) ... end,
             onmousedown=function(ev) ... end,
             onmouseup=function(ev) ... end,
+            ondblclick=function(ev) ... end,
             onwheel=function(ev) ... end,
             ontouchmagnify=function(ev) ... end }
 ```
