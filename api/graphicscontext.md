@@ -141,6 +141,12 @@ gc:lineTo(x, y)
 gc:cubicTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 
+## GraphicsContext:oval()
+
+```lua
+gc:oval(rectangle)
+```
+
 ## GraphicsContext:rect()
 
 ```lua

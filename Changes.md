@@ -31,6 +31,7 @@ end
 * New [`app.theme:styleMetrics()`](api/app_theme.md#appthemestylemetrics) function
 * New [`plugin:newMenuGroup()`](api/plugin.md#pluginnewmenugroup) function
 * New [`Size:union()`](api/size.md#sizeunion) function
+* New [GraphicsContext:oval()](api/graphicscontext.md#graphicscontextoval) function
 * Renamed `KeyEvent:repeat` to [`KeyEvent:repeatCount`](api/keyevent.md#repeatcount)
 
 ## v1.3-rc1
