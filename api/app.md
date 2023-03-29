@@ -260,7 +260,9 @@ app.useTool{
  contiguous=false | true,
  tolerance=integer,
  freehandAlgorithm=0 | 1,
- selection=SelectionMode.REPLACE | SelectionMode.ADD | SelectionMode.SUBTRACT | SelectionMode.INTERSECT
+ selection=SelectionMode.REPLACE | SelectionMode.ADD | SelectionMode.SUBTRACT | SelectionMode.INTERSECT,
+ tilemapMode=TilemapMode.PIXELS | TilesetMode.TILES,
+ tilesetMode=TilesetMode.MANUAL | TilesetMode.AUTO | TilesetMode.STACK,
 }
 ```
 
