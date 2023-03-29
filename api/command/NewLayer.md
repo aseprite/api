@@ -5,6 +5,7 @@ app.command.NewLayer {
   name="",
   group=false,
   reference=false,
+  tilemap=false,
   ask=false,
   fromFile=false,
   fromClipboard=false,
@@ -15,23 +16,14 @@ app.command.NewLayer {
 }
 ```
 
-* name (string)
-  * The name of the layer
-* group (boolean)
-  * If true, make the new layer a group layer; this option is mutually exclusive to `reference`
-* reference (boolean)
-  * If true, make the new layer a reference layer; this option is mutually exclusive to `group`
-* ask (boolean)
-  * `true` or `false`, when true ask the user for a name if inside the interface
-* fromFile (boolean)
-  * `true` or `false`, when true the layer is created from a file
-* fromClipboard (boolean)
-  * `true` or `false`, when true the layer takes on the image data from the clipboard
-* viaCut (boolean)
-  * `true` or `false`, when true the selected image data is cut and moved into the new layer
-* viaCopy (boolean)
-  * `true` or `false`, when true the selected image data is copied into the new layer
-* top (boolean)
-  * `true` or `false`, when true the newly created layer is placed at the top of the list
-* before (boolean)
-  * `true` or `false`, when true the newly created layer is placed before the currently active layer; but if false it is placed after
+* `name` (string): the name of the layer.
+* `group`: `true` to make the new layer a group layer, this option is mutually exclusive to `reference`/`tilemap`.
+* `reference`: `true` to make the new layer a reference layer, this option is mutually exclusive to `group`/`tilemap`.
+* `tilemap`: `true` to make the new layer a tilemap layer, this option is mutually exclusive to `group`/`reference`.
+* `ask`: `true` to ask the user for a name if inside the interface.
+* `fromFile`: `true` to create the layer from a file, the Open File dialog will appear in the UI.
+* `fromClipboard`: `true` to create the layer from clipboard image data.
+* `viaCut`: `true` the selected image data is cut and moved into the new layer.
+* `viaCopy`: `true` the selected image data is copied into the new layer.
+* `top`: `true` the newly created layer is placed at the top of the list.
+* `before`: `true` the newly created layer is placed before the currently active layer; but if false it is placed after.
