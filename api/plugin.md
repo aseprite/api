@@ -120,3 +120,16 @@ plugin commands.
   Existent app groups are defined in the
   [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
   inside the `<menus>` element.
+
+## Plugin:newMenuSeparator
+
+```lua
+function init(plugin)
+  plugin:newMenuSeparator{
+    group="group_id"
+  }
+end
+```
+
+Creates a menu separator in the given menu group, useful to separate
+several [Plugin:newCommand](#pluginnewcommand).
