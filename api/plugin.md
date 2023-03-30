@@ -113,7 +113,7 @@ Creates a new menu item which will contain a submenu grouping several
 plugin commands.
 
 * `id`: ID to identify this new menu group in
-  `[Plugin:newCommand{ ..., group=id, ... }](#pluginnewcommand)`
+  [`Plugin:newCommand{ ..., group=id, ... }`](#pluginnewcommand)
   calls to add several command/menu items as elements of this
   group submenu.
 * `group`: In which existent group we should add this new menu item.
