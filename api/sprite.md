@@ -528,3 +528,23 @@ Available events for a `Sprite`:
   not from a direct user change in the sprite).
 * `'filenamechange'`: When the filename associated to a sprite
   changes.
+
+## Sprite.tileManagementPlugin
+
+```lua
+local id = sprite.tileManagementPlugin
+sprite.tileManagementPlugin = newId
+```
+
+Special property to disable Aseprite
+[tile management UI](https://aseprite.org/docs/tilemap) and use
+an external plugin to handle tilesets and tilemaps in this sprite.
+
+This property is used by the
+[Attachment-System](https://github.com/aseprite/Attachment-System)
+plugin, but any extension can create a totally customized way to
+handle tiles (and disable the standard UI to avoid conflicts).
+
+**Warning**: If a sprite has this property set, another plugin
+shouldn't change it, because it might break the tilesets/tilemaps
+structure.
