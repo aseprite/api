@@ -66,7 +66,7 @@ Extensions > Add Extension*.
 It's a Lua table where you can load/save any kind of Lua value here
 and they will be saved/restored automatically on each session.
 
-## Plugin:newCommand
+## Plugin:newCommand()
 
 ```lua
 function init(plugin)
@@ -97,7 +97,7 @@ inside the `<menus>` element.
   command can be executed right now. If this function is not specified
   the command will be always available to be executed by the user.
 
-## Plugin:newMenuGroup
+## Plugin:newMenuGroup()
 
 ```lua
 function init(plugin)
@@ -121,7 +121,7 @@ plugin commands.
   [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
   inside the `<menus>` element.
 
-## Plugin:newMenuSeparator
+## Plugin:newMenuSeparator()
 
 ```lua
 function init(plugin)
