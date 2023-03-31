@@ -53,6 +53,27 @@ The new image is unrelated to the sprite, but it can be used to update
 the image in a transaction. E.g. You clone an image, modify the pixels
 from the copy, and then you [patch the image](#imageputimage).
 
+## Image.id
+
+```lua
+local id = image.id
+```
+
+Internal unique ID (an integer) assigned to this image inside the
+program. You can use it to identify this image in your script.
+
+## Image.version
+
+```lua
+local version = image.version
+```
+
+Internal version (an integer) assigned to this image inside the
+program. It's always incremented when the image is modified. Can be
+used to cache some complex calculation related to the image and
+recalculate it only if the version is modified (which means the pixels
+are modified).
+
 ## Image.width
 
 ```lua
