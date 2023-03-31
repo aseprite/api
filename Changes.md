@@ -31,6 +31,7 @@ end
 * New [`app.theme:styleMetrics()`](api/app_theme.md#appthemestylemetrics) function
 * New [`plugin:newMenuGroup()`](api/plugin.md#pluginnewmenugroup) and [`plugin:newMenuSeparator()`](api/plugin.md#pluginnewmenuseparator) functions
 * New [`Size:union()`](api/size.md#sizeunion) function
+* New [GraphicsContext.opacity](api/graphicscontext.md#graphicscontextopacity)/[blendMode](api/graphicscontext.md#graphicscontextblendmode) properties
 * New [GraphicsContext:oval()](api/graphicscontext.md#graphicscontextoval) function
 * Renamed `KeyEvent:repeat` to [`KeyEvent:repeatCount`](api/keyevent.md#repeatcount)
 * New `ondblclick` event for [Dialog:canvas()](api/dialog.md#dialogcanvas) widget

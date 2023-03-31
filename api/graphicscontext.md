@@ -57,6 +57,29 @@ gc.strokeWidth = 10
 
 Gets or sets the width of lines painted when calling [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:strokeRect()](#graphicscontextstrokerect).
 
+## GraphicsContext.blendMode
+
+```lua
+local bm = gc.blendMode
+gc.blendMode = BlendMode.NORMAL
+```
+
+[Blend mode](blendmode.md#blendmode) used in [stroke()](#graphicscontextstroke),
+[fill()]((#graphicscontextfill)), [drawImage()](#graphicscontextdrawimage), etc.
+
+## GraphicsContext.opacity
+
+```lua
+local opacity = gc.opacity
+assert(opacity >= 0 and opacity <= 255)
+gc.opacity = newOpacity
+```
+
+Opacity used in [stroke()](#graphicscontextstroke),
+[fill()]((#graphicscontextfill)), [drawImage()](#graphicscontextdrawimage), etc.
+
+* `opacity`: 0 completelly transparenty, 255 completelly opaque.
+
 ## GraphicsContext:save()
 
 ```lua
@@ -64,9 +87,12 @@ gc:save()
 ```
 
 Saves the current state of the canvas to [restore](#graphicscontextrestore) it later, including:
- - [color](#graphicscontextcolor)
- - [stroke width](#graphicscontextstrokewidth)
- - [clipping region](#graphicscontextclip)
+
+* [color](#graphicscontextcolor)
+* [opacity](#graphicscontextopacity)
+* [blendMode](#graphicscontextblendmode)
+* [stroke width](#graphicscontextstrokewidth)
+* [clipping region](#graphicscontextclip)
 
 ## GraphicsContext:restore()
 
