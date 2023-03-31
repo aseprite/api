@@ -1,6 +1,6 @@
 # GraphicsContext
 
-The _GraphicsContext_ object provides methods for drawing images, text and shapes on the canvas.
+The *GraphicsContext* object provides methods for drawing images, text and shapes on the canvas.
 
 ```lua
 local dlg = Dialog()
@@ -15,7 +15,7 @@ dlg:canvas{
 ## GraphicsContext.width
 
 ```lua
-local width = gc.width 
+local width = gc.width
 ```
 
 Gets the width of the visible area in pixels. Canvas dimensions change when the dialog is resized by the user.
@@ -95,7 +95,7 @@ gc:beginPath()
 gc:rect(Rectangle(0, 30, 100, 40))
 gc:clip()
 
--- Stroke a circle with width of 4 
+-- Stroke a circle with width of 4
 gc.strokeWidth = 4
 
 gc:beginPath()
@@ -139,7 +139,7 @@ Fills the given [rectangle](rectangle.md#rectangle) with the
 gc:fillText(string, x, y)
 ```
 
-Draws on the canvas the given text string, at a position specified by the _xy_-coordinates.
+Draws on the canvas the given text string, at a position specified by the *xy*-coordinates.
 
 ## GraphicsContext:measureText()
 
@@ -159,11 +159,11 @@ gc:drawImage(image, srcX, srcY, srcW, srcH, dstX, dstY, dstW, dstH)
 
 Draws on the canvas the given image.
 
-If given _xy_-coordinates, the full image will be drawn at the specified position, in it's original scale.
+If given *xy*-coordinates, the full image will be drawn at the specified position, in it's original scale.
 
 ![Image drawn on a canvas](image/image-on-canvas.png)
 
-If given source and destination [bounds](rectangle.md) (or their respective values), a part of the image is drawn (specified by the _srcRect_ (or _srcX_, _srcY_, _srcW_, and _srcH_), relative to the image) on the canvas (specified by the _dstRect_ (or _dstX_, _dstY_, _dstW_, and _dstH_), relative to the canvas). This allows drawing only a part of and/or scaling the image.
+If given source and destination [bounds](rectangle.md) (or their respective values), a part of the image is drawn (specified by the *srcRect*, or *srcX/srcY/srcW/srcH*, relative to the image) on the canvas (specified by the *dstRect* or *dstX/dstY/dstW/dstH*). This allows drawing only a part of and/or scaling the image.
 
 ![Image part drawn a on canvas](image/image-part-on-canvas.png)
 
@@ -174,7 +174,7 @@ gc:drawThemeImage(partId, point)
 gc:drawThemeImage(partId, x, y)
 ```
 
-Draws on the canvas a theme part specified by the given _partId_, at a given [Point](point.md) or at specified _xy_-coordinates.
+Draws on the canvas a theme part specified by the given *partId*, at a given [Point](point.md) or at specified *xy*-coordinates.
 
 List of possible parts can be found in [theme.xml](https://github.com/aseprite/aseprite/blob/3c77928a6f193748bcd8cca15d45000dd58e11d5/data/extensions/aseprite-theme/theme.xml#L115).
 
@@ -185,7 +185,7 @@ gc:drawThemeRect(partId, rectangle)
 gc:drawThemeRect(partId, x, y, w, h)
 ```
 
-Draws on the canvas a theme part specified by the given _partId_, filling a given [Rectangle](rectangle.md) or at specified _xy_-coordinates, with given width and height. This method uses [nine-slice scaling](https://en.wikipedia.org/wiki/9-slice_scaling) for parts that have their [Slice's center](slice.md#slicecenter) defined. 
+Draws on the canvas a theme part specified by the given *partId*, filling a given [Rectangle](rectangle.md) or at specified *xy*-coordinates, with given width and height. This method uses [nine-slice scaling](https://en.wikipedia.org/wiki/9-slice_scaling) for parts that have their [Slice's center](slice.md#slicecenter) defined.
 
 List of possible parts can be found in [theme.xml](https://github.com/aseprite/aseprite/blob/3c77928a6f193748bcd8cca15d45000dd58e11d5/data/extensions/aseprite-theme/theme.xml#L115).
 
@@ -211,7 +211,7 @@ Closes the current sub-path by connecting the current point with the first point
 gc:moveTo(x, y)
 ```
 
-Starts a new sub-path at the specified _xy_-coordinates. This is the second method to call (after [GraphicsContext:beginPath()](#graphicscontextbeginpath)) when drawing paths.
+Starts a new sub-path at the specified *xy*-coordinates. This is the second method to call (after [GraphicsContext:beginPath()](#graphicscontextbeginpath)) when drawing paths.
 
 ## GraphicsContext:lineTo()
 
@@ -219,7 +219,7 @@ Starts a new sub-path at the specified _xy_-coordinates. This is the second meth
 gc:lineTo(x, y)
 ```
 
-Adds a line to the current sub-path, from the last point to the specified _xy_-coordinates.
+Adds a line to the current sub-path, from the last point to the specified *xy*-coordinates.
 
 **Note:** This method doesn't draw on the canvas, to draw the path onto the canvas call [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:fill()](#graphicscontextfill).
 
@@ -229,7 +229,7 @@ Adds a line to the current sub-path, from the last point to the specified _xy_-c
 gc:cubicTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 
-Adds a cubic [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) to the current sub-path, from the last point to the specified _xy_-coordinates, with two control points (specified by _cp1x_, _cp1y_, _cp2x_, and _cp2y_ coordinates). 
+Adds a cubic [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) to the current sub-path, from the last point to the specified *xy*-coordinates, with two control points (specified by *cp1x/cp1y* and *cp2x/cp2y* coordinates).
 
 **Note:** This method doesn't draw on the canvas, to draw the path onto the canvas call [GraphicsContext:stroke()](#graphicscontextstroke) or [GraphicsContext:fill()](#graphicscontextfill).
 
