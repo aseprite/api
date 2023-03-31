@@ -29,3 +29,8 @@ You can use this color mode to create indexed
 Each pixel is an 8-bit unsigned integer (a value from 0 to 255) which
 indicates the specific [palette entry](palette.md#palettesetcolor) which
 the pixel refers.
+
+## ColorMode.TILEMAP
+
+Special color mode used for tilemaps, where each pixel is tile
+reference in a [tileset](tileset.md#tileset).
