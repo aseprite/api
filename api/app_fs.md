@@ -38,7 +38,7 @@ Returns the path/directory part (as a string) of the given filename `fn`.
 local fileName = app.fs.fileName(fn)
 ```
 
-Returns the file name (including the extension parth) of the given filename `fn`.
+Returns the file name (including the extension part) of the given filename `fn`.
 
 ## app.fs.fileExtension()
 
