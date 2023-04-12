@@ -81,6 +81,22 @@ cel.opacity = newOpacity
 Gets or sets the cel opacity. A value from `0` to `255` (which means
 `0=0%` completely transparent, or `255=100%` completely opaque).
 
+## Cel.zIndex
+
+```lua
+local zIndex = cel.zIndex
+cel.zIndex = newZIndex
+```
+
+Gets or sets the cel z-index value. By default `0`, which means "show
+this cel in the same position as its layer", but can be modified to
+positive values to move the cel to the front, or negative values to
+move it to the back.
+
+It offers a way to change the order of layers in one specific frame.
+
+Note: The value is limited to the `[-32768,32767]` range.
+
 ## Cel.color
 
 ```lua

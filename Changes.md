@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.3-rc3
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `23`
+* New [`Cel.zIndex`](api/cel.md#celzindex) property
+
 ## v1.3-rc2
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `22`
