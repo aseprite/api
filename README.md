@@ -81,6 +81,7 @@ a little experiment, so you have six options to approach your idea:
   * [Timer](api/timer.md#timer)
   * [Tool](api/tool.md#tool)
   * [Version](api/version.md#version)
+  * [Uuid](api/uuid.md#uuid)
   * [WebSocket](api/websocket.md#websocket)
 * Lua libraries
   * [Basic Functions](https://www.lua.org/manual/5.3/manual.html#6.1)

@@ -28,6 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `23`
 * New [`Cel.zIndex`](api/cel.md#celzindex) property
+* New [`Uuid`](api/uuid.md#uuid) class
 
 ## v1.3-rc2
 
