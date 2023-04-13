@@ -2,7 +2,8 @@
 
 The `app` global namespace.
 
-## app.site
+## <a name="app.site">app.site</a>
+
 
 Active [site](site.md#site) (active image, layer, frame, sprite, etc.).
 
