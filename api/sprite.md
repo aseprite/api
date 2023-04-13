@@ -473,7 +473,7 @@ Deletes the given [tileset](tileset.md#tileset) from the sprite's tilesets.
 local tile = sprite:newTile(tileset [, tileIndex])
 ```
 
-Inserts an empty tile into the given
+Inserts an empty [tile](tile.md#tile) into the given
 [tileset](https://github.com/aseprite/api/blob/next-version/api/tileset.md#tileset)
 at a given `tileIndex`. If `tileIndex` is not provided, the new tile
 is added to the end of the tileset. This method generates undo
