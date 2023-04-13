@@ -31,6 +31,7 @@ end
 * New [`plugin.name`](api/plugin.md#pluginname) and [`plugin.path`](api/plugin.md#pluginpath) properties
 * New [`Cel.zIndex`](api/cel.md#celzindex) property
 * New [`Uuid`](api/uuid.md#uuid) class
+* New [`image:clear(bounds, color)`](api/image.md#imageclear) variant (we can specify a [Rectangle](api/rectangle.md#rectangle) to clear)
 
 ## v1.3-rc2
 
