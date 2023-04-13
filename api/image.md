@@ -147,11 +147,12 @@ get or set the [`Image.bytes`](#imagebytes) property manually.
 ## Image:clear()
 
 ```lua
-image:clear([ color ])
+image:clear([ bounds, color ])
 ```
 
-Clear all pixels in the image with the given [color](color.md#color) (or
-`image.spec.transparentColor` if no color is specified).
+Clears the image pixels in a given [bounds](rectangle.md#rectangle)
+with a the given [color](color.md#color). The entire image is erased by default
+if no bounds present. `image.spec.transparentColor` if no color specified.
 
 ## Image:drawPixel()
 
