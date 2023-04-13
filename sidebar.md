@@ -1,6 +1,7 @@
 ### Table of content
 
-[Overview](README.md)
+[Overview](README.md) <br/>
+[API Changes](Changes.md)
 
 Globals namespaces
   * [app](api/app.md#app)
