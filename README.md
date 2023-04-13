@@ -37,11 +37,13 @@ a little experiment, so you have six options to approach your idea:
 
 ## Reference
 
-* Globals namespaces
+Globals namespaces
   * [app](api/app.md#app)
   * [app.command](api/app_command.md#appcommand)
   * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
-* Constants
+  * [app.theme](api/app_theme.md#apptheme)
+
+Constants
   * [AniDir](api/anidir.md#anidir)
   * [BlendMode](api/blendmode.md#blendmode)
   * [BrushPattern](api/brushpattern.md#brushpattern)
@@ -52,10 +54,12 @@ a little experiment, so you have six options to approach your idea:
   * [MouseButton](api/mousebutton.md#mousebutton)
   * [MouseCursor](api/mousecursor.md#mousecursor)
   * [RangeType](api/rangetype.md#rangetype)
+  * [SelectionMode](api/selectionmode.md#selectionmode)
   * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
   * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
   * [WebSocketMessageType](api/websocketmessagetype.md#websocketmessagetype)
-* Classes/objects
+
+Classes/objects
   * [Brush](api/brush.md#brush)
   * [Cel](api/cel.md#cel)
   * [Color](api/color.md#color)
@@ -66,8 +70,11 @@ a little experiment, so you have six options to approach your idea:
   * [GraphicsContext](api/graphicscontext.md#graphicscontext)
   * [Image](api/image.md#image)
   * [ImageSpec](api/imagespec.md#imagespec)
+  * [KeyEvent](api/keyevent.md#keyevent)
   * [Layer](api/layer.md#layer)
+  * [MouseEvent](api/mouseevent.md#mouseevent)
   * [Palette](api/palette.md#palette)
+  * [Plugin](api/plugin.md#plugin)
   * [Point](api/point.md#point)
   * [Range](api/range.md#range)
   * [Rectangle](api/rectangle.md#rectangle)
@@ -77,13 +84,16 @@ a little experiment, so you have six options to approach your idea:
   * [Slice](api/slice.md#slice)
   * [Sprite](api/sprite.md#sprite)
   * [Tag](api/tag.md#tag)
+  * [Tile](api/tile.md#tile)
   * [Tileset](api/tileset.md#tileset)
   * [Timer](api/timer.md#timer)
   * [Tool](api/tool.md#tool)
+  * [TouchEvent](api/touchevent.md#touchevent)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)
-* Lua libraries
-  * [Basic Functions](https://www.lua.org/manual/5.3/manual.html#6.1)
+
+Lua libraries
+  * [Base library](api/base.md) and [Basic Functions in Lua manual](https://www.lua.org/manual/5.3/manual.html#6.1)
   * [Coroutine Manipulation](https://www.lua.org/manual/5.3/manual.html#6.2)
   * [String Manipulation](https://www.lua.org/manual/5.3/manual.html#6.4)
   * [UTF-8 Support](https://www.lua.org/manual/5.3/manual.html#6.5)
