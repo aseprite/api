@@ -35,6 +35,7 @@ Classes/objects
   * [Layer](api/layer.md#layer)
   * [Palette](api/palette.md#palette)
   * [Point](api/point.md#point)
+  * [Properties](api/properties.md#properties)
   * [Range](api/range.md#range)
   * [Rectangle](api/rectangle.md#rectangle)
   * [Selection](api/selection.md#selection)
