@@ -61,6 +61,14 @@ extension just double-clicking it should be enough on Windows or
 macOS. In other case you can install it from *Edit > Preferences >
 Extensions > Add Extension*.
 
+## Plugin.name
+
+Name of the extension.
+
+## Plugin.path
+
+Path where the extension is installed.
+
 ## Plugin.preferences
 
 It's a Lua table where you can load/save any kind of Lua value here

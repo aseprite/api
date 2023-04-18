@@ -27,6 +27,8 @@ end
 ## v1.3-rc3
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `23`
+* New [`require()`](api/base.md#require) function
+* New [`plugin.name`](api/plugin.md#pluginname) and [`plugin.path`](api/plugin.md#pluginpath) properties
 * New [`Cel.zIndex`](api/cel.md#celzindex) property
 * New [`Uuid`](api/uuid.md#uuid) class
 
