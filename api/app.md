@@ -10,20 +10,14 @@ Active [site](site.md#site) (active image, layer, frame, sprite, etc.).
 
 [Range](range.md#range) member represents the active selection from an objects collection. It returns a sorted list of selected frames, or cels, or layers, or colors, etc.
 
-## app.activeCel
+## app.cel
 
 Gets or sets the active [Cel](cel.md#cel) object.
 
-## app.activeFrame
+## app.frame
 
 Gets or sets the active [frame](frame.md#frame) (1 is the first frame
 in the sprite).
-
-**WARNING**: This function had two bugs
-in [Aseprite v1.2.10-beta2](https://www.aseprite.org/release-notes/12/#aseprite-v1-2-10-beta2)
-where 1) it returned `nil` if we were in the first frame of the
-sprite, and 2) it returned a number. Since Aseprite v1.2.10-beta3 it
-started to return a [frame](frame.md#frame) object.
 
 ## app.image
 
@@ -314,6 +308,12 @@ Deprecated. Use [app.layer](#applayer).
 ## app.activeFrame
 
 Deprecated. Use [app.frame](#appframe).
+
+**WARNING**: This function had two bugs
+in [Aseprite v1.2.10-beta2](https://www.aseprite.org/release-notes/12/#aseprite-v1-2-10-beta2)
+where 1) it returned `nil` if we were in the first frame of the
+sprite, and 2) it returned a number. Since Aseprite v1.2.10-beta3 it
+started to return a [frame](frame.md#frame) object.
 
 ## app.activeCel
 
