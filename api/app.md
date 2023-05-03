@@ -54,6 +54,10 @@ the [tool bar](https://www.aseprite.org/docs/workspace/).
 Returns the active brush (a [Brush](brush.md#brush) object) selected
 in the [context bar](https://www.aseprite.org/docs/workspace/).
 
+## app.editor
+
+Returns the active editor (a [Editor](editor.md#editor) object).
+
 ## app.pixelColor
 
 This [pixelColor namespace](pixelcolor.md#apppixelcolor) contains internal functions
