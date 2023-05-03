@@ -16,14 +16,26 @@ Gets or sets the active [Cel](cel.md#cel) object.
 
 ## app.activeFrame
 
-Gets or sets the active [frame](frame.md#frame) (1 is the first frame
-in the sprite).
+```lua
+local frame = app.activeFrame
+assert(frame.sprite == app.activeSprite)
+app.activeFrame = app.sprite.frames[2] -- go to the second frame
+
+app.activeFrame = 3 -- you can assign a frame number directly
+app.activeFrame = 1 -- 1 is the first frame of the sprite
+```
+
+Returns a [Frame object](frame.md#frame) that represents the active
+frame in the focused sprite editor. You can set this property
+assigning a frame number directly to jump to another frame.
+
+To known the active frame number use [`app.activeFrame.frameNumber`](frame.md#frameframenumber)
 
 **WARNING**: This function had two bugs
 in [Aseprite v1.2.10-beta2](https://www.aseprite.org/release-notes/12/#aseprite-v1-2-10-beta2)
 where 1) it returned `nil` if we were in the first frame of the
 sprite, and 2) it returned a number. Since Aseprite v1.2.10-beta3 it
-started to return a [frame](frame.md#frame) object.
+started to return a [Frame](frame.md#frame) object.
 
 ## app.activeImage
 
