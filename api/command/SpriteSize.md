@@ -26,7 +26,7 @@ Known issue: On the following code, we have a variable `i` pointing to the `cel.
 
 ```lua
 local s = Sprite(1, 1)
-local cel = app.activeCel
+local cel = app.cel
 local i = cel.image
 
 app.command.SpriteSize{ ui = false, scaleX = 2 }
@@ -38,7 +38,7 @@ So, to make it works, we have to use `cel.image` instead of `i`:
 
 ```lua
 local s = Sprite(1, 1)
-local cel = app.activeCel
+local cel = app.cel
 
 app.command.SpriteSize{ ui = false, scaleX = 2 }
 
@@ -48,7 +48,7 @@ Another way, using `i`, and get again the `cel.image` after `app.command.SpriteS
 
 ```lua
 local s = Sprite(1, 1)
-local cel = app.activeCel
+local cel = app.cel
 local i = cel.image
 
 app.command.SpriteSize{ ui = false, scaleX = 2 }

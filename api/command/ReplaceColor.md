@@ -18,7 +18,7 @@ app.command.ReplaceColor {
   respectively.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
   [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).
-  The default value depends on the [active sprite](../app.md#appactivesprite) [color mode](../colormode.md):
+  The default value depends on the [active sprite](../app.md#appsprite) [color mode](../colormode.md):
   * [RGBA](../colormode.md#colormodergb):
     [FilterChannels.RGBA](../filterchannels.md#filterchannelsrgba)
   * [Grayscale](../colormode.md#colormodegray):

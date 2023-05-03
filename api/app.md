@@ -42,7 +42,7 @@ Returns the active sprite, a [Sprite](sprite.md#sprite) object.
 ## app.tag
 
 Returns the active [tag](tag.md#tag), which is the tag located at the
-[active frame](#appactiveframe).
+[active frame](#appframe).
 
 ## app.tool
 
@@ -213,7 +213,7 @@ something is not working right on the Aseprite side.
 app.undo()
 ```
 
-Undoes the latest operation in the [`activeSprite`](#appactivesprite).
+Undoes the latest operation in the [`active sprite`](#appsprite).
 It's like calling `app.command.Undo()` (the *Edit > Undo*  menu option).
 
 ## app.redo()
@@ -223,7 +223,7 @@ app.redo()
 ```
 
 Redoes the latest undone operation in the
-[`activeSprite`](#appactivesprite).  It's like calling
+[`active sprite`](#appsprite).  It's like calling
 `app.command.Redo()` (the *Edit > Redo*  menu option).
 
 ## app.useTool()
@@ -269,9 +269,9 @@ Simulates an user stroke in the canvas using the given tool.
   `app.preferences.selection.mode`, in CLI mode it's
   `SelectionMode.REPLACE`.
 * And we can specify the `cel` or `layer`/`frame` where to draw:
-  * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.activeCel](app.md#appactivecel))
-  * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.activeLayer](app.md#appactivelayer))
-  * `frame`: The [frame](frame.md#frame) where to draw (by default [app.activeFrame](app.md#appactiveframe))
+  * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.cel](app.md#appcel))
+  * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.layer](app.md#applayer))
+  * `frame`: The [frame](frame.md#frame) where to draw (by default [app.frame](app.md#appframe))
 
 ## App.events
 

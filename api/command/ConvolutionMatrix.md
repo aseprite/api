@@ -20,7 +20,7 @@ app.command.ConvolutionMatrix {
   [FilterChannels.BLUE](../filterchannels.md#filterchannelsblue) |
   [FilterChannels.GRAY](../filterchannels.md#filterchannelsgray).
 * `tiledMode`: `'none'`, `'x'`, `'y'`, `'both'`. By default it's
-  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.activeSprite).tiled.mode`
+  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.sprite).tiled.mode`
   when `ui` is `true`.
 * `fromResource`: Name of [pre-defined convolution matrix](https://github.com/aseprite/aseprite/blob/a70a3a11c71ae96eb6af3756525182e88129ffcd/data/convmatr.def#L34).
 

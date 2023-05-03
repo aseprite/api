@@ -32,19 +32,17 @@ local booleanResult = app.range.isEmpty
 ```
 
 Returns true if the range is empty, i.e. there is no selected range in
-the timeline (a thick border in the timeline), only the [active cel](app.md#appactivecel)
+the timeline (a thick border in the timeline), only the [active cel](app.md#appcel)
 in the sprite editor.
 
 This is the same as asking for `app.range.type == RangeType.EMPTY`.
 
 Note that if the range is empty, you can still use
 [Range.layers](#rangelayers) to get the [active
-layer](app.md#appactivelayer) (the Range.layers property will be an
+layer](app.md#applayer) (the Range.layers property will be an
 array of one element, just the active layer). The same is true for
-[Range.frame](#rangeframes) and
-[app.activeFrame](app.md#appactiveframe),
-[Range.cel](#rangecels) and
-[app.activeCel](app.md#appactivecel), etc.
+[Range.frame](#rangeframes) and [app.frame](app.md#appframe),
+[Range.cel](#rangecels) and [app.cel](app.md#appcel), etc.
 
 ## Range.sprite
 
@@ -109,7 +107,7 @@ Each element of the array is a [slice](slice.md#slice).
 
 Example to select all slices in the sprite:
 ```lua
-app.range.slices = app.activeSprite.slices
+app.range.slices = app.sprite.slices
 ```
 
 ## Range:contains()

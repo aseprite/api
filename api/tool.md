@@ -2,7 +2,7 @@
 
 References a drawing tool. At the moment this class is used only to
 get and set the active tool
-([`app.activeTool`](app.md#appactivetool)), or to paint on the canvas
+([`app.tool`](app.md#apptool)), or to paint on the canvas
 (`tool` parameter in [`app.useTool()`](app.md#appusetool)).
 
 If a function receives a tool, it can receive a tool ID too.
@@ -10,7 +10,7 @@ If a function receives a tool, it can receive a tool ID too.
 ## Tool.id
 
 ```lua
-local id = app.activeTool.id
+local id = app.tool.id
 ```
 
 Returns the identifier (a string) of the specified in the

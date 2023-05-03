@@ -144,7 +144,7 @@ following code `layer1.isVisible` will be `true` (even when the parnet
 group visibility is `false`):
 
 ```lua
-local sprite = app.activeSprite
+local sprite = app.sprite
 local layerGroup = sprite:newGroup()
 local layers = sprite.layers
 local layer1 = layers[1]

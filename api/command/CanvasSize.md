@@ -32,7 +32,7 @@ Add 8 pixels to the left and 8 pixels to the right (new width = old
 width + 16 pixels):
 
 ```lua
-local r = app.activeSprite.bounds
+local r = app.sprite.bounds
 r.x = r.x-8
 r.width = r.width+16
 app.command.CanvasSize { ui=false, bounds=r }

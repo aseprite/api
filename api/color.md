@@ -23,7 +23,7 @@ c = Color(integer)
 
 * If `alpha` argument is not specified, it's 255 by default (opacity = 100%).
 * The `Color(integer)` constructor receives a [pixel color](pixelcolor.md#apppixelcolor)
-  and the integer is interpreted depending on the [active sprite](app.md#appactivesprite).
+  and the integer is interpreted depending on the [active sprite](app.md#appsprite).
 
 ## Color.alpha
 

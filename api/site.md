@@ -15,23 +15,23 @@ modified.
 
 ## Site.sprite
 
-Gets the [active sprite](app.md#appactivesprite) at the time the
-site object was created.
+Gets the [active sprite](app.md#appsprite) at the time the site object
+was created.
 
 ## Site.layer
 
-Gets the [active layer](app.md#appactivelayer) at the time the site
-object was created.
+Gets the [active layer](app.md#applayer) at the time the site object
+was created.
 
 ## Site.cel
 
-Gets the [active cel](app.md#appactivecel) at the time the site
-object was created.
+Gets the [active cel](app.md#appcel) at the time the site object was
+created.
 
 ## Site.frame
 
-Gets the [active frame](app.md#appactiveframe) at the time the site
-object was created.
+Gets the [active frame](app.md#appframe) at the time the site object
+was created.
 
 ## Site.frameNumber
 
@@ -40,5 +40,5 @@ Same as [`app.site.frame.frameNumber`](#siteframe).
 
 ## Site.image
 
-Gets the [active image](app.md#appactiveimage) at the time the site
-object was created.
+Gets the [active image](app.md#appimage) at the time the site object
+was created.

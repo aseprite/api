@@ -14,7 +14,7 @@ app.command.MoveMask {
 
 * `target` (string): must be
   * `'boundaries'` to modify selection boundaries onlyor
-  * `'content'` to modify the selection content ([active cel](../app.md#appactivecel) pixels)
+  * `'content'` to modify the selection content ([active cel](../app.md#appcel) pixels)
 * `wrap`: `true` or `false`, when true it does the *Edit > Shift* effect,
   were pixels from one side in will appear from the other side (so the
   content is shifted and pixels wrapped, so the selection boundaries

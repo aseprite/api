@@ -21,5 +21,5 @@ app.command.Despeckle {
 * `width`: Width of the convolution matrix to calculate the median. `3` by default.
 * `height`: Height of the convolution matrix to calculate the median. `3` by default.
 * `tiledMode`: `'none'`, `'x'`, `'y'`, `'both'`. By default it's
-  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.activeSprite).tiled.mode`
+  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.sprite).tiled.mode`
   when `ui` is `true`.

@@ -15,7 +15,7 @@ app.command.Outline {
 * `ui`: Show the dialog on the screen, `true` by default.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
   [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).
-  The default value depends on the [active sprite](../app.md#appactivesprite) [color mode](../colormode.md):
+  The default value depends on the [active sprite](../app.md#appsprite) [color mode](../colormode.md):
   * [RGBA](../colormode.md#colormodergb):
     [FilterChannels.RGBA](../filterchannels.md#filterchannelsrgba)
   * [Grayscale](../colormode.md#colormodegray):
@@ -29,5 +29,5 @@ app.command.Outline {
   transparent color by default on transparent layers, or the first
   pixel at the top-left corner in background layer)
 * `tiledMode`: `'none'`, `'x'`, `'y'`, `'both'`. By default it's
-  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.activeSprite).tiled.mode`
+  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.sprite).tiled.mode`
   when `ui` is `true`.
