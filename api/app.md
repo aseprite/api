@@ -35,37 +35,37 @@ local function activeFrameNumber()
 end
 ```
 
-## app.activeImage
+## app.image
 
 ```lua
-local image = app.activeImage
+local image = app.image
 ```
 
 Returns the active image, an [Image](image.md#image) object.
 
-## app.activeLayer
+## app.layer
 
 Returns the active layer, a [Layer](layer.md#layer) object.
 
-## app.activeSprite
+## app.sprite
 
 ```lua
-local sprite = app.activeSprite
+local sprite = app.sprite
 ```
 
 Returns the active sprite, a [Sprite](sprite.md#sprite) object.
 
-## app.activeTag
+## app.tag
 
 Returns the active [tag](tag.md#tag), which is the tag located at the
 [active frame](#appactiveframe).
 
-## app.activeTool
+## app.tool
 
 Returns the active tool (a [Tool](tool.md#tool) object) selected in
 the [tool bar](https://www.aseprite.org/docs/workspace/).
 
-## app.activeBrush
+## app.brush
 
 Returns the active brush (a [Brush](brush.md#brush) object) selected
 in the [context bar](https://www.aseprite.org/docs/workspace/).
@@ -306,3 +306,41 @@ Available events for a `App`:
 * `'sitechange'`: When the user selects other sprite, layer, or frame.
 * `'fgcolorchange'`: When the [Foreground color](https://www.aseprite.org/docs/color-bar/#foreground-color) in the color bar is changed.
 * `'bgcolorchange'`: When the [Background color](https://www.aseprite.org/docs/color-bar/#background-color) in the color bar is changed.
+
+# Deprecated Names
+
+The following fields were replaced with new alternatives (generally
+shorter) names. These will not be removed from the API, so we can
+offer backward compatibility with old scripts.
+
+## app.activeSprite
+
+Deprecated. Use [app.sprite](#appsprite).
+
+## app.activeLayer
+
+Deprecated. Use [app.layer](#applayer).
+
+## app.activeFrame
+
+Deprecated. Use [app.frame](#appframe).
+
+## app.activeCel
+
+Deprecated. Use [app.cel](#appcel).
+
+## app.activeImage
+
+Deprecated. Use [app.image](#appimage).
+
+## app.activeTag
+
+Deprecated. Use [app.tag](#apptag).
+
+## app.activeTool
+
+Deprecated. Use [app.tool](#apptool).
+
+## app.activeBrush
+
+Deprecated. Use [app.brush](#appbrush).

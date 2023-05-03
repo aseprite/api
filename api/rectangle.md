@@ -20,6 +20,7 @@ Rectangle()
 Rectangle(otherRectangle)
 Rectangle(x, y, width, height)
 Rectangle{x=number, y=number, width=number, height=number}
+Rectangle{x=number, y=number, w=number, h=number}
 Rectangle{number, number, number, number}
 ```
 
@@ -62,6 +63,14 @@ rectangle.height = newHeight
 
 Gets or sets the *height* of the rectangle. If it's 0, the rectangle is
 empty (so the coordinate doesn't matter).
+
+## Rectangle.w
+
+Same as [Rectangle.width](#rectanglewidth).
+
+## Rectangle.h
+
+Same as [Rectangle.height](#rectangleheight).
 
 ## Rectangle.origin
 

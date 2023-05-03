@@ -19,6 +19,7 @@ Size()
 Size(otherSize)
 Size(width, height)
 Size{width=number, height=number}
+Size{w=number, h=number}
 Size{number, number}
 ```
 
@@ -38,6 +39,13 @@ size.width = newWidth
 local height = size.height
 size.height = newHeight
 ```
+## Size.w
+
+Same as [Size.width](#sizewidth).
+
+## Size.h
+
+Same as [Size.height](#sizeheight).
 
 ## Size:union()
 
