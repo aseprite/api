@@ -2,11 +2,11 @@
 
 Some objects like a [Sprite](sprite.md#sprite),
 [Layer](layer.md#layer), [Cel](cel.md#cel), [Slice](slice.md#slice),
-[Tag](tag.md#tag), [Tileset](tileset.md#tileset), contains some
-special fields like `.color` and `.data` to store an user-defined
-[color](color.md#color) or an user-defined text (any text).
+[Tag](tag.md#tag), [Tileset](tileset.md#tileset), [Tile](tile.md#tile),
+contains some special fields like `.color` and `.data` to store an
+user-defined [color](color.md#color) or an user-defined text (any text).
 
-Anyway, since **Aseprite 1.3.0-rc1** you can have user-defined and
+Anyway, since **Aseprite 1.3-rc1** you can have user-defined and
 extension-defined properties for each of these objects. We'll use an
 `object` in the following examples, as it can be of any kind (Sprite,
 Layer, etc.)

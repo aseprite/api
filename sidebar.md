@@ -1,11 +1,13 @@
 ### Table of content
 
-[Overview](README.md)
+[Overview](README.md) <br/>
+[API Changes](Changes.md)
 
 Globals namespaces
   * [app](api/app.md#app)
   * [app.command](api/app_command.md#appcommand)
   * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
+  * [app.theme](api/app_theme.md#apptheme)
 
 Constants
   * [AniDir](api/anidir.md#anidir)
@@ -16,7 +18,9 @@ Constants
   * [FilterChannels](api/filterchannels.md#filterchannel)
   * [Ink](api/ink.md#ink)
   * [MouseButton](api/mousebutton.md#mousebutton)
+  * [MouseCursor](api/mousecursor.md#mousecursor)
   * [RangeType](api/rangetype.md#rangetype)
+  * [SelectionMode](api/selectionmode.md#selectionmode)
   * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
   * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
   * [WebSocketMessageType](api/websocketmessagetype.md#websocketmessagetype)
@@ -32,9 +36,13 @@ Classes/objects
   * [GraphicsContext](api/graphicscontext.md#graphicscontext)
   * [Image](api/image.md#image)
   * [ImageSpec](api/imagespec.md#imagespec)
+  * [KeyEvent](api/keyevent.md#keyevent)
   * [Layer](api/layer.md#layer)
+  * [MouseEvent](api/mouseevent.md#mouseevent)
   * [Palette](api/palette.md#palette)
+  * [Plugin](api/plugin.md#plugin)
   * [Point](api/point.md#point)
+  * [Properties](api/properties.md#properties)
   * [Range](api/range.md#range)
   * [Rectangle](api/rectangle.md#rectangle)
   * [Selection](api/selection.md#selection)
@@ -43,8 +51,10 @@ Classes/objects
   * [Slice](api/slice.md#slice)
   * [Sprite](api/sprite.md#sprite)
   * [Tag](api/tag.md#tag)
+  * [Tile](api/tile.md#tile)
   * [Tileset](api/tileset.md#tileset)
   * [Timer](api/timer.md#timer)
   * [Tool](api/tool.md#tool)
+  * [TouchEvent](api/touchevent.md#touchevent)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)

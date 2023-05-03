@@ -61,7 +61,9 @@ end
 * New [Dialog:canvas()](api/dialog.md#dialogcanvas) widget
 * New [GraphicsContext](api/graphicscontext.md#graphicscontext) class
 * New [Rectangle.origin](api/rectangle.md#rectangleorigin) and [Rectangle.size](api/rectangle.md#rectanglesize) properties
+* New [Tile](api/tile.md#tile) and new [Sprite:newTile()](api/sprite.md#spritenewtile)
 * New [Timer](api/timer.md#timer) class
+* New [properties](api/properties.md#properties) field for several objects
 
 ## v1.2.40 & v1.3-beta21
 
