@@ -418,6 +418,7 @@ local dlg = Dialog()
 dlg:canvas{ id=string,
             width=integer,
             height=integer,
+            autoScaling=boolean,
             onpaint=function(ev) ... end,
             onkeydown=function(ev) ... end,
             onkeyup=function(ev) ... end,
@@ -446,6 +447,12 @@ experience with the user:
 * `ontouchmagnify`: Touch event generated when a pinch gesture is done
   in the trackpad to zoom in or out. The `ev` event is a
   [TouchEvent](touchevent.md).
+
+The `autoScaling` property allows the script developer to draw on the GraphicsContext
+received in the canvas's onpaint event without worrying about the current UI scale
+setting. For instance, you can draw a 20[px]x30[px] rectangle in the canvas's GraphicsContext and it
+will be displayed the same at any UI scale. This property is enabled by default if omitted, so if
+you don't need it you must explicitly set it to false.
 
 ## Dialog:repaint()
 
