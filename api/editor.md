@@ -3,17 +3,29 @@
 References a sprite editor. At the moment we can access only the
 active editor using [app.editor](app.md#appeditor).
 
-## Editor:sprite
+## Editor.sprite
+
+```lua
+local sprite = app.editor.sprite
+```
 
 Returns the [sprite](sprite.md#sprite) in the editor.
 
-## Editor:spritePos
+## Editor.spritePos
+
+```lua
+local point = app.editor.spritePos
+```
 
 Returns a [point](point.md#point) of the the mouse position on the
 sprite, i.e. what pixel is going to be changed if the user clicks the
 mouse.
 
-## Editor:mousePos
+## Editor.mousePos
+
+```lua
+local point = app.editor.mousePos
+```
 
 Returns a [point](point.md#point) indicating the mouse position on the
 screen.
