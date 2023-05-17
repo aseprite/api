@@ -36,6 +36,7 @@ end
 * New short property names for active objects: [app.sprite](api/app.md#appsprite) (same as [app.activeSprite](api/app.md#appactivesprite)),
   app.[layer](api/app.md#applayer)/[frame](api/app.md#appframe)/[cel](api/app.md#appcel)/[tag](api/app.md#apptag)/[tool](api/app.md#apptool)/[brush](api/app.md#appbrush)
 * New width/height short names for Rectangle.[w](api/rectangle.md#rectanglew)/[h](api/rectangle.md#rectangleh) and Size.[w](api/size.md#sizew)/[h](api/size.md#sizeh)
+* New `gridBounds` parameter to [`app.command.NewLayer`](api/command/NewLayer.md#newlayer)
 
 ## v1.3-rc2
 
