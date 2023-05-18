@@ -80,6 +80,28 @@ Opacity used in [stroke()](#graphicscontextstroke),
 
 * `opacity`: 0 completelly transparenty, 255 completelly opaque.
 
+## GraphicsContext.theme
+
+It has the same functionality as [app.theme](app_theme.md#apptheme), with the only difference that the values returned
+by accessing dimensions or style metrics data are not affected by the current UI Scale setting. This is useful when you
+are drawing on a dialog canvas's GraphicsContext with [autoScaling](dialog.md#dialogcanvas) enabled, so you don't have to worry about adjusting sizes and measures when painting on the canvas using the current theme.
+
+For instance, when UI Scale is set to 200% this is the difference:
+```lua
+local dlg = Dialog()
+dlg:canvas{
+  onpaint = function(ev)
+      local b1 = app.theme:styleMetrics("button")
+      local b2 = ev.context.theme:styleMetrics("button")
+      print("app.theme:     " .. b1.border.top .. " " .. b1.border.left .. " " .. b1.border.bottom .. " " .. b1.border.right)
+      print("context.theme: " .. b2.border.top .. " " .. b2.border.left .. " " .. b2.border.bottom .. " " .. b2.border.right)
+      -- Console's output:
+      -- app.theme:     8 8 12 8
+      -- context.theme: 4 4 6 4
+  end
+}
+```
+
 ## GraphicsContext:save()
 
 ```lua
