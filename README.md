@@ -4,7 +4,7 @@ This is the scripting API for Aseprite. Since Aseprite v1.2.10 you
 will be able to create scripts with [Lua](https://www.lua.org/).
 
 You can find [some examples](https://github.com/aseprite/Aseprite-Script-Examples)
-for this API or some [tests](https://github.com/aseprite/tests/tree/main/scripts).
+for this API or some [tests](https://github.com/aseprite/aseprite/tree/main/tests/scripts).
 
 ## Where to start
 
