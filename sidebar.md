@@ -6,6 +6,7 @@
 Globals namespaces
   * [app](api/app.md#app)
   * [app.command](api/app_command.md#appcommand)
+  * [app.fs](api/app_fs.md#appfs)
   * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
   * [app.theme](api/app_theme.md#apptheme)
 
