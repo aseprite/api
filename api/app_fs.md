@@ -80,7 +80,7 @@ Returns the file path [joined](#appfsjoinpath) with the title (without
 including the extension) of the given filename `fn`. For example:
 
 ```lua
-print(app.fs.fileExtension("path/file.png"))
+print(app.fs.filePathAndTitle("path/file.png"))
 ```
 
 Prints `path/file`.
