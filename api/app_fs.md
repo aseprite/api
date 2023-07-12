@@ -65,7 +65,7 @@ Returns the file title (without including the path nor the extension)
 of the given filename `fn`. For example:
 
 ```lua
-print(app.fs.fileExtension("path/file.png"))
+print(app.fs.fileTitle("path/file.png"))
 ```
 
 Prints `file`.
