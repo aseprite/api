@@ -9,6 +9,7 @@ Globals namespaces
   * [app.fs](api/app_fs.md#appfs)
   * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
   * [app.theme](api/app_theme.md#apptheme)
+  * [json](api/json.md#json)
 
 Constants
   * [AniDir](api/anidir.md#anidir)

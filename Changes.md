@@ -24,6 +24,12 @@ else
 end
 ```
 
+## v1.3-rc5
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `25`
+* New integrated [`json.decode()`](api/json.md#jsondecode) and
+  [`json.encode()`](api/json.md#jsonencode) functions.
+
 ## v1.3-rc4
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `24`
