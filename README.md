@@ -67,6 +67,7 @@ Classes/objects
   * [Color](api/color.md#color)
   * [ColorSpace](api/colorspace.md#colorspace)
   * [Dialog](api/dialog.md#dialog)
+  * [Editor](api/editor.md#editor)
   * [Events](api/events.md#events)
   * [Frame](api/frame.md#frame)
   * [GraphicsContext](api/graphicscontext.md#graphicscontext)
