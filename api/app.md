@@ -70,6 +70,10 @@ in the [context bar](https://www.aseprite.org/docs/workspace/).
 
 Returns the active editor (a [Editor](editor.md#editor) object).
 
+## app.window
+
+Returns the main window (a [Window](window.md#window) object).
+
 ## app.pixelColor
 
 This [pixelColor namespace](pixelcolor.md#apppixelcolor) contains internal functions

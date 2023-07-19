@@ -60,3 +60,4 @@ Classes/objects
   * [TouchEvent](api/touchevent.md#touchevent)
   * [Version](api/version.md#version)
   * [WebSocket](api/websocket.md#websocket)
+  * [Window](api/window.md#window)

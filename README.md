@@ -94,6 +94,7 @@ Classes/objects
   * [Version](api/version.md#version)
   * [Uuid](api/uuid.md#uuid)
   * [WebSocket](api/websocket.md#websocket)
+  * [Window](api/window.md#window)
 
 Lua libraries
   * [Base library](api/base.md) and [Basic Functions in Lua manual](https://www.lua.org/manual/5.3/manual.html#6.1)
