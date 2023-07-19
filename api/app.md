@@ -293,10 +293,10 @@ Simulates an user stroke in the canvas using the given tool.
   * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.layer](app.md#applayer))
   * `frame`: The [frame](frame.md#frame) where to draw (by default [app.frame](app.md#appframe))
 
-## App.events
+## app.events
 
 Returns the [`Events`](events.md#events) object to associate functions
-that can act like listeners of specific `App` events. E.g.
+that can act like listeners of specific `app` events. E.g.
 
 ```lua
 app.events:on('sitechange',
@@ -305,11 +305,30 @@ app.events:on('sitechange',
   end)
 ```
 
-Available events for a `App`:
+Available events for `app`:
 
 * `'sitechange'`: When the user selects other sprite, layer, or frame.
 * `'fgcolorchange'`: When the [Foreground color](https://www.aseprite.org/docs/color-bar/#foreground-color) in the color bar is changed.
 * `'bgcolorchange'`: When the [Background color](https://www.aseprite.org/docs/color-bar/#background-color) in the color bar is changed.
+* `'beforecommand'`: Before executing any command in the program.
+* `'aftercommand'`: After executing any command in the program.
+
+The `'beforecommand'` and `'aftercommand'` events receive an `ev`
+argument with the name of the command (`ev.name`) and the params
+(`ev.params`). `'beforecommand'` includes a `ev.stopPropagation()`
+function to cancel the event, e.g. in case that you've handled the
+event in a custom way.
+
+E.g. This code catches the *Edit > Cut* command and convert it to a *Copy*:
+```lua
+app.events:on('beforecommand',
+  function(ev)
+    if ev.name == "Cut" then
+      app.command.Copy()   -- call Copy command
+      ev.stopPropagation() -- and cancel the Cut
+    end
+  end)
+```
 
 # Deprecated Names
 

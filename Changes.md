@@ -27,6 +27,7 @@ end
 ## v1.3-rc5
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `25`
+* Removed [`App.events`](api/app.md#appevents) `'beforepaintemptytilemap'`
 * New [`app.window`](api/app.md#appwindow) object.
 * New integrated [`json.decode()`](api/json.md#jsondecode) and
   [`json.encode()`](api/json.md#jsonencode) functions.
@@ -35,7 +36,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `24`
 * New [`Image:flip()`](api/image.md#imageflip) function and [`FlipType`](api/fliptype.md#fliptype)
-* New [`App.events`](api/app.md#appevents): `'beforecommand'`, `aftercommand'`, `'beforepaintemptytilemap'`
+* New [`App.events`](api/app.md#appevents): `'beforecommand'`, `'aftercommand'`, `'beforepaintemptytilemap'`
 
 ## v1.3-rc3
 
