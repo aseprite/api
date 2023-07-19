@@ -342,7 +342,8 @@ local dlg = Dialog()
 dlg:show()
 dlg:show{
   wait=false,
-  bounds=Rectangle()
+  bounds=Rectangle(),
+  autoscrollbars=false,
 }
 ```
 
@@ -359,6 +360,12 @@ closed with some button or calling [Dialog:close](#dialogclose) in a
 With `{ bounds=Rectangle() }` you can display the dialog in a specific
 location. Useful to show the dialog in a previous position that you
 obtain from [Dialog.bounds](#dialogbounds) property.
+
+Setting `{ autoscrollbars=true }` will add scrollbars automatically only
+if they are needed. This means that if your dialog contains enough widgets
+to make it go out of the window/screen (depending if you are using single
+window UI or multiple windows UI) then scrollbars will be shown into your
+dialog when its content doesn't fit its bounds.
 
 ## Dialog:slider()
 
