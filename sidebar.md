@@ -12,6 +12,7 @@ Globals namespaces
   * [json](api/json.md#json)
 
 Constants
+  * [Align](api/align.md#align)
   * [AniDir](api/anidir.md#anidir)
   * [BlendMode](api/blendmode.md#blendmode)
   * [BrushPattern](api/brushpattern.md#brushpattern)

@@ -427,24 +427,14 @@ dlg:endtabs{ id=string,
 
 Marks the end of both the last tab and the group of tabs to which it belongs.
 
-* `id`: Identifier for this tabs widget. [Dialog.data](#dialogdata) will contain
-a field named as this id, which will return the value of the currently
-selected tab's `id`.
-* `align`: Alignment/placement of the tabs selector. You can use the following constants:
-  * Align.CENTER
-  * Align.LEFT
-  * Align.RIGHT
-  * Align.TOP
-  * Align.BOTTOM
-
-    Then, for example, you can use them as follows:
-    `{ align=Align.LEFT|Align.BOTTOM }`
-    `{ align=Align.RIGHT|Align.TOP }`
-
-    If `align` is omitted, its default value is `{ align=Align.CENTER|Align.TOP }`
-
+* `id`: Identifier for this tabs widget. [Dialog.data](#dialogdata)
+  will contain a field named as this id, which will return the value
+  of the currently selected tab's `id`.
+* `align`: Horizontal and vertical alignment/placement of the tabs
+  selector specified with [Align](align.md#align) values. Its default
+  value is `{ align=Align.CENTER|Align.TOP }`.
 * `onchange`: Function to be called when the tab is changed. It receives a
-parameter that you can use to get the selected tab:
+  parameter that you can use to get the selected tab:
     ```lua
     { onchange=function(ev)
          print("selected tab: " .. ev.tab)
