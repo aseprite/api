@@ -144,6 +144,16 @@ Number of bytes for each row in the image. Each image has a total of
 `image.rowSide * image.height` bytes. It's useful if you are going to
 get or set the [`Image.bytes`](#imagebytes) property manually.
 
+# Image.bytesPerPixel
+
+Number of bytes per pixel.
+
+The number of visible pixels per row is [`Image.width`](#imagewidth),
+the number of bytes per row is [`Image.rowStride`](#imagerowstride),
+the number of "visible bytes" is `image.width * image.bytesPerPixel`,
+and the number of "pixels per row" (visible pixels + hidden/just for alignment)
+is `image.rowStride / image.bytesPerPixel`.
+
 ## Image:clear()
 
 ```lua
