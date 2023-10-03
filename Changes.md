@@ -24,6 +24,15 @@ else
 end
 ```
 
+## v1.3-rc7
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `26`
+* New [`Dialog:tab()/endtabs()`](api/dialog.md#dialogtab) widget
+* New [`Dialog:show{ autoscrollbars=true }`](api/dialog.md#dialogshow) parameter
+* New [`app.editor:askPoint{ decorate={ rulers=true, dimmed=true } }`](api/editor.md#editoraskpoint) options
+* New [`Align`](api/align.md#align) enum
+* New [`Image.bytesPerPixel`](api/image.md#bytesPerPixel) property
+
 ## v1.3-rc5
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `25`
