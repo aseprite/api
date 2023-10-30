@@ -62,7 +62,8 @@ sprite.gridBounds = rectangle
 ```
 
 Gets or sets the bounds of the sprite grid as a
-[rectangle](rectangle.md#rectangle).
+[rectangle](rectangle.md#rectangle). By default this is 16x16 (with origin in 0,0)
+but the default value can be [changed from *Edit > Preferences > Grid*](https://www.aseprite.org/docs/preferences/).
 
 ## Sprite.pixelRatio
 
@@ -445,8 +446,8 @@ local tileset = sprite:newTileset(anotherTileset)
 Returns a new [tileset](tileset.md#tileset) and adds it to the
 sprite's tilesets.
 
-If not parameters are given, the resulting tileset has tile size 16x16
-pixels and just 1 tile.
+If no parameters are given, the resulting tileset will have just one
+empty tile and a tile size equal to the active [sprite grid size](#spritegridbounds).
 
 If Grid or Rectangle is specified it is used to set the resulting
 tileset's origin and tile size.
