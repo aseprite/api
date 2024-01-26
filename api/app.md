@@ -265,7 +265,7 @@ app.useTool{
  tolerance=integer,
  freehandAlgorithm=0 | 1,
  selection=SelectionMode.REPLACE | SelectionMode.ADD | SelectionMode.SUBTRACT | SelectionMode.INTERSECT,
- tilemapMode=TilemapMode.PIXELS | TilesetMode.TILES,
+ tilemapMode=TilemapMode.PIXELS | TilemapMode.TILES,
  tilesetMode=TilesetMode.MANUAL | TilesetMode.AUTO | TilesetMode.STACK,
 }
 ```
