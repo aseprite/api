@@ -261,7 +261,7 @@ sprite:saveAs(filename)
 ```
 
 Saves the sprite to the given file and mark the sprite as saved so
-closing it doesn't will ask to save changes.
+closing it will not ask to save changes.
 
 ## Sprite:saveCopyAs()
 
