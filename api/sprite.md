@@ -260,8 +260,8 @@ Crops the sprite to the given dimensions. See the
 sprite:saveAs(filename)
 ```
 
-Saves the sprite to the given file and mark the sprite as saved so
-closing it doesn't will ask to save changes.
+Saves the sprite to the given file and marks the sprite as saved so
+closing it won't ask to save changes.
 
 ## Sprite:saveCopyAs()
 
