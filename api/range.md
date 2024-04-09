@@ -95,6 +95,22 @@ Example to select the colors with index 0 and 3 in the color bar:
 app.range.colors = { 0, 3 }
 ```
 
+## Range.tiles
+
+```lua
+local selectedTiles = app.range.tiles
+app.range.tiles = { ... }
+```
+
+Gets or sets the array of selected tile entries in the [color bar](https://www.aseprite.org/docs/color-bar/)
+when we are in a [tilemap layer](https://www.aseprite.org/docs/tilemap/).
+Each element of the array is an integer (the tile index).
+
+Example to select tiles with index 0 and 3 in the color bar:
+```lua
+app.range.tiles = { 0, 3 }
+```
+
 ## Range.slices
 
 ```lua
