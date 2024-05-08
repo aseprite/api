@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.3.7
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `28`
+* New [`app.os`](api/app_os.md#appos) with some properties about the running platform
+
 ## v1.3.3
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `27`
