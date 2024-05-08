@@ -24,6 +24,11 @@ else
 end
 ```
 
+## v1.3.3
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `27`
+* Fixed some bugs using tabs widget [#4288](https://github.com/aseprite/aseprite/issues/4288), [#4268](https://github.com/aseprite/aseprite/issues/4268)
+
 ## v1.3-rc7
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `26`
