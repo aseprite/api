@@ -28,6 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `28`
 * New [`app.os`](api/app_os.md#appos) with some properties about the running platform
+* New `recent` parameter to [SaveFile](api/command/SaveFile.md#savefile) and [ExportSpriteSheet](api/command/ExportSpriteSheet.md#exportspritesheet) commands
 
 ## v1.3.3
 

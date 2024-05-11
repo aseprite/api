@@ -3,6 +3,7 @@
 ```lua
 app.command.ExportSpriteSheet {
   ui=true,
+  recent=true,
   askOverwrite=true,
   type=SpriteSheetType.HORIZONTAL,
   columns=0,
@@ -39,7 +40,12 @@ app.command.ExportSpriteSheet {
 This is similar to
 using [the `-sheet` argument from the CLI](https://www.aseprite.org/docs/cli/#sheet).
 
-* `ui`
+* `ui`: Shows the dialog to export the sprite sheet.
+* `recent`: Only available since v1.3.7, it adds the output file
+  (`textureFilename`) to the list of recent files. By default, if it's
+  not specified, it depends on the `ui` parameter: if the Export
+  Sprite Sheet dialog is displayed, the selected output filename will
+  be added to the recent list.
 * `askOverwrite`
 * `type` ([SpriteSheetType](../spritesheettype.md#spritesheettype))
 * `columns`

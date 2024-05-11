@@ -3,6 +3,7 @@
 ```lua
 app.command.SaveFile {
   ui=true,
+  recent=true,
   filename="",
   filenameFormat="",
   tag="",
@@ -35,6 +36,9 @@ Parameters:
   show the UI (`false` by default) if the sprite has an associated
   file.  `SaveFileAs` and `SaveFileCopyAs` will show the UI by
   default.
+* `recent`: Only available since v1.3.7, it adds the file to the list
+  of recent files. By default it depends if the dialog to select the
+  filename is displayed (depends on the value of the `ui` parameter).
 * `filename`: The filename where to save the sprite. The default
   values is the
 * `filenameFormat`: Special value similar to [--filename-format](https://www.aseprite.org/docs/cli/#filename-format)
