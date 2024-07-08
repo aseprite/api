@@ -207,6 +207,10 @@ Check the [app.fs](app_fs.md#appfs) documentation.
 
 Check the [app.theme](app_theme.md#apptheme) documentation.
 
+## app.os
+
+Check the [app.os](app_os.md#appos) documentation.
+
 ## app.uiScale
 
 ```
