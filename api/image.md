@@ -141,7 +141,7 @@ local numberOfBytesPerRow = image.rowStride
 ```
 
 Number of bytes for each row in the image. Each image has a total of
-`image.rowSide * image.height` bytes. It's useful if you are going to
+`image.rowStride * image.height` bytes. It's useful if you are going to
 get or set the [`Image.bytes`](#imagebytes) property manually.
 
 ## Image.bytesPerPixel
