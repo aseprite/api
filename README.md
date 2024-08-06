@@ -12,7 +12,7 @@ Generally you will want to write a script to solve a problem or to do
 a little experiment, so you have six options to approach your idea:
 
 1. **Transform the active sprite**: In this case
-   [app.activeSprite](api/app.md#appactivesprite) will give you access
+   [app.sprite](api/app.md#appsprite) will give you access
    to the current sprite (it's `nil` if there is no active sprite,
    e.g. we are in the `Home` tab).
 2. **Generate a new sprite** : Here the
