@@ -31,7 +31,9 @@ The `spec` parameter is an [image specification](imagespec.md#imagespec) object.
 If you specify `otherImage`, it's equivalent to use
 [`otherImage:clone()`](#imageclone). If you specify `Image(otherImage, rectangle)`
 this will create a copy of the specified
-[rectangle](rectangle.md#rectangle) of `otherImage`.
+[rectangle](rectangle.md#rectangle) of `otherImage`. `Image(otherImage, rectangle)`
+may return `nil` if the [rectangle](rectangle.md#rectangle) is empty
+(i.e., if its width and/or height are equal to or less than zero).
 
 If a `sprite` is given, the image will be a render of the first frame
 of the [sprite](sprite.md#sprite). Note: You can use
