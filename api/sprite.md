@@ -7,8 +7,8 @@ local sprite = Sprite(width, height)
 local sprite = Sprite(width, height, colorMode)
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
-local sprite = Sprite{ fromFile=filename }
-local sprite = Sprite{ fromFile=filename, oneFrame }
+local sprite = Sprite{ fromFile=string }
+local sprite = Sprite{ fromFile=string, oneFrame=boolean }
 ```
 
 Creates a new sprite with the given `width` and `height`. The
@@ -21,6 +21,8 @@ If `otherSprite` is given (other `Sprite` object), the sprite is duplicated.
 
 If `fromFile` is given, it indicates a file name (a string) and it's
 like opening a new document with [`app.open()`](app.md#appopen).
+
+When loading from a file, setting `oneFrame` to true will load with only the first animation frame.
 
 ## Sprite.width
 
