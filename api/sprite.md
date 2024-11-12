@@ -8,7 +8,7 @@ local sprite = Sprite(width, height, colorMode)
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
 local sprite = Sprite{ fromFile=string }
-local sprite = Sprite{ fromFile=string, oneFrame=boolean }
+local sprite = Sprite{ fromFile=string, oneFrame=true }
 ```
 
 Creates a new sprite with the given `width` and `height`. The
