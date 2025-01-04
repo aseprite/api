@@ -102,7 +102,7 @@ parameters.
 * app.command.OpenInFolder
 * app.command.OpenScriptFolder
 * app.command.OpenWithApp
-* app.command.Options
+* [app.command.Options](command/Options.md#options)
 * [app.command.Outline](command/Outline.md#outline)
 * app.command.PaletteEditor
 * app.command.PaletteSize
