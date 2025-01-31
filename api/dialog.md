@@ -519,5 +519,5 @@ you don't need it you must explicitly set it to false.
 dlg:repaint()
 ```
 
-Will call `onpaint` event of all [canvases](#canvas) and update the
+Will call `onpaint` event of all [canvases](#dialogcanvas) and update the
 dialog pixels on the screen.
