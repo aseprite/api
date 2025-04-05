@@ -82,11 +82,15 @@ are modified).
 local w = image.width
 ```
 
+Returns the width of the image in pixels.
+
 ## Image.height
 
 ```lua
 local h = image.height
 ```
+
+Returns the height of the image in pixels.
 
 ## Image.bounds
 
@@ -337,3 +341,12 @@ local rectangle = image:shrinkBounds(refColor)
 Returns the shrunken bounds (a [rectangle](rectangle.md#rectangle)) of
 the image removing all the empty space of borders using the mask color
 or the given reference [color](color.md#color) in `refColor`.
+
+## Image:flip()
+
+```lua
+image:flip()
+image:flip(FlipType.VERTICAL)
+```
+
+Flips an image along an axis defined by a [FlipType](fliptype.md). Flips horizontally if [FlipType](fliptype.md) is not specified by default.
