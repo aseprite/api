@@ -42,3 +42,11 @@ Same as [`app.site.frame.frameNumber`](#siteframe).
 
 Gets the [active image](app.md#appimage) at the time the site object
 was created.
+
+## Site.tilemapMode
+
+Gets [TilemapMode](tilemapmode.md#tilemapmode). On non-tilemap layers, this field returns 0.
+
+## Site.tilesetMode
+
+Gets [TilesetMode](tilesetmode.md#tilesetmode). On non-tilemap layers, this field returns 0.

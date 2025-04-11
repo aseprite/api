@@ -61,6 +61,8 @@ Constants
   * [SelectionMode](api/selectionmode.md#selectionmode)
   * [SpriteSheetDataFormat](api/spritesheetdataformat.md#spritesheetdataformat)
   * [SpriteSheetType](api/spritesheettype.md#spritesheettype)
+  * [TilemapMode](api/tilemapmode.md#tilemapmode)
+  * [TilesetMode](api/tilesetmode.md#tilesetmode)
   * [WebSocketMessageType](api/websocketmessagetype.md#websocketmessagetype)
 
 Classes/objects
