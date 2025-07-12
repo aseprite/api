@@ -65,6 +65,14 @@ Extensions > Add Extension*.
 
 Name of the extension.
 
+## Plugin.displayName
+
+Display name of the extension.
+
+## Plugin.version
+
+Version of the extension.
+
 ## Plugin.path
 
 Path where the extension is installed.
