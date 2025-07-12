@@ -30,6 +30,26 @@ local point = app.editor.mousePos
 Returns a [point](point.md#point) indicating the mouse position on the
 screen.
 
+## Editor.zoom
+
+```lua
+app.editor.zoom = 0.33333333333
+local zoom = app.editor.zoom
+
+local percentage = zoom * 100 -- 33.3%
+```
+
+Gets or sets the editor zoom as a float. To get a percentage, multiply by 100.
+
+## Editor.scroll
+
+```lua
+local scroll = app.editor.scroll 
+app.editor.scroll = scroll
+```
+
+Gets or sets the editor scroll (coordinates of sprite pixel to center the editor at) as a table, with values `x` and `y` as floats.
+
 ## Editor:askPoint()
 
 ```lua
