@@ -337,6 +337,7 @@ app.events:on('sitechange',
 Available events for `app`:
 
 * `'sitechange'`: When the user selects other sprite, layer, or frame.
+* `'beforesitechange'`: Before the user switches to other sprite, layer, or frame.
 * `'fgcolorchange'`: When the [Foreground color](https://www.aseprite.org/docs/color-bar/#foreground-color) in the color bar is changed.
 * `'bgcolorchange'`: When the [Background color](https://www.aseprite.org/docs/color-bar/#background-color) in the color bar is changed.
 * `'beforecommand'`: Before executing any command in the program.
