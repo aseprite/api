@@ -126,6 +126,14 @@ local cel = image.cel
 Returns the [cel](cel.md#cel) to which this image belongs or `nil` if this
 image is not associated to a cel.
 
+## Image.context
+
+```lua
+local gc = image.context
+```
+
+The [GraphicsContext](graphicscontext.md#graphicscontext) object for this image.
+
 ## Image.bytes
 
 ```lua
