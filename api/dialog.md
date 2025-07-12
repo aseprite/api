@@ -344,6 +344,7 @@ dlg:show{
   wait=false,
   bounds=Rectangle(),
   autoscrollbars=false,
+  hand=false
 }
 ```
 
@@ -366,6 +367,8 @@ if they are needed. This means that if your dialog contains enough widgets
 to make it go out of the window/screen (depending if you are using single
 window UI or multiple windows UI) then scrollbars will be shown into your
 dialog when its content doesn't fit its bounds.
+
+If `{ hand=true }`, this enables the hand tool in the editor while the dialog is active. See the *Edit > Replace Color* menu for an example. Only useful if `{ wait=true }`.
 
 ## Dialog:slider()
 
