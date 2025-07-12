@@ -193,6 +193,19 @@ end
 
 An array of [slices](slice.md#slice).
 
+## Sprite.tilesets
+
+```lua
+for i,tileset in ipairs(s.tilesets) do
+  -- ...
+end
+for i = 1,#s.tilesets do
+  -- s.tilesets[i]
+end
+```
+
+An array of [tilesets](tileset.md#tileset).
+
 ## Sprite.backgroundLayer
 
 Returns the [background
