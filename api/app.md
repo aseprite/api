@@ -97,6 +97,14 @@ Gets or sets the current foreground [color](color.md#color).
 Gets or sets the current background [color](color.md#color). Remember that
 some commands use the background color to clear the active layer.
 
+## app.fgTile
+
+Gets or sets the current foreground [tile](tile.md#tile).
+
+## app.bgTile
+
+Gets or sets the current background [tile](tile.md#tile).
+
 ## app.isUIAvailable
 
 Returns true if the UI is available. E.g. if this is true you can use
