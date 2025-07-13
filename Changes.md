@@ -37,7 +37,7 @@ end
 ## v1.3.13
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `32`
-* New `app.clipboard` API [#2073](https://github.com/aseprite/aseprite/issues/2073)
+* New [`app.clipboard`](api/app_clipboard.md#appclipboard) API [#2073](https://github.com/aseprite/aseprite/issues/2073)
 * New [`beforesitechange`](api/app.md#appevents) event [#4785](https://github.com/aseprite/aseprite/issues/4785)
 * New [`plugin.version`](api/plugin.md#pluginversion) and [`plugin.displayName`](api/plugin.md#plugindisplayname) properties [#4904](https://github.com/aseprite/aseprite/issues/4904)
 * Don't allow to set invalid pixel ratios for sprites [#3285](https://github.com/aseprite/aseprite/issues/3285)
