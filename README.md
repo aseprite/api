@@ -39,6 +39,7 @@ a little experiment, so you have six options to approach your idea:
 
 Globals namespaces
   * [app](api/app.md#app)
+  * [app.clipboard](api/app_clipboard.md#appclipboard)
   * [app.command](api/app_command.md#appcommand)
   * [app.fs](api/app_fs.md#appfs)
   * [app.os](api/app_os.md#appos)
