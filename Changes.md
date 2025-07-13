@@ -28,7 +28,7 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `33`
 * Added  `Dialog:separator()` more in line with other widgets [#4989](https://github.com/aseprite/aseprite/issues/4989) (thanks to [@MapleGecko](https://github.com/aseprite/aseprite/pull/5181))
-* Added uuid field to layers [#5033](https://github.com/aseprite/aseprite/issues/5033)
+* Added [uuid field](api/layer.md#layeruuid) to layers [#5033](https://github.com/aseprite/aseprite/issues/5033)
 * Added `os.rename()` and `os.remove()` functions
 * Added `fitCriteria` parameter to `app.command.ChangePixelFormat` command [#4781](https://github.com/aseprite/aseprite/issues/4781)
 * Fixed `cel.image:clear()` cannot be undone [#5015](https://github.com/aseprite/aseprite/issues/5015)
@@ -38,8 +38,8 @@ end
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `32`
 * New `app.clipboard` API [#2073](https://github.com/aseprite/aseprite/issues/2073)
-* New `beforesitechange` event [#4785](https://github.com/aseprite/aseprite/issues/4785)
-* New `plugin.version` and `plugin.displayName` properties [#4904](https://github.com/aseprite/aseprite/issues/4904)
+* New [`beforesitechange`](api/app.md#appevents) event [#4785](https://github.com/aseprite/aseprite/issues/4785)
+* New [`plugin.version`](api/plugin.md#pluginversion) and [`plugin.displayName`](api/plugin.md#plugindisplayname) properties [#4904](https://github.com/aseprite/aseprite/issues/4904)
 * Don't allow to set invalid pixel ratios for sprites [#3285](https://github.com/aseprite/aseprite/issues/3285)
 * Fixed `Image:drawImage()` when `BlendMode.SRC` is used [#5001](https://github.com/aseprite/aseprite/issues/5001)
 
@@ -52,20 +52,20 @@ end
 ## v1.3.11-beta1
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `30`
-* Added `GraphicsContext` for images: `Image.context` property [#4330](https://github.com/aseprite/aseprite/issues/4330)
+* Added `GraphicsContext` for images: [`Image.context`](api/image.md#imagecontext) property [#4330](https://github.com/aseprite/aseprite/issues/4330)
 * Added `ui`/`flatten`/`filename` parameters to `app.command.DuplicateSprite` command [#4755](https://github.com/aseprite/aseprite/issues/4755)
 
 ## v1.3.10
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `30`
-* Added `app.editor.zoom`/`scroll` properties [#4722](https://github.com/aseprite/aseprite/issues/4722)
-* New option (`Dialog:show{ hand=true }`) to enable Hand tool in the active editor with a modal dialog (thanks to [@lampysprites](https://github.com/aseprite/aseprite/pull/4465))
+* Added [`app.editor.zoom`](api/editor.md#editorzoom)/[`scroll`](api/editor.md#editorscroll) properties [#4722](https://github.com/aseprite/aseprite/issues/4722)
+* New option ([`Dialog:show{ hand=true }`](api/dialog.md#dialogshow)) to enable Hand tool in the active editor with a modal dialog (thanks to [@lampysprites](https://github.com/aseprite/aseprite/pull/4465))
 
 ## v1.3.9.2
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `29`
-* New `app.fgTile`/`bgTile` properties to get/set the foreground/background tile [#4403](https://github.com/aseprite/aseprite/issues/4403)
-* Added `Site.tilemapMode` property
+* New [`fgTile`](api/app.md#appfgtile)/[`bgTile`](api/app.md#appbgtile) properties to get/set the foreground/background tile [#4403](https://github.com/aseprite/aseprite/issues/4403)
+* Added [`Site.tilemapMode`](api/site.md#sitetilemapmode) property
 * Added `x` and `y` params to `app.command.Paste()`
 * Fixed `app.command.Cut`/`Paste` in `-batch` mode [#4354](https://github.com/aseprite/aseprite/issues/4354)
 * Fixed `app.command.Cancel()` command when used from scripts
