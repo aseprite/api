@@ -75,6 +75,7 @@ Classes/objects
   * [Events](api/events.md#events)
   * [Frame](api/frame.md#frame)
   * [GraphicsContext](api/graphicscontext.md#graphicscontext)
+  * [Grid](api/grid.md#grid)
   * [Image](api/image.md#image)
   * [ImageSpec](api/imagespec.md#imagespec)
   * [KeyEvent](api/keyevent.md#keyevent)
