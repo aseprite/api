@@ -78,6 +78,14 @@ stack in descending order. For example, a layer with index `1` will
 lie beneath a layer with index `2`, assuming the layers share the same
 parent.
 
+## Layer.uuid
+
+```lua
+local uuid = layer.uuid
+```
+
+Returns the uuid of the layer.
+
 ## Layer.isImage
 
 Gets whether or not the layer contains [cels](cel.md#cel) with
