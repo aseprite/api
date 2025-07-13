@@ -1,6 +1,6 @@
 # app.fs
 
-A set of function to handle file names and the file system.
+A set of functions to handle file names and the file system.
 
 # Path & File Name Manipulation
 

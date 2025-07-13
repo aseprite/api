@@ -1,6 +1,6 @@
 # app.os
 
-A set of function to get properties about the running Operating System
+A set of functions to get properties about the running Operating System
 platform.
 
 ## app.os.name
