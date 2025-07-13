@@ -84,7 +84,7 @@ parent.
 local uuid = layer.uuid
 ```
 
-Returns the uuid of the layer.
+Returns the [uuid](uuid.md#uuid) of the layer.
 
 ## Layer.isImage
 

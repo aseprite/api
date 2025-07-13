@@ -64,5 +64,6 @@ Classes/objects
   * [Tool](api/tool.md#tool)
   * [TouchEvent](api/touchevent.md#touchevent)
   * [Version](api/version.md#version)
+  * [Uuid](api/uuid.md#uuid)
   * [WebSocket](api/websocket.md#websocket)
   * [Window](api/window.md#window)
