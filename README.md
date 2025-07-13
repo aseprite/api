@@ -109,6 +109,6 @@ Lua libraries
   * [Table Manipulation](https://www.lua.org/manual/5.3/manual.html#6.6)
   * [Mathematical Functions](https://www.lua.org/manual/5.3/manual.html#6.7)
   * [Operating System Facilities](https://www.lua.org/manual/5.3/manual.html#6.9)
-    * Some functions like `os.remove`, `os.rename`, `os.exit`, `os.tmpname` are not available yet
+    * Some functions like `os.exit`, `os.tmpname` are not available yet
     * Other functions like `os.execute` and `io.open` will ask for permissions to the user
   * [The Debug Library](https://www.lua.org/manual/5.3/manual.html#6.10)
