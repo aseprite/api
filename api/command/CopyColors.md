@@ -6,6 +6,4 @@ app.command.CopyColors {
 }
 ```
 
-Copies the range selected colors
-[`app.range.colors`](../range.md#rangecolors) before the given
-`colorIndex`.
+Copies the range selected colors [`app.range.colors`](../range.md#rangecolors) before the given `colorIndex`.

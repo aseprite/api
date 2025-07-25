@@ -2,15 +2,14 @@
 
 ```lua
 app.command.ColorCurve {
-  ui=true,
+  ui=bool,
   channels=FilterChannels...,
   curve={ Point, Point, Point... }
 }
 ```
 
 * `ui`: Shows the dialog on the screen, `true` by default. Set to
-  `false` to apply the color curve filter automatically without asking
-  to the user for the change.
+  `false` to apply the color curve filter automatically without user input.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
   [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).
   By default it is equal to:

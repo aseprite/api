@@ -2,11 +2,11 @@
 
 ```lua
 app.command.ReplaceColor {
-  ui=true,
+  ui=bool,
   channels=FilterChannels...,
   from=Color,
   to=Color,
-  tolerance=0
+  tolerance=int
 }
 ```
 
@@ -14,7 +14,7 @@ app.command.ReplaceColor {
   `false` for automatic replacement without asking to the user for the
   change. When the dialog is displayed to the user,
   `app.command.ReplaceColor()` will return a `true` or `false` value
-  indicating if the replacement was accepeted or cancelled
+  indicating if the replacement was accepted or cancelled
   respectively.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
   [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).

@@ -2,16 +2,14 @@
 
 ```lua
 app.command.BrightnessContrast {
-  ui=true,
+  ui=bool,
   channels=FilterChannels...,
-  brightness=0,
-  contrast=0
+  brightness=int,
+  contrast=int
 }
 ```
 
-* `ui`: Shows the dialog on the screen, `true` by default. Set to
-  `false` for automatic change brightness and/or contrast without
-  asking to the user for the change.
+* `ui`: Shows the brightness dialog, `true` by default. Set to `false` to apply the changes immediately without user input or preview.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
   [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).
   By default it is equal to:

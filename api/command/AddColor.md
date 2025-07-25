@@ -7,10 +7,10 @@ app.command.AddColor {
 }
 ```
 
-Adds a new color into the palette.
+Adds a new color to the palette.
 
 * `source`: Can be `"fg"`, `"bg"`, or `"color"` (default). To add the foreground, background, or a specific color respectively.
-* `color`: A [Color](../color.md#color) instance to add too the palette.
+* `color`: A [Color](../color.md#color) instance to add to the palette.
 
 ## Example
 

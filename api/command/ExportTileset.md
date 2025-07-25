@@ -3,7 +3,7 @@
 ```lua
 app.command.ExportTileset {
   dataFormat=SpriteSheetDataFormat.JSON_ARRAY,
-  fromTilesets=true
+  fromTilesets=bool
 }
 ```
 
@@ -11,4 +11,4 @@ This is similar to
 using [the `-export-tileset` argument from the CLI](https://www.aseprite.org/docs/cli/#export-tileset)
 with [`-format=json-array` option](https://www.aseprite.org/docs/cli/#format).
 
-This command accept the same parameters as [app.command.SaveFileCopyAs](SaveFile.md#savefile).
+This command accepts the same parameters as [app.command.SaveFileCopyAs](SaveFile.md#savefile).

@@ -2,16 +2,16 @@
 
 ```lua
 app.command.NewFile {
-  ui=true,
-  width=0,
-  height=0,
-  colorMode=ColorMode.RGB,
-  fromClipboard=false
+  ui=bool,
+  width=int,
+  height=int,
+  colorMode=ColorMode,
+  fromClipboard=bool
 }
 ```
 
-* `ui`
-* `width`
-* `height`
+* `ui`: Shows the new file dialog, defaults to `true`.
+* `width`: The width of the new sprite, ignored when using `fromClipboard`.
+* `height`: The height of the new sprite, ignored when using `fromClipboard`.
 * `colorMode` ([ColorMode](../colormode.md#colormode))
-* `fromClipboard`
+* `fromClipboard`: Use the current clipboard to create the file.

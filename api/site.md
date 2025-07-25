@@ -2,7 +2,7 @@
 
 This is an object that saves the active state of the editor in a
 specific moment. Which active sprite, layer, frame, cel, image,
-etc. where in a specific moment.
+etc. were in a specific moment.
 
 If you save the object:
 

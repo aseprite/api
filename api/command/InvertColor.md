@@ -2,7 +2,7 @@
 
 ```lua
 app.command.InvertColor {
-  ui=true,
+  ui=bool,
   channels=FilterChannels...
 }
 ```

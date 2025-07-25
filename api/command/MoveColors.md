@@ -6,6 +6,4 @@ app.command.MoveColors {
 }
 ```
 
-Moves the range selected colors
-[`app.range.colors`](../range.md#rangecolors) before the given
-`colorIndex`.
+Moves the range selected colors [`app.range.colors`](../range.md#rangecolors) before the given `colorIndex`.

@@ -2,14 +2,14 @@
 
 ```lua
 app.command.SpriteSize {
-  ui=true,
-  width=100,
-  height=100,
-  scale=1.0,
-  scaleX=1.0,
-  scaleY=1.0,
-  lockRatio=false,
-  method="nearest"
+  ui=bool,
+  width=int,
+  height=int,
+  scale=double,
+  scaleX=double,
+  scaleY=double,
+  lockRatio=bool,
+  method=string
 }
 ```
 
@@ -22,7 +22,7 @@ app.command.SpriteSize {
 * `lockRatio`: Final sprite aspect ratio is locked when it is `true`.`false` by default.
 * `method`: Resize algorithm method to be used. `"nearest"` by default (Nearest Neighbor), alternatives: `"bilinear"` and `"rotSprite"`.
 
-Known issue: On the following code, we have a variable `i` pointing to the `cel.image`. After the `app.command.SpriteSize` execution, `i` doesn't longer points to original image. Finally, `print(i.width)` will fail.
+Known issue: On the following code, we have a variable `i` pointing to the `cel.image`. After the `app.command.SpriteSize` execution, `i` no longer points to the original image. Finally, `print(i.width)` will fail.
 
 ```lua
 local s = Sprite(1, 1)
@@ -34,7 +34,7 @@ app.command.SpriteSize{ ui = false, scaleX = 2 }
 print(i.width) -- it will fail: ...attempt to index a nil value (global 'i')
 ```
 
-So, to make it works, we have to use `cel.image` instead of `i`:
+So, to make it work, we have to use `cel.image` instead of `i`:
 
 ```lua
 local s = Sprite(1, 1)
@@ -44,7 +44,7 @@ app.command.SpriteSize{ ui = false, scaleX = 2 }
 
 print(cel.image.width) -- it will print "2"
 ```
-Another way, using `i`, and get again the `cel.image` after `app.command.SpriteSize`:
+Another way, using `i` is to again get the `cel.image` after `app.command.SpriteSize`:
 
 ```lua
 local s = Sprite(1, 1)

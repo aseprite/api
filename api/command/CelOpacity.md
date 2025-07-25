@@ -2,7 +2,7 @@
 
 ```lua
 app.command.CelOpacity {
-    opacity = 0
+    opacity=int
 }
 ```
 

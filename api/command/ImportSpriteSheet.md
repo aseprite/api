@@ -2,10 +2,10 @@
 
 ```lua
 app.command.ImportSpriteSheet {
-  ui=true,
-  type=SpriteSheetType.ROWS,
+  ui=bool,
+  type=SpriteSheetType.ROWS...,
   frameBounds=Rectangle,
-  padding=Size(0, 0),
-  partialTiles=false
+  padding=Size,
+  partialTiles=bool
 }
 ```

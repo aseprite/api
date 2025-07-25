@@ -2,7 +2,7 @@
 
 ```lua
 app.command.SetInkType {
-  type="simple"
+  type=string
 }
 ```
 

@@ -2,16 +2,16 @@
 
 ```lua
 app.command.SaveFile {
-  ui=true,
-  recent=true,
-  filename="",
-  filenameFormat="",
-  tag="",
+  ui=bool,
+  recent=bool,
+  filename=string,
+  filenameFormat=string,
+  tag=string,
   aniDir=AniDir,
-  slice="",
-  fromFrame=frame,
-  toFrame=frame,
-  ignoreEmpty=false,
+  slice=string,
+  fromFrame=int,
+  toFrame=int,
+  ignoreEmpty=bool,
   bounds=Rectangle,
 }
 app.command.SaveFileAs { ... }

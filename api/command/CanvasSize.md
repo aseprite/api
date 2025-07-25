@@ -2,13 +2,13 @@
 
 ```lua
 app.command.CanvasSize {
-  ui=true,
-  left=0,
-  top=0,
-  right=0,
-  bottom=0,
+  ui=bool,
+  left=int,
+  top=int,
+  right=int,
+  bottom=int,
   bounds=Rectangle,
-  trimOutside=false
+  trimOutside=bool
 }
 ```
 

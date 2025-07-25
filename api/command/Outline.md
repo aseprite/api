@@ -2,13 +2,13 @@
 
 ```lua
 app.command.Outline {
-  ui=true,
+  ui=bool,
   channels=FilterChannels...,
-  place='outside',
-  matrix='circle',
-  color=app.fgColor,
-  bgColor=Color(),
-  tiledMode='none'
+  place=string,
+  matrix=string,
+  color=Color,
+  bgColor=Color,
+  tiledMode=string
 }
 ```
 

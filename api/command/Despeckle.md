@@ -2,11 +2,11 @@
 
 ```lua
 app.command.Despeckle {
-  ui=true,
-  channels=...,
-  width=3,
-  height=3,
-  tiledMode=none,
+  ui=bool,
+  channels=FilterChannels...,
+  width=int,
+  height=int,
+  tiledMode=string,
 }
 ```
 
@@ -20,6 +20,6 @@ app.command.Despeckle {
   [FilterChannels.GRAY](../filterchannels.md#filterchannelsgray).
 * `width`: Width of the convolution matrix to calculate the median. `3` by default.
 * `height`: Height of the convolution matrix to calculate the median. `3` by default.
-* `tiledMode`: `'none'`, `'x'`, `'y'`, `'both'`. By default it's
-  `'none'` if there is no UI, or it's equal to `app.preferences.document(app.sprite).tiled.mode`
+* `tiledMode`: `"none"`, `"x"`, `"y"`, `"both"`. By default it's
+  `"none"` if there is no UI, or it's equal to `app.preferences.document(app.sprite).tiled.mode`
   when `ui` is `true`.
