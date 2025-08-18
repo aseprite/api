@@ -88,6 +88,12 @@ Gets or sets the active sprite selection. This property is an instance
 of the [Selection class](selection.md#selection) to manipulate the set of
 selected pixels in the canvas.
 
+Keep in mind that `local selection = sprite.selection` will be a reference to the Sprite's selection, and will update when the Sprite's selection is changed or removed. To clone the selection, you can do the following instead:
+```lua
+local selection = Selection()
+selection:add(sprite.selection)
+```
+
 ## Sprite.filename
 
 ```lua
