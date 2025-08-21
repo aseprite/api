@@ -155,6 +155,18 @@ if result == 1 then
 end
 ```
 
+## app.tip()
+
+```lua
+app.tip "Text"
+app.tip("Text")
+app.tip("Text", 3.5)
+app.tip { text="Text", duration=5 }
+```
+
+Shows a tooltip message in the status bar. If the duration (in seconds) is not specified, it will default to `2`.
+The duration can be between `0.5` to `30` seconds.
+
 ## app.open()
 
 ```lua
