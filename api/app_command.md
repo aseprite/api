@@ -137,7 +137,7 @@ Executes the given command named `CommandName` with the specified parameters.
 * app.command.NewSpriteFromSelection
   * Creates a new sprite from the current selection mask
 * app.command.OpenBrowser <sup>[[UI]](#requiresUI "Requires UI")</sup>
-  * Open the given `filename` in the internal text browser 
+  * Open the given `filename` in the internal text browser
 * [app.command.OpenFile](command/OpenFile.md#openfile)
 * app.command.OpenGroup
   * Opens the active layer group
@@ -197,7 +197,7 @@ Executes the given command named `CommandName` with the specified parameters.
 * app.command.SelectionAsGrid
   * Set the grid bounds to the current selection mask
 * app.command.SetColorSelector <sup>[[UI]](#requiresUI "Requires UI")</sup>
-  * Changes the color selector to the `type`: "`spectrum`", `"tint-shade-tone"`, `"rgb-wheel"`, `"ryb-wheel"` or `"normal-map-wheel"`
+  * Changes the color selector to the `type`: `"spectrum"`, `"tint-shade-tone"`, `"rgb-wheel"`, `"ryb-wheel"` or `"normal-map-wheel"`
 * [app.command.SetInkType](command/SetInkType.md) <sup>[[UI]](#requiresUI "Requires UI")</sup>
 * [app.command.SetLoopSection](command/SetLoopSection.md "Sets the looping property of the given frame range")
 * app.command.SetPaletteEntrySize <sup>[[UI]](#requiresUI "Requires UI")</sup>
@@ -260,7 +260,7 @@ Executes the given command named `CommandName` with the specified parameters.
 
 ## Error Handling
 
-If the command fails to run or is disabled, it will return `false`. 
+If the command fails to run or is disabled, it will return `false`.
 To check if a command is enabled and can be run, you can use `app.command.[COMMAND NAME].enabled` before calling it.
 
 ## Source

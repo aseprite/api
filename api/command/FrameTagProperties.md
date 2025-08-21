@@ -1,7 +1,7 @@
-# FrameProperties
+# FrameTagProperties
 
 ```lua
-app.command.FrameProperties {
+app.command.FrameTagProperties {
   name=string
 }
 ```
