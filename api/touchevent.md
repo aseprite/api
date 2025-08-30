@@ -16,7 +16,7 @@ coordinates, where (0,0) is the top-left corner of the canvas widget.
 
 ## TouchEvent.y
 
-See [TouchEvent.x](#toucheventx)
+See [TouchEvent.x](#toucheventx).
 
 ## TouchEvent.magnification
 

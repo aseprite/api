@@ -501,10 +501,9 @@ experience with the user:
   If a canvas widget handles these events, it will receive the
   keyboard focus when it's clicked. The `ev` event is a
   [KeyEvent](keyevent.md).
-* `onmousemove`/`onmousedown`/`onmouseup`/`onwheel`: Mouse events when
-  the mouse is moved over the canvas, a button is pressed
-  (`onmousedown`), a button is released (`onmouseup`), or the mouse
-  wheel moved (`onwheel`). The `ev` event is a
+* `onmousemove`/`onmousedown`/`onmouseup`/`onwheel`/`ondblclick`: Mouse events when
+  the mouse is moved over the canvas, a mouse button is pressed
+  (`onmousedown`), a mouse button double clicked (`ondblclick`) a button is released (`onmouseup`), or the mouse wheel moved (`onwheel`). The `ev` event is a
   [MouseEvent](mouseevent.md).
 * `ontouchmagnify`: Touch event generated when a pinch gesture is done
   in the trackpad to zoom in or out. The `ev` event is a
