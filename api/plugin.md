@@ -96,6 +96,10 @@ function init(plugin)
     onenabled=function()
       ...
       return true | false
+    end,
+    onchecked=function()
+      ...
+      return true | false
     end
   }
 end
@@ -110,8 +114,9 @@ inside the `<menus>` element.
   (clicked or an associated keyboard shortcut pressed).
 * `onenabled`: Optional function to know if the command should be
   available (enabled or disabled). It should return true if the
-  command can be executed right now. If this function is not specified
-  the command will be always available to be executed by the user.
+  command can be executed right now. If this function is not specified,
+  the command will always be available to be executed by the user.
+* `onchecked`: Optional function to know if the command should be checked or not. The function is called every time the command is displayed in a menu (e.g: a dropdown is opened). It should return true if it is checked. If this function is not specified, the command will be unchecked. 
 
 ## Plugin:newMenuGroup()
 
