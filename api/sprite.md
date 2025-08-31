@@ -105,6 +105,14 @@ Gets or sets the name of the file from where this sprite was loaded or
 saved. Or an empty string if this is a new sprite without an
 associated file.
 
+## Sprite.id
+
+```lua
+local id = sprite.id
+```
+
+Returns the id of this sprite, as an integer. 
+
 ## Sprite.isModified
 
 ```lua
@@ -114,7 +122,20 @@ local modified = sprite.isModified
 Returns true if the sprite is modified compared to the latest saved
 state on disk.
 
+## Sprite.colorSpace
+
+```lua
+local colorspace = sprite.colorSpace
+sprite.colorSpace = colorspace
+```
+
+Gets or sets the [color space](colorspace.md#colorspace) of this sprite. Setting works the same as using [Sprite:assignColorSpace()](sprite.md#spriteassigncolorspace).
+
 ## Sprite.colorMode
+
+```lua
+local colormode = sprite.colormode
+```
 
 Returns the [color mode](colormode.md#colormode) of this sprite.
 
@@ -124,7 +145,23 @@ Returns the [color mode](colormode.md#colormode) of this sprite.
 local spec = sprite.spec
 ```
 
-The [specification](imagespec.md#imagespec) for image in this sprite.
+Returns the [specification](imagespec.md#imagespec) for image in this sprite.
+
+## Sprite.undoHistory.undoSteps
+
+```lua
+local undosteps = sprite.undoHistory.undoSteps
+```
+
+Returns the amount of undo steps (steps before the current step), as an integer.
+
+## Sprite.undoHistory.redoSteps
+
+```lua
+local redosteps = sprite.undoHistory.redoSteps
+```
+
+Returns the amount of redo steps (steps after the current step), as an integer.
 
 ## Sprite.frames
 
@@ -326,7 +363,7 @@ sprite:setPalette(palette)
 
 Changes the sprite [palette](palette.md#palette).
 
-## Sprite:assignColorSpace
+## Sprite:assignColorSpace()
 
 ```lua
 local colorSpace = ColorSpace{ sRGB=true }
@@ -336,7 +373,7 @@ sprite:assignColorSpace(colorSpace)
 Assign a new [color space](colorspace.md#colorspace) to the sprite without
 modifying the sprite pixels.
 
-## Sprite:convertColorSpace
+## Sprite:convertColorSpace()
 
 ```lua
 local colorSpace = ColorSpace{ sRGB=true }
