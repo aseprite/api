@@ -42,6 +42,7 @@ Dialog:widget_type{
   focus=boolean,
   enabled=boolean,
   visible=boolean,
+  resizeable=boolean,
   hexpand=boolean,
   vexpand=boolean,
 }
@@ -54,6 +55,7 @@ Where:
   [entry](#dialogentry) when the dialog appears on the screen for the
   first time)
 * `enabled`: Enable or disable the widget by default
+* `resizeable`: Enable or disable widget resizing
 * `visible`: Make the widget visible or hidden by default
 * `hexpand`: Expand the widget horizontally (useful to make a [canvas](#dialogcanvas) with fixed size if we specify `hexpand=false`)
 * `vexpand`: Expand the widget vertically (useful to make a [canvas](#dialogcanvas) with fixed size if we specify `vexpand=false`)
@@ -514,6 +516,12 @@ received in the canvas's onpaint event without worrying about the current UI sca
 setting. For instance, you can draw a 20[px]x30[px] rectangle in the canvas's GraphicsContext and it
 will be displayed the same at any UI scale. This property is enabled by default if omitted, so if
 you don't need it you must explicitly set it to false.
+
+```lua
+dlg:modify{ id=canvasId, mouseCursor=newMouseCursor }
+```
+
+Additionally, when using `Dialog:modify()`, the canvas `mouseCursor` property can be set to a [MouseCursor](mousecursor.md) value, changing the mouse cursor type.
 
 ## Dialog:repaint()
 
