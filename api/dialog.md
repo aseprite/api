@@ -42,7 +42,6 @@ Dialog:widget_type{
   focus=boolean,
   enabled=boolean,
   visible=boolean,
-  resizeable=boolean,
   hexpand=boolean,
   vexpand=boolean,
 }
@@ -55,7 +54,6 @@ Where:
   [entry](#dialogentry) when the dialog appears on the screen for the
   first time)
 * `enabled`: Enable or disable the widget by default
-* `resizeable`: Enable or disable widget resizing
 * `visible`: Make the widget visible or hidden by default
 * `hexpand`: Expand the widget horizontally (useful to make a [canvas](#dialogcanvas) with fixed size if we specify `hexpand=false`)
 * `vexpand`: Expand the widget vertically (useful to make a [canvas](#dialogcanvas) with fixed size if we specify `vexpand=false`)
@@ -67,6 +65,7 @@ local dlg = Dialog()
 local dlg = Dialog(string)
 local dlg = Dialog{ title=string,
                     notitlebar=false,
+                    resizeable=false,
                     parent=otherDialog,
                     onclose=function }
 ```
@@ -78,12 +77,15 @@ bar of the dialog. The constructor that receives a table can receive a
 special callback function (`onclose`) that is called when the dialog
 is closed.
 
-The `{ parent=otherDialog }` can be used to display an alert/subdialog
+`{ parent=otherDialog }` can be used to display an alert/subdialog
 inside a parent dialog (the parent dialog is blocked until the
 child dialog is closed).
 
-The `{ notitlebar=true }` can be used to display a dialog without any
+`{ notitlebar=true }` can be used to display a dialog without any
 kind of title bar (the dialog must be closed with a button inside it).
+
+`{ resizeable=false }` disables the user from resizing the dialog.
+
 
 Returns `nil` if there is no UI available, i.e. [app.isUIAvailable is `false`](app.md#appisuiavailable).
 

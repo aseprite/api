@@ -580,13 +580,12 @@ events that don't support it.
 
 Available events for a `Sprite`:
 
-* `'change'`: When sprite content changed because we perform some
-  action on it (also called when we undo/redo those actions). Since
-  Aseprite v1.2.41, you can access `ev.fromUndo` property which is
-  `true` if the change came from a undo/redo/undo history event (and
-  not from a direct user change in the sprite).
-* `'filenamechange'`: When the filename associated to a sprite
-  changes.
+* `'change'`: When the sprite content changes because an action is performed on it (also called when those actions are undone/redone). Since Aseprite v1.2.41, you can access `ev.fromUndo` property which is `true` if the change came from a undo/redo/undo history event (and not from a direct user change in the sprite).
+* `'filenamechange'`: When the filename associated to a sprite changes.
+* `'layerblendmode'`: The blend mode of a layer is changed.
+* `'layername'`: The name of a layer is changed.
+* `'layeropacity'`: The opacity of a layer is changed.
+* `'layervisibility'`: The visibility of a layer is changed.
 
 ## Sprite.tileManagementPlugin
 
