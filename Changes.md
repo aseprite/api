@@ -24,6 +24,24 @@ else
 end
 ```
 
+## v1.3.15
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `35`
+* Added [`sprite.undoHistory`](api/sprite.md#spriteundoHistoryundoSteps) [#5205](https://github.com/aseprite/aseprite/issues/5205)
+* Added [`resizeable`](api/dialog.md#dialog) property to `Dialog` constructor [#5177](https://github.com/aseprite/aseprite/issues/5177)
+* Added [`onchecked`](api/plugin.md#pluginnewcommand) parameter to Plugin:newCommand() [#5198](https://github.com/aseprite/aseprite/issues/5198)
+* Added missing [`FlipType.DIAGONAL`](api/fliptype.md#fliptypediagonal) [#5359](https://github.com/aseprite/aseprite/issues/5359)
+* Added [`app.tip`](api/app.md#apptip) [#5316](https://github.com/aseprite/aseprite/issues/5316) [#5348](https://github.com/aseprite/aseprite/issues/5348)
+* Added `autofit` and `sizeHint` properties to Dialog [#5176](https://github.com/aseprite/aseprite/issues/5176)
+* Refresh timeline when changing layer collapsed status [#5366](https://github.com/aseprite/aseprite/issues/5366)
+* Process mnemonics consistently for plugins [#5250](https://github.com/aseprite/aseprite/issues/5250)
+* Escape characters in the console that we can't show properly [#5324](https://github.com/aseprite/aseprite/issues/5324)
+
+## v1.3.14.3
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `34`
+* Added [`events`](api/sprite#spriteevents) to listen to `blendMode`, `name`, `opacity` and `visibility` Sprite layer changes [#5164](https://github.com/aseprite/aseprite/issues/5164)
+
 ## v1.3.14
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `33`
@@ -385,4 +403,4 @@ end
 ## v1.2.10-beta2
 
 * [`app`](api/app.md#app)
-  * `app.apiVersion` didn't exist (is `nil`)
+  * `app.apiVersion` didn't exist (is `nil`)  

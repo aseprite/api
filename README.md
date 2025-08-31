@@ -55,6 +55,7 @@ Constants
   * [BrushType](api/brushtype.md#brushtype)
   * [ColorMode](api/colormode.md#colormode)
   * [FilterChannels](api/filterchannels.md#filterchannel)
+  * [FlipType](api/fliptype.md#fliptype)
   * [Ink](api/ink.md#ink)
   * [MouseButton](api/mousebutton.md#mousebutton)
   * [MouseCursor](api/mousecursor.md#mousecursor)
