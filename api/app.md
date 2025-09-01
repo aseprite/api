@@ -228,6 +228,10 @@ app.transaction(
   end)
 ```
 
+## app.clipboard
+
+Check the [app.clipboard](app_clipboard.md#appclipboard) documentation.
+
 ## app.command
 
 Check the [app.command](app_command.md#appcommand) documentation.

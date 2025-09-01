@@ -65,6 +65,7 @@ local dlg = Dialog()
 local dlg = Dialog(string)
 local dlg = Dialog{ title=string,
                     notitlebar=false,
+                    resizeable=false,
                     parent=otherDialog,
                     onclose=function }
 ```
@@ -76,12 +77,15 @@ bar of the dialog. The constructor that receives a table can receive a
 special callback function (`onclose`) that is called when the dialog
 is closed.
 
-The `{ parent=otherDialog }` can be used to display an alert/subdialog
+`{ parent=otherDialog }` can be used to display an alert/subdialog
 inside a parent dialog (the parent dialog is blocked until the
 child dialog is closed).
 
-The `{ notitlebar=true }` can be used to display a dialog without any
+`{ notitlebar=true }` can be used to display a dialog without any
 kind of title bar (the dialog must be closed with a button inside it).
+
+`{ resizeable=false }` disables the user from resizing the dialog.
+
 
 Returns `nil` if there is no UI available, i.e. [app.isUIAvailable is `false`](app.md#appisuiavailable).
 
@@ -501,10 +505,9 @@ experience with the user:
   If a canvas widget handles these events, it will receive the
   keyboard focus when it's clicked. The `ev` event is a
   [KeyEvent](keyevent.md).
-* `onmousemove`/`onmousedown`/`onmouseup`/`onwheel`: Mouse events when
-  the mouse is moved over the canvas, a button is pressed
-  (`onmousedown`), a button is released (`onmouseup`), or the mouse
-  wheel moved (`onwheel`). The `ev` event is a
+* `onmousemove`/`onmousedown`/`onmouseup`/`onwheel`/`ondblclick`: Mouse events when
+  the mouse is moved over the canvas, a mouse button is pressed
+  (`onmousedown`), a mouse button double clicked (`ondblclick`) a button is released (`onmouseup`), or the mouse wheel moved (`onwheel`). The `ev` event is a
   [MouseEvent](mouseevent.md).
 * `ontouchmagnify`: Touch event generated when a pinch gesture is done
   in the trackpad to zoom in or out. The `ev` event is a
@@ -515,6 +518,12 @@ received in the canvas's onpaint event without worrying about the current UI sca
 setting. For instance, you can draw a 20[px]x30[px] rectangle in the canvas's GraphicsContext and it
 will be displayed the same at any UI scale. This property is enabled by default if omitted, so if
 you don't need it you must explicitly set it to false.
+
+```lua
+dlg:modify{ id=canvasId, mouseCursor=newMouseCursor }
+```
+
+Additionally, when using `Dialog:modify()`, the canvas `mouseCursor` property can be set to a [MouseCursor](mousecursor.md) value, changing the mouse cursor type.
 
 ## Dialog:repaint()
 

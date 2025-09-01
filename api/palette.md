@@ -61,10 +61,10 @@ The `color` can be a [`Color`](color.md#color) object or an [integer pixel value
 
 ## Palette.frame
 
-At the moment it always return the first [frame](frame.md#frame), but in a
+At the moment it will always return the first [frame](frame.md#frame), but in the
 near future Aseprite will support palette changes over time (in
-different frames), so this field should be the frame number where this
-palette is displayed for first time in the [sprite](sprite.md#sprite).
+different frames), so this field should be the frame number where the
+palette is displayed for the first time in the [sprite](sprite.md#sprite).
 
 ## Palette:saveAs()
 
