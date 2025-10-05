@@ -453,29 +453,29 @@ Marks the end of both the last tab and the group of tabs to which it belongs.
 ```lua
 local dlg = Dialog()
 dlg:file{ id=string,
-          label=string,
           title=string,
+          filename=string,  
+          basepath=string,        
           open=boolean,
           save=boolean,
-          filename=string | { string1,string2,string3... },
+          entry=boolean,
           filetypes={ string1,string2,string3... },
           onchange=function }
 ```
 
 Creates a text entry field + a button to select one file to open or save, possibilities:
 
-* `open=true`: shows a dialog to open an existent file (this is the default mode).
-* `save=true`: shows a dialog to select an existent file to overwrite or a new file to save.
+* `open`: When true, shows a dialog to open an existing file (set to true by default).
+* `save`: When true, shows a dialog to select an existing file to overwrite or a new file to save.
 
-Arguments (table fields):
+Other arguments:
 
-* `load`: True if you want to show a dialog to the user to select an existent file to load/read.
-* `save`: True if you want to show a dialog to the user to select a new file to save/write content.
 * `filename`: String of the selected filename to open or save.
+* `title`: The title of the file select menu. 
 * `filetypes`: Array of possible file types/extensions that the user can select.
 * `entry`: Show an entry field to edit the filename manually (false by default).
-* `focus`: Focus this field by default.
-* `onchange`: Function to be called when the filename is changed.
+* `basepath`: The base path of the directory. Use [app.fs.joinPath()](app_fs.md#appfsjoinpath) for paths.
+* `onchange`: Function to be called when the filename/path is changed.
 
 ## Dialog:canvas()
 
