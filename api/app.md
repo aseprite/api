@@ -130,6 +130,77 @@ This is a table with parameters specified as
 [`gui.xml`](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
 file.
 
+## app.clipboard
+
+Check the [app.clipboard](app_clipboard.md#appclipboard) documentation.
+
+## app.command
+
+Check the [app.command](app_command.md#appcommand) documentation.
+
+## app.preferences
+
+Check the [app.preferences](app_preferences.md#apppreferences) documentation.
+
+## app.fs
+
+Check the [app.fs](app_fs.md#appfs) documentation.
+
+## app.theme
+
+Check the [app.theme](app_theme.md#apptheme) documentation.
+
+## app.os
+
+Check the [app.os](app_os.md#appos) documentation.
+
+## app.uiScale
+
+```
+local scale = app.uiScale
+```
+
+Returns the [UI Elements Scaling](https://www.aseprite.org/docs/preferences/)
+value specified in *Edit > Preferences* as an scale factor (1 for 100%, 2 for 200%, etc.)
+
+## app.events
+
+Returns the [`Events`](events.md#events) object to associate functions
+that can act like listeners of specific `app` events. E.g.
+
+```lua
+app.events:on('sitechange',
+  function()
+    print('Now we are located in other sprite, layer, or frame')
+  end)
+```
+
+Available events for `app`:
+
+* `'sitechange'`: When the user selects other sprite, layer, or frame.
+* `'beforesitechange'`: Before the user switches to other sprite, layer, or frame.
+* `'fgcolorchange'`: When the [Foreground color](https://www.aseprite.org/docs/color-bar/#foreground-color) in the color bar is changed.
+* `'bgcolorchange'`: When the [Background color](https://www.aseprite.org/docs/color-bar/#background-color) in the color bar is changed.
+* `'beforecommand'`: Before executing any command in the program.
+* `'aftercommand'`: After executing any command in the program.
+
+The `'beforecommand'` and `'aftercommand'` events receive an `ev`
+argument with the name of the command (`ev.name`) and the params
+(`ev.params`). `'beforecommand'` includes a `ev.stopPropagation()`
+function to cancel the event, e.g. in case that you've handled the
+event in a custom way.
+
+E.g. This code catches the *Edit > Cut* command and convert it to a *Copy*:
+```lua
+app.events:on('beforecommand',
+  function(ev)
+    if ev.name == "Cut" then
+      app.command.Copy()   -- call Copy command
+      ev.stopPropagation() -- and cancel the Cut
+    end
+  end)
+```
+
 ## app.alert()
 
 ```lua
@@ -228,39 +299,6 @@ app.transaction(
   end)
 ```
 
-## app.clipboard
-
-Check the [app.clipboard](app_clipboard.md#appclipboard) documentation.
-
-## app.command
-
-Check the [app.command](app_command.md#appcommand) documentation.
-
-## app.preferences
-
-Check the [app.preferences](app_preferences.md#apppreferences) documentation.
-
-## app.fs
-
-Check the [app.fs](app_fs.md#appfs) documentation.
-
-## app.theme
-
-Check the [app.theme](app_theme.md#apptheme) documentation.
-
-## app.os
-
-Check the [app.os](app_os.md#appos) documentation.
-
-## app.uiScale
-
-```
-local scale = app.uiScale
-```
-
-Returns the [UI Elements Scaling](https://www.aseprite.org/docs/preferences/)
-value specified in *Edit > Preferences* as an scale factor (1 for 100%, 2 for 200%, etc.)
-
 ## app.refresh()
 
 ```lua
@@ -337,44 +375,6 @@ Simulates an user stroke in the canvas using the given tool.
   * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.cel](app.md#appcel))
   * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.layer](app.md#applayer))
   * `frame`: The [frame](frame.md#frame) where to draw (by default [app.frame](app.md#appframe))
-
-## app.events
-
-Returns the [`Events`](events.md#events) object to associate functions
-that can act like listeners of specific `app` events. E.g.
-
-```lua
-app.events:on('sitechange',
-  function()
-    print('Now we are located in other sprite, layer, or frame')
-  end)
-```
-
-Available events for `app`:
-
-* `'sitechange'`: When the user selects other sprite, layer, or frame.
-* `'beforesitechange'`: Before the user switches to other sprite, layer, or frame.
-* `'fgcolorchange'`: When the [Foreground color](https://www.aseprite.org/docs/color-bar/#foreground-color) in the color bar is changed.
-* `'bgcolorchange'`: When the [Background color](https://www.aseprite.org/docs/color-bar/#background-color) in the color bar is changed.
-* `'beforecommand'`: Before executing any command in the program.
-* `'aftercommand'`: After executing any command in the program.
-
-The `'beforecommand'` and `'aftercommand'` events receive an `ev`
-argument with the name of the command (`ev.name`) and the params
-(`ev.params`). `'beforecommand'` includes a `ev.stopPropagation()`
-function to cancel the event, e.g. in case that you've handled the
-event in a custom way.
-
-E.g. This code catches the *Edit > Cut* command and convert it to a *Copy*:
-```lua
-app.events:on('beforecommand',
-  function(ev)
-    if ev.name == "Cut" then
-      app.command.Copy()   -- call Copy command
-      ev.stopPropagation() -- and cancel the Cut
-    end
-  end)
-```
 
 # Deprecated Names
 
