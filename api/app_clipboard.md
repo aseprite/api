@@ -20,7 +20,9 @@ Gets or sets the clipboard text. Returns `nil` if there is no text.
 local image = app.clipboard.image
 ```
 
-Gets or sets the clipboard [image](image.md#image). Returns `nil` if there is no image.
+Gets or sets the clipboard [image](image.md#image). Returns `nil` if there is no image. It is recommended to set/get the value once when needed, as the operation may not always be available immediately (in some instances it may take a few milliseconds, see [#5341](https://github.com/aseprite/aseprite/issues/5341#issuecomment-3176395116)).
+
+Additionally, when calling a method on an image from the clipboard image, the image should be saved to a variable first, instead of calling the method directly on the property (this will not work: `app.clipboard.image:clear()`, see [#5341](https://github.com/aseprite/aseprite/issues/5341#issuecomment-3176395116)) 
 
 ## app.clipboard.content
 
