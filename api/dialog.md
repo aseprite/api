@@ -64,6 +64,7 @@ Where:
 local dlg = Dialog()
 local dlg = Dialog(string)
 local dlg = Dialog{ title=string,
+                    autofit=align,
                     notitlebar=false,
                     resizeable=false,
                     parent=otherDialog,
@@ -86,8 +87,62 @@ kind of title bar (the dialog must be closed with a button inside it).
 
 `{ resizeable=false }` disables the user from resizing the dialog.
 
+`{ autofit=align }` sets how the dialog will align when shown. See [Dialog.autofit](#dialogautofit).
+
 
 Returns `nil` if there is no UI available, i.e. [app.isUIAvailable is `false`](app.md#appisuiavailable).
+
+## Dialog.data
+
+```lua
+local dlg = Dialog()
+local data = dlg.data
+dlg.data = data
+```
+
+Gets/sets a table with one field for each widget with a given `id`.
+For each different kind of widget the field is of a different type:
+
+* [button](#dialogbutton)/[check](#dialogcheck)/[radio](#dialogradio):
+  The field is a boolean (true or
+  false) if the button is selected or was used to close the dialog.
+* [entry](#dialogentry)/[label](#dialoglabel): A string of text.
+* [slider](#dialogslider): An integer.
+* [number](#dialognumber): An intenger or a
+  number depending on the number of decimals of the number field.
+* [combobox](#dialogcombobox): A string with the
+  selected item.
+* [color](#dialogcolor): A [Color](color.md#color).
+* [shades](#dialogshades): A table with an array of [Color](color.md#color)s when `mode="sort"`
+
+## Dialog.bounds
+
+```lua
+local dlg = Dialog()
+local bounds = dlg.bounds
+dlg.bounds = Rectangle(x, y, bounds.width, bounds.height)
+```
+
+Gets or sets the position and size (a [rectangle](rectangle.md#rectangle)) of
+the dialog. This can be useful to align several dialog that must be
+shown in the same *xy*-position.
+
+## Dialog.autofit
+
+```lua
+local autofit = dlg.autofit
+dlg.autofit = autofit
+```
+
+Gets or sets the dialog autofit, as an [Align](align.md#align) object. The setting will only visually take effect on the dialog after a [`Dialog:modify()`](#dialogmodify). When set, the dialog window will resize itself, anchoring at the specified value (eg. when autofitting with `Align.LEFT | Align.TOP`, the dialog bounds will shrink to the minimum size anchored at the top left of the dialog). 
+
+## Dialog.sizeHint
+
+```lua
+local sizeHint = dlg.sizeHint
+```
+
+Gets the minimum size (without cutoff) of the dialog window, as a [Size](size.md#Size). 
 
 ## Dialog:button()
 
@@ -170,41 +225,6 @@ Creates a combo box/drop-down list.
 * `options`: Indicates a list of available options in the combobox.
 * `option`: Indicates the default selected option in the combobox (one of the `options`).
 
-## Dialog.data
-
-```lua
-local dlg = Dialog()
-local data = dlg.data
-dlg.data = data
-```
-
-Gets/sets a table with one field for each widget with a given `id`.
-For each different kind of widget the field is of a different type:
-
-* [button](#dialogbutton)/[check](#dialogcheck)/[radio](#dialogradio):
-  The field is a boolean (true or
-  false) if the button is selected or was used to close the dialog.
-* [entry](#dialogentry)/[label](#dialoglabel): A string of text.
-* [slider](#dialogslider): An integer.
-* [number](#dialognumber): An intenger or a
-  number depending on the number of decimals of the number field.
-* [combobox](#dialogcombobox): A string with the
-  selected item.
-* [color](#dialogcolor): A [Color](color.md#color).
-* [shades](#dialogshades): A table with an array of [Color](color.md#color)s when `mode="sort"`
-
-## Dialog.bounds
-
-```lua
-local dlg = Dialog()
-local bounds = dlg.bounds
-dlg.bounds = Rectangle(x, y, bounds.width, bounds.height)
-```
-
-Gets or sets the position and size (a [rectangle](rectangle.md#rectangle)) of
-the dialog. This might be useful to align several dialog that must be
-shown in the same *xy*-position.
-
 ## Dialog:entry()
 
 ```lua
@@ -252,7 +272,7 @@ local dlg = Dialog()
 dlg:modify{ title = "New Dialog Title" }
 ```
 
-Using the `dialog:modify` with a parameter `title` changes the dialog title.
+Using the `dialog:modify` with a parameter `title` changes the dialog title. 
 
 ## Dialog:newrow()
 

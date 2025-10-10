@@ -8,6 +8,8 @@ element in this enum might vary in the future.
 E.g.
 
 ```lua
+local left = Align.LEFT
+local top = Align.TOP
 local leftBottom = Align.LEFT | Align.BOTTOM
 local rightTop = Align.RIGHT | Align.TOP
 ```
