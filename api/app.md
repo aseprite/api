@@ -333,48 +333,57 @@ Redoes the latest undone operation in the
 
 ```lua
 app.useTool{
- tool=string,
- color=Color,
- bgColor=Color,
- brush=Brush,
- points={ Point, Point, .... },
- cel=Cel,
- layer=Layer,
- frame=Frame,
- ink=Ink,
- button=MouseButton.LEFT | MouseButton.RIGHT,
- opacity=integer,
- contiguous=false | true,
- tolerance=integer,
- freehandAlgorithm=0 | 1,
- selection=SelectionMode.REPLACE | SelectionMode.ADD | SelectionMode.SUBTRACT | SelectionMode.INTERSECT,
- tilemapMode=TilemapMode.PIXELS | TilemapMode.TILES,
- tilesetMode=TilesetMode.MANUAL | TilesetMode.AUTO | TilesetMode.STACK,
+  tool=string | Tool,
+  color=Color,
+  bgColor=Color,
+  brush=Brush,
+  points={ Point, Point, ... },
+  cel=Cel,
+  layer=Layer,
+  frame=Frame,
+  ink=Ink,
+  button=MouseButton.LEFT | MouseButton.RIGHT,
+  opacity=integer,
+  contiguous=boolean,
+  tolerance=integer,
+  freehandAlgorithm=0 | 1,
+  selection=SelectionMode.REPLACE | SelectionMode.ADD | SelectionMode.SUBTRACT | SelectionMode.INTERSECT,
+  tilemapMode=TilemapMode.PIXELS | TilemapMode.TILES,
+  tilesetMode=TilesetMode.MANUAL | TilesetMode.AUTO | TilesetMode.STACK,
 }
 ```
 
 Simulates an user stroke in the canvas using the given tool.
 
-* `tool`: A string with a well known tool ID (`rectangular_marquee`,
+* `tool`: The tool to use. Can either be a [Tool](tool.md#tool) object or a string tool ID (`rectangular_marquee`,
   `elliptical_marquee`, `lasso`, `polygonal_lasso`, `magic_wand`,
   `pencil`, `spray`, `eraser`, `eyedropper`, `zoom`, `hand`, `move`,
   `slice`, `paint_bucket`, `gradient`, `line`, `curve`, `rectangle`,
   `filled_rectangle`, `ellipse`, `filled_ellipse`, `contour`,
-  `polygon`, `blur`, `jumble`) or a [tool](tool.md#tool) object
-* `color`: A [color](color.md#color) object to draw with the given tool
-* `brush`: A [brush](brush.md#brush) object to draw the points
-* `points`: An array of [points](point.md#point) in the sprite canvas which
-  simulate the position of where the user put the mouse to draw with
+  `polygon`, `blur`, `jumble`). Defaults to [app.tool](#apptool).
+* `color`: The color to draw with (foreground color), as a [Color](color.md#color) object. Defaults to [app.fgColor](#appfgcolor).
+* `bgColor`: The background color to draw with, as a [Color](color.md#color) object. Defaults to [app.bgColor](#appbgcolor). 
+* `brush`: A [Brush](brush.md#brush) object for the tool to draw with. Defaults to the active brush.
+* `points`: An array of [points](point.md#point) on the sprite canvas which
+  simulate the positions where a user would put their mouse to draw with
   the given tool.
 * `selection`: What to do with the selection, only for selection-like
   tools (`rectangular_marquee`, `magic_wand`, etc.). The default value
   when the [UI is enabled](#appisuiavailable) will be
   `app.preferences.selection.mode`, in CLI mode it's
   `SelectionMode.REPLACE`.
-* And we can specify the `cel` or `layer`/`frame` where to draw:
-  * `cel`: The specific [cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.cel](app.md#appcel))
-  * `layer`: The [layer](layer.md#layer) where we want to use the tool/draw with the tool (by default [app.layer](app.md#applayer))
-  * `frame`: The [frame](frame.md#frame) where to draw (by default [app.frame](app.md#appframe))
+* The draw location (`cel` or `layer`/`frame`) can be specified:
+  * `cel`: The specific [Cel](cel.md#cel) where we want to use the tool/draw with the tool (by default [app.cel](#appcel)).
+  * `layer`: The [Layer](layer.md#layer) to use the tool at (by default [app.layer](#applayer)).
+  * `frame`: The [Frame](frame.md#frame) to use the tool at (by default [app.frame](#appframe)).
+* `ink`: The [Ink](ink.md#ink) type for the tool to use.
+* `button`: The [MouseButton](mousebutton.md#mousebutton) to use, can either be `MouseButton.LEFT` or `MouseButton.RIGHT`. Defaults to `MouseButton.LEFT`.
+* `opacity`: The opacity of the tool stroke, as an integer between `0` and `255`. Defaults to `255`.
+* `tolerance`: The tolerance of the tool fill, as an integer between `0` and `255`. Defaults to `0`.
+* `contiguous`: Contiguous mode toggle. Defaults to `true`.
+* `freehandAlgorithm`: Changes the freehand algorithm. Can either be `0` (regular mode) or `1` (pixel-perfect mode). Defaults to `0`.
+* `tilemapMode`: The [TilemapMode](tilemapmode.md#tilemapmode) of the tool. Defaults to `TilemapMode.PIXELS`.
+* `tilesetMode`: The [TilesetMode](tilemapmode.md#tilemapmode) of the tool. Defaults to `TilesetMode.MANUAL`.
 
 # Deprecated Names
 
