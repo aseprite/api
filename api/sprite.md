@@ -178,11 +178,14 @@ An array of [frames](frame.md#frame).
 
 ## Sprite.palettes
 
-An array of [palettes](palette.md#palette). Generally it contains only one
-palette (`sprite.palettes[1]`).
+```lua
+local palette = sprite.palettes[1]
+```
 
-In the future we'll support multiple palettes to create
-[color cycling animations](https://en.wikipedia.org/wiki/Color_cycling).
+An array of [palettes](palette.md#palette). In most cases, it only contains one
+palette (`sprite.palettes[1]`), except in a very specific case. 
+
+In the event that two or more [indexed](https://www.aseprite.org/docs/color-mode#indexed) numbered files (eg. `spr_01.png`, `spr_02.png`, `spr_03.png` etc.) are [opened as a sequence](https://www.aseprite.org/docs/open#loading-image-sequences), each frame would have its own palette. This only occurs when there are at least two different indexed palettes, so the indexed palette for the `spr_01.png` frame would have different index-to-color mapping than the indexed palette for the `spr_02.png` (same with `spr_03.png`), hence the need for three sprite palettes. If two images/frames have the same indexed palette, they will share (so if `spr_01.png` and `spr_02.png` have the same palette, but `spr_03.png` has a different one, there would be `2` sprite palettes).
 
 ## Sprite.layers
 
