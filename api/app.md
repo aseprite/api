@@ -156,12 +156,16 @@ Check the [app.os](app_os.md#appos) documentation.
 
 ## app.uiScale
 
-```
+```lua
 local scale = app.uiScale
 ```
 
 Returns the [UI Elements Scaling](https://www.aseprite.org/docs/preferences/)
 value specified in *Edit > Preferences* as an scale factor (1 for 100%, 2 for 200%, etc.)
+
+## app.defaultPalette
+
+Returns the user's default palette, as a [Palette](palette.md#palette).
 
 ## app.events
 
