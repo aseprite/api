@@ -243,6 +243,8 @@ Executes the given command named `CommandName` with the specified parameters.
   * Toggles the visibility of the preview window
 * app.command.ToggleTimelineThumbnails
   * Toggles the timeline thumbnails preference
+* app.command.ToggleWorkspaceLayout
+  * Toggles the Workspace Layout UI. This command only opens or closes the workspace layout mode, and cannot be used to select a specific Layout.
 * app.command.UndoHistory
   * Shows the undo history window
 * app.command.Undo
