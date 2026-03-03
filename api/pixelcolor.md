@@ -44,7 +44,7 @@ local redComponent = app.pixelColor.rgbaR(rgbaPixelValue)
 ```
 
 Returns the red component of the given 32-bit integer (`rgbaPixelValue`).
-This integer is a value created with [`app.pixelColor.rgba()`](apppixelcolorrgba)
+This integer is a value created with [`app.pixelColor.rgba()`](#apppixelcolorrgba)
 or [`Image:getPixel()`]() from a
 [RGBA](colormode.md#colormodergb) image.
 
@@ -98,7 +98,7 @@ local grayValue = app.pixelColor.grayaV(grayPixelValue)
 ```
 
 Returns the gray component of the given 16-bit integer (`grayPixelValue`).
-This integer is a value created with [`app.pixelColor.graya()`](apppixelcolorgraya)
+This integer is a value created with [`app.pixelColor.graya()`](#apppixelcolorgraya)
 or [`Image:getPixel()`]() from a [grayscale](colormode.md#colormodegray) image.
 
 Example:

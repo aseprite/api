@@ -65,7 +65,7 @@ gc.blendMode = BlendMode.NORMAL
 ```
 
 [Blend mode](blendmode.md#blendmode) used in [stroke()](#graphicscontextstroke),
-[fill()]((#graphicscontextfill)), [drawImage()](#graphicscontextdrawimage), etc.
+[fill()](#graphicscontextfill), [drawImage()](#graphicscontextdrawimage), etc.
 
 ## GraphicsContext.opacity
 
@@ -76,7 +76,7 @@ gc.opacity = newOpacity
 ```
 
 Opacity used in [stroke()](#graphicscontextstroke),
-[fill()]((#graphicscontextfill)), [drawImage()](#graphicscontextdrawimage), etc.
+[fill()](#graphicscontextfill), [drawImage()](#graphicscontextdrawimage), etc.
 
 * `opacity`: 0 completelly transparenty, 255 completelly opaque.
 
