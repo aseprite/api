@@ -57,6 +57,10 @@ app.range.layers = { layer1, layer2, ... }
 
 Returns or sets the array of selected [layers](layer.md#layer).
 
+Note that the array is sorted chronologically, in order of when 
+the layers were created. The order does not match the order seen
+on the timeline, nor the order in which they were selected.
+
 ## Range.frames
 
 ```lua
