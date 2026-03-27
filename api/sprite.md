@@ -102,7 +102,7 @@ sprite.filename = newName
 ```
 
 Gets or sets the name of the file from where this sprite was loaded or
-saved. Or an empty string if this is a new sprite without an
+saved. Or returns the sprite title if it's a new sprite without an
 associated file.
 
 ## Sprite.id
@@ -121,6 +121,15 @@ local modified = sprite.isModified
 
 Returns true if the sprite is modified compared to the latest saved
 state on disk.
+
+## Sprite.hasAssociatedFile
+
+```lua
+local associated = sprite.hasAssociatedFile
+```
+
+Returns true if the sprite was loaded from or saved to a file on the
+disk.
 
 ## Sprite.colorSpace
 
