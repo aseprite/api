@@ -32,15 +32,12 @@ little differences by default:
 
 Parameters:
 
-* `ui`: Shows the dialog to select the filename. `SaveFile` doesn't
-  show the UI (`false` by default) if the sprite has an associated
-  file.  `SaveFileAs` and `SaveFileCopyAs` will show the UI by
-  default.
+* `ui`: Shows the dialog to select the filename. Defaults to `true`. When using `SaveFile`, if the sprite already has an associated file, the ui will not show. 
 * `recent`: Only available since v1.3.7, it adds the file to the list
   of recent files. By default it depends if the dialog to select the
   filename is displayed (depends on the value of the `ui` parameter).
 * `filename`: The filename where to save the sprite. The default
-  values is the
+  values is the sprite name (e.g "Sprite-0001"). When using `SaveFile`, this parameter should not be set (as Aseprite will throw an error).
 * `filenameFormat`: Special value similar to [--filename-format](https://www.aseprite.org/docs/cli/#filename-format)
   when we use [--save-as](https://www.aseprite.org/docs/cli/#save-as) from the [CLI](https://www.aseprite.org/docs/cli/)
 * `tag`: A tag name. You can save only the range of frames specified by this tag.
