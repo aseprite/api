@@ -119,8 +119,16 @@ Returns the id of this sprite, as an integer.
 local modified = sprite.isModified
 ```
 
-Returns true if the sprite is modified compared to the latest saved
+Returns `true` if the sprite is modified compared to the latest saved
 state on disk.
+
+## Sprite.isValid
+
+```lua
+local valid = sprite.isValid
+```
+
+Returns `true` if the sprite object is a valid object (the sprite is open).
 
 ## Sprite.colorSpace
 
