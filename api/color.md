@@ -18,10 +18,13 @@ c = Color{ hue=360.0, saturation=1.0, value=1.0, alpha=255 }
 c = Color{ hue=360.0, saturation=1.0, lightness=1.0, alpha=255 }
 c = Color{ gray=255, alpha=255 }
 c = Color{ index=integer }
+c = Color{ tile=integer }
 c = Color(integer)
 ```
 
 * If `alpha` argument is not specified, it's 255 by default (opacity = 100%).
+* The `Color{ index=integer }` returns the color at the specified index from the palette.
+* The `Color{ tile=integer }` returns a special "tile color" at the specified index from the current tileset. This "tile color" can be used to pass tiles into parameters that require the color object (e.g: `app.useTool{color=Color{tile=integer}}`).
 * The `Color(integer)` constructor receives a [pixel color](pixelcolor.md#apppixelcolor)
   and the integer is interpreted depending on the [active sprite](app.md#appsprite).
 
