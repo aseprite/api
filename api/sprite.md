@@ -155,6 +155,15 @@ local spec = sprite.spec
 
 Returns the [specification](imagespec.md#imagespec) for image in this sprite.
 
+## Sprite.useLayerUuids
+
+```lua
+local layeruuids = sprite.useLayerUuids
+sprite.useLayerUuids = layeruuids
+```
+
+Gets or sets if the sprite should use [layer](layer.md#layer) UUIDs.
+
 ## Sprite.undoHistory.undoSteps
 
 ```lua
