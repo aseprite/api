@@ -23,6 +23,44 @@ else
   -- Future versions will be 2, 3, etc.
 end
 ```
+
+## v1.3.17
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `39`
+* Fixed security issue where a script could gain already given access from other script
+
+## v1.3.17-beta1
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `38`
+* Added Dialog `onresize` event [#4736](https://github.com/aseprite/aseprite/issues/4736) [#5354](https://github.com/aseprite/aseprite/issues/5354)
+* Fixed `Image:drawSprite()` call when the user is drawing [#3916](https://github.com/aseprite/aseprite/issues/3916)
+
+## v1.3.16
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `38`
+* **New Behavior**: Property changes outside a transaction don't generate undo steps [#4568](https://github.com/aseprite/aseprite/issues/4568)
+* **New Behavior**: Layer flag changes inside a transaction generate undo steps [#2991](https://github.com/aseprite/aseprite/issues/2991)
+* Avoid clicking an invalid button after a new window is displayed [#4757](https://github.com/aseprite/aseprite/issues/4757)
+* Don't reset dialog bounds after `Dialog:show{autoscrollbars}` when `dialog.bounds` were set before [#4758](https://github.com/aseprite/aseprite/issues/4758)
+* Allow mouse wheel scrolling in dialogs with `autoscrollbars` option [#5116](https://github.com/aseprite/aseprite/issues/5116)
+* Fixed widgets interactivity using bounds and `autoscrollbars` in `Dialog:show{}` [#5516](https://github.com/aseprite/aseprite/issues/5516)
+* Fixed dialog with scrollbar wrong size in a particular case [#5396](https://github.com/aseprite/aseprite/issues/5396) [#5481](https://github.com/aseprite/aseprite/issues/5481)
+* Fixed crash using a `label` field in `Dialog:endtags{}` [#5114](https://github.com/aseprite/aseprite/issues/5114)
+* Fixed disabled checkbox style change after `Dialog:combobox()` change [#4988](https://github.com/aseprite/aseprite/issues/4988)
+* Fixed crash setting properties with its same value [#5519](https://github.com/aseprite/aseprite/issues/5519)
+* Added `Sprite.isValid` [#5017](https://github.com/aseprite/aseprite/issues/5017)
+* Fixed console re-centering [#5349](https://github.com/aseprite/aseprite/issues/5349) [#5562](https://github.com/aseprite/aseprite/issues/5562)
+* Fixed calling filters inside the same `app.transaction()` with `ui=true` [#5572](https://github.com/aseprite/aseprite/issues/5572)
+* Don't show progress bar for filters when running with `ui=false` [#5537](https://github.com/aseprite/aseprite/issues/5537)
+
+## v1.3.15.5
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `37`
+* Avoid setting window bounds when the app is closing [#5384](https://github.com/aseprite/aseprite/issues/5384)
+* Fixed centering a dialog with `autoscrollbars` behavior [#5485](https://github.com/aseprite/aseprite/issues/5485)
+* `WebSocket`: Added `error` param to `onreceive` handler
+* Fixed `app.clipboard.content.selection` property
+
 ## v1.3.16-beta1
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `36`

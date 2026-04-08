@@ -119,8 +119,16 @@ Returns the id of this sprite, as an integer.
 local modified = sprite.isModified
 ```
 
-Returns true if the sprite is modified compared to the latest saved
+Returns `true` if the sprite is modified compared to the latest saved
 state on disk.
+
+## Sprite.isValid
+
+```lua
+local valid = sprite.isValid
+```
+
+Returns `true` if the sprite object is a valid object (the sprite is open).
 
 ## Sprite.colorSpace
 
@@ -146,6 +154,15 @@ local spec = sprite.spec
 ```
 
 Returns the [specification](imagespec.md#imagespec) for image in this sprite.
+
+## Sprite.useLayerUuids
+
+```lua
+local layeruuids = sprite.useLayerUuids
+sprite.useLayerUuids = layeruuids
+```
+
+Gets or sets if the sprite should use [layer](layer.md#layer) UUIDs.
 
 ## Sprite.undoHistory.undoSteps
 
