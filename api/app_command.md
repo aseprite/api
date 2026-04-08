@@ -8,7 +8,7 @@ app.command.CommandName { param1=value1, param2=value2, ... }
 Executes the given command named `CommandName` with the specified parameters.
 
 * app.command.About <sup>[[UI]](#requiresUI "Requires UI")</sup>
- * Opens the About Aseprite window
+  * Opens the About Aseprite window
 * [app.command.AddColor](command/AddColor.md#addcolor "Adds a new color to the palette.")
 * app.command.AdvancedMode <sup>[[UI]](#requiresUI "Requires UI")</sup>
   * Toggles the application's "Advanced Mode"
