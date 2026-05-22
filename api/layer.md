@@ -148,7 +148,7 @@ Gets or sets whether or not the layer is visible.
 
 It describes only the layer's local visibility, not its visibility
 with respect to the hierarchy that contains it. For example, in the
-following code `layer1.isVisible` will be `true` (even when the parnet
+following code `layer1.isVisible` will be `true` (even when the parent
 group visibility is `false`):
 
 ```lua

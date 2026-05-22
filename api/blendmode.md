@@ -1,6 +1,6 @@
 # BlendMode
 
-Blend modes defines how the colors should be mixed when two images overlaps. Used in [Image:drawImage()](image.md#imagedrawimage) as input argument.
+Blend modes define how the colors should be mixed when two images overlap. Used in [Image:drawImage()](image.md#imagedrawimage) as an input argument.
 
 Background sample // sample with blending applied
 
@@ -9,7 +9,7 @@ Background sample // sample with blending applied
 
 ## BlendMode.NORMAL
 
-Mix the background colors with the blending image proportionally to its alpha values. Full transparent pixels will show the background.
+Mixes the background colors with the blending image proportionally to its alpha values. Fully transparent pixels will show the background.
 
 ![normal_blend](image/normal_blend.png)
 

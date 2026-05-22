@@ -36,7 +36,7 @@ dialog:modify{ id=canvasId, mousecursor=newMouseCursor }
 
 ## MouseCursor.MOVE
 
-![MouseCursor.MOVE image ](mousecursor/move.png)
+![MouseCursor.MOVE image](mousecursor/move.png)
 
 ## MouseCursor.NS_RESIZE
 

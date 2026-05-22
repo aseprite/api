@@ -39,7 +39,7 @@ Creates a new timer.
   can specify decimal numbers, e.g. `interval=1.0 / 60.0` to call the
   function 60 times per second, etc.
 * `ontick`: Function that is called each time the specified number of
-  seconds ellapses.
+  seconds elapses.
 
 ## Timer:start()
 

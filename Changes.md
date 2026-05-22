@@ -1,11 +1,11 @@
 # API Changes
 
-We will try minimize API changes between versions and keep backward
+We will try to minimize API changes between versions and keep backward
 compatibility, but if a function in the API was introduced with a bug,
 it's probable that its behavior will change in the next Aseprite
 release.
 
-Deprecated should be avoided because might be removed in future
+Deprecated features should be avoided because they might be removed in future
 versions of Aseprite.
 
 ## Detect available API

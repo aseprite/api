@@ -186,7 +186,7 @@ image:drawPixel(x, y, color)
 
 Sets the pixel in the *xy*-coordinate to the given [integer pixel
 value](pixelcolor.md#apppixelcolor). The *xy*-coordinate is relative to the image,
-so pixel (0, 0) is the first pixel at the top-left coorner in the
+so pixel (0, 0) is the first pixel at the top-left corner of the
 image, not in the sprite canvas.
 
 **Warning**: This method doesn't create undo information, you should
@@ -335,9 +335,9 @@ image:resize{ ..., method='bilinear' | 'rotsprite' }
 image:resize{ ..., pivot=Point(x, y) }
 ```
 
-Resizes the image. The pivot is `Point(0, 0)` by default (i.e.  the
-image right and bottom sides will be increased, and the top-left
-corner will be in the same place).
+Resizes the image. The pivot is `Point(0, 0)` by default (i.e. the
+image's right and bottom sides will be increased, and the top-left
+corner will remain in the same place).
 
 ## Image:shrinkBounds()
 

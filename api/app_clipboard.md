@@ -46,7 +46,7 @@ Depending on what is copied, each value will be set differently. Case table:
 |`selection`|[Selection](selection.md#selection) |`nil`                        |`nil`         |`nil`                                                    |
 |`palette`  |Sprite [palette](palette.md#palette)|`nil`                        |`nil`         |`nil`                                                    |
 |`tileset`  |`nil`                               |`nil`                        |`nil`         |`nil`                                                    |
-|`text`     |`nil`                               |`nil`                        |String        |String of selected colors in hex codes, seperated by `\n`|
+|`text`     |`nil`                               |`nil`                        |String        |String of selected colors in hex codes, separated by `\n`|
 
 ## app.clipboard.hasText
 

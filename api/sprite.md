@@ -64,7 +64,7 @@ sprite.gridBounds = rectangle
 ```
 
 Gets or sets the bounds of the sprite grid as a
-[rectangle](rectangle.md#rectangle). By default this is 16x16 (with origin in 0,0)
+[rectangle](rectangle.md#rectangle). By default, this is 16x16 (with its origin at 0,0)
 but the default value can be [changed from *Edit > Preferences > Grid*](https://www.aseprite.org/docs/preferences/).
 
 ## Sprite.pixelRatio
@@ -101,8 +101,8 @@ local name = sprite.filename
 sprite.filename = newName
 ```
 
-Gets or sets the name of the file from where this sprite was loaded or
-saved. Or an empty string if this is a new sprite without an
+Gets or sets the name of the file from which this sprite was loaded or
+saved, or an empty string if this is a new sprite without an
 associated file.
 
 ## Sprite.id
@@ -207,15 +207,15 @@ files (eg. `spr_01.png`, `spr_02.png`, `spr_03.png` etc.) are
 [opened as a sequence](https://www.aseprite.org/docs/open#loading-image-sequences),
 each frame would have its own palette. This only occurs when there are
 at least two different indexed palettes, so the indexed palette for
-the `spr_01.png` frame would have different index-to-color mapping
-than the indexed palette for the `spr_02.png` (same with
-`spr_03.png`), hence the need for three sprite palettes. If two
-images/frames have the same indexed palette, they will share (so if
-`spr_01.png` and `spr_02.png` have the same palette, but `spr_03.png`
-has a different one, there would be `2` sprite palettes).
+the `spr_01.png` frame would have a different index-to-color mapping
+than the indexed palette for `spr_02.png` (as would `spr_03.png`), hence
+the need for three sprite palettes. If two images/frames have the same
+indexed palette, they will share it (so if `spr_01.png` and `spr_02.png`
+have the same palette, but `spr_03.png` has a different one, there
+would be `2` sprite palettes).
 
 There is no proper UI to support multiple palettes at the moment, but
-in a future we want to create an easy way to create
+in the future we want to create an easy way to create
 [color cycling animations](https://en.wikipedia.org/wiki/Color_cycling).
 
 ## Sprite.layers
@@ -297,7 +297,7 @@ local number = sprite.transparentColor
 sprite.transparentColor = number
 ```
 
-The transparent color is an intenger that specifies what index (`0` by
+The transparent color is an integer that specifies which index (`0` by
 default) is the transparent color in transparent layers on indexed
 sprites.
 
@@ -361,9 +361,9 @@ closing it won't ask to save changes.
 sprite:saveCopyAs(filename)
 ```
 
-Saves a copy of the sprite in the given file but doesn't change the
-saved state of the sprite, if the sprite is modified and then try to
-close it, the user will be asked to save changes.
+Saves a copy of the sprite to the given file but does not change the
+saved state of the sprite. If the sprite is then modified, the user 
+will be asked to save changes on close.
 
 ## Sprite:close()
 
@@ -371,8 +371,8 @@ close it, the user will be asked to save changes.
 sprite:close()
 ```
 
-Closes the sprite. This doesn't ask the user to save changes. If you
-want to do the classic *File > Close* where the user is asking to save
+Closes the sprite. This does not ask the user to save changes. If you
+want to do the classic *File > Close* where the user is asked to save
 changes, you can use `app.command.CloseFile()`.
 
 ## Sprite:loadPalette()
@@ -404,7 +404,7 @@ local colorSpace = ColorSpace{ sRGB=true }
 sprite:assignColorSpace(colorSpace)
 ```
 
-Assign a new [color space](colorspace.md#colorspace) to the sprite without
+Assigns a new [color space](colorspace.md#colorspace) to the sprite without
 modifying the sprite pixels.
 
 ## Sprite:convertColorSpace()
@@ -486,7 +486,7 @@ sprite:deleteCel(layer, frame)
 
 Deletes the given [cel](cel.md#cel). If the cel is from a transparent
 layer, the cel is completely deleted, but if the cel is from a
-background layer, the cel will be delete with the
+background layer, the cel will be deleted with the
 [background color](app.md#appbgcolor).
 
 ## Sprite:newTag()
@@ -538,10 +538,10 @@ local tileset = sprite:newTileset(anotherTileset)
 Returns a new [tileset](tileset.md#tileset) and adds it to the
 sprite's tilesets.
 
-If no parameters are given, the resulting tileset will have just one
+If no parameters are given, the resulting tileset will have only one
 empty tile and a tile size equal to the active [sprite grid size](#spritegridbounds).
 
-If Grid or Rectangle is specified it is used to set the resulting
+If a Grid or Rectangle is specified, it is used to set the resulting
 tileset's origin and tile size.
 
 numTiles specifies the number of tiles we want the tileset to contain
@@ -593,8 +593,8 @@ individual operation or in a
 sprite:flatten()
 ```
 
-Flatten all layers of the sprite into one layer.
-It's like calling `app.commands.FlattenLayers()`.
+Flattens all layers of the sprite into one layer.
+The same as calling `app.command.FlattenLayers()`.
 
 ## Sprite.events
 

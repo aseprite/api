@@ -1,6 +1,6 @@
 # Color
 
-Represents a color that can be choose by the user in different kinds
+Represents a color that can be chosen by the user in different kinds
 (RGB, HSV, HSL, grayscale, indexed).
 
 Don't confuse this color with the [app.pixelColor](pixelcolor.md#apppixelcolor)
@@ -22,7 +22,7 @@ c = Color{ tile=integer }
 c = Color(integer)
 ```
 
-* If `alpha` argument is not specified, it's 255 by default (opacity = 100%).
+* If the `alpha` argument is not specified, it is 255 by default (opacity = 100%).
 * The `Color{ index=integer }` returns the color at the specified index from the palette.
 * The `Color{ tile=integer }` returns a special "tile color" at the specified index from the current tileset. This "tile color" can be used to pass tiles into parameters that require the color object (e.g: `app.useTool{color=Color{tile=integer}}`).
 * The `Color(integer)` constructor receives a [pixel color](pixelcolor.md#apppixelcolor)

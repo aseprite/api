@@ -13,13 +13,13 @@ app.command.SpriteSize {
 }
 ```
 
-* `ui`: Shows the dialog on the screen, `true` by default. Set to `false` to modify the sprite size without asking to the user.
+* `ui`: Shows the dialog on the screen, `true` by default. Set to `false` to modify the sprite size without asking the user.
 * `width`: Final sprite width. Current sprite width by default.
 * `height`: Final sprite height. Current sprite height by default.
 * `scale`: Bidimensional scale factor per unit (1.0 = same original sprite size). `1.0` by default.
 * `scaleX`: horizontal scale factor per unit. `1.0` by default.
 * `scaleY`: Vertical scale factor per unit. `1.0` by default.
-* `lockRatio`: Final sprite aspect ratio is locked when it is `true`.`false` by default.
+* `lockRatio`: Final sprite aspect ratio is locked when it is `true`. `false` by default.
 * `method`: Resize algorithm method to be used. `"nearest"` by default (Nearest Neighbor), alternatives: `"bilinear"` and `"rotSprite"`.
 
 Known issue: On the following code, we have a variable `i` pointing to the `cel.image`. After the `app.command.SpriteSize` execution, `i` no longer points to the original image. Finally, `print(i.width)` will fail.
@@ -44,7 +44,7 @@ app.command.SpriteSize{ ui = false, scaleX = 2 }
 
 print(cel.image.width) -- it will print "2"
 ```
-Another way, using `i` is to again get the `cel.image` after `app.command.SpriteSize`:
+Another way, using `i`, is to get `cel.image` again after `app.command.SpriteSize`:
 
 ```lua
 local s = Sprite(1, 1)

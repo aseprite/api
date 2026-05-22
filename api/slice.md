@@ -46,7 +46,7 @@ Access user-defined and extension-defined
 
 ## Slice.name
 
-Gets or sets the a slice's name, a `string`.
+Gets or sets a slice's name, a `string`.
 
 ## Slice.pivot
 

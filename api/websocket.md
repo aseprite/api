@@ -36,7 +36,7 @@ local function handleMessage(mt, data, error)
     ws:sendText("Hello!")
 
   elseif mt == WebSocketMessageType.TEXT then
-    print("Message recived: " .. data)
+    print("Message received: " .. data)
     ws:close()
 
   elseif mt == WebSocketMessageType.CLOSE then

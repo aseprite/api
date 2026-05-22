@@ -1,9 +1,9 @@
-### Table of content
+### Table of contents
 
 [Overview](README.md) <br/>
 [API Changes](Changes.md)
 
-Globals namespaces
+Global namespace
   * [app](api/app.md#app)
   * [app.clipboard](api/app_clipboard.md#appclipboard)
   * [app.command](api/app_command.md#appcommand)

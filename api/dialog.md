@@ -1,6 +1,6 @@
 # Dialog
 
-The dialog class can be used to show input controls/widgets in the
+The dialog class can be used to show input controls/widgets on the
 screen to get some data from the user.
 
 Example:
@@ -17,7 +17,7 @@ if data.confirm then
 end
 ```
 
-Almost all dialogs functions return the same dialog object so we can
+Almost all dialog functions return the same dialog object so we can
 use [method chaining](https://en.wikipedia.org/wiki/Method_chaining).
 For example:
 
@@ -108,7 +108,7 @@ For each different kind of widget the field is of a different type:
   false) if the button is selected or was used to close the dialog.
 * [entry](#dialogentry)/[label](#dialoglabel): A string of text.
 * [slider](#dialogslider): An integer.
-* [number](#dialognumber): An intenger or a
+* [number](#dialognumber): An integer or a
   number depending on the number of decimals of the number field.
 * [combobox](#dialogcombobox): A string with the
   selected item.
@@ -163,10 +163,10 @@ Arguments (table fields):
 * `id`: Identifier for this button. [Dialog.data](#dialogdata) will contain a field
   for each widget with an `id`.
 * `label`: Text label on the left side of the control.
-* `text`: Text displayed on top of the button.
+* `text`: Text displayed on the button.
 * `selected`: True in case that you want to show the button checked by default.
-* `focus`: Focus this button by default or when the Enter key is pressed in an [text entry](#dialogentry) field.
-* `onclick`: Function to be called when the button is pressed. When omitted, clicking the button closes it's Dialog, as if [Dialog:close()](#dialogclose) was called.
+* `focus`: Focus this button by default or when the Enter key is pressed in a [text entry](#dialogentry) field.
+* `onclick`: Function to be called when the button is pressed. When omitted, clicking the button closes its Dialog, as if [Dialog:close()](#dialogclose) was called.
 
 ## Dialog:check()
 
@@ -336,7 +336,7 @@ dlg:shades{ id=string,
 
 Creates a widget with a set of colors that can be clicked/picked (when
 `mode="pick"`, which is the default mode) or can be sorted (when
-`mode="sort"`, which is the default mode).
+`mode="sort"`).
 
 The `onclick` function can receive a `event` parameter which is a
 table with one `event.color` field which is the color that was
@@ -376,10 +376,10 @@ Makes the dialog visible to the user. The script code will continue
 when the dialog is closed by default (pressing a
 [button](#dialogbutton)).
 
-If `{ wait=false }` is used as argument, the dialog is open "in
-background", which means that the script code continues the execution
+If `{ wait=false }` is used as an argument, the dialog is opened "in the
+background", which means that the script code continues execution
 with its following line, and the dialog will be visible until it's
-closed with some button or calling [Dialog:close](#dialogclose) in a
+closed with some button or calling [Dialog:close](#dialogclose) in an
 `onclick` event.
 
 With `{ bounds=Rectangle() }` you can display the dialog in a specific
@@ -388,8 +388,8 @@ obtain from [Dialog.bounds](#dialogbounds) property.
 
 Setting `{ autoscrollbars=true }` will add scrollbars automatically only
 if they are needed. This means that if your dialog contains enough widgets
-to make it go out of the window/screen (depending if you are using single
-window UI or multiple windows UI) then scrollbars will be shown into your
+to make it go out of the window/screen (depending on whether you are using single
+window UI or multiple windows UI) then scrollbars will be shown in your
 dialog when its content doesn't fit its bounds.
 
 If `{ hand=true }`, this enables the hand tool in the editor while the dialog is active. See the *Edit > Replace Color* menu for an example. Only useful if `{ wait=true }`.
@@ -424,7 +424,7 @@ the first tab.
 If called after a previous `Dialog:tab` call, it marks the end of the previous
 tab and starts a new one.
 
-Once started a tab, you can define its content by adding widgets as usual. When
+Once a tab is started, you can define its content by adding widgets as usual. When
 you are done adding tabs, call [Dialog:endtabs](#dialogendtabs).
 
 * `id`: Identifier for this tab. If you specify it, you can use it in
@@ -483,7 +483,7 @@ dlg:file{ id=string,
           onchange=function }
 ```
 
-Creates a text entry field + a button to select one file to open or save, possibilities:
+Creates a text entry field + a button to select one file to open or save, with the following options:
 
 * `open`: When true, shows a dialog to open an existing file (set to true by default).
 * `save`: When true, shows a dialog to select an existing file to overwrite or a new file to save.
@@ -527,7 +527,7 @@ experience with the user:
   [KeyEvent](keyevent.md).
 * `onmousemove`/`onmousedown`/`onmouseup`/`onwheel`/`ondblclick`: Mouse events when
   the mouse is moved over the canvas, a mouse button is pressed
-  (`onmousedown`), a mouse button double clicked (`ondblclick`) a button is released (`onmouseup`), or the mouse wheel moved (`onwheel`). The `ev` event is a
+  (`onmousedown`), a mouse button is double-clicked (`ondblclick`), a button is released (`onmouseup`), or the mouse wheel is moved (`onwheel`). The `ev` event is a
   [MouseEvent](mouseevent.md).
 * `ontouchmagnify`: Touch event generated when a pinch gesture is done
   in the trackpad to zoom in or out. The `ev` event is a

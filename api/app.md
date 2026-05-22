@@ -29,7 +29,7 @@ Returns a [Frame object](frame.md#frame) that represents the active
 frame in the focused sprite editor. You can set this property
 assigning a frame number directly to jump to another frame.
 
-To known the active frame number use [`app.frame.frameNumber`](frame.md#frameframenumber)
+To know the active frame number, use [`app.frame.frameNumber`](frame.md#frameframenumber)
 
 ## app.image
 
@@ -86,7 +86,7 @@ Returns the Aseprite version number as a [`Version`](version.md#version) object 
 ## app.apiVersion
 
 Returns the API version. See the [changes file](../Changes.md#api-changes) between
-version to know what offer each API version.
+versions to know what each API version offers.
 
 ## app.fgColor
 
@@ -161,7 +161,7 @@ local scale = app.uiScale
 ```
 
 Returns the [UI Elements Scaling](https://www.aseprite.org/docs/preferences/)
-value specified in *Edit > Preferences* as an scale factor (1 for 100%, 2 for 200%, etc.)
+value specified in *Edit > Preferences* as a scale factor (1 for 100%, 2 for 200%, etc.)
 
 ## app.defaultPalette
 
@@ -181,8 +181,8 @@ app.events:on('sitechange',
 
 Available events for `app`:
 
-* `'sitechange'`: When the user selects other sprite, layer, or frame.
-* `'beforesitechange'`: Before the user switches to other sprite, layer, or frame.
+* `'sitechange'`: When the user selects another sprite, layer, or frame.
+* `'beforesitechange'`: Before the user switches to another sprite, layer, or frame.
 * `'fgcolorchange'`: When the [Foreground color](https://www.aseprite.org/docs/color-bar/#foreground-color) in the color bar is changed.
 * `'bgcolorchange'`: When the [Background color](https://www.aseprite.org/docs/color-bar/#background-color) in the color bar is changed.
 * `'beforecommand'`: Before executing any command in the program.
@@ -194,7 +194,7 @@ argument with the name of the command (`ev.name`) and the params
 function to cancel the event, e.g. in case that you've handled the
 event in a custom way.
 
-E.g. This code catches the *Edit > Cut* command and convert it to a *Copy*:
+E.g. This code catches the *Edit > Cut* command and converts it to a *Copy*:
 ```lua
 app.events:on('beforecommand',
   function(ev)
@@ -248,7 +248,7 @@ The duration can be between `0.5` to `30` seconds.
 app.open(filename)
 ```
 
-Opens a new sprite loading it from the given filename. Returns an
+Opens a new sprite, loading it from the given filename. Returns an
 instance of the [Sprite class](sprite.md#sprite) or `nil` if something went
 wrong.
 
@@ -281,9 +281,9 @@ first argument, that string will be used as the label of this
 undo/redo action (which can be seen in the *Edit > Undo History*
 window).
 
-The given function is called inside the transaction, if the function
+The given function is called inside the transaction. If the function
 fails, the whole transaction is undone (i.e. all the steps executed so
-far will be reversed). If the function successes, the transaction is
+far will be reversed). If the function succeeds, the transaction is
 committed and then all actions will be grouped in just one undo/redo
 operation.
 
@@ -357,7 +357,7 @@ app.useTool{
 }
 ```
 
-Simulates an user stroke in the canvas using the given tool.
+Simulates a user stroke on the canvas using the given tool.
 
 * `tool`: The tool to use. Can either be a [Tool](tool.md#tool) object or a string tool ID (`rectangular_marquee`,
   `elliptical_marquee`, `lasso`, `polygonal_lasso`, `magic_wand`,

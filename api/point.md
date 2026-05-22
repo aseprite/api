@@ -1,6 +1,6 @@
 # Point
 
-If a function receives a point as an argument it could be several things:
+If a function receives a point as an argument, it can be one of several things:
 
 1. You can specify two parameters `x, y` directly as arguments of the
    function.  E.g. `selection:contains(8, 20)`

@@ -46,7 +46,7 @@ array of one element, just the active layer). The same is true for
 
 ## Range.sprite
 
-[Sprite](sprite.md#sprite) to which this range is pointing to.
+The [Sprite](sprite.md#sprite) to which this range points.
 
 ## Range.layers
 
@@ -77,7 +77,7 @@ Returns an array of selected [cels](cel.md#cel).
 ## Range.images
 
 Returns an array of selected [images](image.md#image) (images from linked
-cels are counted just one time in this array).
+cels are counted only once in this array).
 
 ## Range.editableImages
 

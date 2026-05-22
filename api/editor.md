@@ -17,7 +17,7 @@ Returns the [sprite](sprite.md#sprite) in the editor.
 local point = app.editor.spritePos
 ```
 
-Returns a [point](point.md#point) of the the mouse position on the
+Returns a [point](point.md#point) of the mouse position on the
 sprite, i.e. what pixel is going to be changed if the user clicks the
 mouse.
 

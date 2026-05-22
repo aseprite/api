@@ -11,7 +11,7 @@ app.command.ReplaceColor {
 ```
 
 * `ui`: Show the dialog on the screen, `true` by default. Set to
-  `false` for automatic replacement without asking to the user for the
+  `false` for automatic replacement without asking the user for the
   change. When the dialog is displayed to the user,
   `app.command.ReplaceColor()` will return a `true` or `false` value
   indicating if the replacement was accepted or cancelled

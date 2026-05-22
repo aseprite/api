@@ -1,6 +1,6 @@
 # Rectangle
 
-If a function receives a rectangle as an argument it could be several
+If a function receives a rectangle as an argument, it can be one of several
 things:
 
 1. You can specify the parameters `x, y, width, height` directly as
@@ -126,7 +126,7 @@ if bounds:contains(rectInside) then ... end
 local booleanResult = rectangle:intersects(otherRectangle)
 ```
 
-Returns true if `rectangle` intersects in some way `otherRectangle`.
+Returns true if `rectangle` intersects `otherRectangle` in some way.
 
 ## Rectangle:intersect()
 
@@ -135,7 +135,7 @@ local newRectangle = rectangle:intersect(otherRectangle)
 ```
 
 Returns the new rectangle `newRectangle` which is the intersection of
-`rectangle` and `otherRectangle`. If both rectangles don't intersect each other, the result will be an [empty rectangle](#rectangleisempty)
+`rectangle` and `otherRectangle`. If both rectangles do not intersect, the result will be an [empty rectangle](#rectangleisempty).
 
 ## Rectangle:union()
 
@@ -144,5 +144,5 @@ local newRectangle = rectangle:union(otherRectangle)
 ```
 
 Returns the new rectangle `newRectangle` which will be a rectangle big
-enough to contains both given rectangles `rectangle` and
+enough to contain both given rectangles `rectangle` and
 `otherRectangle`.

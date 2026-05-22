@@ -25,7 +25,7 @@ app.command.NewLayer {
 * `ask`: `true` to ask the user for a name if inside the interface.
 * `fromFile`: `true` to create the layer from a file, the Open File dialog will appear in the UI.
 * `fromClipboard`: `true` to create the layer from clipboard image data.
-* `viaCut`: `true` the selected image data is cut and moved into the new layer.
+* `viaCut`: `true` to cut the selected image data and move it into the new layer.
 * `viaCopy`: `true` the selected image data is copied into the new layer.
-* `top`: `true` the newly created layer is placed at the top of the list.
-* `before`: `true` the newly created layer is placed before the currently active layer; but if false it is placed after.
+* `top`: `true` to place the newly created layer at the top of the list.
+* `before`: `true` to place the newly created layer before the currently active layer; if `false`, it is placed after.

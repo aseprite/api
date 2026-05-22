@@ -22,7 +22,7 @@ instead of a `Frame` object.
 
 ## Tag.frames
 
-Returns the number of frames that this tag contain. Equal to:
+Returns the number of frames that this tag contains. Equal to:
 
 ```lua
 local frames = tag.toFrame.frameNumber - tag.fromFrame.frameNumber + 1

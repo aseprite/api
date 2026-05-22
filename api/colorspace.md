@@ -12,7 +12,7 @@ local icc = ColorSpace{ fromFile="/path/file.icc" }
 ```
 
 Creates an empty color space, sRGB color space, or loads a color
-profile from the given ICC file specified in `fromFile` parameter.
+profile from the given ICC file specified in the `fromFile` parameter.
 
 ## ColorSpace.name
 
@@ -21,4 +21,4 @@ local cs = ColorSpace()
 local colorSpaceName = cs.name
 ```
 
-Get/sets the color space name.
+Gets/sets the color space name.

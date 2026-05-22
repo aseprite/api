@@ -78,7 +78,7 @@ gc.opacity = newOpacity
 Opacity used in [stroke()](#graphicscontextstroke),
 [fill()](#graphicscontextfill), [drawImage()](#graphicscontextdrawimage), etc.
 
-* `opacity`: 0 completelly transparenty, 255 completelly opaque.
+* `opacity`: 0 completely transparent, 255 completely opaque.
 
 ## GraphicsContext.theme
 
@@ -207,7 +207,7 @@ gc:drawImage(image, srcX, srcY, srcW, srcH, dstX, dstY, dstW, dstH)
 
 Draws on the canvas the given image.
 
-If given *xy*-coordinates, the full image will be drawn at the specified position, in it's original scale.
+If given *xy*-coordinates, the full image will be drawn at the specified position, in its original scale.
 
 ![Image drawn on a canvas](image/image-on-canvas.png)
 

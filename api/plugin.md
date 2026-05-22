@@ -55,11 +55,10 @@ function exit(plugin)
 end
 ```
 
-Then we compress both files (`package.json` and `my-script.lua`) in a
-`.zip`, and rename the `.zip` to `.aseprite-extension`. To install the
-extension just double-clicking it should be enough on Windows or
-macOS. In other case you can install it from *Edit > Preferences >
-Extensions > Add Extension*.
+Then we compress both files (`package.json` and `my-script.lua`) to a zip 
+archive, and change the `.zip` extension to `.aseprite-extension`.
+
+To install the extension just double-clicking it should be enough on Windows or macOS. Alternatively, you can install it from *Edit > Preferences > Extensions > Add Extension*.
 
 ## Plugin.name
 
@@ -105,18 +104,18 @@ function init(plugin)
 end
 ```
 
-Creates a new command that can be associated to keyboard shortcuts and
-it's added in the app menu in the specific `"group"`. Groups are defined
+Creates a new command that can be associated with keyboard shortcuts and
+is added to the app menu in the specified `"group"`. Groups are defined
 in the [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
 inside the `<menus>` element.
 
 * `onclick`: Function to be called when the command is executed
   (clicked or an associated keyboard shortcut pressed).
-* `onenabled`: Optional function to know if the command should be
+* `onenabled`: Optional function to check if the command should be
   available (enabled or disabled). It should return true if the
   command can be executed right now. If this function is not specified,
   the command will always be available to be executed by the user.
-* `onchecked`: Optional function to know if the command should be checked or not. The function is called every time the command is displayed in a menu (e.g: a dropdown is opened). It should return true if it is checked. If this function is not specified, the command will be unchecked. 
+* `onchecked`: Optional function to check whether the command should have a checkbox. This is called every time the command is displayed in a menu (e.g., when a dropdown is opened). It should return true if the command should have a checked checkbox next to it.
 
 ## Plugin:newMenuGroup()
 
@@ -135,10 +134,10 @@ plugin commands.
 
 * `id`: ID to identify this new menu group in
   [`Plugin:newCommand{ ..., group=id, ... }`](#pluginnewcommand)
-  calls to add several command/menu items as elements of this
+  calls to add several commands/menu items as elements of this
   group submenu.
-* `group`: In which existent group we should add this new menu item.
-  Existent app groups are defined in the
+* `group`: Specifies the existing group to which this new menu item should be added.
+  Existing app groups are defined in the
   [`gui.xml` file](https://github.com/aseprite/aseprite/blob/main/data/gui.xml)
   inside the `<menus>` element.
 
@@ -153,4 +152,4 @@ end
 ```
 
 Creates a menu separator in the given menu group, useful to separate
-several [Plugin:newCommand](#pluginnewcommand).
+several [Plugin:newCommand](#pluginnewcommand) calls.

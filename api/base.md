@@ -7,9 +7,9 @@ local library = require "library"
 ```
 
 Returns a pointer to the given library/module. This function will try
-to find the `library.lua` file in the same folder of the script that
+to find the `library.lua` file in the same folder as the script that
 was executed, or if it's running a [plugin](plugin.md#plugin), it will
-try to find `library.lua` from the plugin folder.
+try to find `library.lua` in the plugin folder.
 
 Libraries between plugins are not shared, as they will be stored in
 the `_LOADED` table with the [plugin.name](plugin.md#pluginname) as a

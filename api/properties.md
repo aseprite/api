@@ -3,13 +3,13 @@
 Some objects like a [Sprite](sprite.md#sprite),
 [Layer](layer.md#layer), [Cel](cel.md#cel), [Slice](slice.md#slice),
 [Tag](tag.md#tag), [Tileset](tileset.md#tileset), [Tile](tile.md#tile),
-contains some special fields like `.color` and `.data` to store an
-user-defined [color](color.md#color) or an user-defined text (any text).
+contain some special fields like `.color` and `.data` to store a
+user-defined [color](color.md#color) or user-defined text (any text).
 
 Anyway, since **Aseprite 1.3-rc1** you can have user-defined and
-extension-defined properties for each of these objects. We'll use an
+extension-defined properties for each of these objects. We will use
 `object` in the following examples, as it can be of any kind (Sprite,
-Layer, etc.)
+Layer, etc.).
 
 ## User-defined properties
 
@@ -26,7 +26,7 @@ You can set one property at a time, or all properties at the same
 time. Each time a property is set, it generates undo information.
 
 * The syntax `object.properties = { ... }` sets the user-defined
-  properties, but doesn't modify the properties related to extensions
+  properties, but doesn't modify the properties related to extensions.
 
 ## Extension-defined properties
 
@@ -46,10 +46,10 @@ time a property is set, it generates undo information.
 Some important points:
 
 * The given `pluginKey` must be equal to `publisher/name`, where
-  `name` is the name of the plugin, and `publisher` the name/ID of the
-  author of this extension (e.g. GitHub username). These values are
-  specified in the `package.json` file of the [plugin](plugin.md#plugin)
+  `name` is the name of the plugin, and `publisher` is the name/ID of the
+  author of this extension (e.g., GitHub username). These values are
+  specified in the `package.json` file of the [plugin](plugin.md#plugin).
 * The syntax `object.properties(pluginKey, { ... })` is used to set
-  all the properties related to the extension in the given `object`
+  all the properties related to the extension in the given `object`.
 * Using a `pluginKey=""` is exactly the same as accessing the
-  user-defined properties
+  user-defined properties.

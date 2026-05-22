@@ -16,7 +16,7 @@ end
 local v = Version("1.2.10")
 ```
 
-You can create a new version from a string. Then access each field
+You can create a new version from a string, then access each field
 
 ## Version.major
 

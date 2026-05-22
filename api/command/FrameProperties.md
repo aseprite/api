@@ -8,4 +8,4 @@ app.command.FrameProperties {
 
 Shows the Frame Properties dialog
 
-* `target`: Can be `"all"`, `"current"` or the frame number. Defaults to `"current"`.
+* `frame`: Can be `"all"`, `"current"` or the frame number. Defaults to `"current"`.

@@ -2,7 +2,7 @@
 
 Since **Aseprite v1.3-rc5** you have this `json` global namespace. It
 provides a couple of functions to decode JSON objects from strings to
-Lua objects/tables and viceversa.
+Lua objects/tables and vice versa.
 
 ## json.decode()
 

@@ -1,7 +1,7 @@
 # Aseprite API
 
-This is the scripting API for Aseprite. Since Aseprite v1.2.10 you
-will be able to create scripts with [Lua](https://www.lua.org/).
+This is the scripting API for Aseprite. Since version 1.2.10 you
+are able to create scripts with [Lua](https://www.lua.org/).
 
 You can find [some examples](https://github.com/aseprite/Aseprite-Script-Examples)
 for this API or some [tests](https://github.com/aseprite/aseprite/tree/main/tests/scripts).
@@ -15,11 +15,11 @@ a little experiment, so you have six options to approach your idea:
    [app.sprite](api/app.md#appsprite) will give you access
    to the current sprite (it's `nil` if there is no active sprite,
    e.g. we are in the `Home` tab).
-2. **Generate a new sprite** : Here the
+2. **Create a new sprite** : Here the
    [Sprite()](api/sprite.md#sprite-1) function creates a new
    sprite and sets it as the active one. From there you can modify the
    [Sprite](api/sprite.md#sprite) object as you want.
-3. **Open one or several existent files**: You can use
+3. **Open one or several existing files**: You can use
    [app.open](api/app.md#appopen) to load a sprite from the disk and
    then modify it.
 4. **Save the modified sprite**: After you have done some modifications
@@ -37,7 +37,7 @@ a little experiment, so you have six options to approach your idea:
 
 ## Reference
 
-Globals namespaces
+Global namespace
   * [app](api/app.md#app)
   * [app.clipboard](api/app_clipboard.md#appclipboard)
   * [app.command](api/app_command.md#appcommand)

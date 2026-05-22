@@ -1,6 +1,6 @@
 # ColorMode
 
-The color mode of an sprite or image specifies the internal structure
+The color mode of a sprite or image specifies the internal structure
 of each pixel. You can see the [Color Mode section in the Aseprite docs](https://www.aseprite.org/docs/color-mode/)
 for an introduction about each color mode.
 
@@ -27,10 +27,10 @@ You can use this color mode to create indexed
 [sprites](sprite.md#sprite) and [images](image.md#image).
 
 Each pixel is an 8-bit unsigned integer (a value from 0 to 255) which
-indicates the specific [palette entry](palette.md#palettesetcolor) which
+indicates the specific [palette entry](palette.md#palettesetcolor) to which
 the pixel refers.
 
 ## ColorMode.TILEMAP
 
-Special color mode used for tilemaps, where each pixel is tile
+Special color mode used for tilemaps, where each pixel is a tile
 reference in a [tileset](tileset.md#tileset).
