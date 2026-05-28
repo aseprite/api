@@ -72,8 +72,8 @@ Executes the given command named `CommandName` with the specified parameters.
   * Resets the zoom on the current view to fit the screen
 * [app.command.FlattenLayers](command/FlattenLayers.md#flattenlayers)
 * [app.command.Flip](command/Flip.md#flip)
-* [app.command.FrameProperties](command/FrameProperties.md#frameproperties) <sup>[[*]](#canHaveUI "Can have UI interaction")</sup>
-* [app.command.FrameTagProperties](command/FrameTagProperties.md#frametagproperties) <sup>[[*]](#canHaveUI "Can have UI interaction")</sup>
+* [app.command.FrameProperties](command/FrameProperties.md#frameproperties) <sup>[[UI]](#requiresUI "Requires UI")</sup>
+* [app.command.FrameTagProperties](command/FrameTagProperties.md#frametagproperties) <sup>[[UI]](#requiresUI "Requires UI")</sup>
 * app.command.FullscreenPreview <sup>[[UI]](#requiresUI "Requires UI")</sup>
   * Opens the full screen preview
 * app.command.GotoFirstFrameInTag <sup>[[UI]](#requiresUI "Requires UI")</sup>
@@ -129,7 +129,7 @@ Executes the given command named `CommandName` with the specified parameters.
 * [app.command.MoveMask](command/MoveMask.md#movemask "Moves the selection boundaries or its content (pixels).")
 * app.command.NewBrush <sup>[[UI]](#requiresUI "Requires UI")</sup>
   * Create a new brush from the current selection/editor
-* [app.command.NewFile](command/NewFile.md#newfile)
+* [app.command.NewFile](command/NewFile.md#newfile) <sup>[[*]](#canHaveUI "Can have UI interaction")</sup>
 * app.command.NewFrameTag <sup>[[UI]](#requiresUI "Requires UI")</sup>
   * Shows the New Tag dialog for the selected frame range
 * [app.command.NewFrame](command/NewFrame.md#newframe)
@@ -181,7 +181,7 @@ Executes the given command named `CommandName` with the specified parameters.
   * Re-selects a hidden selection mask
 * app.command.ReverseFrames
   * Reverses frames (only if there are 2 or more in the selected range)
-* [app.command.Rotate](command/Rotate.md#rotate)
+* [app.command.Rotate](command/Rotate.md#rotate) <sup>[[*]](#canHaveUI "Can have UI interaction")</sup>
 * app.command.RunScript
   * Run a script given by the `filename` parameter - any other parameters are passed to the script.
 * [app.command.SaveFile](command/SaveFile.md#savefile) <sup>[[*]](#canHaveUI "Can have UI interaction")</sup>
@@ -228,7 +228,7 @@ Executes the given command named `CommandName` with the specified parameters.
   * Toggles the snap to grid property
 * app.command.SpriteProperties
   * Shows the sprite properties window
-* [app.command.SpriteSize](command/SpriteSize.md#spritesize)
+* [app.command.SpriteSize](command/SpriteSize.md#spritesize) <sup>[[*]](#canHaveUI "Can have UI interaction")</sup>
 * app.command.Stroke
    * Performs a foreground color stroke fill on the current selection mask
 * app.command.SwitchColors <sup>[[UI]](#requiresUI "Requires UI")</sup>
@@ -245,7 +245,7 @@ Executes the given command named `CommandName` with the specified parameters.
   * Toggles the timeline thumbnails preference
 * app.command.ToggleWorkspaceLayout
   * Toggles the Workspace Layout UI. This command only opens or closes the workspace layout mode, and cannot be used to select a specific Layout.
-* app.command.UndoHistory
+* app.command.UndoHistory <sup>[[UI]](#requiresUI "Requires UI")</sup>
   * Shows the undo history window
 * app.command.Undo
 * app.command.UnlinkCel
