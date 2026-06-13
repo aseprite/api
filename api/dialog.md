@@ -166,7 +166,7 @@ Arguments (table fields):
 * `text`: Text displayed on top of the button.
 * `selected`: True in case that you want to show the button checked by default.
 * `focus`: Focus this button by default or when the Enter key is pressed in an [text entry](#dialogentry) field.
-* `onclick`: Function to be called when the button is pressed. When ommitted, clicking the button will call [Dialog:close()](#dialogclose) instead.
+* `onclick`: Function to be called when the button is pressed. When ommitted, clicking the button close the Dialog, as if [Dialog:close()](#dialogclose) was called.
 
 ## Dialog:check()
 
