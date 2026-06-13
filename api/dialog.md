@@ -161,12 +161,12 @@ Creates a button.
 Arguments (table fields):
 
 * `id`: Identifier for this button. [Dialog.data](#dialogdata) will contain a field
-  for each widget with and `id`.
-* `label`: Label at the left side of the control.
-* `text`: Text of the button.
+  for each widget with an `id`.
+* `label`: Text label on the left side of the control.
+* `text`: Text displayed on top of the button.
 * `selected`: True in case that you want to show the button checked by default.
 * `focus`: Focus this button by default or when the Enter key is pressed in an [text entry](#dialogentry) field.
-* `onclick`: Function to be called when the button is pressed.
+* `onclick`: Function to be called when the button is pressed. When ommitted, clicking the button will call [Dialog:close()](#dialogclose) instead.
 
 ## Dialog:check()
 
