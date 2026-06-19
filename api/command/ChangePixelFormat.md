@@ -2,6 +2,7 @@
 
 ```lua
 app.command.ChangePixelFormat {
+  ui=boolean,
   format=string,
   dithering=string,
   ["dithering-matrix"]=string,
@@ -13,6 +14,7 @@ app.command.ChangePixelFormat {
 
 Changes the [ColorMode](../colormode.md) of the active [sprite](../sprite.md)
 
+* `ui`: Shows the ui. Defaults to `true`.
 * `format`: `"rgb"`, `"gray"`, or `"indexed"`.
 * `dithering`: Optional, `"ordered"`, `"old"` `"error-diffusion"`
 * `dithering-matrix`: Optional, `"bayer8x8"`, `"bayer4x4"`, or `"bayer2x2"` (when When `dithering` is `ordered` or `old`).

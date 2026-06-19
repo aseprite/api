@@ -1,4 +1,4 @@
-## app.clipboard
+# app.clipboard
 
 A set of functions to handle the clipboard. 
 

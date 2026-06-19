@@ -16,6 +16,10 @@ Connected to the server
 
 Connection was closed for any reason, or broke
 
+## WebSocketMessageType.ERROR
+
+Connection encountered an error
+
 ## WebSocketMessageType.PING
 
 See [the standard](https://datatracker.ietf.org/doc/html/rfc6455) about ping and pong.
