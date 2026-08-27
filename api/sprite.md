@@ -140,6 +140,15 @@ local valid = sprite.isValid
 
 Returns `true` if the sprite object is a valid object (the sprite is open).
 
+## Sprite.hasAssociatedFile
+
+```lua
+local associated = sprite.hasAssociatedFile
+```
+
+Returns true if the sprite was loaded from or saved to a file on the
+disk.
+
 ## Sprite.colorSpace
 
 ```lua
@@ -372,7 +381,7 @@ sprite:saveCopyAs(filename)
 ```
 
 Saves a copy of the sprite to the given file but does not change the
-saved state of the sprite. If the sprite is then modified, the user 
+saved state of the sprite. If the sprite is then modified, the user
 will be asked to save changes on close.
 
 ## Sprite:close()
