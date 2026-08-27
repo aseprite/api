@@ -102,9 +102,8 @@ sprite.filename = newName
 ```
 
 Gets or sets the name of the file from which this sprite was loaded or was saved to. 
-For saved files the filename returns the full filepath (`C:\Aseprite\myfile.ase`),
-for unsaved Sprites it returns only the title (`Sprite-001`), and for new sprites without an
-associated file (such as Sprites created by `Sprite(width, height)`) it returns an empty string.
+For saved files the filename returns the full filepath (`C:\Aseprite\myfile.ase`), while
+for unsaved Sprites and Sprites without an [Associated File](sprite.md#spritehasassociatedfile) it returns only the title (`Sprite-0001`).
 
 Use [app.fs.fileTitle(filename)](app_fs.md#appfsfiletitle) to retrieve the Sprite's title as
 shown on the ui.
