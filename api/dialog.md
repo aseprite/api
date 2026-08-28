@@ -315,6 +315,8 @@ dlg:radio{ id=string,
 
 Creates a radio button. Arguments are the same as in [Dialog:button](#dialogbutton).
 
+Using `label` creates a new group.
+
 ## Dialog:separator()
 
 ```lua
