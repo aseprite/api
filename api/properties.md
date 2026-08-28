@@ -1,12 +1,12 @@
 # Properties
 
-Some objects like a [Sprite](sprite.md#sprite),
+Certain objects like [Sprite](sprite.md#sprite),
 [Layer](layer.md#layer), [Cel](cel.md#cel), [Slice](slice.md#slice),
 [Tag](tag.md#tag), [Tileset](tileset.md#tileset), [Tile](tile.md#tile),
-contain some special fields like `.color` and `.data` to store a
+contain special fields like `.color` and `.data` to store a
 user-defined [color](color.md#color) or user-defined text (any text).
 
-Anyway, since **Aseprite 1.3-rc1** you can have user-defined and
+Since **Aseprite 1.3-rc1** you can have user-defined and
 extension-defined properties for each of these objects. We will use
 `object` in the following examples, as it can be of any kind (Sprite,
 Layer, etc.).
@@ -24,6 +24,12 @@ object.properties = { myInteger=1, myNumber=1.2, ... }
 
 You can set one property at a time, or all properties at the same
 time. Each time a property is set, it generates undo information.
+Changing any property will [modify](sprite.md#spriteismodified) the
+Sprite and requires the Sprite to be **resaved** to store the data.
+
+Properties are only stored on-disk in Aseprite-specific file formats,
+and might be lost for other files, such as `.png` or `.gif`, when the 
+file is closed.
 
 * The syntax `object.properties = { ... }` sets the user-defined
   properties, but doesn't modify the properties related to extensions.
