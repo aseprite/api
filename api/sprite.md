@@ -101,9 +101,18 @@ local name = sprite.filename
 sprite.filename = newName
 ```
 
-Gets or sets the name of the file from which this sprite was loaded or
-saved, or returns the sprite title if it's a new sprite without an
-associated file.
+Gets or sets the name of the file from which this sprite was loaded or was saved to. 
+For saved files the filename returns the full filepath (`C:\Aseprite\myfile.ase`), while
+for unsaved Sprites and Sprites without an [Associated File](sprite.md#spritehasassociatedfile) it returns only the title (`Sprite-0001`).
+
+Use [app.fs.fileTitle(filename)](app_fs.md#appfsfiletitle) to retrieve the Sprite's title as
+shown on the ui.
+
+Changing this value for an active sprite will not [open](app.md#appopen) or switch to the file
+at the given filename, but does change where this file is saved when calling
+`app.command.SaveFile()`.
+
+Changes to the filename will create a `'filenamechange'` event in [Sprite.events]{sprite.md#spriteevents}.
 
 ## Sprite.id
 
