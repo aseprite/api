@@ -34,3 +34,8 @@ the pixel refers.
 
 Special color mode used for tilemaps, where each pixel is a tile
 reference in a [tileset](tileset.md#tileset).
+Each entry is a 32-bit unsigned integer containing a tile index and
+[flip flags](pixelcolor.md#tile-flags). Use
+[`app.pixelColor.tile()`](pixelcolor.md#apppixelcolortile) to construct
+an entry, [`tileI()`](pixelcolor.md#apppixelcolortilei) to extract its
+index, and [`tileF()`](pixelcolor.md#apppixelcolortilef) to extract its flags.
