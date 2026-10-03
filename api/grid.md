@@ -1,6 +1,6 @@
-## Grid
+# Grid
 
-This is an object that defines the grid for a [tileset](tileset.md#tileset).
+An object that defines the grid for a [tileset](tileset.md#tileset).
 
 ## Grid()
 
@@ -8,6 +8,8 @@ This is an object that defines the grid for a [tileset](tileset.md#tileset).
 Grid()
 Grid(otherGrid)
 ```
+
+Creates a new grid object. If `otherGrid` is defined, the constructor will make a copy.
 
 ## Grid.tileSize
 
