@@ -4,6 +4,11 @@ An object that allows for [nine-slice scaling](https://en.wikipedia.org/wiki/9-s
 
 ## Slice.bounds
 
+```lua
+local bounds = slice.bounds
+slice.bounds = bounds
+```
+
 Gets or sets a slice's bounding [rectangle](rectangle.md#rectangle).
 
 ## Slice.center
@@ -46,6 +51,11 @@ Access user-defined and extension-defined
 
 ## Slice.name
 
+```lua
+local name = slice.name
+slice.name = name
+```
+
 Gets or sets a slice's name, a `string`.
 
 ## Slice.pivot
@@ -62,5 +72,9 @@ slice.pivot = Point(
 For example, the snippet above sets the pivot to the slice's approximate center.
 
 ## Slice.sprite
+
+```lua
+local sprite = slice.sprite
+```
 
 Gets the [sprite](sprite.md#sprite) to which a slice belongs.

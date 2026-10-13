@@ -24,6 +24,31 @@ else
 end
 ```
 
+## v1.3.18.6
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `41`
+* Fixed dialog relayout not invalidating display and contents [#5766](https://github.com/aseprite/aseprite/issues/5766)
+
+## v1.3.18.2
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `41`
+* New `Dialog:samerow{}` function (thanks to [@lampysprites](https://github.com/aseprite/aseprite/pull/5959)
+* Added save/beforesave sprite events [#5115](https://github.com/aseprite/aseprite/issues/5115) (thanks to [@MapleGecko](https://github.com/aseprite/aseprite/pull/5945))
+* Prevent uninitialized params in `app.command.MoveMask/Scroll`
+
+## v1.3.18-beta2
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `40`
+* New plugin API to add custom file formats when loading/saving sprites [#4950](https://github.com/aseprite/aseprite/issues/4950) [#5174](https://github.com/aseprite/aseprite/issues/5174)
+* Improved Dialog labels and buddy enabled handling [#5117](https://github.com/aseprite/aseprite/issues/5117) [#5554](https://github.com/aseprite/aseprite/issues/5554) 
+* Added support for eyedropper tool in `app.useTool()`
+
+## v1.3.17.1
+
+* [`app.apiVersion`](api/app.md#appapiversion) is `40`
+* Fixed moving active cel to 0,0 when drawing for some specific scripts [#5679](https://github.com/aseprite/aseprite/issues/5679)
+* Added `Sprite.hasAssociatedFile` property [#5721](https://github.com/aseprite/aseprite/issues/5721)
+
 ## v1.3.17
 
 * [`app.apiVersion`](api/app.md#appapiversion) is `39`

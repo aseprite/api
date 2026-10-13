@@ -7,6 +7,8 @@ local sprite = Sprite(width, height)
 local sprite = Sprite(width, height, colorMode)
 local sprite = Sprite(spec)
 local sprite = Sprite(otherSprite)
+local sprite = Sprite{ width=integer, height=integer}
+local sprite = Sprite{ width=integer, height=integer, colorMode=ColorMode}
 local sprite = Sprite{ fromFile=string }
 local sprite = Sprite{ fromFile=string, oneFrame=true }
 ```
@@ -19,10 +21,10 @@ The `spec` parameter is an [image specification](imagespec.md#imagespec) object.
 
 If `otherSprite` is given (other `Sprite` object), the sprite is duplicated.
 
-If `fromFile` is given, it indicates a file name (a string) and it's
+If `fromFile` is given, it indicates a file name (a string); it's
 like opening a new document with [`app.open()`](app.md#appopen).
 
-When loading from a file, setting `oneFrame` to true will load with only the first animation frame.
+When loading from a file, setting `oneFrame` to `true` will load the sprite with only the first animation frame.
 
 ## Sprite.width
 
@@ -31,9 +33,8 @@ local w = sprite.width
 sprite.width = w
 ```
 
-Returns or changes the sprite width. Use
-[Sprite:resize](#spriteresize) if you want to change the sprite size
-resizing layers, images, etc.
+Gets or sets the sprite width. Use
+[Sprite:resize()](#spriteresize) if you want to change the sprite size.
 
 ## Sprite.height
 
@@ -42,9 +43,8 @@ local h = sprite.height
 sprite.height = h
 ```
 
-Returns or changes the sprite height. Use
-[Sprite:resize](#spriteresize) if you want to change the sprite size
-resizing layers, images, etc.
+Gets or sets the sprite height. Use
+[Sprite:resize()](#spriteresize) if you want to change the sprite size.
 
 ## Sprite.bounds
 
@@ -53,7 +53,7 @@ local rectangle = sprite.bounds
 ```
 
 Returns the bounds of the sprite as a
-[rectangle](rectangle.md#rectangle) in the position `0,0`.
+[rectangle](rectangle.md#rectangle) at the position `0,0`.
 This is like calling `Rectangle{ x=0, y=0, width=sprite.width, height=sprite.height }`.
 
 ## Sprite.gridBounds
@@ -64,8 +64,8 @@ sprite.gridBounds = rectangle
 ```
 
 Gets or sets the bounds of the sprite grid as a
-[rectangle](rectangle.md#rectangle). By default, this is 16x16 (with its origin at 0,0)
-but the default value can be [changed from *Edit > Preferences > Grid*](https://www.aseprite.org/docs/preferences/).
+[rectangle](rectangle.md#rectangle). By default, this is `16x16` (with its origin at `0,0`),
+but the default value can be changed from [*Edit > Preferences > Grid*](https://www.aseprite.org/docs/preferences/).
 
 ## Sprite.pixelRatio
 
@@ -74,7 +74,7 @@ local size = sprite.pixelRatio
 sprite.pixelRatio = size
 ```
 
-Gets or sets the pixel ratio of the sprite as a
+Gets or sets the pixel aspect ratio of the sprite, as a
 [size](size.md#size).
 
 ## Sprite.selection
@@ -84,11 +84,9 @@ local selection = sprite.selection
 sprite.selection = newSelection
 ```
 
-Gets or sets the active sprite selection. This property is an instance
-of the [Selection class](selection.md#selection) to manipulate the set of
-selected pixels in the canvas.
+Gets or sets the active sprite selection, as a [Selection object](selection.md#selection). Note that this refers to the *selection* and not the selected content.
 
-Keep in mind that `local selection = sprite.selection` will be a reference to the Sprite's selection, and will update when the Sprite's selection is changed or removed. To clone the selection, you can do the following instead:
+Keep in mind that `local selection = sprite.selection` will be a *reference* to the Sprite's selection, and will update when the Sprite's selection is changed or removed. To clone the selection, you can do the following:
 ```lua
 local selection = Selection()
 selection:add(sprite.selection)
@@ -101,9 +99,7 @@ local name = sprite.filename
 sprite.filename = newName
 ```
 
-Gets or sets the name of the file from which this sprite was loaded or
-saved, or returns the sprite title if it's a new sprite without an
-associated file.
+Gets or sets the filepath associated with the sprite (where the sprite is loaded from / saved to). If the sprite has no associated file, it will return the sprite title. See [Sprite.hasAssociatedFile](#spritehasassociatedfile).
 
 ## Sprite.id
 
@@ -111,7 +107,7 @@ associated file.
 local id = sprite.id
 ```
 
-Returns the id of this sprite, as an integer.
+Returns the id of the sprite, as an integer.
 
 ## Sprite.isModified
 
@@ -136,7 +132,7 @@ Returns `true` if the sprite object is a valid object (the sprite is open).
 local associated = sprite.hasAssociatedFile
 ```
 
-Returns true if the sprite was loaded from or saved to a file on the
+Returns `true` if the sprite was loaded from or saved to a file on the
 disk.
 
 ## Sprite.colorSpace
@@ -146,7 +142,7 @@ local colorspace = sprite.colorSpace
 sprite.colorSpace = colorspace
 ```
 
-Gets or sets the [color space](colorspace.md#colorspace) of this sprite. Setting works the same as using [Sprite:assignColorSpace()](sprite.md#spriteassigncolorspace).
+Gets or sets the [color space](colorspace.md#colorspace) of the sprite. Setting works the same as using [Sprite:assignColorSpace()](sprite.md#spriteassigncolorspace).
 
 ## Sprite.colorMode
 
@@ -154,7 +150,7 @@ Gets or sets the [color space](colorspace.md#colorspace) of this sprite. Setting
 local colormode = sprite.colormode
 ```
 
-Returns the [color mode](colormode.md#colormode) of this sprite.
+Returns the [color mode](colormode.md#colormode) of the sprite.
 
 ## Sprite.spec
 
@@ -162,7 +158,7 @@ Returns the [color mode](colormode.md#colormode) of this sprite.
 local spec = sprite.spec
 ```
 
-Returns the [specification](imagespec.md#imagespec) for image in this sprite.
+Returns the [image specification](imagespec.md#imagespec) of the sprite.
 
 ## Sprite.useLayerUuids
 
@@ -171,7 +167,7 @@ local layeruuids = sprite.useLayerUuids
 sprite.useLayerUuids = layeruuids
 ```
 
-Gets or sets if the sprite should use [layer](layer.md#layer) UUIDs.
+Gets or sets if the sprite should use [layer UUIDs](layer.md#layeruuid).
 
 ## Sprite.undoHistory.undoSteps
 
@@ -200,7 +196,7 @@ for i = 1,#s.frames do
 end
 ```
 
-An array of [frames](frame.md#frame).
+An array of the sprite's [frames](frame.md#frame).
 
 ## Sprite.palettes
 
@@ -208,8 +204,8 @@ An array of [frames](frame.md#frame).
 local palette = sprite.palettes[1]
 ```
 
-An array of [palettes](palette.md#palette). In most cases, it only contains one
-palette (`sprite.palettes[1]`), except in a very specific case.
+An array of the sprite's [palettes](palette.md#palette). In most cases, it only contains one
+palette (`sprite.palettes[1]`), except in a very specific case:
 
 In the event that two or more [indexed](https://www.aseprite.org/docs/color-mode#indexed) numbered
 files (eg. `spr_01.png`, `spr_02.png`, `spr_03.png` etc.) are
@@ -238,7 +234,7 @@ for i = 1,#s.layers do
 end
 ```
 
-An array of [layers](layer.md#layer).
+An array of the sprite's [layers](layer.md#layer), in ascending order.
 
 ## Sprite.cels
 
@@ -251,7 +247,7 @@ for i = 1,#s.cels do
 end
 ```
 
-An array of [cels](cel.md#cel).
+An array of the sprite's [cels](cel.md#cel), starting from the first (bottom) layer. Empty cels are not included.
 
 ## Sprite.tags
 
@@ -264,7 +260,7 @@ for i = 1,#s.tags do
 end
 ```
 
-An array of [tags](tag.md#tag).
+An array of the sprite's [tags](tag.md#tag).
 
 ## Sprite.slices
 
@@ -277,7 +273,7 @@ for i = 1,#s.slices do
 end
 ```
 
-An array of [slices](slice.md#slice).
+An array of the sprite's [slices](slice.md#slice).
 
 ## Sprite.tilesets
 
@@ -290,25 +286,23 @@ for i = 1,#s.tilesets do
 end
 ```
 
-An array of [tilesets](tileset.md#tileset).
+An array of the sprite's [tilesets](tileset.md#tileset).
 
 ## Sprite.backgroundLayer
 
-Returns the [background
-layer](https://www.aseprite.org/docs/layers/#background-layer) a
-[layer](layer.md#layer) object or `nil` if the sprite doesn't contain a
+Returns the sprite's [background
+layer](https://www.aseprite.org/docs/layers/#background-layer) (a
+[layer](layer.md#layer) object). Returns `nil` if the sprite doesn't contain a
 background layer.
 
 ## Sprite.transparentColor
 
 ```lua
-local number = sprite.transparentColor
-sprite.transparentColor = number
+local integer = sprite.transparentColor
+sprite.transparentColor = integer
 ```
 
-The transparent color is an integer that specifies which index (`0` by
-default) is the transparent color in transparent layers on indexed
-sprites.
+Gets or sets the sprite's transparent color index, as an integer. The transparent color index specifies which index in the palette (`0` by default) is the transparent color. The transparent color index is only in use when the sprite is in [indexed](colormode.md#colormodeindexed) mode. 
 
 ## Sprite.color
 
@@ -318,8 +312,9 @@ sprite.color = color
 ```
 
 Gets or sets the user-defined [color](color.md#color) of this sprite.
-This color is used to display the tab in the main window of this
-sprite.
+This color is used for the color of the sprite's tab in the tab bar.
+
+![tab color example image](image/tab_color.png)
 
 ## Sprite.data
 
@@ -342,7 +337,7 @@ sprite:resize(width, height)
 sprite:resize(size)
 ```
 
-Resize the sprite (and all frames/cels) to the given dimensions. See
+Resize the sprite (and all frames/cels) to the given dimensions. See the
 [Size class](size.md#size).
 
 ## Sprite:crop()
@@ -361,7 +356,7 @@ Crops the sprite to the given dimensions. See the
 sprite:saveAs(filename)
 ```
 
-Saves the sprite to the given file and marks the sprite as saved so
+Saves the sprite to the given `filename` (string path) and marks the sprite as saved so
 closing it won't ask to save changes.
 
 ## Sprite:saveCopyAs()
@@ -390,7 +385,7 @@ changes, you can use `app.command.CloseFile()`.
 sprite:loadPalette(filename)
 ```
 
-Sets the sprite palette loading it from the given file.
+Sets the sprite palette, loading it from the given file. If you want to set it to a [palette](palette.md#palette) object, use [`Sprite:setPalette()`](#spritesetpalette).
 
 The same can be achieved using [`Palette{ fromFile }`](palette.md#palette):
 
@@ -404,7 +399,7 @@ sprite:setPalette(Palette{ fromFile=filename })
 sprite:setPalette(palette)
 ```
 
-Changes the sprite [palette](palette.md#palette).
+Changes the sprite [palette](palette.md#palette). If you want to set the sprite palette from a file, use [`Sprite:loadPalette()`](#spriteloadpalette).
 
 ## Sprite:assignColorSpace()
 
@@ -433,7 +428,7 @@ will be adjusted to the new color space).
 local layer = sprite:newLayer()
 ```
 
-Creates a new [layer](layer.md#layer) at the top of the layers stack.
+Creates and returns a new [layer](layer.md#layer) at the top of the layer stack. For more layer creation options, like creating a reference layer, use [`app.command.NewLayer()`](command/NewLayer.md).
 
 ## Sprite:newGroup()
 
@@ -441,7 +436,7 @@ Creates a new [layer](layer.md#layer) at the top of the layers stack.
 local layerGroup = sprite:newGroup()
 ```
 
-Creates a new empty [layer group](layer.md#layer) at the top of the layers stack.
+Creates and returns a new empty [layer group](https://www.aseprite.org/docs/layer-group#layer-group) at the top of the layer stack.
 
 ## Sprite:deleteLayer()
 
@@ -450,7 +445,7 @@ sprite:deleteLayer(layer)
 sprite:deleteLayer(layerName)
 ```
 
-Deletes the given [layer](layer.md#layer) or the layer with the given `layerName` (a string).
+Deletes the given [`layer`](layer.md#layer) or the layer with the given `layerName` (a string). Also works for groups.
 
 ## Sprite:newFrame()
 
@@ -459,32 +454,39 @@ local frame = sprite:newFrame(frame)
 local frame = sprite:newFrame(frameNumber)
 ```
 
-Creates a copy of the given [frame](frame.md#frame) object or frame number
-and returns a [`Frame`](frame.md#frame) that points to the newly created
-frame in `frameNumber` position.
+Creates a copy of the given [`frame`](frame.md#frame) object (defaults to the last frame + 1) or frame number (an integer). If `frame` or `frameNumber` is specified, the copy is placed in the position of the original frame, so the original frame is shifted 1 frame to the right. Returns the newly created [frame](frame.md#frame) at the `frameNumber` position.
 
 ## Sprite:newEmptyFrame()
 
-Creates a new empty frame in the given `frameNumber` (an integer) and
-returns the new [frame](frame.md#frame).
+```lua
+local frame = sprite:newEmptyFrame(frame)
+local frame = sprite:newEmptyFrame(frameNumber)
+```
+
+Creates a new empty frame at the given [`frame`](frame.md#frame) or `frameNumber` (an integer) and
+returns the new frame. The frame at the specified position is shifted to the right.
 
 ## Sprite:deleteFrame()
 
 ```lua
 sprite:deleteFrame(frame)
+sprite:deleteFrame(frameNumber)
 ```
+
+Deletes the frame at the specified [`frame`](frame.md#frame) or `frameNumber` (an integer). Defaults to the first frame.
 
 ## Sprite:newCel()
 
 ```lua
 cel = sprite:newCel(layer, frame)
+cel = sprite:newCel(layer, frameNumber)
 cel = sprite:newCel(layer, frame, image, position)
+cel = sprite:newCel(layer, frameNumber, image, position)
 ```
 
-Creates a new [cel](cel.md#cel) in the given [layer](layer.md#layer) and `frame`
-number. If the [image](image.md#image) is not specified, a new image will be
-created with the size of the sprite canvas. The [position](point.md#point)
-is a point to locate the image.
+Creates and returns a new [cel](cel.md#cel) at the intersection of the given [`layer`](layer.md#layer) and [`frame`](frame.md#frame)/`frameNumber`. If the [`image`](image.md#image) is not specified, a new image will be
+created with the size of the sprite canvas. The `position`
+is a [point](point.md#point) to locate the image.
 
 ## Sprite:deleteCel()
 
@@ -493,7 +495,7 @@ sprite:deleteCel(cel)
 sprite:deleteCel(layer, frame)
 ```
 
-Deletes the given [cel](cel.md#cel). If the cel is from a transparent
+Deletes the given [`cel`](cel.md#cel). If the cel is from a transparent
 layer, the cel is completely deleted, but if the cel is from a
 background layer, the cel will be deleted with the
 [background color](app.md#appbgcolor).
@@ -504,7 +506,7 @@ background layer, the cel will be deleted with the
 local tag = sprite:newTag(fromFrameNumber, toFrameNumber)
 ```
 
-Creates a new [tag](tag.md#tag) in the given frame range and with the given name.
+Creates and returns a new [tag](tag.md#tag) in the given frame range.
 
 ## Sprite:deleteTag()
 
@@ -519,10 +521,9 @@ Deletes the given [tag](tag.md#tag).
 
 ```lua
 local slice = sprite:newSlice()
-local slice = sprite:newSlice(Rectangle)
+local slice = sprite:newSlice(bounds)
 ```
-
-Returns a new [slice](slice.md#slice).
+Creates and returns a new [slice](slice.md#slice), with optional `bounds` (a [Rectangle](rectangle.md#rectangle)). If `bounds` is not specified, the slice will be created with no bounds (`nil`).
 
 ## Sprite:deleteSlice()
 
@@ -537,10 +538,10 @@ Deletes the given [slice](slice.md#slice).
 
 ```lua
 local tileset = sprite:newTileset()
-local tileset = sprite:newTileset(Grid)
-local tileset = sprite:newTileset(Rectangle)
-local tileset = sprite:newTileset(Grid, numTiles)
-local tileset = sprite:newTileset(Rectangle, numTiles)
+local tileset = sprite:newTileset(grid)
+local tileset = sprite:newTileset(rectangle)
+local tileset = sprite:newTileset(grid, numTiles)
+local tileset = sprite:newTileset(rectangle, numTiles)
 local tileset = sprite:newTileset(anotherTileset)
 ```
 
@@ -550,14 +551,13 @@ sprite's tilesets.
 If no parameters are given, the resulting tileset will have only one
 empty tile and a tile size equal to the active [sprite grid size](#spritegridbounds).
 
-If a Grid or Rectangle is specified, it is used to set the resulting
+If [`grid`](grid.md#grid) or [`rectangle`](rectangle.md#rectangle) is specified, it will be used to set the resulting
 tileset's origin and tile size.
 
-numTiles specifies the number of tiles we want the tileset to contain
-initially.
+`numTiles`, an integer, specifies the number of tiles that the tileset will initially contain.
 
-If another tileset is passed as the only parameter, the result is a
-duplicate of it. Take into consideration that the passed tileset
+If `anotherTileset`, a [tileset](tileset.md#tileset), is passed as the only parameter, the result will be a
+duplicate of the passed tileset. Take into consideration that the passed tileset
 cannot belong to another sprite.
 
 ## Sprite:deleteTileset()
@@ -580,7 +580,7 @@ Inserts an empty [tile](tile.md#tile) into the given
 at a given `tileIndex`. If `tileIndex` is not provided, the new tile
 is added to the end of the tileset. This method generates undo
 information, so you could use it as an individual operation or in a
-[transaction](https://github.com/aseprite/api/blob/main/api/app.md#apptransaction).
+[transaction](https://github.com/aseprite/api/blob/main/api/app.md#apptransaction). Returns a [tile](tile.md#tile) object.
 
 ## Sprite:deleteTile()
 
@@ -607,8 +607,8 @@ The same as calling `app.command.FlattenLayers()`.
 
 ## Sprite.events
 
-Returns the [`Events`](events.md#events) object to associate functions
-that can act like listeners of specific `Sprite` events. E.g.
+Returns the [events](events.md#events) object to associate functions
+that can act like listeners of specific sprite events. E.g.
 
 ```lua
 sprite.events:on('change',
@@ -629,6 +629,8 @@ Available events for a `Sprite`:
 * `'layername'`: The name of a layer is changed.
 * `'layeropacity'`: The opacity of a layer is changed.
 * `'layervisibility'`: The visibility of a layer is changed.
+* `save`: The sprite is saved.
+* `beforesave`: Before the sprite is saved.
 
 ## Sprite.tileManagementPlugin
 
@@ -639,7 +641,7 @@ sprite.tileManagementPlugin = newId
 
 Special property to disable Aseprite
 [tile management UI](https://aseprite.org/docs/tilemap) and use
-an external plugin to handle tilesets and tilemaps in this sprite.
+an external plugin to handle tilesets and tilemaps in the sprite.
 
 This property is used by the
 [Attachment-System](https://github.com/aseprite/Attachment-System)

@@ -19,10 +19,19 @@ things:
 Rectangle()
 Rectangle(otherRectangle)
 Rectangle(x, y, width, height)
+Rectangle(point, size)
 Rectangle{x=number, y=number, width=number, height=number}
 Rectangle{x=number, y=number, w=number, h=number}
 Rectangle{number, number, number, number}
 ```
+
+Creates a rectangle. 
+
+If `otherRectangle` is specified, the constructor will return a copy of the passed rectangle.
+
+If a `point` and `size` are specified, the rectangle will be created with the values from the specified [point](point.md#point) and [size](size.md#size).
+
+If no parameters are specified, a rectangle with all values set to `0` will be returned (equivalent to `Rectangle(0,0,0,0)`)
 
 ## Rectangle.x
 

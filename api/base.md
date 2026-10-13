@@ -21,11 +21,13 @@ More details in the Programming in Lua book: https://www.lua.org/pil/8.1.html
 ## assert()
 
 ```lua
-assert(condition)
+assert(condition, message)
 ```
 
-Prints an error message when `condition` is `false` and stops the
-execution of the script. This method is used for unit-testing.
+Prints an error message to the console when `condition` is `false` and stops the
+execution of the script. If `condition` is `true`, it returns condition. This method is used for unit-testing. If `message` is not specified, it will default to `"assertion failed!"`.
+
+More details in the Lua 5.4 Manual https://www.lua.org/manual/5.4/manual.html#pdf-assert
 
 ## print()
 

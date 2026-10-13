@@ -17,7 +17,7 @@ app.command.ReplaceColor {
   indicating if the replacement was accepted or cancelled
   respectively.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
-  [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).
+  [bitwise OR (`|`) operator](https://www.lua.org/manual/5.4/manual.html#3.4.2).
   The default value depends on the [active sprite](../app.md#appsprite) [color mode](../colormode.md):
   * [RGBA](../colormode.md#colormodergb):
     [FilterChannels.RGBA](../filterchannels.md#filterchannelsrgba)

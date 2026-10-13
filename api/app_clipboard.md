@@ -2,7 +2,7 @@
 
 A set of functions to handle the clipboard. 
 
-When calling a function with clipboard write access in a script, Aseprite will ask the user if they want to allow the function to run or stop the script. 
+When calling a function with clipboard write access in a script, Aseprite will ask the user if they want to allow the function to run or stop the script:
 
 ![security popup](image/security.png)
 
@@ -30,7 +30,7 @@ Additionally, when calling a method on an image from the clipboard image, the im
 local content = app.clipboard.content
 ```
 
-Gets the content of the clipboard, as a table. Values:
+Gets or sets the content of the clipboard, as a table. Values:
 
 * `image`: An [image](image.md#image) object or `nil`
 * `selection`: A [selection](selection.md#selection) object or `nil`

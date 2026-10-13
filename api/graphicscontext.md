@@ -1,6 +1,6 @@
 # GraphicsContext
 
-The *GraphicsContext* object provides methods for drawing images, text and shapes on the canvas.
+The *GraphicsContext* object provides methods for drawing images, text and shapes on the canvas, or on images with [image.context](image.md#imagecontext).
 
 ```lua
 local dlg = Dialog()
@@ -46,7 +46,7 @@ local color = gc.color
 gc.color = Color(255)
 ```
 
-Gets or sets the [color](color.md#color) to paint with the path functions.
+Gets or sets the color to paint with the path functions. When setting, it can accept either a [Color object](color.md#color) or a [pixelcolor](pixelcolor.md#apppixelcolor) (converts to a Color object). When getting, returns a Color object.
 
 ## GraphicsContext.strokeWidth
 
@@ -78,7 +78,7 @@ gc.opacity = newOpacity
 Opacity used in [stroke()](#graphicscontextstroke),
 [fill()](#graphicscontextfill), [drawImage()](#graphicscontextdrawimage), etc.
 
-* `opacity`: 0 completely transparent, 255 completely opaque.
+* `opacity`: `0` completely transparent, `255` completely opaque.
 
 ## GraphicsContext.theme
 
@@ -86,7 +86,7 @@ It has the same functionality as [app.theme](app_theme.md#apptheme), with the on
 by accessing dimensions or style metrics data are not affected by the current UI Scale setting. This is useful when you
 are drawing on a dialog canvas's GraphicsContext with [autoScaling](dialog.md#dialogcanvas) enabled, so you don't have to worry about adjusting sizes and measures when painting on the canvas using the current theme.
 
-For instance, when UI Scale is set to 200% this is the difference:
+For instance, when UI Scale is set to `200%` this is the difference:
 ```lua
 local dlg = Dialog()
 dlg:canvas{

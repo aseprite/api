@@ -3,28 +3,30 @@
 Represents a color that can be chosen by the user in different kinds
 (RGB, HSV, HSL, grayscale, indexed).
 
-Don't confuse this color with the [app.pixelColor](pixelcolor.md#apppixelcolor)
+Don't confuse this color with the [app.pixelColor](pixelcolor.md#apppixelcolor) object
 which is used to put/get pixels to/from an [image](image.md#image).
 
 ## Color()
 
 ```lua
-local c
-c = Color{ r=255, g=255, b=255, a=255 }
-c = Color{ h=360.0, s=1.0, v=1.0, a=255 }
-c = Color{ h=360.0, s=1.0, l=1.0, a=255 }
-c = Color{ red=255, green=255, blue=255, alpha=255 }
-c = Color{ hue=360.0, saturation=1.0, value=1.0, alpha=255 }
-c = Color{ hue=360.0, saturation=1.0, lightness=1.0, alpha=255 }
-c = Color{ gray=255, alpha=255 }
-c = Color{ index=integer }
-c = Color{ tile=integer }
-c = Color(integer)
+Color(red, green, blue, alpha)
+Color{ r=255, g=255, b=255, a=255 }
+Color{ h=360.0, s=1.0, v=1.0, a=255 }
+Color{ h=360.0, s=1.0, l=1.0, a=255 }
+Color{ red=255, green=255, blue=255, alpha=255 }
+Color{ hue=360.0, saturation=1.0, value=1.0, alpha=255 }
+Color{ hue=360.0, saturation=1.0, lightness=1.0, alpha=255 }
+Color{ gray=255, alpha=255 }
+Color{ index=integer }
+Color{ tile=integer }
+Color(integer)
 ```
 
-* If the `alpha` argument is not specified, it is 255 by default (opacity = 100%).
-* The `Color{ index=integer }` returns the color at the specified index from the palette.
-* The `Color{ tile=integer }` returns a special "tile color" at the specified index from the current tileset. This "tile color" can be used to pass tiles into parameters that require the color object (e.g: `app.useTool{color=Color{tile=integer}}`).
+Creates a new Color object.
+
+* If the `alpha` argument is not specified, it is `255` by default (opacity = `100%`).
+* The `Color{ index=integer }` constructor returns the color at the specified index from the palette.
+* The `Color{ tile=integer }` constructor returns a special "tile color" at the specified index from the current tileset. This "tile color" can be used to pass tiles into parameters that require the color object (e.g: `app.useTool{color=Color{tile=integer}}`).
 * The `Color(integer)` constructor receives a [pixel color](pixelcolor.md#apppixelcolor)
   and the integer is interpreted depending on the [active sprite](app.md#appsprite).
 

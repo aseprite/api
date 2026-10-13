@@ -14,7 +14,7 @@ app.command.HueSaturation {
 
 * `ui`: Shows the dialog on the screen, `true` by default. Set to `false` for automatic change brightness and/or contrast without asking the user for confirmation.
 * `channels`: A combination of [FilterChannels](../filterchannels.md#filterchannels) with
-  [bitwise OR (`|`) operator](https://www.lua.org/manual/5.3/manual.html#3.4.2).
+  [bitwise OR (`|`) operator](https://www.lua.org/manual/5.4/manual.html#3.4.2).
   By default it is equal to:
   [FilterChannels.RED](../filterchannels.md#filterchannelsred) |
   [FilterChannels.GREEN](../filterchannels.md#filterchannelsgreen) |

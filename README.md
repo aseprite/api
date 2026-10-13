@@ -1,10 +1,15 @@
 # Aseprite API
 
-This is the scripting API for Aseprite. Since version 1.2.10 you
-are able to create scripts with [Lua](https://www.lua.org/).
+This is the scripting API reference for Aseprite. Since version `1.2.10` you
+are able to create scripts and extensions with [Lua](https://www.lua.org/). Aseprite uses Lua version `5.4.6`.
 
-You can find [some examples](https://github.com/aseprite/Aseprite-Script-Examples)
-for this API or some [tests](https://github.com/aseprite/aseprite/tree/main/tests/scripts).
+### Quick links
+
+* [Script examples](https://github.com/aseprite/Aseprite-Script-Examples)
+* [Tests](https://github.com/aseprite/aseprite/tree/main/tests/scripts)
+* [API changes between versions](Changes.md#api-changes)
+* [Docs: Extensions](https://www.aseprite.org/docs/extensions#extensions)
+* [Plugin class](api/plugin.md)
 
 ## Where to start
 
@@ -20,7 +25,7 @@ a little experiment, so you have six options to approach your idea:
    sprite and sets it as the active one. From there you can modify the
    [Sprite](api/sprite.md#sprite) object as you want.
 3. **Open one or several existing files**: You can use
-   [app.open](api/app.md#appopen) to load a sprite from the disk and
+   [app.open()](api/app.md#appopen) to load a sprite from the disk and
    then modify it.
 4. **Save the modified sprite**: After you have done some modifications
    to a sprite, you might want to save the result directly to the
@@ -31,10 +36,6 @@ a little experiment, so you have six options to approach your idea:
 6. **Add new options to any menu**: In this case you'll need to create a
    [plugin with a script](api/plugin.md).
 
-## API Changes
-
-[API changes between versions](Changes.md#api-changes).
-
 ## Reference
 
 Global namespace
@@ -44,6 +45,7 @@ Global namespace
   * [app.fs](api/app_fs.md#appfs)
   * [app.os](api/app_os.md#appos)
   * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
+  * [app.preferences](api/app_preferences.md#apppreferences)
   * [app.theme](api/app_theme.md#apptheme)
   * [json](api/json.md#json)
 
@@ -86,6 +88,7 @@ Classes/objects
   * [Palette](api/palette.md#palette)
   * [Plugin](api/plugin.md#plugin)
   * [Point](api/point.md#point)
+  * [Properties](api/properties.md#properties)
   * [Range](api/range.md#range)
   * [Rectangle](api/rectangle.md#rectangle)
   * [Selection](api/selection.md#selection)
@@ -105,13 +108,13 @@ Classes/objects
   * [Window](api/window.md#window)
 
 Lua libraries
-  * [Base library](api/base.md) and [Basic Functions in Lua manual](https://www.lua.org/manual/5.3/manual.html#6.1)
-  * [Coroutine Manipulation](https://www.lua.org/manual/5.3/manual.html#6.2)
-  * [String Manipulation](https://www.lua.org/manual/5.3/manual.html#6.4)
-  * [UTF-8 Support](https://www.lua.org/manual/5.3/manual.html#6.5)
-  * [Table Manipulation](https://www.lua.org/manual/5.3/manual.html#6.6)
-  * [Mathematical Functions](https://www.lua.org/manual/5.3/manual.html#6.7)
-  * [Operating System Facilities](https://www.lua.org/manual/5.3/manual.html#6.9)
+  * [Base library](api/base.md) and [Basic Functions in Lua manual](https://www.lua.org/manual/5.4/manual.html#6.1)
+  * [Coroutine Manipulation](https://www.lua.org/manual/5.4/manual.html#6.2)
+  * [String Manipulation](https://www.lua.org/manual/5.4/manual.html#6.4)
+  * [UTF-8 Support](https://www.lua.org/manual/5.4/manual.html#6.5)
+  * [Table Manipulation](https://www.lua.org/manual/5.4/manual.html#6.6)
+  * [Mathematical Functions](https://www.lua.org/manual/5.4/manual.html#6.7)
+  * [Operating System Facilities](https://www.lua.org/manual/5.4/manual.html#6.9)
     * Some functions like `os.exit`, `os.tmpname` are not available yet
     * Other functions like `os.execute` and `io.open` will ask for permissions to the user
-  * [The Debug Library](https://www.lua.org/manual/5.3/manual.html#6.10)
+  * [The Debug Library](https://www.lua.org/manual/5.4/manual.html#6.10)

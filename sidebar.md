@@ -1,7 +1,8 @@
 ### Table of contents
 
 [Overview](README.md) <br/>
-[API Changes](Changes.md)
+[API Changes](Changes.md) <br/>
+[Base Library](api/base.md#base-library)
 
 Global namespace
   * [app](api/app.md#app)
@@ -10,6 +11,7 @@ Global namespace
   * [app.fs](api/app_fs.md#appfs)
   * [app.os](api/app_os.md#appos)
   * [app.pixelColor](api/pixelcolor.md#apppixelcolor)
+  * [app.preferences](api/app_preferences.md#apppreferences)
   * [app.theme](api/app_theme.md#apptheme)
   * [json](api/json.md#json)
 
