@@ -11,7 +11,7 @@ local fn = "path" .. app.fs.pathSeparator .. "filename.png"
 ```
 
 Returns the preferred path separator of the current platform, it is
-`/` on macOS and Linux, and `\` on Windows. Preferably you should use
+`/` on macOS and Linux, and `\` on Windows. When joining paths, it is better to use
 [app.fs.joinPath()](#appfsjoinpath).
 
 Example:
@@ -187,7 +187,7 @@ end
 app.fs.makeDirectory(path)
 ```
 
-Create one directory.
+Creates a single directory.
 
 Returns `true` if the directory was created.
 
